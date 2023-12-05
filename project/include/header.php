@@ -1,0 +1,1 @@
+<center><img src="images/logo_sia.png" alt="logo" width="250" height="100" /></center>

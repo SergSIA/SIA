@@ -1,0 +1,5 @@
+
+Runner.buttonEvents["cancelarCliente"]=function(pageObj,proxy,pageid){pageObj.buttonNames[pageObj.buttonNames.length]='cancelarCliente';if(!pageObj.buttonEventBefore['cancelarCliente']){pageObj.buttonEventBefore['cancelarCliente']=function(params,ctrl,pageObj,proxy,pageid,rowData,row,submit){var ajax=ctrl;params;swal("Desea realmente cancelar la Asesoria?",{buttons:{cancel:"Cancelar",proceed:{text:"Aceptar",value:"proceed",}},icon:"warning",}).then(function(value){switch(value){case"proceed":swal("Se dio de baja la Asesoria","","success");submit();break;default:swal("Operacion Cancelada!");break;}});return false;}}
+if(!pageObj.buttonEventAfter['cancelarCliente']){pageObj.buttonEventAfter['cancelarCliente']=function(result,ctrl,pageObj,proxy,pageid,rowData,row,params){var ajax=ctrl;setTimeout(function(){window.location.reload();},2000);}}
+$('a[id="cancelarCliente"]').each(function(){if($(this).closest('.gridRowAdd').length){return;}
+this.id="cancelarCliente"+"_"+Runner.genId();var button_cancelarCliente=new Runner.form.Button({id:this.id,btnName:"cancelarCliente"});button_cancelarCliente.init({args:[pageObj,proxy,pageid]});});};

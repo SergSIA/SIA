@@ -1,0 +1,13 @@
+Notification on registering
+
+You have registered as a user at %url%
+
+
+Id: %id_value%
+Email: %email_value%
+Rol: %fk_id_rol_value%
+Username: %username_value%
+Created: %created_value%
+Updated: %updated_value%
+Fk Id People: %fk_id_people_value%
+Userpic: %userpic_value%

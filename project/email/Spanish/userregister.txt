@@ -1,0 +1,13 @@
+Notificación de registro
+
+Te has registrado como usuario en %url%
+
+
+Id: %id_value%
+Email: %email_value%
+Rol: %fk_id_rol_value%
+Usuario: %username_value%
+Fecha Alta: %created_value%
+Fecha Actualizacion: %updated_value%
+Fk Id Persona: %fk_id_people_value%
+Userpic: %userpic_value%

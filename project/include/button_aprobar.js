@@ -1,0 +1,5 @@
+
+Runner.buttonEvents["aprobar"]=function(pageObj,proxy,pageid){pageObj.buttonNames[pageObj.buttonNames.length]='aprobar';if(!pageObj.buttonEventBefore['aprobar']){pageObj.buttonEventBefore['aprobar']=function(params,ctrl,pageObj,proxy,pageid,rowData,row,submit){var ajax=ctrl;swal("Desea realmente aprobar la Asesoria?",{buttons:{cancel:"Cancelar",proceed:{text:"Aceptar",value:"proceed",}},icon:"warning",}).then(function(value){switch(value){case"proceed":swal("Se aprobo la Asesoria","","success");submit();break;default:swal("Operacion Cancelada!");break;}});return false;}}
+if(!pageObj.buttonEventAfter['aprobar']){pageObj.buttonEventAfter['aprobar']=function(result,ctrl,pageObj,proxy,pageid,rowData,row,params){var ajax=ctrl;setTimeout(function(){window.location.reload();},2000);}}
+$('a[id="aprobar"]').each(function(){if($(this).closest('.gridRowAdd').length){return;}
+this.id="aprobar"+"_"+Runner.genId();var button_aprobar=new Runner.form.Button({id:this.id,btnName:"aprobar"});button_aprobar.init({args:[pageObj,proxy,pageid]});});};
