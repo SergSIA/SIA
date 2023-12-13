@@ -19,21 +19,6 @@ $fieldToolTipsstatus_payment = array();
 $pageTitlesstatus_payment = array();
 $placeHoldersstatus_payment = array();
 
-if(mlang_getcurrentlang()=="English")
-{
-	$fieldLabelsstatus_payment["English"] = array();
-	$fieldToolTipsstatus_payment["English"] = array();
-	$placeHoldersstatus_payment["English"] = array();
-	$pageTitlesstatus_payment["English"] = array();
-	$fieldLabelsstatus_payment["English"]["id"] = "Id";
-	$fieldToolTipsstatus_payment["English"]["id"] = "";
-	$placeHoldersstatus_payment["English"]["id"] = "";
-	$fieldLabelsstatus_payment["English"]["description"] = "Description";
-	$fieldToolTipsstatus_payment["English"]["description"] = "";
-	$placeHoldersstatus_payment["English"]["description"] = "";
-	if (count($fieldToolTipsstatus_payment["English"]))
-		$tdatastatus_payment[".isUseToolTips"] = true;
-}
 if(mlang_getcurrentlang()=="Spanish")
 {
 	$fieldLabelsstatus_payment["Spanish"] = array();
@@ -145,7 +130,7 @@ $tdatastatus_payment[".rowHighlite"] = true;
 
 
 
-												
+									
 
 $tdatastatus_payment[".ajaxCodeSnippetAdded"] = false;
 
@@ -157,7 +142,7 @@ $tdatastatus_payment[".addPageEvents"] = false;
 $tdatastatus_payment[".isUseTimeForSearch"] = false;
 
 
-$tdatastatus_payment[".badgeColor"] = "00C2C5";
+$tdatastatus_payment[".badgeColor"] = "7B68EE";
 
 
 $tdatastatus_payment[".allSearchFields"] = array();
@@ -571,21 +556,21 @@ $detailsTablesData["public.status_payment"] = array();
 				$detailsTablesData["public.status_payment"][$dIndex]["detailKeys"] = array();
 
 	$detailsTablesData["public.status_payment"][$dIndex]["detailKeys"][]="fk_id_status_payment";
-//	public.payment_my
+//	public.payment_advisor
 	
 	
 
 		$dIndex = 1;
 	$detailsParam = array();
-	$detailsParam["dDataSourceTable"]="public.payment_my";
+	$detailsParam["dDataSourceTable"]="public.payment_advisor";
 		$detailsParam["dOriginalTable"] = "public.payment";
 
 
 
 		
 		$detailsParam["dType"]=PAGE_LIST;
-	$detailsParam["dShortTable"] = "payment_my";
-	$detailsParam["dCaptionTable"] = GetTableCaption("public_payment_my");
+	$detailsParam["dShortTable"] = "payment_advisor";
+	$detailsParam["dCaptionTable"] = GetTableCaption("public_payment_advisor");
 	$detailsParam["masterKeys"] =array();
 	$detailsParam["detailKeys"] =array();
 

@@ -19,33 +19,6 @@ $fieldToolTipspayment = array();
 $pageTitlespayment = array();
 $placeHolderspayment = array();
 
-if(mlang_getcurrentlang()=="English")
-{
-	$fieldLabelspayment["English"] = array();
-	$fieldToolTipspayment["English"] = array();
-	$placeHolderspayment["English"] = array();
-	$pageTitlespayment["English"] = array();
-	$fieldLabelspayment["English"]["id"] = "Id";
-	$fieldToolTipspayment["English"]["id"] = "";
-	$placeHolderspayment["English"]["id"] = "";
-	$fieldLabelspayment["English"]["fk_id_consulting"] = "Consulting";
-	$fieldToolTipspayment["English"]["fk_id_consulting"] = "";
-	$placeHolderspayment["English"]["fk_id_consulting"] = "";
-	$fieldLabelspayment["English"]["price"] = "Price";
-	$fieldToolTipspayment["English"]["price"] = "";
-	$placeHolderspayment["English"]["price"] = "";
-	$fieldLabelspayment["English"]["fk_id_status_payment"] = "Status Payment";
-	$fieldToolTipspayment["English"]["fk_id_status_payment"] = "";
-	$placeHolderspayment["English"]["fk_id_status_payment"] = "";
-	$fieldLabelspayment["English"]["fk_id_method_payment"] = "Method Payment";
-	$fieldToolTipspayment["English"]["fk_id_method_payment"] = "";
-	$placeHolderspayment["English"]["fk_id_method_payment"] = "";
-	$fieldLabelspayment["English"]["obs"] = "Obs";
-	$fieldToolTipspayment["English"]["obs"] = "";
-	$placeHolderspayment["English"]["obs"] = "";
-	if (count($fieldToolTipspayment["English"]))
-		$tdatapayment[".isUseToolTips"] = true;
-}
 if(mlang_getcurrentlang()=="Spanish")
 {
 	$fieldLabelspayment["Spanish"] = array();
@@ -58,13 +31,13 @@ if(mlang_getcurrentlang()=="Spanish")
 	$fieldLabelspayment["Spanish"]["fk_id_consulting"] = "Asesoria";
 	$fieldToolTipspayment["Spanish"]["fk_id_consulting"] = "";
 	$placeHolderspayment["Spanish"]["fk_id_consulting"] = "";
-	$fieldLabelspayment["Spanish"]["price"] = "Costo";
+	$fieldLabelspayment["Spanish"]["price"] = "Precio";
 	$fieldToolTipspayment["Spanish"]["price"] = "";
 	$placeHolderspayment["Spanish"]["price"] = "";
 	$fieldLabelspayment["Spanish"]["fk_id_status_payment"] = "Estado Pago";
 	$fieldToolTipspayment["Spanish"]["fk_id_status_payment"] = "";
 	$placeHolderspayment["Spanish"]["fk_id_status_payment"] = "";
-	$fieldLabelspayment["Spanish"]["fk_id_method_payment"] = "Medio Pago";
+	$fieldLabelspayment["Spanish"]["fk_id_method_payment"] = "Metodo de Pago";
 	$fieldToolTipspayment["Spanish"]["fk_id_method_payment"] = "";
 	$placeHolderspayment["Spanish"]["fk_id_method_payment"] = "";
 	$fieldLabelspayment["Spanish"]["obs"] = "Observacion";
@@ -169,7 +142,7 @@ $tdatapayment[".rowHighlite"] = true;
 
 
 
-																																																																								
+																																																						
 
 $tdatapayment[".ajaxCodeSnippetAdded"] = false;
 
@@ -181,7 +154,7 @@ $tdatapayment[".addPageEvents"] = false;
 $tdatapayment[".isUseTimeForSearch"] = false;
 
 
-$tdatapayment[".badgeColor"] = "EDCA00";
+$tdatapayment[".badgeColor"] = "d2af80";
 
 
 $tdatapayment[".allSearchFields"] = array();
@@ -486,16 +459,15 @@ $tdatapayment[".hideMobileList"] = array();
 // Begin Lookup settings
 				$edata["LookupType"] = 2;
 	$edata["LookupTable"] = "public.consulting";
-		$edata["listPageId"] = "list";
-		$edata["autoCompleteFieldsOnEdit"] = 0;
+			$edata["autoCompleteFieldsOnEdit"] = 0;
 	$edata["autoCompleteFields"] = array();
-		$edata["LCType"] = 2;
+		$edata["LCType"] = 0;
 
 	
 		
 	$edata["LinkField"] = "id";
-	$edata["LinkFieldType"] = 20;
-	$edata["DisplayField"] = "id";
+	$edata["LinkFieldType"] = 3;
+	$edata["DisplayField"] = "access";
 
 	
 
@@ -509,7 +481,8 @@ $tdatapayment[".hideMobileList"] = array();
 
 	
 	
-	
+		$edata["SelectSize"] = 1;
+
 // End Lookup Settings
 
 
@@ -1290,7 +1263,7 @@ $masterTablesData["public.payment"] = array();
 	$masterParams = array();
 	$masterParams["mDataSourceTable"]="public.consulting_my_advisor";
 	$masterParams["mOriginalTable"]= $strOriginalDetailsTable;
-	$masterParams["mShortTable"]= "public_consulting_my_advisor";
+	$masterParams["mShortTable"]= "consulting_my_advisor";
 	$masterParams["masterKeys"]= array();
 	$masterParams["detailKeys"]= array();
 

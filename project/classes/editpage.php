@@ -1196,7 +1196,7 @@ class EditPage extends RunnerPage
 		{
 			$messageLink = "";
 			if( !isLogged() || Security::isGuest() )
-				$messageLink = " <a href='#' id='loginButtonContinue'>". mlang_message("SESSION_EXPIRED3") . "</a>";
+				$messageLink = " <a href='#' id='loginButtonContinue'>". "Login" . "</a>";
 			Security::sendPermissionError( $messageLink );
 			return false;
 		}
@@ -1235,7 +1235,7 @@ class EditPage extends RunnerPage
 		{
 			$returnJSON = array();
 			$returnJSON['success'] = false;
-			$returnJSON['message'] = mlang_message("INLINE_ERROR");
+			$returnJSON['message'] = "Se ha producido un error";
 			$returnJSON['fatalError'] = true;
 			echo printJSON($returnJSON);
 			exit();
@@ -1248,7 +1248,7 @@ class EditPage extends RunnerPage
 				exit();
 			}
 			else
-				$_SESSION["message_edit"] = "<< ".mlang_message("INLINE_ERROR")." >>";
+				$_SESSION["message_edit"] = "<< "."Se ha producido un error"." >>";
 		}
 	}
 
@@ -1376,7 +1376,7 @@ class EditPage extends RunnerPage
 		if( $this->isMessageSet() )
 			return;
 
-		$this->setMessage( "<strong>&lt;&lt;&lt; ".mlang_message("RECORD_UPDATED"). " &gt;&gt;&gt;</strong>" );
+		$this->setMessage( "<strong>&lt;&lt;&lt; "."Registro actualizado". " &gt;&gt;&gt;</strong>" );
 	}
 
 	/**
@@ -1600,7 +1600,7 @@ class EditPage extends RunnerPage
 	{
 		if($this->mode == EDIT_INLINE)
 		{
-			echo printJSON(array("success" => false, "message" => mlang_message("RECORD_ISNOT_EDITABLE")));
+			echo printJSON(array("success" => false, "message" => "El registro no se puede editar"));
 			exit();
 		}
 		Security::redirectToList( $this->tName );
@@ -1675,10 +1675,10 @@ class EditPage extends RunnerPage
 	{
 		if( $this->mode != EDIT_INLINE )
 		{
-			$this->message = "<strong>&lt;&lt;&lt; ".mlang_message("RECORD_NOT_UPDATED")."</strong> &gt;&gt;&gt;<br><br>".$message;
+			$this->message = "<strong>&lt;&lt;&lt; "."El registro no ha sido editado"."</strong> &gt;&gt;&gt;<br><br>".$message;
 		}
 		else
-			$this->message = mlang_message("RECORD_NOT_UPDATED").". ".$message;
+			$this->message = "El registro no ha sido editado".". ".$message;
 
 		$this->messageType = MESSAGE_ERROR;
 	}

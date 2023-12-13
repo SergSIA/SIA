@@ -19,36 +19,6 @@ $fieldToolTipscustomers = array();
 $pageTitlescustomers = array();
 $placeHolderscustomers = array();
 
-if(mlang_getcurrentlang()=="English")
-{
-	$fieldLabelscustomers["English"] = array();
-	$fieldToolTipscustomers["English"] = array();
-	$placeHolderscustomers["English"] = array();
-	$pageTitlescustomers["English"] = array();
-	$fieldLabelscustomers["English"]["id"] = "Id";
-	$fieldToolTipscustomers["English"]["id"] = "";
-	$placeHolderscustomers["English"]["id"] = "";
-	$fieldLabelscustomers["English"]["fk_id_people"] = "People";
-	$fieldToolTipscustomers["English"]["fk_id_people"] = "";
-	$placeHolderscustomers["English"]["fk_id_people"] = "";
-	$fieldLabelscustomers["English"]["created_by"] = "Created By";
-	$fieldToolTipscustomers["English"]["created_by"] = "";
-	$placeHolderscustomers["English"]["created_by"] = "";
-	$fieldLabelscustomers["English"]["created_at"] = "Created At";
-	$fieldToolTipscustomers["English"]["created_at"] = "";
-	$placeHolderscustomers["English"]["created_at"] = "";
-	$fieldLabelscustomers["English"]["updated_by"] = "Updated By";
-	$fieldToolTipscustomers["English"]["updated_by"] = "";
-	$placeHolderscustomers["English"]["updated_by"] = "";
-	$fieldLabelscustomers["English"]["updated_at"] = "Updated At";
-	$fieldToolTipscustomers["English"]["updated_at"] = "";
-	$placeHolderscustomers["English"]["updated_at"] = "";
-	$fieldLabelscustomers["English"]["status"] = "Status";
-	$fieldToolTipscustomers["English"]["status"] = "";
-	$placeHolderscustomers["English"]["status"] = "";
-	if (count($fieldToolTipscustomers["English"]))
-		$tdatacustomers[".isUseToolTips"] = true;
-}
 if(mlang_getcurrentlang()=="Spanish")
 {
 	$fieldLabelscustomers["Spanish"] = array();
@@ -61,16 +31,16 @@ if(mlang_getcurrentlang()=="Spanish")
 	$fieldLabelscustomers["Spanish"]["fk_id_people"] = "Persona";
 	$fieldToolTipscustomers["Spanish"]["fk_id_people"] = "";
 	$placeHolderscustomers["Spanish"]["fk_id_people"] = "";
-	$fieldLabelscustomers["Spanish"]["created_by"] = "Creado Por";
+	$fieldLabelscustomers["Spanish"]["created_by"] = "Creado por";
 	$fieldToolTipscustomers["Spanish"]["created_by"] = "";
 	$placeHolderscustomers["Spanish"]["created_by"] = "";
-	$fieldLabelscustomers["Spanish"]["created_at"] = "Creado El";
+	$fieldLabelscustomers["Spanish"]["created_at"] = "Creado el";
 	$fieldToolTipscustomers["Spanish"]["created_at"] = "";
 	$placeHolderscustomers["Spanish"]["created_at"] = "";
-	$fieldLabelscustomers["Spanish"]["updated_by"] = "Actualizado Por";
+	$fieldLabelscustomers["Spanish"]["updated_by"] = "Actualizado por";
 	$fieldToolTipscustomers["Spanish"]["updated_by"] = "";
 	$placeHolderscustomers["Spanish"]["updated_by"] = "";
-	$fieldLabelscustomers["Spanish"]["updated_at"] = "Actualizado El";
+	$fieldLabelscustomers["Spanish"]["updated_at"] = "Actualizado el";
 	$fieldToolTipscustomers["Spanish"]["updated_at"] = "";
 	$placeHolderscustomers["Spanish"]["updated_at"] = "";
 	$fieldLabelscustomers["Spanish"]["status"] = "Estado";
@@ -175,7 +145,7 @@ $tdatacustomers[".rowHighlite"] = true;
 
 
 
-																																				
+																											
 
 $tdatacustomers[".ajaxCodeSnippetAdded"] = false;
 
@@ -187,7 +157,7 @@ $tdatacustomers[".addPageEvents"] = false;
 $tdatacustomers[".isUseTimeForSearch"] = false;
 
 
-$tdatacustomers[".badgeColor"] = "db7093";
+$tdatacustomers[".badgeColor"] = "4169E1";
 
 
 $tdatacustomers[".allSearchFields"] = array();
@@ -340,7 +310,7 @@ $tdatacustomers[".hideMobileList"] = array();
 //	Begin Edit Formats
 	$fdata["EditFormats"] = array();
 
-	$edata = array("EditFormat" => "Lookup wizard");
+	$edata = array("EditFormat" => "Text field");
 
 	
 		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
@@ -350,34 +320,6 @@ $tdatacustomers[".hideMobileList"] = array();
 	
 	
 
-// Begin Lookup settings
-				$edata["LookupType"] = 2;
-	$edata["LookupTable"] = "public.people";
-			$edata["autoCompleteFieldsOnEdit"] = 0;
-	$edata["autoCompleteFields"] = array();
-		$edata["LCType"] = 0;
-
-	
-		
-	$edata["LinkField"] = "id";
-	$edata["LinkFieldType"] = 20;
-	$edata["DisplayField"] = "name";
-
-	
-
-	
-	$edata["LookupOrderBy"] = "";
-
-	
-	
-	
-	
-
-	
-	
-		$edata["SelectSize"] = 1;
-
-// End Lookup Settings
 
 
 		$edata["IsRequired"] = true;
@@ -394,14 +336,17 @@ $tdatacustomers[".hideMobileList"] = array();
 	
 	
 	
-	
-	
+			$edata["HTML5InuptType"] = "text";
+
+		$edata["EditParams"] = "";
+		
 		$edata["controlWidth"] = 200;
 
 //	Begin validation
 	$edata["validateAs"] = array();
 	$edata["validateAs"]["basicValidate"] = array();
 	$edata["validateAs"]["customMessages"] = array();
+				$edata["validateAs"]["basicValidate"][] = getJsValidatorName("Number");
 						$edata["validateAs"]["basicValidate"][] = "IsRequired";
 		
 	
@@ -525,7 +470,7 @@ $tdatacustomers[".hideMobileList"] = array();
 	
 		
 	$edata["LinkField"] = "id";
-	$edata["LinkFieldType"] = 0;
+	$edata["LinkFieldType"] = 3;
 	$edata["DisplayField"] = "name";
 
 	
@@ -587,7 +532,7 @@ $tdatacustomers[".hideMobileList"] = array();
 
 
 // the field's search options settings
-		$fdata["defaultSearchOption"] = "Equals";
+		$fdata["defaultSearchOption"] = "Contains";
 
 			// the default search options list
 				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
@@ -822,8 +767,7 @@ $tdatacustomers[".hideMobileList"] = array();
 
 
 
-		$edata["IsRequired"] = true;
-
+	
 	
 	
 	
@@ -847,8 +791,7 @@ $tdatacustomers[".hideMobileList"] = array();
 	$edata["validateAs"] = array();
 	$edata["validateAs"]["basicValidate"] = array();
 	$edata["validateAs"]["customMessages"] = array();
-						$edata["validateAs"]["basicValidate"][] = "IsRequired";
-		
+	
 	
 	//	End validation
 
@@ -1102,8 +1045,7 @@ $tdatacustomers[".hideMobileList"] = array();
 
 
 
-		$edata["IsRequired"] = true;
-
+	
 	
 	
 	
@@ -1127,8 +1069,7 @@ $tdatacustomers[".hideMobileList"] = array();
 	$edata["validateAs"] = array();
 	$edata["validateAs"]["basicValidate"] = array();
 	$edata["validateAs"]["customMessages"] = array();
-						$edata["validateAs"]["basicValidate"][] = "IsRequired";
-		
+	
 	
 	//	End validation
 
@@ -1380,36 +1321,6 @@ $detailsTablesData["public.customers"] = array();
 				$detailsTablesData["public.customers"][$dIndex]["detailKeys"] = array();
 
 	$detailsTablesData["public.customers"][$dIndex]["detailKeys"][]="fk_id_customer";
-//	public.consulting_my_advisor
-	
-	
-
-		$dIndex = 2;
-	$detailsParam = array();
-	$detailsParam["dDataSourceTable"]="public.consulting_my_advisor";
-		$detailsParam["dOriginalTable"] = "public.consulting";
-
-
-
-		
-		$detailsParam["dType"]=PAGE_LIST;
-	$detailsParam["dShortTable"] = "public_consulting_my_advisor";
-	$detailsParam["dCaptionTable"] = GetTableCaption("public_consulting_my_advisor");
-	$detailsParam["masterKeys"] =array();
-	$detailsParam["detailKeys"] =array();
-
-
-		
-	$detailsTablesData["public.customers"][$dIndex] = $detailsParam;
-
-	
-		$detailsTablesData["public.customers"][$dIndex]["masterKeys"] = array();
-
-	$detailsTablesData["public.customers"][$dIndex]["masterKeys"][]="id";
-
-				$detailsTablesData["public.customers"][$dIndex]["detailKeys"] = array();
-
-	$detailsTablesData["public.customers"][$dIndex]["detailKeys"][]="fk_id_customer";
 //endif
 
 // tables which are master tables for current table (detail)
@@ -1449,10 +1360,8 @@ $masterTablesData["public.customers"] = array();
 					$masterTablesData["public.customers"][1] = $masterParams;
 				$masterTablesData["public.customers"][1]["masterKeys"] = array();
 	$masterTablesData["public.customers"][1]["masterKeys"][]="id";
-				$masterTablesData["public.customers"][1]["masterKeys"][]="id";
 				$masterTablesData["public.customers"][1]["detailKeys"] = array();
-	$masterTablesData["public.customers"][1]["detailKeys"][]="id";
-				$masterTablesData["public.customers"][1]["detailKeys"][]="fk_id_people";
+	$masterTablesData["public.customers"][1]["detailKeys"][]="fk_id_people";
 		
 	//endif
 // -----------------end  prepare master-details data arrays ------------------------------//

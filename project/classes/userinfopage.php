@@ -628,7 +628,7 @@ class UserInfoPage extends EditPage {
 		}
 		if( !$this->verify2fCode( $twofData, $code ) ) {
 			//	just wrong code, ask to reype
-			$this->send2fError( mlang_message("WRONG_CODE"), 'wrong' );
+			$this->send2fError( "Codigo erroneo", 'wrong' );
 		}
 
 		//	save data in the database

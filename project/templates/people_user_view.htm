@@ -93,6 +93,25 @@
 >
 	<div edit-form-cell class="clearfix">
 				
+{BEGIN id_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_id}  r-vertical-field" data-fieldname="id" data-signal-error-for="id{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field" {$item_integrated_edit_field} data-pageid="{$pageid}" data-field="id" data-fieldname="id" >
+
+	
+	<label class="col-md-offset-3 col-md-6" for="{$labelfor_id}">
+		
+		{BEGIN id_label}{$label public_people_user id }{END id_label}
+	</label>
+	<div class="col-md-offset-3 col-md-6" >
+		{$id_value}	</div>
+
+		
+</div>
+
+
+{END id_fieldblock}
+											
 {BEGIN name_fieldblock}
 
 
@@ -249,7 +268,7 @@
 <span data-itemtype="view_back_list" data-itemid="view_back_list" {$item_view_back_list} data-pageid="{$pageid}" data-small data-button-item>
 	<a type="button" title="" class="btn btn-default   
 	" {$backbutton_attrs} >
-							{mlang_message BACK_TO_LIST}			</a>
+							Volver a la lista			</a>
 </span>
 {END back_button}
 	 
@@ -257,7 +276,7 @@
 <span data-itemtype="view_close" data-itemid="view_close" {$item_view_close} data-pageid="{$pageid}" data-small data-button-item>
 	<a type="button" title="" class="btn btn-default   
 	" href="#" {$closebutton_attrs} >
-							{mlang_message CLOSE_WINDOW}			</a>
+							Cerrar ventana			</a>
 </span>
 {END close_button}
 	</div>			 
@@ -277,7 +296,7 @@
 	<li data-itemtype="view_edit" data-itemid="view_edit" {$item_view_edit} data-pageid="{$pageid}" data-small >
 				<a  href="people_user_edit.php?{$editlink}" {$edit_page_button_attrs}  title="" >
 				
-		{mlang_message EDIT}		
+		Editar		
 		</a>
 	</li>
 {END edit_page_button}

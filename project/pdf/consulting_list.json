@@ -225,7 +225,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{mlang_message DISPLAYING}","hidden":"{$item_hide_details_found}","isHtml":true,"page_indicator":true},
+			{"text":"Mostrando %first% - %last% de %total%","hidden":"{$item_hide_details_found}","isHtml":true,"page_indicator":true},
 				
 				
 			{"text":"","hidden":"{$item_hide_page_size}"},
@@ -450,11 +450,11 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel public_consulting start_h }","hidden":"{$item_hide_simple_grid_field13}","bold":true},
+			{"text":"{$jslabel public_consulting end }","hidden":"{$item_hide_simple_grid_field13}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
-              "alignment": '{$start_h_align}',
+              "alignment": '{$end_align}',
   },
 
 {END cellblock_grid_headcell_field4}
@@ -476,11 +476,11 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel public_consulting end }","hidden":"{$item_hide_simple_grid_field14}","bold":true},
+			{"text":"{$jslabel public_consulting fk_id_status_consulting }","hidden":"{$item_hide_simple_grid_field14}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
-              "alignment": '{$end_align}',
+              "alignment": '{$fk_id_status_consulting_align}',
   },
 
 {END cellblock_grid_headcell_field5}
@@ -502,11 +502,11 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel public_consulting end_h }","hidden":"{$item_hide_simple_grid_field15}","bold":true},
+			{"text":"{$jslabel public_consulting access }","hidden":"{$item_hide_simple_grid_field15}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
-              "alignment": '{$end_h_align}',
+              "alignment": '{$access_align}',
   },
 
 {END cellblock_grid_headcell_field6}
@@ -528,11 +528,11 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel public_consulting fk_id_status_consulting }","hidden":"{$item_hide_simple_grid_field16}","bold":true},
+			{"text":"{$jslabel public_consulting start_h }","hidden":"{$item_hide_simple_grid_field16}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
-              "alignment": '{$fk_id_status_consulting_align}',
+              "alignment": '{$start_h_align}',
   },
 
 {END cellblock_grid_headcell_field7}
@@ -554,11 +554,11 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel public_consulting access }","hidden":"{$item_hide_simple_grid_field17}","bold":true},
+			{"text":"{$jslabel public_consulting end_h }","hidden":"{$item_hide_simple_grid_field17}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
-              "alignment": '{$access_align}',
+              "alignment": '{$end_h_align}',
   },
 
 {END cellblock_grid_headcell_field8}
@@ -783,32 +783,6 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":{$start_h_pdfvalue},"hidden":"{$item_hide_simple_grid_field7}"},
-				
-		  ],
-  "border": [ true, true, true, true ],
-              "alignment": '{$start_h_align}',
-  },
-
-{END cellblock_grid_cell_field4}
-																							{BEGIN cellblock_grid_cell_field5}
-{
-	cellId: 'cell_field5',
-	col:0,
-	row:0,
-			style: 'bodycell',
-		
-		
-	//	dynamic colspan/rowspan
-
-		
-						
-	
-	
-	
-			"text": [
-		
-				
 			{"text":{$end_pdfvalue},"hidden":"{$item_hide_simple_grid_field4}"},
 				
 		  ],
@@ -816,36 +790,10 @@ pdfDocument = {
               "alignment": '{$end_align}',
   },
 
-{END cellblock_grid_cell_field5}
-																							{BEGIN cellblock_grid_cell_field6}
+{END cellblock_grid_cell_field4}
+																							{BEGIN cellblock_grid_cell_field5}
 {
-	cellId: 'cell_field6',
-	col:0,
-	row:0,
-			style: 'bodycell',
-		
-		
-	//	dynamic colspan/rowspan
-
-		
-						
-	
-	
-	
-			"text": [
-		
-				
-			{"text":{$end_h_pdfvalue},"hidden":"{$item_hide_simple_grid_field8}"},
-				
-		  ],
-  "border": [ true, true, true, true ],
-              "alignment": '{$end_h_align}',
-  },
-
-{END cellblock_grid_cell_field6}
-																							{BEGIN cellblock_grid_cell_field7}
-{
-	cellId: 'cell_field7',
+	cellId: 'cell_field5',
 	col:0,
 	row:0,
 			style: 'bodycell',
@@ -868,10 +816,10 @@ pdfDocument = {
               "alignment": '{$fk_id_status_consulting_align}',
   },
 
-{END cellblock_grid_cell_field7}
-																							{BEGIN cellblock_grid_cell_field8}
+{END cellblock_grid_cell_field5}
+																							{BEGIN cellblock_grid_cell_field6}
 {
-	cellId: 'cell_field8',
+	cellId: 'cell_field6',
 	col:0,
 	row:0,
 			style: 'bodycell',
@@ -892,6 +840,58 @@ pdfDocument = {
 		  ],
   "border": [ true, true, true, true ],
               "alignment": '{$access_align}',
+  },
+
+{END cellblock_grid_cell_field6}
+																							{BEGIN cellblock_grid_cell_field7}
+{
+	cellId: 'cell_field7',
+	col:0,
+	row:0,
+			style: 'bodycell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+						
+	
+	
+	
+			"text": [
+		
+				
+			{"text":{$start_h_pdfvalue},"hidden":"{$item_hide_simple_grid_field7}"},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": '{$start_h_align}',
+  },
+
+{END cellblock_grid_cell_field7}
+																							{BEGIN cellblock_grid_cell_field8}
+{
+	cellId: 'cell_field8',
+	col:0,
+	row:0,
+			style: 'bodycell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+						
+	
+	
+	
+			"text": [
+		
+				
+			{"text":{$end_h_pdfvalue},"hidden":"{$item_hide_simple_grid_field8}"},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": '{$end_h_align}',
   },
 
 {END cellblock_grid_cell_field8}
@@ -925,9 +925,9 @@ pdfDocument = {
 		{END details_payment},
 				
 				
-			 {BEGIN details_payment_my}
-			{$displayDetailTable_payment_my }
-		{END details_payment_my},
+			 {BEGIN details_payment_advisor}
+			{$displayDetailTable_payment_advisor }
+		{END details_payment_advisor},
 				
 		  ],
   "border": [ true, true, true, true ],

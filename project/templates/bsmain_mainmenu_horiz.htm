@@ -384,13 +384,17 @@ navbar-nav
 
 			</li>
 			{END item18_menulink}
-				
+				</ul>
+	</li>
+	{END item12_menulink}
+	
+	
+	{BEGIN item19_menulink}
+	<li class=" {$item19_current}">
 		
-					{BEGIN item19_menulink}
-			<li class=" {$item19_current}">
-				
 <a {$item19_menulink_attrs} title="{$item19_tooltip}" 
-				data-menu-h
+			data-menu-top
+			data-menu-h
 		data-menu-link
 >
 	<span class="
@@ -402,9 +406,6 @@ navbar-nav
 			</span>
 	</a>
 
-			</li>
-			{END item19_menulink}
-				</ul>
 	</li>
-	{END item12_menulink}
+	{END item19_menulink}
 </ul>

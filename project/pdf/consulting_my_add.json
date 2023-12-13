@@ -125,6 +125,9 @@ pdfDocument = {
 									{BEGIN col_grid_0}
 						"*", 
 							{END col_grid_0}
+												{BEGIN col_grid_1}
+						"*", 
+							{END col_grid_1}
 					 ],	
 		
 			heights: [
@@ -138,97 +141,16 @@ pdfDocument = {
 			"%",
 						{END row_grid_1}
 			 
+								{BEGIN row_grid_2}
+						
+			"%",
+						{END row_grid_2}
+			 
 				],
 	
 		body: [
 				
 				{BEGIN row_grid_0}
-				[
-																{BEGIN cellblock_grid_c3}
-{
-	cellId: 'c3',
-	col:0,
-	row:0,
-		
-		
-	//	dynamic colspan/rowspan
-
-		
-						
-	
-	
-	
-			"stack": [
-		
-						 
-		{
-		layout: 'panel',
-		
-		table: {
-			tableForm: true,
-			location: 'section',
-			widths: ['*'],
-			body: [
-				[{text: '{$custom NEW_SECTION}', style: 'tableHeader'}],
-				[{
-					table: {
-						tableForm: true,
-						widths: [
-															{BEGIN col_section_0}
-									"*", 
-								{END col_section_0}
-							 						
-						],
-						body: [
-								
-				{BEGIN row_section_0}
-				[
-																{BEGIN cellblock_section_c1}
-{
-	cellId: 'c1',
-	col:0,
-	row:0,
-		
-		
-	//	dynamic colspan/rowspan
-
-		
-						
-	
-	
-	
-			"stack": [
-		
-				
-			{"hidden":"{$item_hide_integrated_edit_field1}","stack":[{"text":"{$jslabel public_consulting_my fk_id_advisor }","bold":true},{"text":{$fk_id_advisor_pdfvalue}}],"margin":[0,0,0,15]},
-				
-		  ],
-  "border": [ false, false, false, false ],
-              "alignment": 'left',
-  },
-
-{END cellblock_section_c1}
-											],
-				{END row_section_0}
-		
-						]
-					}
-				}]
-
-			]
-		},
-		margin: [0,0,0,15],
-	},
-				
-		  ],
-  "border": [ false, false, false, false ],
-              "alignment": 'left',
-  },
-
-{END cellblock_grid_c3}
-											],
-				{END row_grid_0}
-						{BEGIN row_grid_1}
 				[
 																{BEGIN cellblock_grid_c4}
 {
@@ -246,35 +168,45 @@ pdfDocument = {
 	
 			"stack": [
 		
-						 
-		{
-		layout: 'panel',
-		
-		table: {
-			tableForm: true,
-			location: 'section1',
-			widths: ['*'],
-			body: [
-				[{text: '{$custom NEW_SECTION1}', style: 'tableHeader'}],
-				[{
-					table: {
-						tableForm: true,
-						widths: [
-															{BEGIN col_section1_0}
-									"*", 
-								{END col_section1_0}
-															{BEGIN col_section1_1}
-									"*", 
-								{END col_section1_1}
-							 						
-						],
-						body: [
-								
-				{BEGIN row_section1_0}
-				[
-																{BEGIN cellblock_section1_c1}
+				
+			{"hidden":"{$item_hide_integrated_edit_field}","stack":[{"text":"{$jslabel public_consulting_my fk_id_advisor }","bold":true},{"text":{$fk_id_advisor_pdfvalue}}],"margin":[0,0,0,15]},
+				
+		  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'left',
+  },
+
+{END cellblock_grid_c4}
+																							{BEGIN cellblock_grid_c5}
 {
-	cellId: 'c1',
+	cellId: 'c5',
+	col:0,
+	row:0,
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+						
+	
+	
+	
+			"stack": [
+		
+				'',
+	  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'left',
+  },
+
+{END cellblock_grid_c5}
+											],
+				{END row_grid_0}
+						{BEGIN row_grid_1}
+				[
+																{BEGIN cellblock_grid_c3}
+{
+	cellId: 'c3',
 	col:0,
 	row:0,
 		
@@ -289,18 +221,15 @@ pdfDocument = {
 			"stack": [
 		
 				
-			{"hidden":"{$item_hide_integrated_edit_field3}","stack":[{"text":"{$jslabel public_consulting_my start }","bold":true},{"text":{$start_pdfvalue}}],"margin":[0,0,0,15]},
-				
-				
-			{"hidden":"{$item_hide_integrated_edit_field4}","stack":[{"text":"{$jslabel public_consulting_my end }","bold":true},{"text":{$end_pdfvalue}}],"margin":[0,0,0,15]},
+			{"hidden":"{$item_hide_integrated_edit_field2}","stack":[{"text":"{$jslabel public_consulting_my start }","bold":true},{"text":{$start_pdfvalue}}],"margin":[0,0,0,15]},
 				
 		  ],
   "border": [ false, false, false, false ],
               "alignment": 'left',
   },
 
-{END cellblock_section1_c1}
-																							{BEGIN cellblock_section1_c}
+{END cellblock_grid_c3}
+																							{BEGIN cellblock_grid_c}
 {
 	cellId: 'c',
 	col:0,
@@ -317,37 +246,70 @@ pdfDocument = {
 			"stack": [
 		
 				
-			{"hidden":"{$item_hide_integrated_edit_field}","stack":[{"text":"{$jslabel public_consulting_my start_h }","bold":true},{"text":{$start_h_pdfvalue}}],"margin":[0,0,0,15]},
-				
-				
-			{"hidden":"{$item_hide_integrated_edit_field2}","stack":[{"text":"{$jslabel public_consulting_my end_h }","bold":true},{"text":{$end_h_pdfvalue}}],"margin":[0,0,0,15]},
+			{"hidden":"{$item_hide_integrated_edit_field6}","stack":[{"text":"{$jslabel public_consulting_my start_h }","bold":true},{"text":{$start_h_pdfvalue}}],"margin":[0,0,0,15]},
 				
 		  ],
   "border": [ false, false, false, false ],
               "alignment": 'left',
   },
 
-{END cellblock_section1_c}
-											],
-				{END row_section1_0}
-		
-						]
-					}
-				}]
-
-			]
-		},
-		margin: [0,0,0,15],
-	},
-				
-		  ],
-  "border": [ false, false, false, false ],
-              "alignment": 'left',
-  },
-
-{END cellblock_grid_c4}
+{END cellblock_grid_c}
 											],
 				{END row_grid_1}
+						{BEGIN row_grid_2}
+				[
+																{BEGIN cellblock_grid_c6}
+{
+	cellId: 'c6',
+	col:0,
+	row:0,
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+						
+	
+	
+	
+			"stack": [
+		
+				
+			{"hidden":"{$item_hide_integrated_edit_field3}","stack":[{"text":"{$jslabel public_consulting_my end }","bold":true},{"text":{$end_pdfvalue}}],"margin":[0,0,0,15]},
+				
+		  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'left',
+  },
+
+{END cellblock_grid_c6}
+																							{BEGIN cellblock_grid_c1}
+{
+	cellId: 'c1',
+	col:0,
+	row:0,
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+						
+	
+	
+	
+			"stack": [
+		
+				
+			{"hidden":"{$item_hide_integrated_edit_field7}","stack":[{"text":"{$jslabel public_consulting_my end_h }","bold":true},{"text":{$end_h_pdfvalue}}],"margin":[0,0,0,15]},
+				
+		  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'left',
+  },
+
+{END cellblock_grid_c1}
+											],
+				{END row_grid_2}
 		
 		]
 	}

@@ -46,26 +46,6 @@ while( isset( $_REQUEST["masterkey".$i] ) ) {
 }
 
 
-if($buttId=='cancelar')
-{
-	//  for login page users table can be turned off
-	if( $table != GLOBAL_PAGES )
-	{
-		require_once("include/". GetTableURL( $table ) ."_variables.php");
-		$cipherer = new RunnerCipherer( $table );
-	}
-	buttonHandler_cancelar($params);
-}
-if($buttId=='start')
-{
-	//  for login page users table can be turned off
-	if( $table != GLOBAL_PAGES )
-	{
-		require_once("include/". GetTableURL( $table ) ."_variables.php");
-		$cipherer = new RunnerCipherer( $table );
-	}
-	buttonHandler_start($params);
-}
 if($buttId=='aprobar')
 {
 	//  for login page users table can be turned off
@@ -76,7 +56,7 @@ if($buttId=='aprobar')
 	}
 	buttonHandler_aprobar($params);
 }
-if($buttId=='cancelarCliente')
+if($buttId=='rechazar')
 {
 	//  for login page users table can be turned off
 	if( $table != GLOBAL_PAGES )
@@ -84,7 +64,17 @@ if($buttId=='cancelarCliente')
 		require_once("include/". GetTableURL( $table ) ."_variables.php");
 		$cipherer = new RunnerCipherer( $table );
 	}
-	buttonHandler_cancelarCliente($params);
+	buttonHandler_rechazar($params);
+}
+if($buttId=='finalizar')
+{
+	//  for login page users table can be turned off
+	if( $table != GLOBAL_PAGES )
+	{
+		require_once("include/". GetTableURL( $table ) ."_variables.php");
+		$cipherer = new RunnerCipherer( $table );
+	}
+	buttonHandler_finalizar($params);
 }
 
 
@@ -92,122 +82,6 @@ if($buttId=='cancelarCliente')
 
 
 // create table and non table handlers
-function buttonHandler_cancelar($params)
-{
-	global $strTableName;
-	$result = array();
-
-	// create new button object for get record data
-	$params["keys"] = (array)my_json_decode(postvalue('keys'));
-	$params["isManyKeys"] = postvalue('isManyKeys');
-	$params["location"] = postvalue('location');
-
-	$button = new Button($params);
-	$ajax = $button; // for examle from HELP
-	$keys = $button->getKeys();
-
-	$masterData = false;
-	if ( isset($params['masterData']) && count($params['masterData']) > 0 )
-	{
-		$masterData = $params['masterData'];
-	}
-	else if ( isset($params["masterTable"]) )
-	{
-		$masterData = $button->getMasterData($params["masterTable"]);
-	}
-	
-	$contextParams = array();
-	if ( $params["location"] == PAGE_VIEW )
-	{
-		$contextParams["data"] = $button->getRecordData();
-		$contextParams["masterData"] = $masterData;
-	}
-	else if ( $params["location"] == PAGE_EDIT )
-	{
-		$contextParams["data"] = $button->getRecordData();
-		$contextParams["newData"] = $params['fieldsData'];
-		$contextParams["masterData"] = $masterData;
-	}
-	else if ( $params["location"] == "grid" )
-	{	
-		$params["location"] = "list";
-		$contextParams["data"] = $button->getRecordData();
-		$contextParams["newData"] = $params['fieldsData'];
-		$contextParams["masterData"] = $masterData;
-	}
-	else 
-	{
-		$contextParams["masterData"] = $masterData;
-	}
-
-	RunnerContext::push( new RunnerContextItem( $params["location"], $contextParams));
-	// Put your code here.
-$sql = "UPDATE public.consulting SET fk_id_status_consulting=4
-WHERE id=".$params['keys']['id'];
-db_exec($sql);
-;
-	RunnerContext::pop();
-	echo my_json_encode($result);
-	$button->deleteTempFiles();
-}
-function buttonHandler_start($params)
-{
-	global $strTableName;
-	$result = array();
-
-	// create new button object for get record data
-	$params["keys"] = (array)my_json_decode(postvalue('keys'));
-	$params["isManyKeys"] = postvalue('isManyKeys');
-	$params["location"] = postvalue('location');
-
-	$button = new Button($params);
-	$ajax = $button; // for examle from HELP
-	$keys = $button->getKeys();
-
-	$masterData = false;
-	if ( isset($params['masterData']) && count($params['masterData']) > 0 )
-	{
-		$masterData = $params['masterData'];
-	}
-	else if ( isset($params["masterTable"]) )
-	{
-		$masterData = $button->getMasterData($params["masterTable"]);
-	}
-	
-	$contextParams = array();
-	if ( $params["location"] == PAGE_VIEW )
-	{
-		$contextParams["data"] = $button->getRecordData();
-		$contextParams["masterData"] = $masterData;
-	}
-	else if ( $params["location"] == PAGE_EDIT )
-	{
-		$contextParams["data"] = $button->getRecordData();
-		$contextParams["newData"] = $params['fieldsData'];
-		$contextParams["masterData"] = $masterData;
-	}
-	else if ( $params["location"] == "grid" )
-	{	
-		$params["location"] = "list";
-		$contextParams["data"] = $button->getRecordData();
-		$contextParams["newData"] = $params['fieldsData'];
-		$contextParams["masterData"] = $masterData;
-	}
-	else 
-	{
-		$contextParams["masterData"] = $masterData;
-	}
-
-	RunnerContext::push( new RunnerContextItem( $params["location"], $contextParams));
-	// Put your code here.
-$sql = "UPDATE public.consulting SET fk_id_status_consulting=3
-WHERE id=".$params['keys']['id'];
-db_exec($sql);
-;
-	RunnerContext::pop();
-	echo my_json_encode($result);
-	$button->deleteTempFiles();
-}
 function buttonHandler_aprobar($params)
 {
 	global $strTableName;
@@ -266,7 +140,7 @@ db_exec($sql);
 	echo my_json_encode($result);
 	$button->deleteTempFiles();
 }
-function buttonHandler_cancelarCliente($params)
+function buttonHandler_rechazar($params)
 {
 	global $strTableName;
 	$result = array();
@@ -320,6 +194,64 @@ $sql = "UPDATE public.consulting SET fk_id_status_consulting=4
 WHERE id=".$params['keys']['id'];
 db_exec($sql);
 
+;
+	RunnerContext::pop();
+	echo my_json_encode($result);
+	$button->deleteTempFiles();
+}
+function buttonHandler_finalizar($params)
+{
+	global $strTableName;
+	$result = array();
+
+	// create new button object for get record data
+	$params["keys"] = (array)my_json_decode(postvalue('keys'));
+	$params["isManyKeys"] = postvalue('isManyKeys');
+	$params["location"] = postvalue('location');
+
+	$button = new Button($params);
+	$ajax = $button; // for examle from HELP
+	$keys = $button->getKeys();
+
+	$masterData = false;
+	if ( isset($params['masterData']) && count($params['masterData']) > 0 )
+	{
+		$masterData = $params['masterData'];
+	}
+	else if ( isset($params["masterTable"]) )
+	{
+		$masterData = $button->getMasterData($params["masterTable"]);
+	}
+	
+	$contextParams = array();
+	if ( $params["location"] == PAGE_VIEW )
+	{
+		$contextParams["data"] = $button->getRecordData();
+		$contextParams["masterData"] = $masterData;
+	}
+	else if ( $params["location"] == PAGE_EDIT )
+	{
+		$contextParams["data"] = $button->getRecordData();
+		$contextParams["newData"] = $params['fieldsData'];
+		$contextParams["masterData"] = $masterData;
+	}
+	else if ( $params["location"] == "grid" )
+	{	
+		$params["location"] = "list";
+		$contextParams["data"] = $button->getRecordData();
+		$contextParams["newData"] = $params['fieldsData'];
+		$contextParams["masterData"] = $masterData;
+	}
+	else 
+	{
+		$contextParams["masterData"] = $masterData;
+	}
+
+	RunnerContext::push( new RunnerContextItem( $params["location"], $contextParams));
+	// Put your code here.
+$sql = "UPDATE public.consulting SET fk_id_status_consulting=3
+WHERE id=".$params['keys']['id'];
+db_exec($sql);
 ;
 	RunnerContext::pop();
 	echo my_json_encode($result);

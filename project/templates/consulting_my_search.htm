@@ -290,6 +290,28 @@
 </div>
 
 {END end_h_fieldblock}
+											
+{BEGIN fk_id_people_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_fk_id_people}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="fk_id_people{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field9" {$item_integrated_search_field9} data-pageid="{$pageid}" data-field="fk_id_people" data-fieldname="fk_id_people" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_fk_id_people}">
+		{$label public_consulting_my fk_id_people }	</label>
+	<div class="r-search-option">
+		{$searchtype_fk_id_people}
+	</div>
+	<div class="r-search-field">
+		{$fk_id_people_editcontrol}	</div>
+	<div class="r-search-field">
+		{$fk_id_people_editcontrol1}
+	</div>
+	
+</div>
+
+{END fk_id_people_fieldblock}
 	
 								</td>
 			{END cellblock_grid_c3}
@@ -313,20 +335,20 @@
 		<span data-itemtype="search_search" data-itemid="search_search" {$item_search_search} data-pageid="{$pageid}" data-small data-button-item>
 	<a type="button" title="" class="btn btn-primary   
 	" {$searchbutton_attrs} >
-							{mlang_message SEARCH}			</a>
+							Buscar			</a>
 </span>
 	 
 		<span data-itemtype="search_reset" data-itemid="search_reset" {$item_search_reset} data-pageid="{$pageid}" data-small data-button-item>
 	<a type="button" title="" class="btn btn-default   
 	" {$resetbutton_attrs} >
-							{mlang_message RESET}			</a>
+							Reiniciar			</a>
 </span>
 	 
 		{BEGIN back_button}
 <span data-itemtype="search_back_list" data-itemid="search_back_list" {$item_search_back_list} data-pageid="{$pageid}" data-small data-button-item>
 	<a type="button" title="" class="btn btn-default   
 	" {$backbutton_attrs} >
-							{mlang_message BACK_TO_LIST}			</a>
+							Volver a la lista			</a>
 </span>
 {END back_button}
 	 
@@ -334,7 +356,7 @@
 <span data-itemtype="search_cancel" data-itemid="search_cancel" {$item_search_cancel} data-pageid="{$pageid}" data-small data-button-item>
 	<a type="button" title="" class="btn btn-default   
 	" id="cancelButton{$id}" >
-							{mlang_message CANCEL}			</a>
+							Cancelar			</a>
 </span>
 {END cancel_button}
 	</div>					</div>

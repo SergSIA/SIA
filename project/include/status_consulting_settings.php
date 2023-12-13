@@ -19,21 +19,6 @@ $fieldToolTipsstatus_consulting = array();
 $pageTitlesstatus_consulting = array();
 $placeHoldersstatus_consulting = array();
 
-if(mlang_getcurrentlang()=="English")
-{
-	$fieldLabelsstatus_consulting["English"] = array();
-	$fieldToolTipsstatus_consulting["English"] = array();
-	$placeHoldersstatus_consulting["English"] = array();
-	$pageTitlesstatus_consulting["English"] = array();
-	$fieldLabelsstatus_consulting["English"]["id"] = "Id";
-	$fieldToolTipsstatus_consulting["English"]["id"] = "";
-	$placeHoldersstatus_consulting["English"]["id"] = "";
-	$fieldLabelsstatus_consulting["English"]["description"] = "Description";
-	$fieldToolTipsstatus_consulting["English"]["description"] = "";
-	$placeHoldersstatus_consulting["English"]["description"] = "";
-	if (count($fieldToolTipsstatus_consulting["English"]))
-		$tdatastatus_consulting[".isUseToolTips"] = true;
-}
 if(mlang_getcurrentlang()=="Spanish")
 {
 	$fieldLabelsstatus_consulting["Spanish"] = array();
@@ -145,7 +130,7 @@ $tdatastatus_consulting[".rowHighlite"] = true;
 
 
 
-												
+									
 
 $tdatastatus_consulting[".ajaxCodeSnippetAdded"] = false;
 
@@ -157,7 +142,7 @@ $tdatastatus_consulting[".addPageEvents"] = false;
 $tdatastatus_consulting[".isUseTimeForSearch"] = false;
 
 
-$tdatastatus_consulting[".badgeColor"] = "4682B4";
+$tdatastatus_consulting[".badgeColor"] = "DB7093";
 
 
 $tdatastatus_consulting[".allSearchFields"] = array();
@@ -614,7 +599,7 @@ $detailsTablesData["public.status_consulting"] = array();
 
 		
 		$detailsParam["dType"]=PAGE_LIST;
-	$detailsParam["dShortTable"] = "public_consulting_my_advisor";
+	$detailsParam["dShortTable"] = "consulting_my_advisor";
 	$detailsParam["dCaptionTable"] = GetTableCaption("public_consulting_my_advisor");
 	$detailsParam["masterKeys"] =array();
 	$detailsParam["detailKeys"] =array();

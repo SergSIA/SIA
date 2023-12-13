@@ -38,6 +38,7 @@ function BeforeAdd(&$values, &$message, $inline, $pageObject)
 
 		$values['created_by']= $_SESSION["UserData"]["id"];
 $values['updated_by']= $_SESSION["UserData"]["id"];
+
 // Place event code here.
 // Use "Add Action" button to add code snippets.
 

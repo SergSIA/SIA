@@ -1,0 +1,5 @@
+
+Runner.buttonEvents["rechazar"]=function(pageObj,proxy,pageid){pageObj.buttonNames[pageObj.buttonNames.length]='rechazar';if(!pageObj.buttonEventBefore['rechazar']){pageObj.buttonEventBefore['rechazar']=function(params,ctrl,pageObj,proxy,pageid,rowData,row,submit){var ajax=ctrl;params;swal("Desea realmente cancelar la Asesoria?",{buttons:{cancel:"Cancelar",proceed:{text:"Aceptar",value:"proceed",}},icon:"warning",}).then(function(value){switch(value){case"proceed":swal("Se dio de baja la Asesoria","","success");submit();break;default:swal("Operacion Cancelada!");break;}});return false;}}
+if(!pageObj.buttonEventAfter['rechazar']){pageObj.buttonEventAfter['rechazar']=function(result,ctrl,pageObj,proxy,pageid,rowData,row,params){var ajax=ctrl;setTimeout(function(){window.location.reload();},2000);}}
+$('a[id="rechazar"]').each(function(){if($(this).closest('.gridRowAdd').length){return;}
+this.id="rechazar"+"_"+Runner.genId();var button_rechazar=new Runner.form.Button({id:this.id,btnName:"rechazar"});button_rechazar.init({args:[pageObj,proxy,pageid]});});};

@@ -364,14 +364,14 @@ class LoginPage extends RunnerPage
 		$destination = Security::twoFactorDeliveryInfo( Security::provisionalUserData() );
 		$twofMessage = "";
 		if( $destination["method"] === "phone" ) {
-			$twofMessage = str_replace( "%phone%", $destination["address"], mlang_message("MESSAGE_SENT_TO_PNONE") );
+			$twofMessage = str_replace( "%phone%", $destination["address"], "Un mensaje de texto con su código ha sido enviada a: %phone%" );
 		} else if( $destination["method"] === "email" ) {
-			$twofMessage = str_replace( "%email%", $destination["address"], mlang_message("MESSAGE_SENT_TO_EMAIL") );
+			$twofMessage = str_replace( "%email%", $destination["address"], "Un correo electrónico con su código ha sido enviada a %email%." );
 		} else if( $destination["method"] === "totp" ) {
 			$twofMessage = str_replace(
 				array( "%username%", "%site%" ),
 				array( "<br><b>".Security::provisionalUsername()."</b>", "<b>".$destination["address"]."</b>" ),
-				mlang_message("ENTER_TOTP_CODE")
+				"Introduzca el código de su aplicación para la autenticación correspondiente a %username% en %site%."
 			);
 			$this->hideItemType("resend_button");
 		}
@@ -386,7 +386,7 @@ class LoginPage extends RunnerPage
 		}
 		if( !$ret["success"] )
 		{
-			$this->message = mlang_message("ERR_SENDING_CODE")." ".$ret["error"];
+			$this->message = "el envío de mensajes de error"." ".$ret["error"];
 			$this->messageType = MESSAGE_ERROR;
 			return false;
 		}
@@ -410,7 +410,7 @@ class LoginPage extends RunnerPage
 		} else {
 
 			$this->setRememberMachineCookie( false );
-			$this->message = mlang_message("WRONG_CODE");
+			$this->message = "Codigo erroneo";
 		}
 	}
 
@@ -442,9 +442,9 @@ class LoginPage extends RunnerPage
 	protected function refineMessage()
 	{
 		if( $this->message == "expired" )
-			$this->message = mlang_message("SESSION_EXPIRED1") . " " . mlang_message("SESSION_EXPIRED2");
+			$this->message = "Su sesión ha expirado." . " " . "Por favor, identifíquese de nuevo.";
 		elseif( $this->message == "invalidlogin" )
-			$this->message = mlang_message("INVALID_LOGIN");
+			$this->message = "Conexión inválida";
 		elseif( $this->message == "loginblocked" && strlen( $_SESSION["loginBlockMessage"] ) )
 			$this->message = $_SESSION["loginBlockMessage"];
 
@@ -516,7 +516,7 @@ class LoginPage extends RunnerPage
 			$globalEvents->AfterUnsuccessfulLogin( $username, $password, $message, $this, $this->controlsData );
 
 		if( $message == "" && !$this->message )
-			$this->message = mlang_message("INVALID_LOGIN");
+			$this->message = "Conexión inválida";
 		else if( $message )
 			$this->message = $message;
 	}
@@ -532,7 +532,7 @@ class LoginPage extends RunnerPage
 		if( !$this->auditObj->LoginAccess() )
 			return true;
 
-		$this->message = mysprintf( mlang_message("LOGIN_BLOCKED"), array($this->auditObj->LoginAccess()) );
+		$this->message = mysprintf( "Acceso denegado por %s minutos", array($this->auditObj->LoginAccess()) );
 		$_SESSION["loginBlockMessage"] = $this->message;
 
 		return false;
@@ -913,8 +913,6 @@ class LoginPage extends RunnerPage
 	 */
 	public function setLangParams()
 	{
-		if( $this->mode == LOGIN_SIMPLE )
-			SetLangVars($this->xt, "login");
 	}
 
 	/**

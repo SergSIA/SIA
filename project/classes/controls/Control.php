@@ -98,20 +98,20 @@ class EditControl
 		if( $this->connection->dbType == nDATABASE_PostgreSQL )
 			$this->like = "ilike";
 
-		$this->searchOptions[CONTAINS] = mlang_message("CONTAINS");
-		$this->searchOptions[EQUALS] = mlang_message("EQUALS");
-		$this->searchOptions[STARTS_WITH] = mlang_message("STARTS_WITH");
-		$this->searchOptions[MORE_THAN] = mlang_message("MORE_THAN");
-		$this->searchOptions[LESS_THAN] = mlang_message("LESS_THAN");
-		$this->searchOptions[BETWEEN] = mlang_message("BETWEEN");
-		$this->searchOptions[EMPTY_SEARCH] = mlang_message("EMPTY");
-		$this->searchOptions[NOT_CONTAINS] = mlang_message("SEARCH_NOT_CONTAINS");
-		$this->searchOptions[NOT_EQUALS] = mlang_message("SEARCH_NOT_EQUALS");
-		$this->searchOptions[NOT_STARTS_WITH] = mlang_message("SEARCH_NOT_STARTS_WITH");
-		$this->searchOptions[NOT_MORE_THAN] = mlang_message("SEARCH_NOT_MORE_THAN");
-		$this->searchOptions[NOT_LESS_THAN] = mlang_message("SEARCH_NOT_LESS_THAN");
-		$this->searchOptions[NOT_BETWEEN] = mlang_message("SEARCH_NOT_BETWEEN");
-		$this->searchOptions[NOT_EMPTY] = mlang_message("SEARCH_NOT_EMPTY");
+		$this->searchOptions[CONTAINS] = "Contiene";
+		$this->searchOptions[EQUALS] = "Equivale";
+		$this->searchOptions[STARTS_WITH] = "Empieza con";
+		$this->searchOptions[MORE_THAN] = "Más que";
+		$this->searchOptions[LESS_THAN] = "Menos que";
+		$this->searchOptions[BETWEEN] = "Entre";
+		$this->searchOptions[EMPTY_SEARCH] = "Vacio";
+		$this->searchOptions[NOT_CONTAINS] = "No contiene";
+		$this->searchOptions[NOT_EQUALS] = "No es igual";
+		$this->searchOptions[NOT_STARTS_WITH] = "No empieza por";
+		$this->searchOptions[NOT_MORE_THAN] = "No mayor que";
+		$this->searchOptions[NOT_LESS_THAN] = "No menor que";
+		$this->searchOptions[NOT_BETWEEN] = "No está entre";
+		$this->searchOptions[NOT_EMPTY] = "No está vacío";
 		
 		$this->init();
 	}
@@ -260,18 +260,6 @@ class EditControl
 			{
 				if(IsTextType($this->pageObject->pSetEdit->getFieldType($this->field)))
 					$blobfields[] = $this->field;
-			}
-			if($this->field == "password" && $this->pageObject->tName == "admin_users")
-			{	
-				$needHashPass = true;
-				if ( $this->pageObject->pageType == PAGE_EDIT )
-				{
-					$oldData = $this->pageObject->getOldRecordData();
-					$needHashPass = $oldData[$this->field] != $this->webValue;
-				}
-
-				if ( $needHashPass )
-					$this->webValue = $this->pageObject->getPasswordHash( $this->webValue );	
 			}
 			$avalues[ $this->field ] = $this->webValue;
 		}

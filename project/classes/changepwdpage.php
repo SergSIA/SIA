@@ -97,7 +97,7 @@ class ChangePasswordPage extends RunnerPage
 	 * @return DsCondition
 	 */
 	protected function getTokenCondition() {
-		return DataCondition::FieldEquals( "reset_token", $this->token );
+		return DataCondition::FieldEquals( "", $this->token );
 	}
 
 	/**
@@ -127,8 +127,8 @@ class ChangePasswordPage extends RunnerPage
 		$values = array();
 		$values[ $this->passwordField ] = $newpass;
 		if( $this->token ) {
-			$values[ "reset_token" ] = "";
-			$values[ "updated" ] = NULL;
+			$values[ "" ] = "";
+			$values[ "" ] = NULL;
 			if( GetGlobalData( "userRequireActivation" ) ) {
 				$values[  GetGlobalData( "userActivationField" ) ] = "1";
 			}
@@ -179,7 +179,7 @@ class ChangePasswordPage extends RunnerPage
 
 		$dbOldPass = "";
 		if( !$row ) {
-			$this->message = mlang_message("INVALID_PASSWORD");
+			$this->message = "Cambiar contraseña";
 			return false;
 		}
 
@@ -188,7 +188,7 @@ class ChangePasswordPage extends RunnerPage
 
 		if( !$this->token ) {
 			if( !Security::verifyPassword( $values["oldpass"], $dbOldPass ) ) {
-				$this->message = mlang_message("INVALID_PASSWORD");
+				$this->message = "Cambiar contraseña";
 				return false;
 			}
 		}
@@ -230,27 +230,27 @@ class ChangePasswordPage extends RunnerPage
 		$pwdLen = GetGlobalData("pwdLen", 0);
 		if($pwdLen)
 		{
-			$fmt = mlang_message("SEC_PWD_LEN");
+			$fmt = "La contraseña debe contener por lo menos %% carácteres ";
 			$fmt = str_replace("%%", "".$pwdLen, $fmt);
 			$msg.= "<br>".$fmt;
 		}
 		$pwdUnique = GetGlobalData("pwdUnique", 0);
 		if($pwdUnique)
 		{
-			$fmt = mlang_message("SEC_PWD_UNIQUE");
+			$fmt = "La contraseña debe contener %% carácteres únicos";
 			$fmt = str_replace("%%", "".$pwdUnique, $fmt);
 			$msg.= "<br>".$fmt;
 		}
 		$pwdDigits = GetGlobalData("pwdDigits", 0);
 		if($pwdDigits)
 		{
-			$fmt = mlang_message("SEC_PWD_DIGIT");
+			$fmt = "La contraseña debe contener por lo menos %% dígitos o símbolos";
 			$fmt = str_replace("%%", "".$pwdDigits, $fmt);
 			$msg.= "<br>".$fmt;
 		}
 		if(GetGlobalData("pwdUpperLower", false))
 		{
-			$fmt = mlang_message("SEC_PWD_CASE");
+			$fmt = "La contraseña debe contener letras en mayúscula y minúscula";
 			$msg.= "<br>".$fmt;
 		}
 
@@ -458,7 +458,7 @@ class ChangePasswordPage extends RunnerPage
 		
 		$data = $this->cipherer->DecryptFetchedArray( $qResult->fetchAssoc() );
 		if( $data )
-			return secondsPassedFrom( $data["updated"] ) < 86400;
+			return secondsPassedFrom( $data[""] ) < 86400;
 
 		return false;
 	}

@@ -684,10 +684,10 @@ class CrossTableReport
 	public function getCurrentOperationList()
 	{
 		$names = array();
-		$names["sum"] = mlang_message("SUM");
-		$names["min"] = mlang_message("MIN");
-		$names["max"] = mlang_message("MAX");
-		$names["avg"] = mlang_message("AVG");
+		$names["sum"] = "Sum";
+		$names["min"] = "Min";
+		$names["max"] = "Max";
+		$names["avg"] = "Media";
 
 		$opData = array();
 
@@ -852,23 +852,23 @@ class CrossTableReport
 		if( $this->pdfJsonMode() )
 			return $this->getPdfCrossHeader();
 
-		return "<div>".mlang_message("GROUP_X")
-			.":<b>".$this->fieldsTotalsData[ $this->xFName ]["label"]."</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;".mlang_message("GROUP_Y")
-			.":<b>".$this->fieldsTotalsData[ $this->yFName ]["label"]."</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;".mlang_message("FIELD")
-			.":<b>".$this->fieldsTotalsData[ $this->dataField ]["label"]."</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;".mlang_message("GROUP_FUNCTION")
+		return "<div>"."Grupo en el eje X"
+			.":<b>".$this->fieldsTotalsData[ $this->xFName ]["label"]."</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"."Grupo en el eje Y"
+			.":<b>".$this->fieldsTotalsData[ $this->yFName ]["label"]."</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"."Campo"
+			.":<b>".$this->fieldsTotalsData[ $this->dataField ]["label"]."</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"."Función para agrupar"
 			.":<b>".$this->dataGroupFunction."</b></div>";
 	}
 
 	protected function getPdfCrossHeader()
 	{
 		$parts = array();
-		$parts[] = "{ text: '".mlang_message("GROUP_X").":'}";
+		$parts[] = "{ text: '"."Grupo en el eje X".":'}";
 		$parts[] = "{ text: '". $this->getXGroupLabel() ."     ', bold: true }";
-		$parts[] = "{ text: '".mlang_message("GROUP_Y").":'}";
+		$parts[] = "{ text: '"."Grupo en el eje Y".":'}";
 		$parts[] = "{ text: '". $this->getYGroupLabel() ."     ', bold: true }";
-		$parts[] = "{ text: '".mlang_message("FIELD").":'}";
+		$parts[] = "{ text: '"."Campo".":'}";
 		$parts[] = "{ text: '". $this->getDataFieldLabel() ."     ', bold: true }";
-		$parts[] = "{ text: '".mlang_message("GROUP_FUNCTION").":'}";
+		$parts[] = "{ text: '"."Función para agrupar".":'}";
 		$parts[] = "{ text: '". jsreplace( $this->dataGroupFunction ) ."', bold: true }";
 
 		return implode( $parts, "," );
@@ -903,16 +903,16 @@ class CrossTableReport
 		switch( $this->dataGroupFunction )
 		{
 			case "sum":
-				return mlang_message("SUM");
+				return "Sum";
 			break;
 			case "min":
-				return mlang_message("MIN");
+				return "Min";
 			break;
 			case "max":
-				return mlang_message("MAX");
+				return "Max";
 			break;
 			case "avg":
-				return mlang_message("AVERAGE");
+				return "Promedio";
 			break;
 			default:
 				return "";
@@ -971,19 +971,19 @@ class CrossTableReport
 		if( IsDateFieldType( $ftype ) )
 		{
 			if($int_type == 1) // DATE_INTERVAL_YEAR
-				return mlang_message("CCR_YEAR");
+				return "Año";
 			if($int_type == 2) // DATE_INTERVAL_QUARTER
-				return mlang_message("CCR_QUARTER");
+				return "Trimestre";
 			if($int_type == 3) // DATE_INTERVAL_MONTH
-				return mlang_message("CCR_MONTH");
+				return "mes";
 			if($int_type == 4) // DATE_INTERVAL_WEEK
-				return mlang_message("CCR_WEEK");
+				return "semana";
 			if($int_type == 5) // DATE_INTERVAL_DAY
-				return mlang_message("CCR_DAY");
+				return "día";
 			if($int_type == 6) // DATE_INTERVAL_HOUR
-				return mlang_message("CCR_HOUR");
+				return "hora";
 			if($int_type == 7) // DATE_INTERVAL_MINUTE
-				return mlang_message("CCR_MINUTE");
+				return "minuto";
 		}
 		return $int_type;
 	}

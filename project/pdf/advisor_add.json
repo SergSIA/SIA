@@ -156,16 +156,16 @@ pdfDocument = {
 			"stack": [
 		
 				
-			{"hidden":"{$item_hide_integrated_edit_field1}","stack":[{"text":"{$jslabel public_advisor fk_id_people }","bold":true},{"text":{$fk_id_people_pdfvalue}}],"margin":[0,0,0,15]},
+			{"hidden":"{$item_hide_integrated_edit_field}","stack":[{"text":"{$jslabel public_advisor fk_id_people }","bold":true},{"text":{$fk_id_people_pdfvalue}}],"margin":[0,0,0,15]},
 				
 				
-			{"hidden":"{$item_hide_integrated_edit_field2}","stack":[{"text":"{$jslabel public_advisor fk_id_specialty }","bold":true},{"text":{$fk_id_specialty_pdfvalue}}],"margin":[0,0,0,15]},
+			{"hidden":"{$item_hide_integrated_edit_field1}","stack":[{"text":"{$jslabel public_advisor fk_id_specialty }","bold":true},{"text":{$fk_id_specialty_pdfvalue}}],"margin":[0,0,0,15]},
 				
 				
-			{"hidden":"{$item_hide_integrated_edit_field7}","stack":[{"text":"{$jslabel public_advisor status }","bold":true},{"text":{$status_pdfvalue}}],"margin":[0,0,0,15]},
+			{"hidden":"{$item_hide_integrated_edit_field6}","stack":[{"text":"{$jslabel public_advisor status }","bold":true},{"text":{$status_pdfvalue}}],"margin":[0,0,0,15]},
 				
 				
-			{"hidden":"{$item_hide_integrated_edit_field8}","stack":[{"text":"{$jslabel public_advisor commission }","bold":true},{"text":{$commission_pdfvalue}}],"margin":[0,0,0,15]},
+			{"hidden":"{$item_hide_integrated_edit_field7}","stack":[{"text":"{$jslabel public_advisor commission }","bold":true},{"text":{$commission_pdfvalue}}],"margin":[0,0,0,15]},
 				
 		  ],
   "border": [ false, false, false, false ],

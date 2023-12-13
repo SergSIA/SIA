@@ -171,7 +171,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{mlang_message PRINT_PAGES}","hidden":"{$item_hide_print_pages}","isHtml":true,"page_indicator":true},
+			{"text":"Página %current% / %total%","hidden":"{$item_hide_print_pages}","isHtml":true,"page_indicator":true},
 				
 		  ],
   "border": [ false, false, false, false ],

@@ -3313,6 +3313,8 @@ function fillProjectEntites()
 	$projectEntitiesReverse[ "advisor" ] = "public.advisor";
 	$projectEntities[ "public.consulting" ] = array( "url" => "consulting", "type" => 0 );
 	$projectEntitiesReverse[ "consulting" ] = "public.consulting";
+	$projectEntities[ "public.country" ] = array( "url" => "country", "type" => 0 );
+	$projectEntitiesReverse[ "country" ] = "public.country";
 	$projectEntities[ "public.customers" ] = array( "url" => "customers", "type" => 0 );
 	$projectEntitiesReverse[ "customers" ] = "public.customers";
 	$projectEntities[ "public.document" ] = array( "url" => "document", "type" => 0 );
@@ -3333,18 +3335,22 @@ function fillProjectEntites()
 	$projectEntitiesReverse[ "status_payment" ] = "public.status_payment";
 	$projectEntities[ "public.user" ] = array( "url" => "user", "type" => 0 );
 	$projectEntitiesReverse[ "user" ] = "public.user";
-	$projectEntities[ "public.people_user" ] = array( "url" => "people_user", "type" => 1 );
-	$projectEntitiesReverse[ "people_user" ] = "public.people_user";
 	$projectEntities[ "public.consulting_my" ] = array( "url" => "consulting_my", "type" => 1 );
 	$projectEntitiesReverse[ "consulting_my" ] = "public.consulting_my";
-	$projectEntities[ "public.country" ] = array( "url" => "country", "type" => 0 );
-	$projectEntitiesReverse[ "country" ] = "public.country";
-	$projectEntities[ "public.advisor_user" ] = array( "url" => "public_advisor_user", "type" => 1 );
-	$projectEntitiesReverse[ "public_advisor_user" ] = "public.advisor_user";
-	$projectEntities[ "public.consulting_my_advisor" ] = array( "url" => "public_consulting_my_advisor", "type" => 1 );
-	$projectEntitiesReverse[ "public_consulting_my_advisor" ] = "public.consulting_my_advisor";
-	$projectEntities[ "public.payment_my" ] = array( "url" => "payment_my", "type" => 1 );
-	$projectEntitiesReverse[ "payment_my" ] = "public.payment_my";
+	$projectEntities[ "public.consulting_my_advisor" ] = array( "url" => "consulting_my_advisor", "type" => 1 );
+	$projectEntitiesReverse[ "consulting_my_advisor" ] = "public.consulting_my_advisor";
+	$projectEntities[ "public.advisor_user" ] = array( "url" => "advisor_user", "type" => 1 );
+	$projectEntitiesReverse[ "advisor_user" ] = "public.advisor_user";
+	$projectEntities[ "public.payment_advisor" ] = array( "url" => "payment_advisor", "type" => 1 );
+	$projectEntitiesReverse[ "payment_advisor" ] = "public.payment_advisor";
+	$projectEntities[ "public.people_user" ] = array( "url" => "people_user", "type" => 1 );
+	$projectEntitiesReverse[ "people_user" ] = "public.people_user";
+	$projectEntities[ "public.advisor1" ] = array( "url" => "advisor1", "type" => 1 );
+	$projectEntitiesReverse[ "advisor1" ] = "public.advisor1";
+	$projectEntities[ "public.pay_deta" ] = array( "url" => "pay_deta", "type" => 1 );
+	$projectEntitiesReverse[ "pay_deta" ] = "public.pay_deta";
+	$projectEntities[ "public.customers1" ] = array( "url" => "customers1", "type" => 1 );
+	$projectEntitiesReverse[ "customers1" ] = "public.customers1";
 }
 
 function findTable( $table ) {

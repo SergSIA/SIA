@@ -97,7 +97,7 @@ class ViewDatabaseVideoField extends ViewControl
 	 */
 	public function getExportValue(&$data, $keylink = "", $html = false )
 	{
-		return mlang_message("LONG_BINARY");
+		return "código binario demasiado grande – no puede ser desplegado";
 	}	
 }
 ?>

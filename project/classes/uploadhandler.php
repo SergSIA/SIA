@@ -138,38 +138,38 @@ class UploadHandler
             return false;
         }
         if (!$file["name"]) {
-            $file["error"] = mlang_message("ERROR_MISSING_FILE_NAME");
+            $file["error"] = "No se ha indicado el nombre de fichero";
             return false;
         }
         if (!preg_match($this->options['accept_file_types'], $file["name"])) {
-            $file["error"] = mlang_message("ERROR_ACCEPT_FILE_TYPES");
+            $file["error"] = "El tipo de fichero es erróneo";
             return false;
         }
         if ($this->options['max_file_size'] && (
                 $file_size > $this->options['max_file_size'] * 1024 ||
                 $file["size"] > $this->options['max_file_size'] * 1024)
             ) {
-            $file["error"] = mysprintf(mlang_message("ERROR_MAX_FILE_SIZE"), array($this->options['max_file_size']));
+            $file["error"] = mysprintf("El tamaño del fichero supera el límite de %s KBytes", array($this->options['max_file_size']));
             return false;
         }
         if ($this->options['min_file_size'] &&
             $file_size < $this->options['min_file_size'] * 1024) {
-            $file["error"] = mysprintf(mlang_message("ERROR_MIN_FILE_SIZE"), array($this->options['min_file_size']));
+            $file["error"] = mysprintf("El tamaño del fichero no puede ser menor de %s KBytes", array($this->options['min_file_size']));
             return false;
         }
    		if (is_int($this->options['max_totalFile_size']) && (
                 $this->getUploadFilesSize() + $file["size"] > $this->options['max_totalFile_size'] * 1024)
             ) {
-            $file["error"] = mysprintf(mlang_message("ERROR_MAX_TOTAL_FILE_SIZE"), array($this->options['max_totalFile_size']));
+            $file["error"] = mysprintf("El tamaño de los ficheros supera el límite de %s KBytes", array($this->options['max_totalFile_size']));
             return false;
         }
         if (is_int($this->options['max_number_of_files']) && (
                 $this->getUploadFilesCount() >= $this->options['max_number_of_files'] && $this->options['max_number_of_files'] > 0)
             ) {
             	if($this->options['max_number_of_files'] > 1)
-            		$file["error"] = mysprintf(mlang_message("ERROR_MAX_NUMBER_OF_FILES_MANY"), array($this->options['max_number_of_files']));
+            		$file["error"] = mysprintf("No puede enviar más de %s ficheros", array($this->options['max_number_of_files']));
             	else 
-            		$file["error"] = mlang_message("ERROR_MAX_NUMBER_OF_FILES_ONE");
+            		$file["error"] = "Solo puede enviar un fichero";
             return false;
         }
         if(isImageType($uploadedFile["type"]))
@@ -252,13 +252,13 @@ class UploadHandler
 		{
 			if(!makeSurePathExists($uploadDir))
 			{
-				$file["error"] = mlang_message("ERROR_NO_UPLOAD_FOLDER");
+				$file["error"] = "No existe el envío de carpetas";
 				return $file;
 			}
 		}
 		else if(!is_dir($uploadDir))
         {
-        	$file["error"] = mlang_message("ERROR_NO_UPLOAD_FOLDER");
+        	$file["error"] = "No existe el envío de carpetas";
         	return $file;
         }
         if ($this->validate($uploadedFile, $file, $error, $size, $index, $uploadDir)) {

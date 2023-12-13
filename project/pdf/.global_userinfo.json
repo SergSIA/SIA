@@ -129,7 +129,7 @@ pdfDocument = {
 			"stack": [
 		
 				
-			{"text":"{mlang_message PROFILE}","hidden":"{$item_hide_user_fields_title}","fontSize":24,"isHtml":true},
+			{"text":"Perfil","hidden":"{$item_hide_user_fields_title}","fontSize":24,"isHtml":true},
 				
 				
 			{"text":"","hidden":"{$item_hide_fields_message}"},

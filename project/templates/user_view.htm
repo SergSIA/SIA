@@ -169,6 +169,25 @@
 
 {END fk_id_rol_fieldblock}
 											
+{BEGIN password_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_password}  r-vertical-field" data-fieldname="password" data-signal-error-for="password{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field4" {$item_integrated_edit_field4} data-pageid="{$pageid}" data-field="password" data-fieldname="password" >
+
+	
+	<label class="col-md-offset-3 col-md-6" for="{$labelfor_password}">
+		
+		{BEGIN password_label}{$label public_user password }{END password_label}
+	</label>
+	<div class="col-md-offset-3 col-md-6" >
+		{$password_value}	</div>
+
+		
+</div>
+
+
+{END password_fieldblock}
+											
 {BEGIN username_fieldblock}
 
 
@@ -263,6 +282,44 @@
 
 
 {END fk_id_people_fieldblock}
+											
+{BEGIN userpic_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_userpic}  r-vertical-field" data-fieldname="userpic" data-signal-error-for="userpic{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field10" {$item_integrated_edit_field10} data-pageid="{$pageid}" data-field="userpic" data-fieldname="userpic" >
+
+	
+	<label class="col-md-offset-3 col-md-6" for="{$labelfor_userpic}">
+		
+		{BEGIN userpic_label}{$label public_user userpic }{END userpic_label}
+	</label>
+	<div class="col-md-offset-3 col-md-6" >
+		{$userpic_value}	</div>
+
+		
+</div>
+
+
+{END userpic_fieldblock}
+											
+{BEGIN ext_security_id_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_ext_security_id}  r-vertical-field" data-fieldname="ext_security_id" data-signal-error-for="ext_security_id{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field11" {$item_integrated_edit_field11} data-pageid="{$pageid}" data-field="ext_security_id" data-fieldname="ext_security_id" >
+
+	
+	<label class="col-md-offset-3 col-md-6" for="{$labelfor_ext_security_id}">
+		
+		{BEGIN ext_security_id_label}{$label public_user ext_security_id }{END ext_security_id_label}
+	</label>
+	<div class="col-md-offset-3 col-md-6" >
+		{$ext_security_id_value}	</div>
+
+		
+</div>
+
+
+{END ext_security_id_fieldblock}
 	
 								</td>
 			{END cellblock_grid_c3}
@@ -287,7 +344,7 @@
 <span data-itemtype="view_back_list" data-itemid="view_back_list" {$item_view_back_list} data-pageid="{$pageid}" data-small data-button-item>
 	<a type="button" title="" class="btn btn-default   
 	" {$backbutton_attrs} >
-							{mlang_message BACK_TO_LIST}			</a>
+							Volver a la lista			</a>
 </span>
 {END back_button}
 	 
@@ -295,7 +352,7 @@
 <span data-itemtype="view_close" data-itemid="view_close" {$item_view_close} data-pageid="{$pageid}" data-small data-button-item>
 	<a type="button" title="" class="btn btn-default   
 	" href="#" {$closebutton_attrs} >
-							{mlang_message CLOSE_WINDOW}			</a>
+							Cerrar ventana			</a>
 </span>
 {END close_button}
 	</div>			 
@@ -315,7 +372,7 @@
 	<li data-itemtype="view_edit" data-itemid="view_edit" {$item_view_edit} data-pageid="{$pageid}" data-small >
 				<a  href="user_edit.php?{$editlink}" {$edit_page_button_attrs}  title="" >
 				
-		{mlang_message EDIT}		
+		Editar		
 		</a>
 	</li>
 {END edit_page_button}

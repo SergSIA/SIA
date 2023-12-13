@@ -78,8 +78,8 @@
 </span>	 
 		{BEGIN inline_cancel}
 <span data-itemtype="grid_inline_cancel" data-itemid="grid_inline_cancel" {$item_grid_inline_cancel} data-pageid="{$pageid}" data-small data-button-item>
-	<a type="button" title="{mlang_message CANCEL}" class="btn-link   
-	 glyphicon glyphicon-remove" {$inlinerevertlink_attrs} title="{mlang_message CANCEL}" >		
+	<a type="button" title="Cancelar" class="btn-link   
+	 glyphicon glyphicon-remove" {$inlinerevertlink_attrs} title="Cancelar" >		
 				
 								</a>
 </span>
@@ -89,7 +89,7 @@
 <span data-itemtype="inline_add" data-itemid="inline_add" {$item_inline_add} data-pageid="{$pageid}" data-small data-button-item>
 	<a type="button" title="" class="btn btn-primary   
 	" {$inlineaddlink_attrs} >
-							{mlang_message INLINE_ADD}			</a>
+							Añadir nuevo			</a>
 </span>
 {END inlineadd_link}
 			{END firstAboveGridCell}	
@@ -727,13 +727,25 @@
 {$displayDetailTable_advisor}
 {END details_advisor}
 	 
+		{BEGIN details_customers}
+{$displayDetailTable_customers}
+{END details_customers}
+	 
 		{BEGIN details_user}
 {$displayDetailTable_user}
 {END details_user}
 	 
-		{BEGIN details_customers}
-{$displayDetailTable_customers}
-{END details_customers}
+		{BEGIN details_people_user}
+{$displayDetailTable_people_user}
+{END details_people_user}
+	 
+		{BEGIN details_advisor_user}
+{$displayDetailTable_advisor_user}
+{END details_advisor_user}
+	 
+		{BEGIN details_pay_deta}
+{$displayDetailTable_pay_deta}
+{END details_pay_deta}
 	
 	</td>
 	{END cellblock_grid_cell_dpreview}

@@ -97,27 +97,24 @@ class RegisterPage extends RunnerPage
 		$qResult = $this->connection->query( $sql );
 		if( !$qResult )
 		{
-			echo mlang_message("SEC_INVALID_REG_CODE");
+			echo "Codigo de validación no válido";
 			return;
 		}
 		
 		$data = $qResult->fetchNumeric();
 		if( !$data )
 		{
-			echo mlang_message("SEC_INVALID_REG_CODE");
+			echo "Codigo de validación no válido";
 			return;
 		}
 		
 		$dbPassword = $this->cipherer->DecryptField( "password", $data[0] );
-		if( !$this->cipherer->isFieldEncrypted("password") )
-			$usercode = $username.$dbPassword;// $dbPassword is already encrypted
-		else
-			$usercode = $username.md5( $dbPassword );
+		$usercode = $username.md5( $dbPassword );
 		
 		
 		if( $code != md5( $usercode ) )
 		{
-			echo mlang_message("SEC_INVALID_REG_CODE");
+			echo "Codigo de validación no válido";
 			return;
 		}
 			
@@ -368,12 +365,6 @@ class RegisterPage extends RunnerPage
 			
 		$passwordHash = md5( $values["password"] );
 		$originalpassword = $values["password"];
-		//	encrypt password
-		if( !$this->cipherer->isFieldEncrypted( $this->passwordFiled ) )
-		{
-			$passwordHash = $this->getPasswordHash( $values["password"] );
-			$values["password"] = $passwordHash;
-		}
 
 		$retval = DoInsertRecord("public.user", $values, $blobfields, $this);
 		if( GetGlobalData("userRequireActivation") ) {
@@ -401,24 +392,24 @@ class RegisterPage extends RunnerPage
 		//	check if entered username already exists
 		if( !strlen($strUsername) )
 		{
-			$this->jsSettings['tableSettings'][ $this->tName ]['msg_userError'] = mlang_message("USER_NOEMPTY");
+			$this->jsSettings['tableSettings'][ $this->tName ]['msg_userError'] = "El nombre de usuario no puede estar vacío";
 			$ret = false;
 		}	
 		else if( !$this->checkIfUsernameUnique( $strUsername ) )
 		{		
-			$this->jsSettings['tableSettings'][ $this->tName ]['msg_userError'] = mlang_message("USERNAME_EXISTS1")." <i>".runner_htmlspecialchars( $strUsername )."</i> ".mlang_message("USERNAME_EXISTS2");
+			$this->jsSettings['tableSettings'][ $this->tName ]['msg_userError'] = "Este nombre de usuario"." <i>".runner_htmlspecialchars( $strUsername )."</i> "."ya existe. Elija otro nombre de usuario.";
 			$ret = false;
 		}
 
 		//	check if entered email already exists
 		if( !strlen($strEmail) )
 		{
-			$this->jsSettings['tableSettings'][ $this->tName ]['msg_emailError'] = mlang_message("VALID_EMAIL");
+			$this->jsSettings['tableSettings'][ $this->tName ]['msg_emailError'] = "Favor de escribir dirección electrónica válida";
 			$ret = false;
 		}
 		else if( !$this->checkIfEmailUnique( $strEmail ) )
 		{
-			$this->jsSettings['tableSettings'][ $this->tName ]['msg_emailError'] = mlang_message("EMAIL_ALREADY1")." <i>". runner_htmlspecialchars( $strEmail )."</i> ".mlang_message("EMAIL_ALREADY2");
+			$this->jsSettings['tableSettings'][ $this->tName ]['msg_emailError'] = "Correo electrónico"." <i>". runner_htmlspecialchars( $strEmail )."</i> "."registrado, si olvidó su nombre de usuario o contraseña use la forma de recordador de contraseña";
 			$ret = false;
 		}
 		
@@ -444,27 +435,27 @@ class RegisterPage extends RunnerPage
 		$pwdLen = GetGlobalData("pwdLen", 0);
 		if($pwdLen)
 		{
-			$fmt = mlang_message("SEC_PWD_LEN");
+			$fmt = "La contraseña debe contener por lo menos %% carácteres ";
 			$fmt = str_replace("%%", "".$pwdLen, $fmt);
 			$msg.= "<br>".$fmt;
 		}
 		$pwdUnique = GetGlobalData("pwdUnique", 0);
 		if($pwdUnique)
 		{
-			$fmt = mlang_message("SEC_PWD_UNIQUE");
+			$fmt = "La contraseña debe contener %% carácteres únicos";
 			$fmt = str_replace("%%", "".$pwdUnique, $fmt);
 			$msg.= "<br>".$fmt;
 		}
 		$pwdDigits = GetGlobalData("pwdDigits", 0);
 		if($pwdDigits)
 		{
-			$fmt = mlang_message("SEC_PWD_DIGIT");
+			$fmt = "La contraseña debe contener por lo menos %% dígitos o símbolos";
 			$fmt = str_replace("%%", "".$pwdDigits, $fmt);
 			$msg.= "<br>".$fmt;
 		}
 		if(GetGlobalData("pwdUpperLower", false))
 		{
-			$fmt = mlang_message("SEC_PWD_CASE");
+			$fmt = "La contraseña debe contener letras en mayúscula y minúscula";
 			$msg.= "<br>".$fmt;
 		}
 		

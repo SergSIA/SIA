@@ -220,7 +220,7 @@ class Security
 	 */
 	public static function sendPermissionError( $message = '' )
 	{
-		echo printJSON(array("success" => false, "message" => mlang_message("NO_PERMISSIONS") . " " .$message ) );
+		echo printJSON(array("success" => false, "message" => "No tiene permiso para acceder a esta tabla" . " " .$message ) );
 		exit();
 	}
 
@@ -363,7 +363,7 @@ class Security
 		$grConnection = $cman->getForUserGroups();
 
 		$sql = "select ". $grConnection->addFieldWrappers( "" )
-			." from ". $grConnection->addTableWrappers( "uggroups" ) . " WHERE " . $grConnection->addFieldWrappers( "" )
+			." from ". $grConnection->addTableWrappers( "" ) . " WHERE " . $grConnection->addFieldWrappers( "" )
 			." in ( " . implode( ",", array_keys( $groupIds ) ) . ")";
 
 		$qResult = $grConnection->query( $sql );
@@ -915,13 +915,13 @@ class Security
 
 	public static function _staticRestrictedPages( $table ) {
 		$group = Security::getUserGroup();
-		if( $group == "1" )	{
+		if( $group == "2" )	{
 			return array();
 		}
 		if( $group == "3" )	{
 			return array();
 		}
-		if( $group == "2" )	{
+		if( $group == "1" )	{
 			return array();
 		}
 		//	default permissions
@@ -1022,7 +1022,7 @@ class Security
 			return null;
 		}
 		global $cman;
-		return getTableDataSource( "ugmembers", $cman->getUserGroupsConnId() );
+		return getTableDataSource( "", $cman->getUserGroupsConnId() );
 	}
 
 	/**
@@ -1034,7 +1034,7 @@ class Security
 			return null;
 		}
 		global $cman;
-		return getTableDataSource( "uggroups", $cman->getUserGroupsConnId() );
+		return getTableDataSource( "", $cman->getUserGroupsConnId() );
 	}
 
 	/**
@@ -1046,7 +1046,7 @@ class Security
 			return null;
 		}
 		global $cman;
-		return getTableDataSource( "ugrights", $cman->getUserGroupsConnId() );
+		return getTableDataSource( "", $cman->getUserGroupsConnId() );
 	}
 
 
@@ -1230,7 +1230,7 @@ class Security
 		if( $userId == "" ) {
 			$userId = "Guest";
 			$accessLevel = ACCESS_LEVEL_GUEST;
-			$displayName = mlang_message("AA_GROUP_GUEST");
+			$displayName = "Invitado";
 		}
 		if( $displayName == "" ) {
 			$displayName = $userId;

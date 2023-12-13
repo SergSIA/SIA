@@ -295,9 +295,9 @@ class ListPage_DPInline extends ListPage_Embed
 			$inlineaddlink_attrs = $this->xt->getVar("inlineaddlink_attrs");
 			
 			if( $this->addAvailable() )
-				$caption = mlang_message("INLINE_ADD");
+				$caption = "Añadir nuevo";
 			else	
-				$caption = mlang_message("AA_P_ADD");
+				$caption = "Añadir";
 				
 			if( !$this->isBootstrap() ) 
 			{
@@ -318,9 +318,9 @@ class ListPage_DPInline extends ListPage_Embed
 			$addlink_attrs = $this->xt->getVar("addlink_attrs");
 			
 			if( $this->inlineAddAvailable() )
-				$caption = mlang_message("ADD_NEW");
+				$caption = "Añadir nuevo";
 			else	
-				$caption = mlang_message("AA_P_ADD");
+				$caption = "Añadir";
 				
 			if( !$this->isBootstrap() ) 
 			{
@@ -343,18 +343,18 @@ class ListPage_DPInline extends ListPage_Embed
 			
 			// "bs-invisible-button" class need for init hidden in bootstrap
 			if( !$this->isBootstrap()) 
-				$buttons.= '<a class="rnr-button" href="#" '.$editselectedlink_attrs.' '.$editselectedlink_span.'>'.mlang_message("AA_P_EDIT").'</a> ';
+				$buttons.= '<a class="rnr-button" href="#" '.$editselectedlink_attrs.' '.$editselectedlink_span.'>'."Editar".'</a> ';
 			else
-				$buttons.= '<a class="' . $bs_button_class . ' " disabled href="#" '.$editselectedlink_attrs.' '.$editselectedlink_span.'>'.mlang_message("AA_P_EDIT").'</a> ';
+				$buttons.= '<a class="' . $bs_button_class . ' " disabled href="#" '.$editselectedlink_attrs.' '.$editselectedlink_span.'>'."Editar".'</a> ';
 		};	
 
 		if( $this->updateSelectedAvailable() && $this->xt->getVar("updateselected_link") && $this->isBootstrap() )
 		{
 			$updateselectedlink_attrs = $this->xt->getVar("updateselectedlink_attrs");   
 			if( $this->isPD() )
-				$buttons.= '<a class="' . $bs_button_class . '" disabled '.$updateselectedlink_attrs.'>'.mlang_message("UPDATE_SELECTED").'</a> ';
+				$buttons.= '<a class="' . $bs_button_class . '" disabled '.$updateselectedlink_attrs.'>'."Actualizar los seleccionados".'</a> ';
 			else	
-				$buttons.= '<a class="' . $bs_button_class . '" disabled href="#" '.$updateselectedlink_attrs.'>'.mlang_message("UPDATE_SELECTED").'</a> ';		  		
+				$buttons.= '<a class="' . $bs_button_class . '" disabled href="#" '.$updateselectedlink_attrs.'>'."Actualizar los seleccionados".'</a> ';		  		
 		}
 		
 		if( $this->xt->getVar("saveall_link") )
@@ -363,9 +363,9 @@ class ListPage_DPInline extends ListPage_Embed
 			$savealllink_span = $this->xt->getVar("savealllink_span");	
 	
 			if( !$this->isBootstrap()) 
-				$buttons.= '<a class="rnr-button" href="#" '.$savealllink_attrs.' '.$savealllink_span.'>'.mlang_message("SAVE_ALL").'</a> ';					  
+				$buttons.= '<a class="rnr-button" href="#" '.$savealllink_attrs.' '.$savealllink_span.'>'."Guardar todo".'</a> ';					  
 			else
-				$buttons.= '<a class="' . $bs_button_class . '" href="#" '.$savealllink_attrs.' '.$savealllink_span.'>'.mlang_message("SAVE_ALL").'</a> ';					  
+				$buttons.= '<a class="' . $bs_button_class . '" href="#" '.$savealllink_attrs.' '.$savealllink_span.'>'."Guardar todo".'</a> ';					  
 		}
 		
 		if( $this->xt->getVar("cancelall_link") )
@@ -374,9 +374,9 @@ class ListPage_DPInline extends ListPage_Embed
 			$cancelalllink_span = $this->xt->getVar("cancelalllink_span");
 
 			if( !$this->isBootstrap()) 
-				$buttons.= '<a class="rnr-button" href="#" '.$cancelalllink_attrs.' '.$cancelalllink_span.'>'.mlang_message("CANCEL_ALL").'</a> ';					  
+				$buttons.= '<a class="rnr-button" href="#" '.$cancelalllink_attrs.' '.$cancelalllink_span.'>'."Cancelar".'</a> ';					  
 			else
-				$buttons.= '<a class="' . $bs_button_class . '" href="#" '.$cancelalllink_attrs.' '.$cancelalllink_span.'>'.mlang_message("CANCEL_ALL").'</a> ';					  
+				$buttons.= '<a class="' . $bs_button_class . '" href="#" '.$cancelalllink_attrs.' '.$cancelalllink_span.'>'."Cancelar".'</a> ';					  
 		}
 		
 		if( $this->deleteAvailable() && $this->xt->getVar("deleteselected_link") )
@@ -386,9 +386,9 @@ class ListPage_DPInline extends ListPage_Embed
 
 			// "bs-invisible-button" class need for init hidden in bootstrap
 			if( !$this->isBootstrap()) 
-				$buttons.= '<a class="rnr-button " href="#" '.$deleteselectedlink_attrs.' '.$deleteselectedlink_span.'>'.mlang_message("AA_P_DELETE").'</a> ';		  
+				$buttons.= '<a class="rnr-button " href="#" '.$deleteselectedlink_attrs.' '.$deleteselectedlink_span.'>'."Eliminar".'</a> ';		  
 			else
-				$buttons.= '<a class="' . $bs_button_class . '" disabled href="#" '.$deleteselectedlink_attrs.' '.$deleteselectedlink_span.'>'.mlang_message("AA_P_DELETE").'</a> ';		  
+				$buttons.= '<a class="' . $bs_button_class . '" disabled href="#" '.$deleteselectedlink_attrs.' '.$deleteselectedlink_span.'>'."Eliminar".'</a> ';		  
 		}		
 		if( $buttons ) 
 		{

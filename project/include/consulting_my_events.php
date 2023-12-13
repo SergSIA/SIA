@@ -18,6 +18,8 @@
 
 		$this->events["BeforeMoveNextList"]=true;
 
+		$this->events["BeforeQueryList"]=true;
+
 
 	}
 
@@ -40,8 +42,14 @@
 function BeforeAdd(&$values, &$message, $inline, $pageObject)
 {
 
-		$values["fk_id_customer"] = $_SESSION["UserData"]["fk_id_people"];
+		$id = $_SESSION["UserData"]["fk_id_people"]>0?$_SESSION["UserData"]["fk_id_people"]:0;
+$rs_c = DB::Query("select c.id as cliente from public.customers c 
+where c.fk_id_people = ".$id);
+$data_c=$rs_c->fetchAssoc();	
+
+$values["fk_id_customer"] =$data_c['cliente'];
 $values["fk_id_status_consulting"]=1;
+
 // Place event code here.
 // Use "Add Action" button to add code snippets.
 
@@ -216,8 +224,7 @@ else{
 function BeforeMoveNextList(&$data, &$row, &$record, $recordId, $pageObject)
 {
 
-		//$pageObject->showItem("cancelar_ase", $recordId);
-if($data['fk_id_status_consulting']==1){
+		if($data['fk_id_status_consulting']==1){
 	$pageObject->showItem("custom_button", $recordId);
 }
 else{
@@ -229,6 +236,83 @@ else{
 ;		
 } // function BeforeMoveNextList
 
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+				// List page: Before SQL query
+function BeforeQueryList(&$strSQL, &$strWhereClause, &$strOrderBy, $pageObject)
+{
+
+		$id = $_SESSION["UserData"]["fk_id_people"]>0?$_SESSION["UserData"]["fk_id_people"]:0;
+$strWhereClause = whereAdd($strWhereClause, "customers.fk_id_people=$id");
+
+
+// Place event code here.
+// Use "Add Action" button to add code snippets.
+;		
+} // function BeforeQueryList
+
+		
+		
+		
+		
+		
+		
+		
+		
+		
 		
 		
 		

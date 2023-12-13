@@ -159,7 +159,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{mlang_message DISPLAYING}","hidden":"{$item_hide_details_found}","isHtml":true,"page_indicator":true},
+			{"text":"Mostrando %first% - %last% de %total%","hidden":"{$item_hide_details_found}","isHtml":true,"page_indicator":true},
 				
 				
 			{"text":"","hidden":"{$item_hide_page_size}"},
@@ -500,9 +500,9 @@ pdfDocument = {
 		{END details_consulting_my},
 				
 				
-			 {BEGIN details_undefined}
-			{$displayDetailTable_undefined }
-		{END details_undefined},
+			 {BEGIN details_consulting_my_advisor}
+			{$displayDetailTable_consulting_my_advisor }
+		{END details_consulting_my_advisor},
 				
 		  ],
   "border": [ true, true, true, true ],

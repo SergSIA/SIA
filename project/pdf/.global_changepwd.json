@@ -154,7 +154,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{mlang_message OLD_PASSWORD}","hidden":"{$item_hide_oldpass_label}","isHtml":true},
+			{"text":"Antigua contraseña","hidden":"{$item_hide_oldpass_label}","isHtml":true},
 				
 		  ],
   "border": [ false, false, false, false ],
@@ -198,7 +198,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{mlang_message NEW_PASSWORD}","hidden":"{$item_hide_newpass_label}","isHtml":true},
+			{"text":"Nueva contraseña","hidden":"{$item_hide_newpass_label}","isHtml":true},
 				
 		  ],
   "border": [ false, false, false, false ],
@@ -242,7 +242,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{mlang_message CONFIRM_PASSWORD}","hidden":"{$item_hide_confirm_label}","isHtml":true},
+			{"text":"Confirme su contraseña","hidden":"{$item_hide_confirm_label}","isHtml":true},
 				
 		  ],
   "border": [ false, false, false, false ],

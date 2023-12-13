@@ -78,8 +78,8 @@
 </span>	 
 		{BEGIN inline_cancel}
 <span data-itemtype="grid_inline_cancel" data-itemid="grid_inline_cancel" {$item_grid_inline_cancel} data-pageid="{$pageid}" data-small data-button-item>
-	<a type="button" title="{mlang_message CANCEL}" class="btn-link   
-	 glyphicon glyphicon-remove" {$inlinerevertlink_attrs} title="{mlang_message CANCEL}" >		
+	<a type="button" title="Cancelar" class="btn-link   
+	 glyphicon glyphicon-remove" {$inlinerevertlink_attrs} title="Cancelar" >		
 				
 								</a>
 </span>
@@ -89,7 +89,7 @@
 <span data-itemtype="inline_add" data-itemid="inline_add" {$item_inline_add} data-pageid="{$pageid}" data-small data-button-item>
 	<a type="button" title="" class="btn btn-primary   
 	" {$inlineaddlink_attrs} >
-							{mlang_message INLINE_ADD}			</a>
+							Añadir nuevo			</a>
 </span>
 {END inlineadd_link}
 			{END firstAboveGridCell}	
@@ -130,7 +130,7 @@
 	 
 		{BEGIN id_fieldheadercolumn}
  
-	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field8" {$item_simple_grid_field8} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="id" data-fieldname="id">
+	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field9" {$item_simple_grid_field9} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="id" data-fieldname="id">
 	{$label public_consulting_my id }	</span>
 {END id_fieldheadercolumn}
 
@@ -155,7 +155,7 @@
 	 
 		{BEGIN fk_id_advisor_fieldheadercolumn}
  
-	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field9" {$item_simple_grid_field9} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="fk_id_advisor" data-fieldname="fk_id_advisor">
+	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field10" {$item_simple_grid_field10} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="fk_id_advisor" data-fieldname="fk_id_advisor">
 	{$label public_consulting_my fk_id_advisor }	</span>
 {END fk_id_advisor_fieldheadercolumn}
 
@@ -169,20 +169,20 @@
 	{$cell_grid_headcell_field2}
 	{$recordattrs}
 	class="
-		 r-ori-vert				{$start_class}
+		 r-ori-vert				{$fk_id_customer_class}
 			"
 
-			data-field="start"
+			data-field="fk_id_customer"
 	
 	data-cellId="grid_headcell_field2" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
-		{BEGIN start_fieldheadercolumn}
+		{BEGIN fk_id_customer_fieldheadercolumn}
  
-	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field10" {$item_simple_grid_field10} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="start" data-fieldname="start">
-	{$label public_consulting_my start }	</span>
-{END start_fieldheadercolumn}
+	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field11" {$item_simple_grid_field11} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="fk_id_customer" data-fieldname="fk_id_customer">
+	{$label public_consulting_my fk_id_customer }	</span>
+{END fk_id_customer_fieldheadercolumn}
 
 	
 	</th>
@@ -194,20 +194,20 @@
 	{$cell_grid_headcell_field3}
 	{$recordattrs}
 	class="
-		 r-ori-vert				{$end_class}
+		 r-ori-vert				{$start_class}
 			"
 
-			data-field="end"
+			data-field="start"
 	
 	data-cellId="grid_headcell_field3" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
-		{BEGIN end_fieldheadercolumn}
+		{BEGIN start_fieldheadercolumn}
  
-	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field11" {$item_simple_grid_field11} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="end" data-fieldname="end">
-	{$label public_consulting_my end }	</span>
-{END end_fieldheadercolumn}
+	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field12" {$item_simple_grid_field12} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="start" data-fieldname="start">
+	{$label public_consulting_my start }	</span>
+{END start_fieldheadercolumn}
 
 	
 	</th>
@@ -219,20 +219,20 @@
 	{$cell_grid_headcell_field4}
 	{$recordattrs}
 	class="
-		 r-ori-vert				{$fk_id_status_consulting_class}
+		 r-ori-vert				{$end_class}
 			"
 
-			data-field="fk_id_status_consulting"
+			data-field="end"
 	
 	data-cellId="grid_headcell_field4" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
-		{BEGIN fk_id_status_consulting_fieldheadercolumn}
+		{BEGIN end_fieldheadercolumn}
  
-	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field12" {$item_simple_grid_field12} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="fk_id_status_consulting" data-fieldname="fk_id_status_consulting">
-	{$label public_consulting_my fk_id_status_consulting }	</span>
-{END fk_id_status_consulting_fieldheadercolumn}
+	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field13" {$item_simple_grid_field13} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="end" data-fieldname="end">
+	{$label public_consulting_my end }	</span>
+{END end_fieldheadercolumn}
 
 	
 	</th>
@@ -244,20 +244,20 @@
 	{$cell_grid_headcell_field5}
 	{$recordattrs}
 	class="
-		 r-ori-vert				{$access_class}
+		 r-ori-vert				{$fk_id_status_consulting_class}
 			"
 
-			data-field="access"
+			data-field="fk_id_status_consulting"
 	
 	data-cellId="grid_headcell_field5" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
-		{BEGIN access_fieldheadercolumn}
+		{BEGIN fk_id_status_consulting_fieldheadercolumn}
  
-	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field13" {$item_simple_grid_field13} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="access" data-fieldname="access">
-	{$label public_consulting_my access }	</span>
-{END access_fieldheadercolumn}
+	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field14" {$item_simple_grid_field14} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="fk_id_status_consulting" data-fieldname="fk_id_status_consulting">
+	{$label public_consulting_my fk_id_status_consulting }	</span>
+{END fk_id_status_consulting_fieldheadercolumn}
 
 	
 	</th>
@@ -269,20 +269,20 @@
 	{$cell_grid_headcell_field6}
 	{$recordattrs}
 	class="
-		 r-ori-vert				{$start_h_class}
+		 r-ori-vert				{$access_class}
 			"
 
-			data-field="start_h"
+			data-field="access"
 	
 	data-cellId="grid_headcell_field6" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
-		{BEGIN start_h_fieldheadercolumn}
+		{BEGIN access_fieldheadercolumn}
  
-	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field14" {$item_simple_grid_field14} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="start_h" data-fieldname="start_h">
-	{$label public_consulting_my start_h }	</span>
-{END start_h_fieldheadercolumn}
+	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field15" {$item_simple_grid_field15} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="access" data-fieldname="access">
+	{$label public_consulting_my access }	</span>
+{END access_fieldheadercolumn}
 
 	
 	</th>
@@ -294,24 +294,49 @@
 	{$cell_grid_headcell_field7}
 	{$recordattrs}
 	class="
-		 r-ori-vert				{$end_h_class}
+		 r-ori-vert				{$start_h_class}
 			"
 
-			data-field="end_h"
+			data-field="start_h"
 	
 	data-cellId="grid_headcell_field7" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
+		{BEGIN start_h_fieldheadercolumn}
+ 
+	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field16" {$item_simple_grid_field16} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="start_h" data-fieldname="start_h">
+	{$label public_consulting_my start_h }	</span>
+{END start_h_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field7}
+				 
+					{BEGIN cellblock_grid_headcell_field8}
+	<th
+	
+	{$cell_grid_headcell_field8}
+	{$recordattrs}
+	class="
+		 r-ori-vert				{$end_h_class}
+			"
+
+			data-field="end_h"
+	
+	data-cellId="grid_headcell_field8" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
 		{BEGIN end_h_fieldheadercolumn}
  
-	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field15" {$item_simple_grid_field15} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="end_h" data-fieldname="end_h">
+	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field17" {$item_simple_grid_field17} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="end_h" data-fieldname="end_h">
 	{$label public_consulting_my end_h }	</span>
 {END end_h_fieldheadercolumn}
 
 	
 	</th>
-	{END cellblock_grid_headcell_field7}
+	{END cellblock_grid_headcell_field8}
 							</tr>
 					 
 					 
@@ -381,20 +406,20 @@
 	{$cell_grid_cell_field2}
 	{$recordattrs}
 	class="
-		 r-ori-vert				{$start_class}
+		 r-ori-vert				{$fk_id_customer_class}
 			"
 
-			data-field="start"
+			data-field="fk_id_customer"
 	
 	data-cellId="grid_cell_field2" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
-		{BEGIN start_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="simple_grid_field3" {$item_simple_grid_field3} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="start" data-fieldname="start" data-default-width >
-{$start_value}
+		{BEGIN fk_id_customer_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field2" {$item_simple_grid_field2} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="fk_id_customer" data-fieldname="fk_id_customer" data-default-width >
+{$fk_id_customer_value}
 </span>
-{END start_fieldcolumn}	
+{END fk_id_customer_fieldcolumn}	
 	</td>
 	{END cellblock_grid_cell_field2}
 				 
@@ -404,20 +429,20 @@
 	{$cell_grid_cell_field3}
 	{$recordattrs}
 	class="
-		 r-ori-vert				{$end_class}
+		 r-ori-vert				{$start_class}
 			"
 
-			data-field="end"
+			data-field="start"
 	
 	data-cellId="grid_cell_field3" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
-		{BEGIN end_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="simple_grid_field4" {$item_simple_grid_field4} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="end" data-fieldname="end" data-default-width >
-{$end_value}
+		{BEGIN start_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field3" {$item_simple_grid_field3} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="start" data-fieldname="start" data-default-width >
+{$start_value}
 </span>
-{END end_fieldcolumn}	
+{END start_fieldcolumn}	
 	</td>
 	{END cellblock_grid_cell_field3}
 				 
@@ -427,20 +452,20 @@
 	{$cell_grid_cell_field4}
 	{$recordattrs}
 	class="
-		 r-ori-vert				{$fk_id_status_consulting_class}
+		 r-ori-vert				{$end_class}
 			"
 
-			data-field="fk_id_status_consulting"
+			data-field="end"
 	
 	data-cellId="grid_cell_field4" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
-		{BEGIN fk_id_status_consulting_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="simple_grid_field5" {$item_simple_grid_field5} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="fk_id_status_consulting" data-fieldname="fk_id_status_consulting" data-default-width >
-{$fk_id_status_consulting_value}
+		{BEGIN end_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field4" {$item_simple_grid_field4} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="end" data-fieldname="end" data-default-width >
+{$end_value}
 </span>
-{END fk_id_status_consulting_fieldcolumn}	
+{END end_fieldcolumn}	
 	</td>
 	{END cellblock_grid_cell_field4}
 				 
@@ -450,20 +475,20 @@
 	{$cell_grid_cell_field5}
 	{$recordattrs}
 	class="
-		 r-ori-vert				{$access_class}
+		 r-ori-vert				{$fk_id_status_consulting_class}
 			"
 
-			data-field="access"
+			data-field="fk_id_status_consulting"
 	
 	data-cellId="grid_cell_field5" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
-		{BEGIN access_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="simple_grid_field6" {$item_simple_grid_field6} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="access" data-fieldname="access" data-default-width >
-{$access_value}
+		{BEGIN fk_id_status_consulting_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field5" {$item_simple_grid_field5} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="fk_id_status_consulting" data-fieldname="fk_id_status_consulting" data-default-width >
+{$fk_id_status_consulting_value}
 </span>
-{END access_fieldcolumn}	
+{END fk_id_status_consulting_fieldcolumn}	
 	</td>
 	{END cellblock_grid_cell_field5}
 				 
@@ -473,20 +498,20 @@
 	{$cell_grid_cell_field6}
 	{$recordattrs}
 	class="
-		 r-ori-vert				{$start_h_class}
+		 r-ori-vert				{$access_class}
 			"
 
-			data-field="start_h"
+			data-field="access"
 	
 	data-cellId="grid_cell_field6" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
-		{BEGIN start_h_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="simple_grid_field2" {$item_simple_grid_field2} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="start_h" data-fieldname="start_h" data-default-width >
-{$start_h_value}
+		{BEGIN access_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field6" {$item_simple_grid_field6} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="access" data-fieldname="access" data-default-width >
+{$access_value}
 </span>
-{END start_h_fieldcolumn}	
+{END access_fieldcolumn}	
 	</td>
 	{END cellblock_grid_cell_field6}
 				 
@@ -496,22 +521,45 @@
 	{$cell_grid_cell_field7}
 	{$recordattrs}
 	class="
-		 r-ori-vert				{$end_h_class}
+		 r-ori-vert				{$start_h_class}
 			"
 
-			data-field="end_h"
+			data-field="start_h"
 	
 	data-cellId="grid_cell_field7" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
+		{BEGIN start_h_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field7" {$item_simple_grid_field7} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="start_h" data-fieldname="start_h" data-default-width >
+{$start_h_value}
+</span>
+{END start_h_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field7}
+				 
+					{BEGIN cellblock_grid_cell_field8}
+	<td
+	
+	{$cell_grid_cell_field8}
+	{$recordattrs}
+	class="
+		 r-ori-vert				{$end_h_class}
+			"
+
+			data-field="end_h"
+	
+	data-cellId="grid_cell_field8" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
 		{BEGIN end_h_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="simple_grid_field7" {$item_simple_grid_field7} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="end_h" data-fieldname="end_h" data-default-width >
+<span data-itemtype="grid_field" data-itemid="simple_grid_field8" {$item_simple_grid_field8} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="end_h" data-fieldname="end_h" data-default-width >
 {$end_h_value}
 </span>
 {END end_h_fieldcolumn}	
 	</td>
-	{END cellblock_grid_cell_field7}
+	{END cellblock_grid_cell_field8}
 							</tr>
 					 
 						<tr {$rowattrs} {$row_grid_2} class="{$rowclass} 
@@ -681,6 +729,22 @@
 	
 	</td>
 	{END cellblock_grid_footcell_field7}
+				 
+					{BEGIN cellblock_grid_footcell_field8}
+	<td
+	
+	{$cell_grid_footcell_field8}
+	{$recordattrs}
+	class="
+		 r-ori-vert			"
+
+	
+	data-cellId="grid_footcell_field8" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="consulting_my_print"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field8}
 							</tr>
 					
 					</tfoot>

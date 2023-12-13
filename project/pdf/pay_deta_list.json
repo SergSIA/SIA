@@ -1,0 +1,306 @@
+
+pdfDocument = {
+{BEGIN backgroundImage}
+	background: {
+		image: {$backgroundImage},
+		{BEGIN bgWidth}
+		imgWidth: {$bgWidth},
+		imgHeight: {$bgHeight},
+		{END bgWidth}
+	},
+{END backgroundImage}
+	styles: {
+				bodycell: {
+			fontSize:12,
+		},
+		headcell: {
+			fontSize:12,
+			bold: true
+		},
+
+	
+			},
+	defaultStyle: {
+		fontSize: 14,
+	},
+	"content": [
+		{BEGIN body}
+		{BEGIN embedded_grid}
+		{
+			text: '{$jscaption public_pay_deta}',
+		},
+		{END embedded_grid}
+		{ 
+			{BEGIN standalone_page}
+			pageBreak: 'before',
+			{END standalone_page}
+			{BEGIN embedded_grid}
+			embeddedPage: true,
+			{END embedded_grid}
+			layout: {
+				hLineWidth: function(i, node) { return 0; },
+				vLineWidth: function(i, node) { 
+					if( node.table.embeddedPage ) {
+						return (i === 0 || i === node.table.widths.length) ? 0 : 0;
+					} else  {
+						return 0; 
+					}
+				},
+				hLineColor: function(i, node) { return 'gray'; },
+				vLineColor: function(i, node) { return 'gray'; },
+			},
+			table: {
+				{BEGIN embedded_grid}
+				embeddedPage: true,
+				{END embedded_grid}
+				
+				tableForm: true,
+				headerRows: 0 + 1 {BEGIN embedded_grid} -1 {END embedded_grid} ,
+
+				widths: [
+														"*",
+															],
+							
+				body: [
+				{BEGIN standalone_page}
+					[
+						{
+							colSpan: 1,
+							border:[false, false,false,false],
+							stack: [
+
+																										
+{
+	table: {
+	
+				
+		location: 'top',
+		
+		
+		widths: [
+								"*", 
+					 ],	
+		
+	
+		body: [
+				
+				[
+																{
+	cellId: 'c2',
+	col:0,
+	row:0,
+		
+		
+	//	static colspan/rowspan
+		
+			
+	
+	
+			"text": [
+		
+				
+			{BEGIN mastertable_block}
+			{$showmasterfile}
+		{END mastertable_block},
+				
+		  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'left',
+  },
+
+											],
+		
+		]
+	}
+}
+,
+								
+																										
+{
+	table: {
+	
+				
+		location: 'above-grid',
+		
+		
+		widths: [
+								"*", 
+					 ],	
+		
+	
+		body: [
+				
+				[
+																{
+	cellId: 'c4',
+	col:0,
+	row:0,
+		
+		
+	//	static colspan/rowspan
+		
+			
+	
+	
+			"text": [
+		
+				'',
+	  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'center',
+  },
+
+											],
+		
+		]
+	}
+}
+,
+															]
+						},
+					],
+				{END standalone_page}
+
+																	
+	{BEGIN grid_row}
+	[ 
+	
+	{BEGIN grid_record}
+	{BEGIN grid_vrecord}
+	
+		{ 
+			layout: 'vrecord',
+			table: {
+				widths: ['*'],
+				body: [[
+					{
+						
+						table: {
+							tableForm: true,
+							widths: [
+																{BEGIN col_grid_0}
+								"%",
+								{END col_grid_0}
+															],
+													heights: [
+															{BEGIN row_grid_0}			
+								"%",
+								{END row_grid_0}
+															{BEGIN row_grid_1}			
+								"%",
+								{END row_grid_1}
+															{BEGIN row_grid_2}			
+								"%",
+								{END row_grid_2}
+														],
+													
+							body: [
+									
+				{BEGIN row_grid_0}
+				[
+																{BEGIN cellblock_grid_cell_label5}
+{
+	cellId: 'cell_label5',
+	col:0,
+	row:0,
+			style: 'headcell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+						
+	
+	
+	
+			"text": [
+		
+				'',
+	  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'left',
+  },
+
+{END cellblock_grid_cell_label5}
+											],
+				{END row_grid_0}
+						{BEGIN row_grid_1}
+				[
+																{BEGIN cellblock_grid_cell_label7}
+{
+	cellId: 'cell_label7',
+	col:0,
+	row:0,
+			style: 'bodycell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+								// [left, top, right, bottom]
+		margin: [ 0, 0, 0, 0 ],
+		
+	
+	
+	
+			"text": [
+		
+				
+			{"text":{$pdf_image images/banco.jpeg 550 700},"hidden":"{$item_hide_image}"},
+				
+		  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'center',
+  },
+
+{END cellblock_grid_cell_label7}
+											],
+				{END row_grid_1}
+						{BEGIN row_grid_2}
+				[
+																{BEGIN cellblock_grid_cell_label11}
+{
+	cellId: 'cell_label11',
+	col:0,
+	row:0,
+			style: 'footcell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+						
+	
+	
+	
+			"text": [
+		
+				'',
+	  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'left',
+  },
+
+{END cellblock_grid_cell_label11}
+											],
+				{END row_grid_2}
+		
+							]
+						}
+					}
+				]]
+			}
+		},
+	{END grid_vrecord}
+	{END grid_record}
+	]
+,
+	{END grid_row}
+	
+									]
+			
+			}
+		},
+		{END body}
+	]
+}

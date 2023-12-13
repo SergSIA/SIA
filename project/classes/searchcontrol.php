@@ -190,12 +190,12 @@ class SearchControl
 	
 	function getSimpleSearchTypeCombo($selOpt, $not) 
 	{
-		$options = "<option value=\"Contains\" ".( $selOpt == "Contains" && !$not ? "selected" : "" ).">".mlang_message("CONTAINS")."</option>";
-		$options.= "<option value=\"Equals\" ".( $selOpt == "Equals" && !$not ? "selected" : "" ).">".mlang_message("EQUALS")."</option>";
-		$options.= "<option value=\"Starts with\" ".( $selOpt == "Starts with" && !$not ? "selected" : "" ).">".mlang_message("STARTS_WITH")."</option>";
-		$options.= "<option value=\"More than\" ".( $selOpt == "More than" && !$not ? "selected" : "" ).">".mlang_message("MORE_THAN")."</option>";
-		$options.= "<option value=\"Less than\" ".( $selOpt == "Less than" && !$not ? "selected" : "" ).">".mlang_message("LESS_THAN")."</option>";
-		$options.= "<option value=\"Empty\" ".( $selOpt == "Empty" && !$not ? "selected" : "" ).">".mlang_message("EMPTY")."</option>";
+		$options = "<option value=\"Contains\" ".( $selOpt == "Contains" && !$not ? "selected" : "" ).">"."Contiene"."</option>";
+		$options.= "<option value=\"Equals\" ".( $selOpt == "Equals" && !$not ? "selected" : "" ).">"."Equivale"."</option>";
+		$options.= "<option value=\"Starts with\" ".( $selOpt == "Starts with" && !$not ? "selected" : "" ).">"."Empieza con"."</option>";
+		$options.= "<option value=\"More than\" ".( $selOpt == "More than" && !$not ? "selected" : "" ).">"."Más que"."</option>";
+		$options.= "<option value=\"Less than\" ".( $selOpt == "Less than" && !$not ? "selected" : "" ).">"."Menos que"."</option>";
+		$options.= "<option value=\"Empty\" ".( $selOpt == "Empty" && !$not ? "selected" : "" ).">"."Vacio"."</option>";
 		return $options;
 	}
 	
@@ -267,7 +267,7 @@ class SearchControl
 		}
 		
 		$html = '<a id = "'.$this->getDelButtonId($fName, $recId).'" ctrlId="'.$recId.'" fName="'.GoodFieldName($fName)
-			.'" class="searchPanelButton searchpanel-options" '.$iconAttr.' href="#" title="'.mlang_message("DELETE_CONTROL").'">' . $text . '</a>';
+			.'" class="searchPanelButton searchpanel-options" '.$iconAttr.' href="#" title="'."Borrar control".'">' . $text . '</a>';
 		return $html;
 	}
 	

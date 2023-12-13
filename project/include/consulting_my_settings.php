@@ -19,68 +19,31 @@ $fieldToolTipsconsulting_my = array();
 $pageTitlesconsulting_my = array();
 $placeHoldersconsulting_my = array();
 
-if(mlang_getcurrentlang()=="English")
-{
-	$fieldLabelsconsulting_my["English"] = array();
-	$fieldToolTipsconsulting_my["English"] = array();
-	$placeHoldersconsulting_my["English"] = array();
-	$pageTitlesconsulting_my["English"] = array();
-	$fieldLabelsconsulting_my["English"]["id"] = "Code";
-	$fieldToolTipsconsulting_my["English"]["id"] = "";
-	$placeHoldersconsulting_my["English"]["id"] = "";
-	$fieldLabelsconsulting_my["English"]["fk_id_advisor"] = "Specialty - Advisor";
-	$fieldToolTipsconsulting_my["English"]["fk_id_advisor"] = "";
-	$placeHoldersconsulting_my["English"]["fk_id_advisor"] = "";
-	$fieldLabelsconsulting_my["English"]["fk_id_customer"] = "Customer";
-	$fieldToolTipsconsulting_my["English"]["fk_id_customer"] = "";
-	$placeHoldersconsulting_my["English"]["fk_id_customer"] = "";
-	$fieldLabelsconsulting_my["English"]["start"] = "Start";
-	$fieldToolTipsconsulting_my["English"]["start"] = "";
-	$placeHoldersconsulting_my["English"]["start"] = "";
-	$fieldLabelsconsulting_my["English"]["end"] = "End";
-	$fieldToolTipsconsulting_my["English"]["end"] = "";
-	$placeHoldersconsulting_my["English"]["end"] = "";
-	$fieldLabelsconsulting_my["English"]["fk_id_status_consulting"] = "Status Consulting";
-	$fieldToolTipsconsulting_my["English"]["fk_id_status_consulting"] = "";
-	$placeHoldersconsulting_my["English"]["fk_id_status_consulting"] = "";
-	$fieldLabelsconsulting_my["English"]["access"] = "Access";
-	$fieldToolTipsconsulting_my["English"]["access"] = "";
-	$placeHoldersconsulting_my["English"]["access"] = "";
-	$fieldLabelsconsulting_my["English"]["start_h"] = "Time";
-	$fieldToolTipsconsulting_my["English"]["start_h"] = "";
-	$placeHoldersconsulting_my["English"]["start_h"] = "";
-	$fieldLabelsconsulting_my["English"]["end_h"] = "Time";
-	$fieldToolTipsconsulting_my["English"]["end_h"] = "";
-	$placeHoldersconsulting_my["English"]["end_h"] = "";
-	$pageTitlesconsulting_my["English"]["add"] = "Mis Asesorias, Añadir nuevo";
-	if (count($fieldToolTipsconsulting_my["English"]))
-		$tdataconsulting_my[".isUseToolTips"] = true;
-}
 if(mlang_getcurrentlang()=="Spanish")
 {
 	$fieldLabelsconsulting_my["Spanish"] = array();
 	$fieldToolTipsconsulting_my["Spanish"] = array();
 	$placeHoldersconsulting_my["Spanish"] = array();
 	$pageTitlesconsulting_my["Spanish"] = array();
-	$fieldLabelsconsulting_my["Spanish"]["id"] = "Codigo";
+	$fieldLabelsconsulting_my["Spanish"]["id"] = "Id";
 	$fieldToolTipsconsulting_my["Spanish"]["id"] = "";
 	$placeHoldersconsulting_my["Spanish"]["id"] = "";
-	$fieldLabelsconsulting_my["Spanish"]["fk_id_advisor"] = "Especialidad - Asesor";
+	$fieldLabelsconsulting_my["Spanish"]["fk_id_advisor"] = "Asesor";
 	$fieldToolTipsconsulting_my["Spanish"]["fk_id_advisor"] = "";
 	$placeHoldersconsulting_my["Spanish"]["fk_id_advisor"] = "";
 	$fieldLabelsconsulting_my["Spanish"]["fk_id_customer"] = "Cliente";
 	$fieldToolTipsconsulting_my["Spanish"]["fk_id_customer"] = "";
 	$placeHoldersconsulting_my["Spanish"]["fk_id_customer"] = "";
-	$fieldLabelsconsulting_my["Spanish"]["start"] = "Inicio";
+	$fieldLabelsconsulting_my["Spanish"]["start"] = "Inicia";
 	$fieldToolTipsconsulting_my["Spanish"]["start"] = "";
 	$placeHoldersconsulting_my["Spanish"]["start"] = "";
-	$fieldLabelsconsulting_my["Spanish"]["end"] = "Fin";
+	$fieldLabelsconsulting_my["Spanish"]["end"] = "Termina";
 	$fieldToolTipsconsulting_my["Spanish"]["end"] = "";
 	$placeHoldersconsulting_my["Spanish"]["end"] = "";
-	$fieldLabelsconsulting_my["Spanish"]["fk_id_status_consulting"] = "Estado Asesoria";
+	$fieldLabelsconsulting_my["Spanish"]["fk_id_status_consulting"] = "Estado";
 	$fieldToolTipsconsulting_my["Spanish"]["fk_id_status_consulting"] = "";
 	$placeHoldersconsulting_my["Spanish"]["fk_id_status_consulting"] = "";
-	$fieldLabelsconsulting_my["Spanish"]["access"] = "Acceso ";
+	$fieldLabelsconsulting_my["Spanish"]["access"] = "Acceso";
 	$fieldToolTipsconsulting_my["Spanish"]["access"] = "";
 	$placeHoldersconsulting_my["Spanish"]["access"] = "";
 	$fieldLabelsconsulting_my["Spanish"]["start_h"] = "Hora";
@@ -89,6 +52,9 @@ if(mlang_getcurrentlang()=="Spanish")
 	$fieldLabelsconsulting_my["Spanish"]["end_h"] = "Hora";
 	$fieldToolTipsconsulting_my["Spanish"]["end_h"] = "";
 	$placeHoldersconsulting_my["Spanish"]["end_h"] = "";
+	$fieldLabelsconsulting_my["Spanish"]["fk_id_people"] = "Fk Id People";
+	$fieldToolTipsconsulting_my["Spanish"]["fk_id_people"] = "";
+	$placeHoldersconsulting_my["Spanish"]["fk_id_people"] = "";
 	if (count($fieldToolTipsconsulting_my["Spanish"]))
 		$tdataconsulting_my[".isUseToolTips"] = true;
 }
@@ -188,7 +154,7 @@ $tdataconsulting_my[".rowHighlite"] = true;
 
 
 
-																																																
+																																				
 
 $tdataconsulting_my[".ajaxCodeSnippetAdded"] = false;
 
@@ -200,7 +166,7 @@ $tdataconsulting_my[".addPageEvents"] = false;
 $tdataconsulting_my[".isUseTimeForSearch"] = true;
 
 
-$tdataconsulting_my[".badgeColor"] = "4169E1";
+$tdataconsulting_my[".badgeColor"] = "6493EA";
 
 
 $tdataconsulting_my[".allSearchFields"] = array();
@@ -217,6 +183,7 @@ $tdataconsulting_my[".googleLikeFields"][] = "fk_id_status_consulting";
 $tdataconsulting_my[".googleLikeFields"][] = "access";
 $tdataconsulting_my[".googleLikeFields"][] = "start_h";
 $tdataconsulting_my[".googleLikeFields"][] = "end_h";
+$tdataconsulting_my[".googleLikeFields"][] = "fk_id_people";
 
 
 
@@ -250,22 +217,11 @@ $tdataconsulting_my[".strOrderBy"] = $tstrOrderBy;
 $tdataconsulting_my[".orderindexes"] = array();
 
 
-$tdataconsulting_my[".sqlHead"] = "SELECT id,  	fk_id_advisor,  	fk_id_customer,  	\"start\",  	\"end\",  	fk_id_status_consulting,  	\"access\",  	start_h,  	end_h";
-$tdataconsulting_my[".sqlFrom"] = "FROM \"public\".consulting";
+$tdataconsulting_my[".sqlHead"] = "SELECT \"public\".consulting.id,  \"public\".consulting.fk_id_advisor,  \"public\".consulting.fk_id_customer,  \"public\".consulting.\"start\",  \"public\".consulting.\"end\",  \"public\".consulting.fk_id_status_consulting,  \"public\".consulting.\"access\",  \"public\".consulting.start_h,  \"public\".consulting.end_h,  \"public\".customers.fk_id_people";
+$tdataconsulting_my[".sqlFrom"] = "FROM \"public\".consulting  INNER JOIN \"public\".customers ON \"public\".consulting.fk_id_customer = \"public\".customers.id";
 $tdataconsulting_my[".sqlWhereExpr"] = "";
 $tdataconsulting_my[".sqlTail"] = "";
 
-//fill array of tabs for list page
-$arrGridTabs = array();
-$arrGridTabs[] = array(
-	'tabId' => "",
-	'name' => "All data",
-	'nameType' => 'Text',
-	'where' => "",
-	'showRowCount' => 0,
-	'hideEmpty' => 0,
-);
-$tdataconsulting_my[".arrGridTabs"] = $arrGridTabs;
 
 
 
@@ -330,7 +286,7 @@ $tdataconsulting_my[".hideMobileList"] = array();
 		$fdata["sourceSingle"] = "id";
 
 		$fdata["isSQLExpression"] = true;
-	$fdata["FullName"] = "id";
+	$fdata["FullName"] = "\"public\".consulting.id";
 
 	
 	
@@ -470,7 +426,7 @@ $tdataconsulting_my[".hideMobileList"] = array();
 		$fdata["sourceSingle"] = "fk_id_advisor";
 
 		$fdata["isSQLExpression"] = true;
-	$fdata["FullName"] = "fk_id_advisor";
+	$fdata["FullName"] = "\"public\".consulting.fk_id_advisor";
 
 	
 	
@@ -518,7 +474,7 @@ $tdataconsulting_my[".hideMobileList"] = array();
 
 // Begin Lookup settings
 				$edata["LookupType"] = 2;
-	$edata["LookupTable"] = "public.advisor_user";
+	$edata["LookupTable"] = "public.advisor1";
 		$edata["listPageId"] = "list";
 		$edata["autoCompleteFieldsOnEdit"] = 0;
 	$edata["autoCompleteFields"] = array();
@@ -527,13 +483,14 @@ $tdataconsulting_my[".hideMobileList"] = array();
 	
 		
 	$edata["LinkField"] = "id";
-	$edata["LinkFieldType"] = 20;
-	$edata["DisplayField"] = "advisor";
+	$edata["LinkFieldType"] = 3;
+	$edata["DisplayField"] = "name|| '  ' || last_name || '- ' || description";
 
 	
 
-	
-	$edata["LookupOrderBy"] = "";
+		$edata["CustomDisplay"] = "true";
+
+	$edata["LookupOrderBy"] = "description";
 
 	
 	
@@ -635,7 +592,7 @@ $tdataconsulting_my[".hideMobileList"] = array();
 		$fdata["sourceSingle"] = "fk_id_customer";
 
 		$fdata["isSQLExpression"] = true;
-	$fdata["FullName"] = "fk_id_customer";
+	$fdata["FullName"] = "\"public\".consulting.fk_id_customer";
 
 	
 	
@@ -671,7 +628,7 @@ $tdataconsulting_my[".hideMobileList"] = array();
 //	Begin Edit Formats
 	$fdata["EditFormats"] = array();
 
-	$edata = array("EditFormat" => "Lookup wizard");
+	$edata = array("EditFormat" => "Readonly");
 
 	
 		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
@@ -681,34 +638,6 @@ $tdataconsulting_my[".hideMobileList"] = array();
 	
 	
 
-// Begin Lookup settings
-				$edata["LookupType"] = 2;
-	$edata["LookupTable"] = "public.customers";
-			$edata["autoCompleteFieldsOnEdit"] = 0;
-	$edata["autoCompleteFields"] = array();
-		$edata["LCType"] = 0;
-
-	
-		
-	$edata["LinkField"] = "id";
-	$edata["LinkFieldType"] = 20;
-	$edata["DisplayField"] = "id";
-
-	
-
-	
-	$edata["LookupOrderBy"] = "";
-
-	
-	
-	
-	
-
-	
-	
-		$edata["SelectSize"] = 1;
-
-// End Lookup Settings
 
 
 		$edata["IsRequired"] = true;
@@ -733,8 +662,7 @@ $tdataconsulting_my[".hideMobileList"] = array();
 	$edata["validateAs"] = array();
 	$edata["validateAs"]["basicValidate"] = array();
 	$edata["validateAs"]["customMessages"] = array();
-						$edata["validateAs"]["basicValidate"][] = "IsRequired";
-		
+							
 	
 	//	End validation
 
@@ -800,7 +728,7 @@ $tdataconsulting_my[".hideMobileList"] = array();
 		$fdata["sourceSingle"] = "start";
 
 		$fdata["isSQLExpression"] = true;
-	$fdata["FullName"] = "\"start\"";
+	$fdata["FullName"] = "\"public\".consulting.\"start\"";
 
 	
 	
@@ -940,7 +868,7 @@ $tdataconsulting_my[".hideMobileList"] = array();
 		$fdata["sourceSingle"] = "end";
 
 		$fdata["isSQLExpression"] = true;
-	$fdata["FullName"] = "\"end\"";
+	$fdata["FullName"] = "\"public\".consulting.\"end\"";
 
 	
 	
@@ -979,7 +907,7 @@ $tdataconsulting_my[".hideMobileList"] = array();
 	$edata = array("EditFormat" => "Date");
 
 	
-		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
+		$edata["weekdayMessage"] = array("message" => "Invalid week day", "messageType" => "Text");
 	$edata["weekdays"] = "[]";
 
 
@@ -1000,7 +928,7 @@ $tdataconsulting_my[".hideMobileList"] = array();
 
 	
 	
-		$edata["DateEditType"] = 13;
+		$edata["DateEditType"] = 5;
 	$edata["InitialYearFactor"] = 100;
 	$edata["LastYearFactor"] = 10;
 
@@ -1080,7 +1008,7 @@ $tdataconsulting_my[".hideMobileList"] = array();
 		$fdata["sourceSingle"] = "fk_id_status_consulting";
 
 		$fdata["isSQLExpression"] = true;
-	$fdata["FullName"] = "fk_id_status_consulting";
+	$fdata["FullName"] = "\"public\".consulting.fk_id_status_consulting";
 
 	
 	
@@ -1245,7 +1173,7 @@ $tdataconsulting_my[".hideMobileList"] = array();
 		$fdata["sourceSingle"] = "access";
 
 		$fdata["isSQLExpression"] = true;
-	$fdata["FullName"] = "\"access\"";
+	$fdata["FullName"] = "\"public\".consulting.\"access\"";
 
 	
 	
@@ -1261,7 +1189,7 @@ $tdataconsulting_my[".hideMobileList"] = array();
 	
 	
 				$vdata["hlNewWindow"] = true;
-	$vdata["hlType"] = 1;
+	$vdata["hlType"] = 0;
 	$vdata["hlLinkWordNameType"] = "Text";
 	$vdata["hlLinkWordText"] = "Link";
 	$vdata["hlTitleField"] = "";
@@ -1387,7 +1315,7 @@ $tdataconsulting_my[".hideMobileList"] = array();
 		$fdata["sourceSingle"] = "start_h";
 
 		$fdata["isSQLExpression"] = true;
-	$fdata["FullName"] = "start_h";
+	$fdata["FullName"] = "\"public\".consulting.start_h";
 
 	
 	
@@ -1442,7 +1370,8 @@ $tdataconsulting_my[".hideMobileList"] = array();
 
 
 
-	
+		$edata["IsRequired"] = true;
+
 	
 	
 	
@@ -1464,7 +1393,8 @@ $tdataconsulting_my[".hideMobileList"] = array();
 	$edata["validateAs"] = array();
 	$edata["validateAs"]["basicValidate"] = array();
 	$edata["validateAs"]["customMessages"] = array();
-	
+						$edata["validateAs"]["basicValidate"][] = "IsRequired";
+		
 	
 	//	End validation
 
@@ -1535,7 +1465,7 @@ $tdataconsulting_my[".hideMobileList"] = array();
 		$fdata["sourceSingle"] = "end_h";
 
 		$fdata["isSQLExpression"] = true;
-	$fdata["FullName"] = "end_h";
+	$fdata["FullName"] = "\"public\".consulting.end_h";
 
 	
 	
@@ -1590,7 +1520,8 @@ $tdataconsulting_my[".hideMobileList"] = array();
 
 
 
-	
+		$edata["IsRequired"] = true;
+
 	
 	
 	
@@ -1612,7 +1543,8 @@ $tdataconsulting_my[".hideMobileList"] = array();
 	$edata["validateAs"] = array();
 	$edata["validateAs"]["basicValidate"] = array();
 	$edata["validateAs"]["customMessages"] = array();
-	
+						$edata["validateAs"]["basicValidate"][] = "IsRequired";
+		
 	
 	//	End validation
 
@@ -1663,6 +1595,145 @@ $tdataconsulting_my[".hideMobileList"] = array();
 
 	$tdataconsulting_my["end_h"] = $fdata;
 		$tdataconsulting_my[".searchableFields"][] = "end_h";
+//	fk_id_people
+//	Custom field settings
+	$fdata = array();
+	$fdata["Index"] = 10;
+	$fdata["strName"] = "fk_id_people";
+	$fdata["GoodName"] = "fk_id_people";
+	$fdata["ownerTable"] = "public.customers";
+	$fdata["Label"] = GetFieldLabel("public_consulting_my","fk_id_people");
+	$fdata["FieldType"] = 20;
+
+
+	
+	
+			
+
+		$fdata["strField"] = "fk_id_people";
+
+	
+		$fdata["isSQLExpression"] = true;
+	$fdata["FullName"] = "\"public\".customers.fk_id_people";
+
+	
+	
+				$fdata["UploadFolder"] = "files";
+
+//  Begin View Formats
+	$fdata["ViewFormats"] = array();
+
+	$vdata = array("ViewFormat" => "");
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+		
+	
+		$vdata["NeedEncode"] = true;
+
+	
+		$vdata["truncateText"] = true;
+	$vdata["NumberOfChars"] = 80;
+
+	$fdata["ViewFormats"]["view"] = $vdata;
+//  End View Formats
+
+//	Begin Edit Formats
+	$fdata["EditFormats"] = array();
+
+	$edata = array("EditFormat" => "Text field");
+
+	
+		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
+	$edata["weekdays"] = "[]";
+
+
+	
+	
+
+
+
+		$edata["IsRequired"] = true;
+
+	
+	
+	
+			$edata["acceptFileTypes"] = ".+$";
+		$edata["acceptFileTypesHtml"] = "";
+
+		$edata["maxNumberOfFiles"] = 1;
+
+	
+	
+	
+	
+			$edata["HTML5InuptType"] = "text";
+
+		$edata["EditParams"] = "";
+		
+		$edata["controlWidth"] = 200;
+
+//	Begin validation
+	$edata["validateAs"] = array();
+	$edata["validateAs"]["basicValidate"] = array();
+	$edata["validateAs"]["customMessages"] = array();
+				$edata["validateAs"]["basicValidate"][] = getJsValidatorName("Number");
+						$edata["validateAs"]["basicValidate"][] = "IsRequired";
+		
+	
+	//	End validation
+
+	
+			
+	
+	
+	
+	$fdata["EditFormats"]["edit"] = $edata;
+//	End Edit Formats
+
+
+	$fdata["isSeparate"] = false;
+
+
+
+
+// the field's search options settings
+		$fdata["defaultSearchOption"] = "Contains";
+
+			// the default search options list
+				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
+// the end of search options settings
+
+
+//Filters settings
+	$fdata["filterTotals"] = 0;
+		$fdata["filterMultiSelect"] = 0;
+			$fdata["filterFormat"] = "Values list";
+		$fdata["showCollapsed"] = false;
+
+		$fdata["sortValueType"] = 0;
+		$fdata["numberOfVisibleItems"] = 10;
+
+		$fdata["filterBy"] = 0;
+
+	
+
+	
+	
+//end of Filters settings
+
+
+	$tdataconsulting_my["fk_id_people"] = $fdata;
+		$tdataconsulting_my[".searchableFields"][] = "fk_id_people";
 
 
 $tables_data["public.consulting_my"]=&$tdataconsulting_my;
@@ -1788,8 +1859,8 @@ function createSqlQuery_consulting_my()
 {
 $proto0=array();
 $proto0["m_strHead"] = "SELECT";
-$proto0["m_strFieldList"] = "id,  	fk_id_advisor,  	fk_id_customer,  	\"start\",  	\"end\",  	fk_id_status_consulting,  	\"access\",  	start_h,  	end_h";
-$proto0["m_strFrom"] = "FROM \"public\".consulting";
+$proto0["m_strFieldList"] = "\"public\".consulting.id,  \"public\".consulting.fk_id_advisor,  \"public\".consulting.fk_id_customer,  \"public\".consulting.\"start\",  \"public\".consulting.\"end\",  \"public\".consulting.fk_id_status_consulting,  \"public\".consulting.\"access\",  \"public\".consulting.start_h,  \"public\".consulting.end_h,  \"public\".customers.fk_id_people";
+$proto0["m_strFrom"] = "FROM \"public\".consulting  INNER JOIN \"public\".customers ON \"public\".consulting.fk_id_customer = \"public\".customers.id";
 $proto0["m_strWhere"] = "";
 $proto0["m_strOrderBy"] = "";
 	
@@ -1835,7 +1906,7 @@ $proto0["m_fieldlist"] = array();
 	"m_srcTableName" => "public.consulting_my"
 ));
 
-$proto6["m_sql"] = "id";
+$proto6["m_sql"] = "\"public\".consulting.id";
 $proto6["m_srcTableName"] = "public.consulting_my";
 $proto6["m_expr"]=$obj;
 $proto6["m_alias"] = "";
@@ -1849,7 +1920,7 @@ $proto0["m_fieldlist"][]=$obj;
 	"m_srcTableName" => "public.consulting_my"
 ));
 
-$proto8["m_sql"] = "fk_id_advisor";
+$proto8["m_sql"] = "\"public\".consulting.fk_id_advisor";
 $proto8["m_srcTableName"] = "public.consulting_my";
 $proto8["m_expr"]=$obj;
 $proto8["m_alias"] = "";
@@ -1863,7 +1934,7 @@ $proto0["m_fieldlist"][]=$obj;
 	"m_srcTableName" => "public.consulting_my"
 ));
 
-$proto10["m_sql"] = "fk_id_customer";
+$proto10["m_sql"] = "\"public\".consulting.fk_id_customer";
 $proto10["m_srcTableName"] = "public.consulting_my";
 $proto10["m_expr"]=$obj;
 $proto10["m_alias"] = "";
@@ -1877,7 +1948,7 @@ $proto0["m_fieldlist"][]=$obj;
 	"m_srcTableName" => "public.consulting_my"
 ));
 
-$proto12["m_sql"] = "\"start\"";
+$proto12["m_sql"] = "\"public\".consulting.\"start\"";
 $proto12["m_srcTableName"] = "public.consulting_my";
 $proto12["m_expr"]=$obj;
 $proto12["m_alias"] = "";
@@ -1891,7 +1962,7 @@ $proto0["m_fieldlist"][]=$obj;
 	"m_srcTableName" => "public.consulting_my"
 ));
 
-$proto14["m_sql"] = "\"end\"";
+$proto14["m_sql"] = "\"public\".consulting.\"end\"";
 $proto14["m_srcTableName"] = "public.consulting_my";
 $proto14["m_expr"]=$obj;
 $proto14["m_alias"] = "";
@@ -1905,7 +1976,7 @@ $proto0["m_fieldlist"][]=$obj;
 	"m_srcTableName" => "public.consulting_my"
 ));
 
-$proto16["m_sql"] = "fk_id_status_consulting";
+$proto16["m_sql"] = "\"public\".consulting.fk_id_status_consulting";
 $proto16["m_srcTableName"] = "public.consulting_my";
 $proto16["m_expr"]=$obj;
 $proto16["m_alias"] = "";
@@ -1919,7 +1990,7 @@ $proto0["m_fieldlist"][]=$obj;
 	"m_srcTableName" => "public.consulting_my"
 ));
 
-$proto18["m_sql"] = "\"access\"";
+$proto18["m_sql"] = "\"public\".consulting.\"access\"";
 $proto18["m_srcTableName"] = "public.consulting_my";
 $proto18["m_expr"]=$obj;
 $proto18["m_alias"] = "";
@@ -1933,7 +2004,7 @@ $proto0["m_fieldlist"][]=$obj;
 	"m_srcTableName" => "public.consulting_my"
 ));
 
-$proto20["m_sql"] = "start_h";
+$proto20["m_sql"] = "\"public\".consulting.start_h";
 $proto20["m_srcTableName"] = "public.consulting_my";
 $proto20["m_expr"]=$obj;
 $proto20["m_alias"] = "";
@@ -1947,52 +2018,106 @@ $proto0["m_fieldlist"][]=$obj;
 	"m_srcTableName" => "public.consulting_my"
 ));
 
-$proto22["m_sql"] = "end_h";
+$proto22["m_sql"] = "\"public\".consulting.end_h";
 $proto22["m_srcTableName"] = "public.consulting_my";
 $proto22["m_expr"]=$obj;
 $proto22["m_alias"] = "";
 $obj = new SQLFieldListItem($proto22);
 
 $proto0["m_fieldlist"][]=$obj;
-$proto0["m_fromlist"] = array();
-												$proto24=array();
-$proto24["m_link"] = "SQLL_MAIN";
-			$proto25=array();
-$proto25["m_strName"] = "public.consulting";
-$proto25["m_srcTableName"] = "public.consulting_my";
-$proto25["m_columns"] = array();
-$proto25["m_columns"][] = "id";
-$proto25["m_columns"][] = "fk_id_advisor";
-$proto25["m_columns"][] = "fk_id_customer";
-$proto25["m_columns"][] = "start";
-$proto25["m_columns"][] = "end";
-$proto25["m_columns"][] = "fk_id_status_consulting";
-$proto25["m_columns"][] = "access";
-$proto25["m_columns"][] = "start_h";
-$proto25["m_columns"][] = "end_h";
-$obj = new SQLTable($proto25);
+						$proto24=array();
+			$obj = new SQLField(array(
+	"m_strName" => "fk_id_people",
+	"m_strTable" => "public.customers",
+	"m_srcTableName" => "public.consulting_my"
+));
 
-$proto24["m_table"] = $obj;
-$proto24["m_sql"] = "\"public\".consulting";
-$proto24["m_alias"] = "";
+$proto24["m_sql"] = "\"public\".customers.fk_id_people";
 $proto24["m_srcTableName"] = "public.consulting_my";
-$proto26=array();
-$proto26["m_sql"] = "";
-$proto26["m_uniontype"] = "SQLL_UNKNOWN";
+$proto24["m_expr"]=$obj;
+$proto24["m_alias"] = "";
+$obj = new SQLFieldListItem($proto24);
+
+$proto0["m_fieldlist"][]=$obj;
+$proto0["m_fromlist"] = array();
+												$proto26=array();
+$proto26["m_link"] = "SQLL_MAIN";
+			$proto27=array();
+$proto27["m_strName"] = "public.consulting";
+$proto27["m_srcTableName"] = "public.consulting_my";
+$proto27["m_columns"] = array();
+$proto27["m_columns"][] = "id";
+$proto27["m_columns"][] = "fk_id_advisor";
+$proto27["m_columns"][] = "fk_id_customer";
+$proto27["m_columns"][] = "start";
+$proto27["m_columns"][] = "end";
+$proto27["m_columns"][] = "fk_id_status_consulting";
+$proto27["m_columns"][] = "access";
+$proto27["m_columns"][] = "start_h";
+$proto27["m_columns"][] = "end_h";
+$obj = new SQLTable($proto27);
+
+$proto26["m_table"] = $obj;
+$proto26["m_sql"] = "\"public\".consulting";
+$proto26["m_alias"] = "";
+$proto26["m_srcTableName"] = "public.consulting_my";
+$proto28=array();
+$proto28["m_sql"] = "";
+$proto28["m_uniontype"] = "SQLL_UNKNOWN";
 	$obj = new SQLNonParsed(array(
 	"m_sql" => ""
 ));
 
-$proto26["m_column"]=$obj;
-$proto26["m_contained"] = array();
-$proto26["m_strCase"] = "";
-$proto26["m_havingmode"] = false;
-$proto26["m_inBrackets"] = false;
-$proto26["m_useAlias"] = false;
-$obj = new SQLLogicalExpr($proto26);
+$proto28["m_column"]=$obj;
+$proto28["m_contained"] = array();
+$proto28["m_strCase"] = "";
+$proto28["m_havingmode"] = false;
+$proto28["m_inBrackets"] = false;
+$proto28["m_useAlias"] = false;
+$obj = new SQLLogicalExpr($proto28);
 
-$proto24["m_joinon"] = $obj;
-$obj = new SQLFromListItem($proto24);
+$proto26["m_joinon"] = $obj;
+$obj = new SQLFromListItem($proto26);
+
+$proto0["m_fromlist"][]=$obj;
+												$proto30=array();
+$proto30["m_link"] = "SQLL_INNERJOIN";
+			$proto31=array();
+$proto31["m_strName"] = "public.customers";
+$proto31["m_srcTableName"] = "public.consulting_my";
+$proto31["m_columns"] = array();
+$proto31["m_columns"][] = "id";
+$proto31["m_columns"][] = "fk_id_people";
+$proto31["m_columns"][] = "created_by";
+$proto31["m_columns"][] = "created_at";
+$proto31["m_columns"][] = "updated_by";
+$proto31["m_columns"][] = "updated_at";
+$proto31["m_columns"][] = "status";
+$obj = new SQLTable($proto31);
+
+$proto30["m_table"] = $obj;
+$proto30["m_sql"] = "INNER JOIN \"public\".customers ON \"public\".consulting.fk_id_customer = \"public\".customers.id";
+$proto30["m_alias"] = "";
+$proto30["m_srcTableName"] = "public.consulting_my";
+$proto32=array();
+$proto32["m_sql"] = "\"public\".consulting.fk_id_customer = \"public\".customers.id";
+$proto32["m_uniontype"] = "SQLL_UNKNOWN";
+						$obj = new SQLField(array(
+	"m_strName" => "fk_id_customer",
+	"m_strTable" => "public.consulting",
+	"m_srcTableName" => "public.consulting_my"
+));
+
+$proto32["m_column"]=$obj;
+$proto32["m_contained"] = array();
+$proto32["m_strCase"] = "= \"public\".customers.id";
+$proto32["m_havingmode"] = false;
+$proto32["m_inBrackets"] = false;
+$proto32["m_useAlias"] = false;
+$obj = new SQLLogicalExpr($proto32);
+
+$proto30["m_joinon"] = $obj;
+$obj = new SQLFromListItem($proto30);
 
 $proto0["m_fromlist"][]=$obj;
 $proto0["m_groupby"] = array();
@@ -2008,7 +2133,7 @@ $queryData_consulting_my = createSqlQuery_consulting_my();
 	
 		;
 
-									
+										
 
 $tdataconsulting_my[".sqlquery"] = $queryData_consulting_my;
 

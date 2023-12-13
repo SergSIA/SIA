@@ -3,8 +3,6 @@
 'details' => array( 'public.consulting' => array( 'displayPreview' => 2,
 'previewPageId' => '' ),
 'public.consulting_my' => array( 'displayPreview' => 2,
-'previewPageId' => '' ),
-'public.consulting_my_advisor' => array( 'displayPreview' => 2,
 'previewPageId' => '' ) ),
 'master' => array( 'public.people' => array( 'preview' => false ),
 'public.specialty' => array( 'preview' => false ),

@@ -19,51 +19,6 @@ $fieldToolTipspeople = array();
 $pageTitlespeople = array();
 $placeHolderspeople = array();
 
-if(mlang_getcurrentlang()=="English")
-{
-	$fieldLabelspeople["English"] = array();
-	$fieldToolTipspeople["English"] = array();
-	$placeHolderspeople["English"] = array();
-	$pageTitlespeople["English"] = array();
-	$fieldLabelspeople["English"]["id"] = "Id";
-	$fieldToolTipspeople["English"]["id"] = "";
-	$placeHolderspeople["English"]["id"] = "";
-	$fieldLabelspeople["English"]["name"] = "Name";
-	$fieldToolTipspeople["English"]["name"] = "";
-	$placeHolderspeople["English"]["name"] = "";
-	$fieldLabelspeople["English"]["last_name"] = "Last Name";
-	$fieldToolTipspeople["English"]["last_name"] = "";
-	$placeHolderspeople["English"]["last_name"] = "";
-	$fieldLabelspeople["English"]["birth_date"] = "Birth Date";
-	$fieldToolTipspeople["English"]["birth_date"] = "";
-	$placeHolderspeople["English"]["birth_date"] = "";
-	$fieldLabelspeople["English"]["created_by"] = "Created By";
-	$fieldToolTipspeople["English"]["created_by"] = "";
-	$placeHolderspeople["English"]["created_by"] = "";
-	$fieldLabelspeople["English"]["created_at"] = "Created At";
-	$fieldToolTipspeople["English"]["created_at"] = "";
-	$placeHolderspeople["English"]["created_at"] = "";
-	$fieldLabelspeople["English"]["updated_by"] = "Updated By";
-	$fieldToolTipspeople["English"]["updated_by"] = "";
-	$placeHolderspeople["English"]["updated_by"] = "";
-	$fieldLabelspeople["English"]["updated_at"] = "Updated At";
-	$fieldToolTipspeople["English"]["updated_at"] = "";
-	$placeHolderspeople["English"]["updated_at"] = "";
-	$fieldLabelspeople["English"]["fk_type_doc"] = "Type Doc";
-	$fieldToolTipspeople["English"]["fk_type_doc"] = "";
-	$placeHolderspeople["English"]["fk_type_doc"] = "";
-	$fieldLabelspeople["English"]["document"] = "Document";
-	$fieldToolTipspeople["English"]["document"] = "";
-	$placeHolderspeople["English"]["document"] = "";
-	$fieldLabelspeople["English"]["telf"] = "Telf";
-	$fieldToolTipspeople["English"]["telf"] = "";
-	$placeHolderspeople["English"]["telf"] = "";
-	$fieldLabelspeople["English"]["country"] = "Country";
-	$fieldToolTipspeople["English"]["country"] = "";
-	$placeHolderspeople["English"]["country"] = "";
-	if (count($fieldToolTipspeople["English"]))
-		$tdatapeople[".isUseToolTips"] = true;
-}
 if(mlang_getcurrentlang()=="Spanish")
 {
 	$fieldLabelspeople["Spanish"] = array();
@@ -79,19 +34,19 @@ if(mlang_getcurrentlang()=="Spanish")
 	$fieldLabelspeople["Spanish"]["last_name"] = "Apellido";
 	$fieldToolTipspeople["Spanish"]["last_name"] = "";
 	$placeHolderspeople["Spanish"]["last_name"] = "";
-	$fieldLabelspeople["Spanish"]["birth_date"] = "Fecha de nacimiento";
+	$fieldLabelspeople["Spanish"]["birth_date"] = "Fecha Nacimiento";
 	$fieldToolTipspeople["Spanish"]["birth_date"] = "";
 	$placeHolderspeople["Spanish"]["birth_date"] = "";
-	$fieldLabelspeople["Spanish"]["created_by"] = "Creado Por";
+	$fieldLabelspeople["Spanish"]["created_by"] = "Creado por";
 	$fieldToolTipspeople["Spanish"]["created_by"] = "";
 	$placeHolderspeople["Spanish"]["created_by"] = "";
-	$fieldLabelspeople["Spanish"]["created_at"] = "Creado El";
+	$fieldLabelspeople["Spanish"]["created_at"] = "Creado el";
 	$fieldToolTipspeople["Spanish"]["created_at"] = "";
 	$placeHolderspeople["Spanish"]["created_at"] = "";
-	$fieldLabelspeople["Spanish"]["updated_by"] = "Actualizado Por";
+	$fieldLabelspeople["Spanish"]["updated_by"] = "Actualizado por";
 	$fieldToolTipspeople["Spanish"]["updated_by"] = "";
 	$placeHolderspeople["Spanish"]["updated_by"] = "";
-	$fieldLabelspeople["Spanish"]["updated_at"] = "Actualizado Por";
+	$fieldLabelspeople["Spanish"]["updated_at"] = "Actualizado el";
 	$fieldToolTipspeople["Spanish"]["updated_at"] = "";
 	$placeHolderspeople["Spanish"]["updated_at"] = "";
 	$fieldLabelspeople["Spanish"]["fk_type_doc"] = "Tipo Documento";
@@ -100,10 +55,10 @@ if(mlang_getcurrentlang()=="Spanish")
 	$fieldLabelspeople["Spanish"]["document"] = "Documento";
 	$fieldToolTipspeople["Spanish"]["document"] = "";
 	$placeHolderspeople["Spanish"]["document"] = "";
-	$fieldLabelspeople["Spanish"]["telf"] = "Telf";
+	$fieldLabelspeople["Spanish"]["telf"] = "Telefono";
 	$fieldToolTipspeople["Spanish"]["telf"] = "";
 	$placeHolderspeople["Spanish"]["telf"] = "";
-	$fieldLabelspeople["Spanish"]["country"] = "Country";
+	$fieldLabelspeople["Spanish"]["country"] = "Nacionalidad";
 	$fieldToolTipspeople["Spanish"]["country"] = "";
 	$placeHolderspeople["Spanish"]["country"] = "";
 	if (count($fieldToolTipspeople["Spanish"]))
@@ -205,7 +160,7 @@ $tdatapeople[".rowHighlite"] = true;
 
 
 
-																								
+																		
 
 $tdatapeople[".ajaxCodeSnippetAdded"] = false;
 
@@ -217,7 +172,7 @@ $tdatapeople[".addPageEvents"] = false;
 $tdatapeople[".isUseTimeForSearch"] = false;
 
 
-$tdatapeople[".badgeColor"] = "8FBC8B";
+$tdatapeople[".badgeColor"] = "5F9EA0";
 
 
 $tdatapeople[".allSearchFields"] = array();
@@ -1083,8 +1038,7 @@ $tdatapeople[".hideMobileList"] = array();
 
 
 
-		$edata["IsRequired"] = true;
-
+	
 	
 	
 	
@@ -1108,8 +1062,7 @@ $tdatapeople[".hideMobileList"] = array();
 	$edata["validateAs"] = array();
 	$edata["validateAs"]["basicValidate"] = array();
 	$edata["validateAs"]["customMessages"] = array();
-						$edata["validateAs"]["basicValidate"][] = "IsRequired";
-		
+	
 	
 	//	End validation
 
@@ -1363,8 +1316,7 @@ $tdatapeople[".hideMobileList"] = array();
 
 
 
-		$edata["IsRequired"] = true;
-
+	
 	
 	
 	
@@ -1388,8 +1340,7 @@ $tdatapeople[".hideMobileList"] = array();
 	$edata["validateAs"] = array();
 	$edata["validateAs"]["basicValidate"] = array();
 	$edata["validateAs"]["customMessages"] = array();
-						$edata["validateAs"]["basicValidate"][] = "IsRequired";
-		
+	
 	
 	//	End validation
 
@@ -2055,11 +2006,41 @@ $detailsTablesData["public.people"] = array();
 				$detailsTablesData["public.people"][$dIndex]["detailKeys"] = array();
 
 	$detailsTablesData["public.people"][$dIndex]["detailKeys"][]="fk_id_people";
-//	public.user
+//	public.customers
 	
 	
 
 		$dIndex = 1;
+	$detailsParam = array();
+	$detailsParam["dDataSourceTable"]="public.customers";
+		$detailsParam["dOriginalTable"] = "public.customers";
+
+
+
+		
+		$detailsParam["dType"]=PAGE_LIST;
+	$detailsParam["dShortTable"] = "customers";
+	$detailsParam["dCaptionTable"] = GetTableCaption("public_customers");
+	$detailsParam["masterKeys"] =array();
+	$detailsParam["detailKeys"] =array();
+
+
+		
+	$detailsTablesData["public.people"][$dIndex] = $detailsParam;
+
+	
+		$detailsTablesData["public.people"][$dIndex]["masterKeys"] = array();
+
+	$detailsTablesData["public.people"][$dIndex]["masterKeys"][]="id";
+
+				$detailsTablesData["public.people"][$dIndex]["detailKeys"] = array();
+
+	$detailsTablesData["public.people"][$dIndex]["detailKeys"][]="fk_id_people";
+//	public.user
+	
+	
+
+		$dIndex = 2;
 	$detailsParam = array();
 	$detailsParam["dDataSourceTable"]="public.user";
 		$detailsParam["dOriginalTable"] = "public.user";
@@ -2085,21 +2066,21 @@ $detailsTablesData["public.people"] = array();
 				$detailsTablesData["public.people"][$dIndex]["detailKeys"] = array();
 
 	$detailsTablesData["public.people"][$dIndex]["detailKeys"][]="fk_id_people";
-//	public.customers
+//	public.advisor_user
 	
 	
 
-		$dIndex = 2;
+		$dIndex = 3;
 	$detailsParam = array();
-	$detailsParam["dDataSourceTable"]="public.customers";
-		$detailsParam["dOriginalTable"] = "public.customers";
+	$detailsParam["dDataSourceTable"]="public.advisor_user";
+		$detailsParam["dOriginalTable"] = "public.advisor";
 
 
 
 		
 		$detailsParam["dType"]=PAGE_LIST;
-	$detailsParam["dShortTable"] = "customers";
-	$detailsParam["dCaptionTable"] = GetTableCaption("public_customers");
+	$detailsParam["dShortTable"] = "advisor_user";
+	$detailsParam["dCaptionTable"] = GetTableCaption("public_advisor_user");
 	$detailsParam["masterKeys"] =array();
 	$detailsParam["detailKeys"] =array();
 

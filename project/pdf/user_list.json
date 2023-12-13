@@ -91,6 +91,15 @@ pdfDocument = {
 										{BEGIN col_grid_10}
 					"%",
 					{END col_grid_10}
+										{BEGIN col_grid_11}
+					"%",
+					{END col_grid_11}
+										{BEGIN col_grid_12}
+					"%",
+					{END col_grid_12}
+										{BEGIN col_grid_13}
+					"%",
+					{END col_grid_13}
 															],
 											heights: [ // first height for header part
 					"%",
@@ -219,7 +228,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{mlang_message DISPLAYING}","hidden":"{$item_hide_details_found}","isHtml":true,"page_indicator":true},
+			{"text":"Mostrando %first% - %last% de %total%","hidden":"{$item_hide_details_found}","isHtml":true,"page_indicator":true},
 				
 				
 			{"text":"","hidden":"{$item_hide_page_size}"},
@@ -316,7 +325,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel public_user id }","hidden":"{$item_hide_simple_grid_field4}","bold":true},
+			{"text":"{$jslabel public_user id }","hidden":"{$item_hide_simple_grid_field12}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -342,7 +351,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel public_user active }","hidden":"{$item_hide_simple_grid_field10}","bold":true},
+			{"text":"{$jslabel public_user active }","hidden":"{$item_hide_simple_grid_field13}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -368,7 +377,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel public_user email }","hidden":"{$item_hide_simple_grid_field11}","bold":true},
+			{"text":"{$jslabel public_user email }","hidden":"{$item_hide_simple_grid_field14}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -394,7 +403,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel public_user fk_id_rol }","hidden":"{$item_hide_simple_grid_field12}","bold":true},
+			{"text":"{$jslabel public_user fk_id_rol }","hidden":"{$item_hide_simple_grid_field15}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -420,11 +429,11 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel public_user username }","hidden":"{$item_hide_simple_grid_field13}","bold":true},
+			{"text":"{$jslabel public_user password }","hidden":"{$item_hide_simple_grid_field16}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
-              "alignment": '{$username_align}',
+              "alignment": '{$password_align}',
   },
 
 {END cellblock_grid_headcell_field4}
@@ -446,11 +455,11 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel public_user reset_token }","hidden":"{$item_hide_simple_grid_field14}","bold":true},
+			{"text":"{$jslabel public_user username }","hidden":"{$item_hide_simple_grid_field17}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
-              "alignment": '{$reset_token_align}',
+              "alignment": '{$username_align}',
   },
 
 {END cellblock_grid_headcell_field5}
@@ -472,11 +481,11 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel public_user created }","hidden":"{$item_hide_simple_grid_field15}","bold":true},
+			{"text":"{$jslabel public_user reset_token }","hidden":"{$item_hide_simple_grid_field18}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
-              "alignment": '{$created_align}',
+              "alignment": '{$reset_token_align}',
   },
 
 {END cellblock_grid_headcell_field6}
@@ -498,11 +507,11 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel public_user updated }","hidden":"{$item_hide_simple_grid_field16}","bold":true},
+			{"text":"{$jslabel public_user created }","hidden":"{$item_hide_simple_grid_field19}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
-              "alignment": '{$updated_align}',
+              "alignment": '{$created_align}',
   },
 
 {END cellblock_grid_headcell_field7}
@@ -524,14 +533,92 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel public_user fk_id_people }","hidden":"{$item_hide_simple_grid_field17}","bold":true},
+			{"text":"{$jslabel public_user updated }","hidden":"{$item_hide_simple_grid_field20}","bold":true},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": '{$updated_align}',
+  },
+
+{END cellblock_grid_headcell_field8}
+																							{BEGIN cellblock_grid_headcell_field9}
+{
+	cellId: 'headcell_field9',
+	col:0,
+	row:0,
+			style: 'headcell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+						
+	
+	
+	
+			"text": [
+		
+				
+			{"text":"{$jslabel public_user fk_id_people }","hidden":"{$item_hide_simple_grid_field21}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
               "alignment": '{$fk_id_people_align}',
   },
 
-{END cellblock_grid_headcell_field8}
+{END cellblock_grid_headcell_field9}
+																							{BEGIN cellblock_grid_headcell_field10}
+{
+	cellId: 'headcell_field10',
+	col:0,
+	row:0,
+			style: 'headcell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+						
+	
+	
+	
+			"text": [
+		
+				
+			{"text":"{$jslabel public_user userpic }","hidden":"{$item_hide_simple_grid_field22}","bold":true},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": '{$userpic_align}',
+  },
+
+{END cellblock_grid_headcell_field10}
+																							{BEGIN cellblock_grid_headcell_field11}
+{
+	cellId: 'headcell_field11',
+	col:0,
+	row:0,
+			style: 'headcell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+						
+	
+	
+	
+			"text": [
+		
+				
+			{"text":"{$jslabel public_user ext_security_id }","hidden":"{$item_hide_simple_grid_field23}","bold":true},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": '{$ext_security_id_align}',
+  },
+
+{END cellblock_grid_headcell_field11}
 											],
 				{END row_grid_0}
 		
@@ -721,6 +808,32 @@ pdfDocument = {
 			"text": [
 		
 				
+			{"text":{$password_pdfvalue},"hidden":"{$item_hide_simple_grid_field4}"},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": '{$password_align}',
+  },
+
+{END cellblock_grid_cell_field4}
+																							{BEGIN cellblock_grid_cell_field5}
+{
+	cellId: 'cell_field5',
+	col:0,
+	row:0,
+			style: 'bodycell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+						
+	
+	
+	
+			"text": [
+		
+				
 			{"text":{$username_pdfvalue},"hidden":"{$item_hide_simple_grid_field5}"},
 				
 		  ],
@@ -728,10 +841,10 @@ pdfDocument = {
               "alignment": '{$username_align}',
   },
 
-{END cellblock_grid_cell_field4}
-																							{BEGIN cellblock_grid_cell_field5}
+{END cellblock_grid_cell_field5}
+																							{BEGIN cellblock_grid_cell_field6}
 {
-	cellId: 'cell_field5',
+	cellId: 'cell_field6',
 	col:0,
 	row:0,
 			style: 'bodycell',
@@ -754,10 +867,10 @@ pdfDocument = {
               "alignment": '{$reset_token_align}',
   },
 
-{END cellblock_grid_cell_field5}
-																							{BEGIN cellblock_grid_cell_field6}
+{END cellblock_grid_cell_field6}
+																							{BEGIN cellblock_grid_cell_field7}
 {
-	cellId: 'cell_field6',
+	cellId: 'cell_field7',
 	col:0,
 	row:0,
 			style: 'bodycell',
@@ -780,10 +893,10 @@ pdfDocument = {
               "alignment": '{$created_align}',
   },
 
-{END cellblock_grid_cell_field6}
-																							{BEGIN cellblock_grid_cell_field7}
+{END cellblock_grid_cell_field7}
+																							{BEGIN cellblock_grid_cell_field8}
 {
-	cellId: 'cell_field7',
+	cellId: 'cell_field8',
 	col:0,
 	row:0,
 			style: 'bodycell',
@@ -806,10 +919,10 @@ pdfDocument = {
               "alignment": '{$updated_align}',
   },
 
-{END cellblock_grid_cell_field7}
-																							{BEGIN cellblock_grid_cell_field8}
+{END cellblock_grid_cell_field8}
+																							{BEGIN cellblock_grid_cell_field9}
 {
-	cellId: 'cell_field8',
+	cellId: 'cell_field9',
 	col:0,
 	row:0,
 			style: 'bodycell',
@@ -832,7 +945,59 @@ pdfDocument = {
               "alignment": '{$fk_id_people_align}',
   },
 
-{END cellblock_grid_cell_field8}
+{END cellblock_grid_cell_field9}
+																							{BEGIN cellblock_grid_cell_field10}
+{
+	cellId: 'cell_field10',
+	col:0,
+	row:0,
+			style: 'bodycell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+						
+	
+	
+	
+			"text": [
+		
+				
+			{"text":{$userpic_pdfvalue},"hidden":"{$item_hide_simple_grid_field10}"},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": '{$userpic_align}',
+  },
+
+{END cellblock_grid_cell_field10}
+																							{BEGIN cellblock_grid_cell_field11}
+{
+	cellId: 'cell_field11',
+	col:0,
+	row:0,
+			style: 'bodycell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+						
+	
+	
+	
+			"text": [
+		
+				
+			{"text":{$ext_security_id_pdfvalue},"hidden":"{$item_hide_simple_grid_field11}"},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": '{$ext_security_id_align}',
+  },
+
+{END cellblock_grid_cell_field11}
 											],
 				{END row_grid_1}
 		
@@ -1106,6 +1271,78 @@ pdfDocument = {
   },
 
 {END cellblock_grid_footcell_field8}
+																							{BEGIN cellblock_grid_footcell_field9}
+{
+	cellId: 'footcell_field9',
+	col:0,
+	row:0,
+			style: 'footcell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+						
+	
+	
+	
+			"text": [
+		
+				'',
+	  ],
+  "border": [ true, true, true, true ],
+              "alignment": 'left',
+  },
+
+{END cellblock_grid_footcell_field9}
+																							{BEGIN cellblock_grid_footcell_field10}
+{
+	cellId: 'footcell_field10',
+	col:0,
+	row:0,
+			style: 'footcell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+						
+	
+	
+	
+			"text": [
+		
+				'',
+	  ],
+  "border": [ true, true, true, true ],
+              "alignment": 'left',
+  },
+
+{END cellblock_grid_footcell_field10}
+																							{BEGIN cellblock_grid_footcell_field11}
+{
+	cellId: 'footcell_field11',
+	col:0,
+	row:0,
+			style: 'footcell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+						
+	
+	
+	
+			"text": [
+		
+				'',
+	  ],
+  "border": [ true, true, true, true ],
+              "alignment": 'left',
+  },
+
+{END cellblock_grid_footcell_field11}
 											],
 				{END row_grid_2}
 		

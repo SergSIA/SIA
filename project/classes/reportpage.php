@@ -788,8 +788,8 @@ class ReportPage extends RunnerPage
 			
 			if($counterstart != 1) 
 			{
-				$pagination.= $this->getPaginationLink(1, mlang_message("FIRST")).$advSeparator;
-				$pagination.= $this->getPaginationLink($counterstart - 1, mlang_message("PREVIOUS")).$separator;
+				$pagination.= $this->getPaginationLink(1, "Primero").$advSeparator;
+				$pagination.= $this->getPaginationLink($counterstart - 1, "Anterior").$separator;
 			}
 			
 			$pageLinks = "";	
@@ -817,8 +817,8 @@ class ReportPage extends RunnerPage
 
 			if($counterend != $this->maxPages) 
 			{
-				$pagination.= $separator . $this->getPaginationLink($counterend + 1, mlang_message("NEXT")) . $advSeparator;
-				$pagination.= $separator . $this->getPaginationLink($this->maxPages, mlang_message("LAST"));
+				$pagination.= $separator . $this->getPaginationLink($counterend + 1, "Siguiente") . $advSeparator;
+				$pagination.= $separator . $this->getPaginationLink($this->maxPages, "Último");
 			}			
 			if( $this->isBootstrap() )
 				$pagination = '<nav><ul class="pagination" data-function="pagination' . $this->id . '">' . $pagination . '</ul></nav>';
@@ -997,11 +997,11 @@ class ReportPage extends RunnerPage
 	public function createPerPage()
 	{
 		$classString = "";
-		$allMessage = mlang_message("SHOW_ALL");
+		$allMessage = "Mostrar todo";
 		if( $this->isBootstrap() )
 		{
 			$classString = 'class="form-control"';
-			$allMessage = mlang_message("ALL");
+			$allMessage = "Todos";
 		}
 		
 		$rpp = "<select ".$classString." id=\"recordspp".$this->id."\">";

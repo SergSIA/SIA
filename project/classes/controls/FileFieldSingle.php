@@ -93,27 +93,27 @@ class FileFieldSingle extends EditControl
 
 			//	filename edit
 			$strfilename = '<input type=hidden name="filenameHidden_'.$this->cfieldname.'" value="'.runner_htmlspecialchars( $fileName ).'"><br>'
-				.mlang_message("FILENAME")
+				."Nombre de archivo"
 				.'&nbsp;&nbsp;<input type="text" style="background-color:gainsboro" disabled id="filename_'.$this->cfieldname
 				.'" name="filename_'.$this->cfieldname.'" size="'.$filename_size.'" maxlength="100" value="'.runner_htmlspecialchars( $fileName ).'">';
 
 			$strtype = '<br><input id="'.$this->ctype.'_keep" type="Radio" name="'.$this->ctype
-					.'" value="upload0" checked class="rnr-uploadtype">'.mlang_message("KEEP");
+					.'" value="upload0" checked class="rnr-uploadtype">'."Guardar";
 
 			if( (strlen($value) || $mode == MODE_INLINE_EDIT) && !$this->pageObject->pSetEdit->isRequired($this->field) )
 			{
 				$strtype .= '<input id="'.$this->ctype.'_delete" type="Radio" name="'.$this->ctype
-					.'" value="upload1" class="rnr-uploadtype">'.mlang_message("DELETE");
+					.'" value="upload1" class="rnr-uploadtype">'."Borrar artículos seleccionados";
 			}
 			$strtype .= '<input id="'.$this->ctype.'_update" type="Radio" name="'.$this->ctype
-				.'" value="upload2" class="rnr-uploadtype">'.mlang_message("UPDATE");
+				.'" value="upload2" class="rnr-uploadtype">'."Actualizar";
 		}
 		else
 		{
 			//	if Adding record
 			$strtype = '<input id="'.$this->ctype.'" type="hidden" name="'.$this->ctype.'" value="upload2">';
 
-			$strfilename = '<br>'.mlang_message("FILENAME")
+			$strfilename = '<br>'."Nombre de archivo"
 				.'&nbsp;&nbsp;<input type="text" id="filename_'.$this->cfieldname.'" name="filename_'.$this->cfieldname.'" size="'
 				.$filename_size.'" maxlength="100">';
 		}

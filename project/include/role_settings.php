@@ -19,21 +19,6 @@ $fieldToolTipsrole = array();
 $pageTitlesrole = array();
 $placeHoldersrole = array();
 
-if(mlang_getcurrentlang()=="English")
-{
-	$fieldLabelsrole["English"] = array();
-	$fieldToolTipsrole["English"] = array();
-	$placeHoldersrole["English"] = array();
-	$pageTitlesrole["English"] = array();
-	$fieldLabelsrole["English"]["id"] = "Id";
-	$fieldToolTipsrole["English"]["id"] = "";
-	$placeHoldersrole["English"]["id"] = "";
-	$fieldLabelsrole["English"]["description"] = "Description";
-	$fieldToolTipsrole["English"]["description"] = "";
-	$placeHoldersrole["English"]["description"] = "";
-	if (count($fieldToolTipsrole["English"]))
-		$tdatarole[".isUseToolTips"] = true;
-}
 if(mlang_getcurrentlang()=="Spanish")
 {
 	$fieldLabelsrole["Spanish"] = array();
@@ -145,7 +130,7 @@ $tdatarole[".rowHighlite"] = true;
 
 
 
-												
+									
 
 $tdatarole[".ajaxCodeSnippetAdded"] = false;
 
@@ -157,7 +142,7 @@ $tdatarole[".addPageEvents"] = false;
 $tdatarole[".isUseTimeForSearch"] = false;
 
 
-$tdatarole[".badgeColor"] = "D2691E";
+$tdatarole[".badgeColor"] = "E07878";
 
 
 $tdatarole[".allSearchFields"] = array();

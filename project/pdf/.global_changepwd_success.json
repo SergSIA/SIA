@@ -104,7 +104,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{mlang_message PASSWORD_WAS_CHANGED}","hidden":"{$item_hide_changepwd_success_message}","isHtml":true},
+			{"text":"La contraseña ha cambiado","hidden":"{$item_hide_changepwd_success_message}","isHtml":true},
 				
 		  ],
   "border": [ false, false, false, false ],

@@ -123,15 +123,15 @@ class RightsPage extends ListPage
 		global $cman;
 		$grConnection = $cman->getForUserGroups();
 
-		$this->groups[-1] = "<".mlang_message("AA_GROUP_ADMIN").">";
-		$this->groups[-2] = "<".mlang_message("AA_GROUP_DEFAULT").">";
-		$this->groups[-3] = "<".mlang_message("AA_GROUP_GUEST").">";
+		$this->groups[-1] = "<"."Administrador".">";
+		$this->groups[-2] = "<"."Por defecto".">";
+		$this->groups[-3] = "<"."Invitado".">";
 
 		$sql = "select ".
 			$grConnection->addFieldWrappers( "" ) .", ".
 			$grConnection->addFieldWrappers( "" )
 			." from ".
-			$grConnection->addTableWrappers( "uggroups" ) .
+			$grConnection->addTableWrappers( "" ) .
 			" order by ". $grConnection->addFieldWrappers( "" );
 
 		$qResult = $grConnection->query( $sql );
@@ -173,7 +173,7 @@ class RightsPage extends ListPage
 			.", ". $this->connection->addFieldWrappers( "" )
 			.", ". $this->connection->addFieldWrappers( "" )
 			.", ". $this->connection->addFieldWrappers( "" )
-			." from ". $this->connection->addTableWrappers( "ugrights" )
+			." from ". $this->connection->addTableWrappers( "" )
 			." order by ". $this->connection->addFieldWrappers( "" );
 
 		$qResult = $this->connection->query( $sql );
@@ -332,7 +332,7 @@ class RightsPage extends ListPage
 			$unlistedId = count($this->menuOrderedTables);
 			$arr = array();
 			$arr["collapsed"] = true;
-			$arr["title"] = mlang_message("UNLISTED");
+			$arr["title"] = "Tablas no listadas";
 			$arr["items"] = array();
 			$this->menuOrderedTables[] = $arr;
 			foreach( $this->alphaOrderedTables as $table)
@@ -623,7 +623,7 @@ class RightsPage extends ListPage
 	function updateTablePermissions( $table, $group, $tableRights )
 	{
 		$mask = $tableRights["permissions"];
-		$rightWTableName = $this->connection->addTableWrappers( "ugrights" );
+		$rightWTableName = $this->connection->addTableWrappers( "" );
 		$accessMaskWFieldName = $this->connection->addFieldWrappers( "" );
 		$groupisWFieldName = $this->connection->addFieldWrappers( "" );
 		$pageWFieldName = $this->connection->addFieldWrappers( "" );

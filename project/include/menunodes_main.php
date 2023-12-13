@@ -7,14 +7,14 @@ function getMenuNodes_main($menuNodesObject)
 
 	$menuNode = array();
 	$menuNode["id"] = "1";
-	$menuNode["name"] = "ADVISOR";
+	$menuNode["name"] = "";
 	$menuNode["href"] = "mypage.htm";
 	$menuNode["type"] = "Leaf";
 	$menuNode["table"] = "public.advisor";
 	$menuNode["style"] = "";
 	$menuNode["params"] = "";
 	$menuNode["parent"] = "0";
-	$menuNode["nameType"] = "CustomID";
+	$menuNode["nameType"] = "Text";
 	$menuNode["linkType"] = "Internal";
 	$menuNode["pageType"] = strtolower("List");//
 	$menuNode["pageId"] = "";
@@ -26,21 +26,21 @@ function getMenuNodes_main($menuNodesObject)
 
 		$menuNode["color"] = "";
 
-	$menuNode["title"] = GetCustomLabel("ADVISOR");
+	$menuNode["title"] = "Asesor";
 
 
 
 	$menuNodesObject->menuNodes["main"][] = $menuNode;
 	$menuNode = array();
 	$menuNode["id"] = "2";
-	$menuNode["name"] = "CONSULTING";
+	$menuNode["name"] = "";
 	$menuNode["href"] = "mypage.htm";
 	$menuNode["type"] = "Leaf";
 	$menuNode["table"] = "public.consulting";
 	$menuNode["style"] = "";
 	$menuNode["params"] = "";
 	$menuNode["parent"] = "0";
-	$menuNode["nameType"] = "CustomID";
+	$menuNode["nameType"] = "Text";
 	$menuNode["linkType"] = "Internal";
 	$menuNode["pageType"] = strtolower("List");//
 	$menuNode["pageId"] = "";
@@ -52,118 +52,14 @@ function getMenuNodes_main($menuNodesObject)
 
 		$menuNode["color"] = "";
 
-	$menuNode["title"] = GetCustomLabel("CONSULTING");
+	$menuNode["title"] = "Asesorias";
 
 
 
 	$menuNodesObject->menuNodes["main"][] = $menuNode;
 	$menuNode = array();
 	$menuNode["id"] = "3";
-	$menuNode["name"] = "CUSTOMERS";
-	$menuNode["href"] = "mypage.htm";
-	$menuNode["type"] = "Leaf";
-	$menuNode["table"] = "public.customers";
-	$menuNode["style"] = "";
-	$menuNode["params"] = "";
-	$menuNode["parent"] = "0";
-	$menuNode["nameType"] = "CustomID";
-	$menuNode["linkType"] = "Internal";
-	$menuNode["pageType"] = strtolower("List");//
-	$menuNode["pageId"] = "";
-	$menuNode["openType"] = "None";
-
-	$menuNode["icon"] = "fa-users";
-	$menuNode["iconType"] = "3";
-	$menuNode["iconShow"] = "1";
-
-		$menuNode["color"] = "";
-
-	$menuNode["title"] = GetCustomLabel("CUSTOMERS");
-
-
-
-	$menuNodesObject->menuNodes["main"][] = $menuNode;
-	$menuNode = array();
-	$menuNode["id"] = "4";
-	$menuNode["name"] = "PAYMENT";
-	$menuNode["href"] = "mypage.htm";
-	$menuNode["type"] = "Leaf";
-	$menuNode["table"] = "public.payment";
-	$menuNode["style"] = "";
-	$menuNode["params"] = "";
-	$menuNode["parent"] = "0";
-	$menuNode["nameType"] = "CustomID";
-	$menuNode["linkType"] = "Internal";
-	$menuNode["pageType"] = strtolower("List");//
-	$menuNode["pageId"] = "";
-	$menuNode["openType"] = "None";
-
-	$menuNode["icon"] = "fa-usd";
-	$menuNode["iconType"] = "3";
-	$menuNode["iconShow"] = "1";
-
-		$menuNode["color"] = "";
-
-	$menuNode["title"] = GetCustomLabel("PAYMENT");
-
-
-
-	$menuNodesObject->menuNodes["main"][] = $menuNode;
-	$menuNode = array();
-	$menuNode["id"] = "5";
-	$menuNode["name"] = "PEOPLE";
-	$menuNode["href"] = "mypage.htm";
-	$menuNode["type"] = "Leaf";
-	$menuNode["table"] = "public.people";
-	$menuNode["style"] = "";
-	$menuNode["params"] = "";
-	$menuNode["parent"] = "0";
-	$menuNode["nameType"] = "CustomID";
-	$menuNode["linkType"] = "Internal";
-	$menuNode["pageType"] = strtolower("List");//
-	$menuNode["pageId"] = "";
-	$menuNode["openType"] = "None";
-
-	$menuNode["icon"] = "fa-folder";
-	$menuNode["iconType"] = "3";
-	$menuNode["iconShow"] = "1";
-
-		$menuNode["color"] = "";
-
-	$menuNode["title"] = GetCustomLabel("PEOPLE");
-
-
-
-	$menuNodesObject->menuNodes["main"][] = $menuNode;
-	$menuNode = array();
-	$menuNode["id"] = "6";
-	$menuNode["name"] = "USER";
-	$menuNode["href"] = "mypage.htm";
-	$menuNode["type"] = "Leaf";
-	$menuNode["table"] = "public.user";
-	$menuNode["style"] = "";
-	$menuNode["params"] = "";
-	$menuNode["parent"] = "0";
-	$menuNode["nameType"] = "CustomID";
-	$menuNode["linkType"] = "Internal";
-	$menuNode["pageType"] = strtolower("List");//
-	$menuNode["pageId"] = "";
-	$menuNode["openType"] = "None";
-
-	$menuNode["icon"] = "fa-user-circle-o";
-	$menuNode["iconType"] = "3";
-	$menuNode["iconShow"] = "1";
-
-		$menuNode["color"] = "";
-
-	$menuNode["title"] = GetCustomLabel("USER");
-
-
-
-	$menuNodesObject->menuNodes["main"][] = $menuNode;
-	$menuNode = array();
-	$menuNode["id"] = "7";
-	$menuNode["name"] = "";
+	$menuNode["name"] = "Solicitudes de Asesorias";
 	$menuNode["href"] = "mypage.htm";
 	$menuNode["type"] = "Leaf";
 	$menuNode["table"] = "public.consulting_my";
@@ -182,14 +78,170 @@ function getMenuNodes_main($menuNodesObject)
 
 		$menuNode["color"] = "";
 
-	$menuNode["title"] = GetTableCaption("public_consulting_my");
+	$menuNode["title"] = "Solicitudes de Asesorias";
+
+
+
+	$menuNodesObject->menuNodes["main"][] = $menuNode;
+	$menuNode = array();
+	$menuNode["id"] = "4";
+	$menuNode["name"] = "Gestionar Asesorias";
+	$menuNode["href"] = "mypage.htm";
+	$menuNode["type"] = "Leaf";
+	$menuNode["table"] = "public.consulting_my_advisor";
+	$menuNode["style"] = "";
+	$menuNode["params"] = "";
+	$menuNode["parent"] = "0";
+	$menuNode["nameType"] = "Text";
+	$menuNode["linkType"] = "Internal";
+	$menuNode["pageType"] = strtolower("List");//
+	$menuNode["pageId"] = "";
+	$menuNode["openType"] = "None";
+
+	$menuNode["icon"] = "fa-legal";
+	$menuNode["iconType"] = "3";
+	$menuNode["iconShow"] = "1";
+
+		$menuNode["color"] = "";
+
+	$menuNode["title"] = "Gestionar Asesorias";
+
+
+
+	$menuNodesObject->menuNodes["main"][] = $menuNode;
+	$menuNode = array();
+	$menuNode["id"] = "5";
+	$menuNode["name"] = "";
+	$menuNode["href"] = "mypage.htm";
+	$menuNode["type"] = "Leaf";
+	$menuNode["table"] = "public.customers";
+	$menuNode["style"] = "";
+	$menuNode["params"] = "";
+	$menuNode["parent"] = "0";
+	$menuNode["nameType"] = "Text";
+	$menuNode["linkType"] = "Internal";
+	$menuNode["pageType"] = strtolower("List");//
+	$menuNode["pageId"] = "";
+	$menuNode["openType"] = "None";
+
+	$menuNode["icon"] = "fa-users";
+	$menuNode["iconType"] = "3";
+	$menuNode["iconShow"] = "1";
+
+		$menuNode["color"] = "";
+
+	$menuNode["title"] = "Clientes";
+
+
+
+	$menuNodesObject->menuNodes["main"][] = $menuNode;
+	$menuNode = array();
+	$menuNode["id"] = "6";
+	$menuNode["name"] = "Documentos";
+	$menuNode["href"] = "mypage.htm";
+	$menuNode["type"] = "Leaf";
+	$menuNode["table"] = "public.document";
+	$menuNode["style"] = "";
+	$menuNode["params"] = "";
+	$menuNode["parent"] = "0";
+	$menuNode["nameType"] = "Text";
+	$menuNode["linkType"] = "Internal";
+	$menuNode["pageType"] = strtolower("List");//
+	$menuNode["pageId"] = "";
+	$menuNode["openType"] = "None";
+
+	$menuNode["icon"] = "fa-500px";
+	$menuNode["iconType"] = "3";
+	$menuNode["iconShow"] = "1";
+
+		$menuNode["color"] = "";
+
+	$menuNode["title"] = "Documentos";
+
+
+
+	$menuNodesObject->menuNodes["main"][] = $menuNode;
+	$menuNode = array();
+	$menuNode["id"] = "7";
+	$menuNode["name"] = "Pagos";
+	$menuNode["href"] = "mypage.htm";
+	$menuNode["type"] = "Leaf";
+	$menuNode["table"] = "public.payment";
+	$menuNode["style"] = "";
+	$menuNode["params"] = "";
+	$menuNode["parent"] = "0";
+	$menuNode["nameType"] = "Text";
+	$menuNode["linkType"] = "Internal";
+	$menuNode["pageType"] = strtolower("List");//
+	$menuNode["pageId"] = "";
+	$menuNode["openType"] = "None";
+
+	$menuNode["icon"] = "fa-usd";
+	$menuNode["iconType"] = "3";
+	$menuNode["iconShow"] = "1";
+
+		$menuNode["color"] = "";
+
+	$menuNode["title"] = "Pagos";
 
 
 
 	$menuNodesObject->menuNodes["main"][] = $menuNode;
 	$menuNode = array();
 	$menuNode["id"] = "8";
-	$menuNode["name"] = "";
+	$menuNode["name"] = "Datos Personales";
+	$menuNode["href"] = "mypage.htm";
+	$menuNode["type"] = "Leaf";
+	$menuNode["table"] = "public.people";
+	$menuNode["style"] = "";
+	$menuNode["params"] = "";
+	$menuNode["parent"] = "0";
+	$menuNode["nameType"] = "Text";
+	$menuNode["linkType"] = "Internal";
+	$menuNode["pageType"] = strtolower("List");//
+	$menuNode["pageId"] = "";
+	$menuNode["openType"] = "None";
+
+	$menuNode["icon"] = "fa-vcard-o";
+	$menuNode["iconType"] = "3";
+	$menuNode["iconShow"] = "1";
+
+		$menuNode["color"] = "";
+
+	$menuNode["title"] = "Datos Personales";
+
+
+
+	$menuNodesObject->menuNodes["main"][] = $menuNode;
+	$menuNode = array();
+	$menuNode["id"] = "9";
+	$menuNode["name"] = "Usuarios";
+	$menuNode["href"] = "mypage.htm";
+	$menuNode["type"] = "Leaf";
+	$menuNode["table"] = "public.user";
+	$menuNode["style"] = "";
+	$menuNode["params"] = "";
+	$menuNode["parent"] = "0";
+	$menuNode["nameType"] = "Text";
+	$menuNode["linkType"] = "Internal";
+	$menuNode["pageType"] = strtolower("List");//
+	$menuNode["pageId"] = "";
+	$menuNode["openType"] = "None";
+
+	$menuNode["icon"] = "fa-user";
+	$menuNode["iconType"] = "3";
+	$menuNode["iconShow"] = "1";
+
+		$menuNode["color"] = "";
+
+	$menuNode["title"] = "Usuarios";
+
+
+
+	$menuNodesObject->menuNodes["main"][] = $menuNode;
+	$menuNode = array();
+	$menuNode["id"] = "10";
+	$menuNode["name"] = "Mis Datos";
 	$menuNode["href"] = "mypage.htm";
 	$menuNode["type"] = "Leaf";
 	$menuNode["table"] = "public.people_user";
@@ -208,17 +260,17 @@ function getMenuNodes_main($menuNodesObject)
 
 		$menuNode["color"] = "";
 
-	$menuNode["title"] = GetTableCaption("public_people_user");
+	$menuNode["title"] = "Mis Datos";
 
 
 
 	$menuNodesObject->menuNodes["main"][] = $menuNode;
 	$menuNode = array();
-	$menuNode["id"] = "9";
-	$menuNode["name"] = "";
+	$menuNode["id"] = "11";
+	$menuNode["name"] = "Medio Pago";
 	$menuNode["href"] = "mypage.htm";
 	$menuNode["type"] = "Leaf";
-	$menuNode["table"] = "public.advisor_user";
+	$menuNode["table"] = "public.pay_deta";
 	$menuNode["style"] = "";
 	$menuNode["params"] = "";
 	$menuNode["parent"] = "0";
@@ -228,157 +280,79 @@ function getMenuNodes_main($menuNodesObject)
 	$menuNode["pageId"] = "";
 	$menuNode["openType"] = "None";
 
-	$menuNode["icon"] = "fa-certificate";
-	$menuNode["iconType"] = "3";
-	$menuNode["iconShow"] = "1";
-
-		$menuNode["color"] = "";
-
-	$menuNode["title"] = GetTableCaption("public_advisor_user");
-
-
-
-	$menuNodesObject->menuNodes["main"][] = $menuNode;
-	$menuNode = array();
-	$menuNode["id"] = "10";
-	$menuNode["name"] = "CONSULTINGS";
-	$menuNode["href"] = "mypage.htm";
-	$menuNode["type"] = "Leaf";
-	$menuNode["table"] = "public.consulting_my_advisor";
-	$menuNode["style"] = "";
-	$menuNode["params"] = "";
-	$menuNode["parent"] = "0";
-	$menuNode["nameType"] = "CustomID";
-	$menuNode["linkType"] = "Internal";
-	$menuNode["pageType"] = strtolower("List");//
-	$menuNode["pageId"] = "";
-	$menuNode["openType"] = "None";
-
-	$menuNode["icon"] = "fa-legal";
-	$menuNode["iconType"] = "3";
-	$menuNode["iconShow"] = "1";
-
-		$menuNode["color"] = "";
-
-	$menuNode["title"] = GetCustomLabel("CONSULTINGS");
-
-
-
-	$menuNodesObject->menuNodes["main"][] = $menuNode;
-	$menuNode = array();
-	$menuNode["id"] = "11";
-	$menuNode["name"] = "PAYMENT_MY";
-	$menuNode["href"] = "mypage.htm";
-	$menuNode["type"] = "Leaf";
-	$menuNode["table"] = "public.payment_my";
-	$menuNode["style"] = "";
-	$menuNode["params"] = "";
-	$menuNode["parent"] = "0";
-	$menuNode["nameType"] = "CustomID";
-	$menuNode["linkType"] = "Internal";
-	$menuNode["pageType"] = strtolower("List");//
-	$menuNode["pageId"] = "";
-	$menuNode["openType"] = "None";
-
 	$menuNode["icon"] = "fa-money";
 	$menuNode["iconType"] = "3";
 	$menuNode["iconShow"] = "1";
 
 		$menuNode["color"] = "";
 
-	$menuNode["title"] = GetCustomLabel("PAYMENT_MY");
+	$menuNode["title"] = "Medio Pago";
 
 
 
 	$menuNodesObject->menuNodes["main"][] = $menuNode;
 	$menuNode = array();
 	$menuNode["id"] = "12";
-	$menuNode["name"] = "PARAMETROS";
+	$menuNode["name"] = "Parametros";
 	$menuNode["href"] = "";
 	$menuNode["type"] = "Group";
 	$menuNode["table"] = "";
 	$menuNode["style"] = "";
 	$menuNode["params"] = "";
 	$menuNode["parent"] = "0";
-	$menuNode["nameType"] = "CustomID";
+	$menuNode["nameType"] = "Text";
 	$menuNode["linkType"] = "None";
 	$menuNode["pageType"] = strtolower("");//
 	$menuNode["pageId"] = "";
 	$menuNode["openType"] = "None";
 
-	$menuNode["icon"] = "fa-cog";
+	$menuNode["icon"] = "fa-gear";
 	$menuNode["iconType"] = "3";
 	$menuNode["iconShow"] = "1";
 
 		$menuNode["color"] = "";
 
-	$menuNode["title"] = GetCustomLabel("PARAMETROS");
+	$menuNode["title"] = "Parametros";
 
 
 
 	$menuNodesObject->menuNodes["main"][] = $menuNode;
 	$menuNode = array();
 	$menuNode["id"] = "13";
-	$menuNode["name"] = "STATUS_CONSULTING1";
+	$menuNode["name"] = "";
 	$menuNode["href"] = "mypage.htm";
 	$menuNode["type"] = "Leaf";
-	$menuNode["table"] = "public.status_consulting";
+	$menuNode["table"] = "public.country";
 	$menuNode["style"] = "";
 	$menuNode["params"] = "";
 	$menuNode["parent"] = "12";
-	$menuNode["nameType"] = "CustomID";
+	$menuNode["nameType"] = "Text";
 	$menuNode["linkType"] = "Internal";
 	$menuNode["pageType"] = strtolower("List");//
 	$menuNode["pageId"] = "";
 	$menuNode["openType"] = "None";
 
-	$menuNode["icon"] = "fa-circle-o";
+	$menuNode["icon"] = "fa-flag-checkered";
 	$menuNode["iconType"] = "3";
 	$menuNode["iconShow"] = "1";
 
 		$menuNode["color"] = "";
 
-	$menuNode["title"] = GetCustomLabel("STATUS_CONSULTING1");
+	$menuNode["title"] = "Pais";
 
 
 
 	$menuNodesObject->menuNodes["main"][] = $menuNode;
 	$menuNode = array();
 	$menuNode["id"] = "14";
-	$menuNode["name"] = "DOCUMENT";
-	$menuNode["href"] = "mypage.htm";
-	$menuNode["type"] = "Leaf";
-	$menuNode["table"] = "public.document";
-	$menuNode["style"] = "";
-	$menuNode["params"] = "";
-	$menuNode["parent"] = "12";
-	$menuNode["nameType"] = "CustomID";
-	$menuNode["linkType"] = "Internal";
-	$menuNode["pageType"] = strtolower("List");//
-	$menuNode["pageId"] = "";
-	$menuNode["openType"] = "None";
-
-	$menuNode["icon"] = "fa-500px";
-	$menuNode["iconType"] = "3";
-	$menuNode["iconShow"] = "1";
-
-		$menuNode["color"] = "";
-
-	$menuNode["title"] = GetCustomLabel("DOCUMENT");
-
-
-
-	$menuNodesObject->menuNodes["main"][] = $menuNode;
-	$menuNode = array();
-	$menuNode["id"] = "15";
-	$menuNode["name"] = "METHOD_PAYMENT";
+	$menuNode["name"] = "Metodo de Pago";
 	$menuNode["href"] = "mypage.htm";
 	$menuNode["type"] = "Leaf";
 	$menuNode["table"] = "public.method_payment";
 	$menuNode["style"] = "";
 	$menuNode["params"] = "";
 	$menuNode["parent"] = "12";
-	$menuNode["nameType"] = "CustomID";
+	$menuNode["nameType"] = "Text";
 	$menuNode["linkType"] = "Internal";
 	$menuNode["pageType"] = strtolower("List");//
 	$menuNode["pageId"] = "";
@@ -390,13 +364,13 @@ function getMenuNodes_main($menuNodesObject)
 
 		$menuNode["color"] = "";
 
-	$menuNode["title"] = GetCustomLabel("METHOD_PAYMENT");
+	$menuNode["title"] = "Metodo de Pago";
 
 
 
 	$menuNodesObject->menuNodes["main"][] = $menuNode;
 	$menuNode = array();
-	$menuNode["id"] = "16";
+	$menuNode["id"] = "15";
 	$menuNode["name"] = "";
 	$menuNode["href"] = "mypage.htm";
 	$menuNode["type"] = "Leaf";
@@ -410,27 +384,27 @@ function getMenuNodes_main($menuNodesObject)
 	$menuNode["pageId"] = "";
 	$menuNode["openType"] = "None";
 
-	$menuNode["icon"] = "fa-eye";
+	$menuNode["icon"] = "fa-leaf";
 	$menuNode["iconType"] = "3";
 	$menuNode["iconShow"] = "1";
 
 		$menuNode["color"] = "";
 
-	$menuNode["title"] = GetTableCaption("public_role");
+	$menuNode["title"] = "Rol";
 
 
 
 	$menuNodesObject->menuNodes["main"][] = $menuNode;
 	$menuNode = array();
-	$menuNode["id"] = "17";
-	$menuNode["name"] = "SPECIALTY";
+	$menuNode["id"] = "16";
+	$menuNode["name"] = "";
 	$menuNode["href"] = "mypage.htm";
 	$menuNode["type"] = "Leaf";
 	$menuNode["table"] = "public.specialty";
 	$menuNode["style"] = "";
 	$menuNode["params"] = "";
 	$menuNode["parent"] = "12";
-	$menuNode["nameType"] = "CustomID";
+	$menuNode["nameType"] = "Text";
 	$menuNode["linkType"] = "Internal";
 	$menuNode["pageType"] = strtolower("List");//
 	$menuNode["pageId"] = "";
@@ -442,21 +416,47 @@ function getMenuNodes_main($menuNodesObject)
 
 		$menuNode["color"] = "";
 
-	$menuNode["title"] = GetCustomLabel("SPECIALTY");
+	$menuNode["title"] = "Especialidad";
+
+
+
+	$menuNodesObject->menuNodes["main"][] = $menuNode;
+	$menuNode = array();
+	$menuNode["id"] = "17";
+	$menuNode["name"] = "";
+	$menuNode["href"] = "mypage.htm";
+	$menuNode["type"] = "Leaf";
+	$menuNode["table"] = "public.status_consulting";
+	$menuNode["style"] = "";
+	$menuNode["params"] = "";
+	$menuNode["parent"] = "12";
+	$menuNode["nameType"] = "Text";
+	$menuNode["linkType"] = "Internal";
+	$menuNode["pageType"] = strtolower("List");//
+	$menuNode["pageId"] = "";
+	$menuNode["openType"] = "None";
+
+	$menuNode["icon"] = "fa-circle-o";
+	$menuNode["iconType"] = "3";
+	$menuNode["iconShow"] = "1";
+
+		$menuNode["color"] = "";
+
+	$menuNode["title"] = "Estado Asesoria";
 
 
 
 	$menuNodesObject->menuNodes["main"][] = $menuNode;
 	$menuNode = array();
 	$menuNode["id"] = "18";
-	$menuNode["name"] = "STATUS_PAYMENT";
+	$menuNode["name"] = "";
 	$menuNode["href"] = "mypage.htm";
 	$menuNode["type"] = "Leaf";
 	$menuNode["table"] = "public.status_payment";
 	$menuNode["style"] = "";
 	$menuNode["params"] = "";
 	$menuNode["parent"] = "12";
-	$menuNode["nameType"] = "CustomID";
+	$menuNode["nameType"] = "Text";
 	$menuNode["linkType"] = "Internal";
 	$menuNode["pageType"] = strtolower("List");//
 	$menuNode["pageId"] = "";
@@ -468,33 +468,33 @@ function getMenuNodes_main($menuNodesObject)
 
 		$menuNode["color"] = "";
 
-	$menuNode["title"] = GetCustomLabel("STATUS_PAYMENT");
+	$menuNode["title"] = "Estado Pago";
 
 
 
 	$menuNodesObject->menuNodes["main"][] = $menuNode;
 	$menuNode = array();
 	$menuNode["id"] = "19";
-	$menuNode["name"] = "COUNTRY";
+	$menuNode["name"] = "";
 	$menuNode["href"] = "mypage.htm";
 	$menuNode["type"] = "Leaf";
-	$menuNode["table"] = "public.country";
+	$menuNode["table"] = "public.customers1";
 	$menuNode["style"] = "";
 	$menuNode["params"] = "";
-	$menuNode["parent"] = "12";
-	$menuNode["nameType"] = "CustomID";
+	$menuNode["parent"] = "0";
+	$menuNode["nameType"] = "Text";
 	$menuNode["linkType"] = "Internal";
 	$menuNode["pageType"] = strtolower("List");//
 	$menuNode["pageId"] = "";
 	$menuNode["openType"] = "None";
 
-	$menuNode["icon"] = "fa-flag-checkered";
-	$menuNode["iconType"] = "3";
-	$menuNode["iconShow"] = "1";
+	$menuNode["icon"] = "glyphicon-hand-right";
+	$menuNode["iconType"] = "2";
+	$menuNode["iconShow"] = "2";
 
 		$menuNode["color"] = "";
 
-	$menuNode["title"] = GetCustomLabel("COUNTRY");
+	$menuNode["title"] = "Customers1";
 
 
 

@@ -19,21 +19,6 @@ $fieldToolTipsdocument = array();
 $pageTitlesdocument = array();
 $placeHoldersdocument = array();
 
-if(mlang_getcurrentlang()=="English")
-{
-	$fieldLabelsdocument["English"] = array();
-	$fieldToolTipsdocument["English"] = array();
-	$placeHoldersdocument["English"] = array();
-	$pageTitlesdocument["English"] = array();
-	$fieldLabelsdocument["English"]["id"] = "Id";
-	$fieldToolTipsdocument["English"]["id"] = "";
-	$placeHoldersdocument["English"]["id"] = "";
-	$fieldLabelsdocument["English"]["description"] = "Description";
-	$fieldToolTipsdocument["English"]["description"] = "";
-	$placeHoldersdocument["English"]["description"] = "";
-	if (count($fieldToolTipsdocument["English"]))
-		$tdatadocument[".isUseToolTips"] = true;
-}
 if(mlang_getcurrentlang()=="Spanish")
 {
 	$fieldLabelsdocument["Spanish"] = array();
@@ -145,7 +130,7 @@ $tdatadocument[".rowHighlite"] = true;
 
 
 
-												
+									
 
 $tdatadocument[".ajaxCodeSnippetAdded"] = false;
 
@@ -157,7 +142,7 @@ $tdatadocument[".addPageEvents"] = false;
 $tdatadocument[".isUseTimeForSearch"] = false;
 
 
-$tdatadocument[".badgeColor"] = "4682B4";
+$tdatadocument[".badgeColor"] = "1E90FF";
 
 
 $tdatadocument[".allSearchFields"] = array();

@@ -6,11 +6,11 @@ $tdatacountry[".OwnerID"] = "";
 $tdatacountry[".OriginalTable"] = "public.country";
 
 
-$tdatacountry[".pagesByType"] = my_json_decode( "{\"add\":[\"add\"],\"edit\":[\"edit\"],\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"list\"],\"masterlist\":[\"masterlist\"],\"masterprint\":[\"masterprint\"],\"print\":[\"print\"],\"search\":[\"search\"]}" );
+$tdatacountry[".pagesByType"] = my_json_decode( "{\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"list\"],\"print\":[\"print\"],\"search\":[\"search\"]}" );
 $tdatacountry[".originalPagesByType"] = $tdatacountry[".pagesByType"];
-$tdatacountry[".pages"] = types2pages( my_json_decode( "{\"add\":[\"add\"],\"edit\":[\"edit\"],\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"list\"],\"masterlist\":[\"masterlist\"],\"masterprint\":[\"masterprint\"],\"print\":[\"print\"],\"search\":[\"search\"]}" ) );
+$tdatacountry[".pages"] = types2pages( my_json_decode( "{\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"list\"],\"print\":[\"print\"],\"search\":[\"search\"]}" ) );
 $tdatacountry[".originalPages"] = $tdatacountry[".pages"];
-$tdatacountry[".defaultPages"] = my_json_decode( "{\"add\":\"add\",\"edit\":\"edit\",\"export\":\"export\",\"import\":\"import\",\"list\":\"list\",\"masterlist\":\"masterlist\",\"masterprint\":\"masterprint\",\"print\":\"print\",\"search\":\"search\"}" );
+$tdatacountry[".defaultPages"] = my_json_decode( "{\"export\":\"export\",\"import\":\"import\",\"list\":\"list\",\"print\":\"print\",\"search\":\"search\"}" );
 $tdatacountry[".originalDefaultPages"] = $tdatacountry[".defaultPages"];
 
 //	field labels
@@ -19,27 +19,6 @@ $fieldToolTipscountry = array();
 $pageTitlescountry = array();
 $placeHolderscountry = array();
 
-if(mlang_getcurrentlang()=="English")
-{
-	$fieldLabelscountry["English"] = array();
-	$fieldToolTipscountry["English"] = array();
-	$placeHolderscountry["English"] = array();
-	$pageTitlescountry["English"] = array();
-	$fieldLabelscountry["English"]["id"] = "Id";
-	$fieldToolTipscountry["English"]["id"] = "";
-	$placeHolderscountry["English"]["id"] = "";
-	$fieldLabelscountry["English"]["alfa_2"] = "Alfa 2";
-	$fieldToolTipscountry["English"]["alfa_2"] = "";
-	$placeHolderscountry["English"]["alfa_2"] = "";
-	$fieldLabelscountry["English"]["alfa_3"] = "Alfa 3";
-	$fieldToolTipscountry["English"]["alfa_3"] = "";
-	$placeHolderscountry["English"]["alfa_3"] = "";
-	$fieldLabelscountry["English"]["description"] = "Description";
-	$fieldToolTipscountry["English"]["description"] = "";
-	$placeHolderscountry["English"]["description"] = "";
-	if (count($fieldToolTipscountry["English"]))
-		$tdatacountry[".isUseToolTips"] = true;
-}
 if(mlang_getcurrentlang()=="Spanish")
 {
 	$fieldLabelscountry["Spanish"] = array();
@@ -55,7 +34,7 @@ if(mlang_getcurrentlang()=="Spanish")
 	$fieldLabelscountry["Spanish"]["alfa_3"] = "Alfa 3";
 	$fieldToolTipscountry["Spanish"]["alfa_3"] = "";
 	$placeHolderscountry["Spanish"]["alfa_3"] = "";
-	$fieldLabelscountry["Spanish"]["description"] = "Description";
+	$fieldLabelscountry["Spanish"]["description"] = "Descripcion";
 	$fieldToolTipscountry["Spanish"]["description"] = "";
 	$placeHolderscountry["Spanish"]["description"] = "";
 	if (count($fieldToolTipscountry["Spanish"]))
@@ -157,7 +136,7 @@ $tdatacountry[".rowHighlite"] = true;
 
 
 
-												
+									
 
 $tdatacountry[".ajaxCodeSnippetAdded"] = false;
 
@@ -169,7 +148,7 @@ $tdatacountry[".addPageEvents"] = false;
 $tdatacountry[".isUseTimeForSearch"] = false;
 
 
-$tdatacountry[".badgeColor"] = "D2691E";
+$tdatacountry[".badgeColor"] = "6493EA";
 
 
 $tdatacountry[".allSearchFields"] = array();
@@ -253,7 +232,6 @@ $tdatacountry[".arrGroupsPerPage"] = $arrGPP;
 $tdatacountry[".highlightSearchResults"] = true;
 
 $tableKeyscountry = array();
-$tableKeyscountry[] = "id";
 $tdatacountry[".Keys"] = $tableKeyscountry;
 
 
@@ -451,7 +429,7 @@ $tdatacountry[".hideMobileList"] = array();
 
 	
 		$vdata["truncateText"] = true;
-	$vdata["NumberOfChars"] = 2;
+	$vdata["NumberOfChars"] = 80;
 
 	$fdata["ViewFormats"]["view"] = $vdata;
 //  End View Formats
@@ -588,7 +566,7 @@ $tdatacountry[".hideMobileList"] = array();
 
 	
 		$vdata["truncateText"] = true;
-	$vdata["NumberOfChars"] = 3;
+	$vdata["NumberOfChars"] = 80;
 
 	$fdata["ViewFormats"]["view"] = $vdata;
 //  End View Formats

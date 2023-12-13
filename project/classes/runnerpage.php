@@ -3882,7 +3882,6 @@ class RunnerPage
 	 */
 	function setLangParams()
 	{
-		SetLangVars($this->xt, $this->shortTableName, $this->pageType);
 	}
 
 	/**
@@ -4708,7 +4707,7 @@ class RunnerPage
 		if ( $captchaSettings["type"] == FLASH_CAPTCHA && @strtolower($this->captchaValue) != strtolower(@$_SESSION["captcha_" . $this->getCaptchaId()]) )
 		{
 			$this->isCaptchaOk = false;
-			$this->message = mlang_message("SEC_INVALID_CAPTCHA_CODE");
+			$this->message = "Codigo de seguridad no válido";
 		}
 
 		//	check recaptcha
@@ -4768,7 +4767,7 @@ class RunnerPage
 	{
 		$captchaHTML = '<div class="captcha_block">';
 
-		$typeCodeMessage = mlang_message("SEC_TYPETHECODE");
+		$typeCodeMessage = "Teclea el codigo que ves debajo";
 		$path = GetCaptchaPath();
 		$swfPath = GetCaptchaSwfPath();
 
@@ -4815,11 +4814,11 @@ class RunnerPage
 			return $this->bsCreatePerPage();
 		}
 		$classString = "";
-		$allMessage = mlang_message("SHOW_ALL");
+		$allMessage = "Mostrar todo";
 		if( $this->isBootstrap() )
 		{
 			$classString = 'class="form-control"';
-			$allMessage = mlang_message("ALL");
+			$allMessage = "Todos";
 		}
 		$rpp = "<select ".$classString." id=\"recordspp".$this->id."\">";
 
@@ -4840,7 +4839,7 @@ class RunnerPage
 	{
 		$txtVal = $this->pageSize;
 		if( $this->pageSize == -1 )
-			$txtVal = mlang_message("SHOW_ALL");
+			$txtVal = "Mostrar todo";
 		$rpp = '<div class="dropdown btn-group">
 			<button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown"><span class="dropdown-text">' . $txtVal . '</span> <span class="caret"></span></button>
 			<ul class="dropdown-menu pull-right" role="menu">';
@@ -4849,7 +4848,7 @@ class RunnerPage
 			$val = $this->arrRecsPerPage[$i];
 			$txtVal = $val;
 			if( $val == -1 )
-				$txtVal = mlang_message("SHOW_ALL");
+				$txtVal = "Mostrar todo";
 			$selectedAttr = '';
 			if( $this->pageSize == $val )
 				$selectedAttr = 'aria-selected="true" class="active"';
@@ -4920,13 +4919,13 @@ class RunnerPage
 			$isSearchRun = true;
 
 		if( $this->pSetSearch->noRecordsOnFirstPage() && !$isSearchRun )
-			return mlang_message("NOTHING_TO_SEE");
+			return "Nada que mostrar. Ejecute alguna búsqueda.";
 
 		if( !$this->rowsFound && !$isSearchRun )
-			return mlang_message("NO_DATA_YET");
+			return "Sin datos.";
 
 		if( $isSearchRun && !$this->rowsFound )
-			return mlang_message("NO_RECORDS");
+			return "No se hallaron registros";
 	}
 
 	function showNoRecordsMessage()
@@ -5041,8 +5040,8 @@ class RunnerPage
 					$counterend = $this->maxPages;
 				if($counterstart != 1)
 				{
-					$pagination.= $this->getPaginationLink(1,mlang_message("FIRST")) . $advSeparator;
-					$pagination.= $this->getPaginationLink($counterstart - 1,mlang_message("PREVIOUS")).$separator;
+					$pagination.= $this->getPaginationLink(1,"Primero") . $advSeparator;
+					$pagination.= $this->getPaginationLink($counterstart - 1,"Anterior").$separator;
 				}
 				$pageLinks = "";
 
@@ -5058,8 +5057,8 @@ class RunnerPage
 				$pagination .= $pageLinks;
 				if($counterend != $this->maxPages)
 				{
-					$pagination.= $separator . $this->getPaginationLink($counterend + 1,mlang_message("NEXT")) . $advSeparator;
-					$pagination.= $this->getPaginationLink($this->maxPages,mlang_message("LAST"));
+					$pagination.= $separator . $this->getPaginationLink($counterend + 1,"Siguiente") . $advSeparator;
+					$pagination.= $this->getPaginationLink($this->maxPages,"Último");
 				}
 				if( $this->isBootstrap() )
 					$pagination = '<nav class="text-center"><ul class="pagination" data-function="pagination' . $this->id . '">' . $pagination . '</ul></nav>';
@@ -5102,7 +5101,7 @@ class RunnerPage
 		}
 		else
 		{
-			$template = mlang_message("DISPLAYING");
+			$template = "Mostrando %first% - %last% de %total%";
 			$template = str_replace( array( '%first%', '%last%', '%total%'), array( $first, $last, $total), $template );
 			$this->xt->assign( "records_indicator", $template );
 		}
@@ -6179,7 +6178,7 @@ class RunnerPage
 
 		return '<span class="rnr-dbebrick">'
 			.'<a href="' . $this->getProceedUrl() . '" name="dp' . $this->id . '">'
-			.  mlang_message("PROCEED_TO") . ' '. GetTableCaption( GoodFieldName( $this->tName ) )
+			.  "Proceder con" . ' '. GetTableCaption( GoodFieldName( $this->tName ) )
 			. '</a>'
 			. "&nbsp;&nbsp;</span>";
 	}
@@ -6690,17 +6689,17 @@ class RunnerPage
 	public static function getDefaultPageTitle($page, $table, $pSet)
 	{
 		if( $page == "add" )
-			return GetTableCaption($table).", ".mlang_message("ADD_NEW");
+			return GetTableCaption($table).", "."Añadir nuevo";
 		if( $page == "edit" )
-			return GetTableCaption($table).", ".mlang_message("EDIT")." [". RunnerPage::getKeysTitleTemplate( $table, $pSet ). "]";
+			return GetTableCaption($table).", "."Editar"." [". RunnerPage::getKeysTitleTemplate( $table, $pSet ). "]";
 		if( $page == "view" )
 			return GetTableCaption($table)." [". RunnerPage::getKeysTitleTemplate( $table, $pSet ). "]";
 		if( $page == "export" )
-			return mlang_message("EXPORT");
+			return "Exportar";
 		if( $page == "import" )
-			return GetTableCaption($table).", ".mlang_message("IMPORT");
+			return GetTableCaption($table).", "."Importar";
 		if( $page == "search" )
-			return GetTableCaption($table)." - ".mlang_message("ADVANCED_SEARCH");
+			return GetTableCaption($table)." - "."Búsqueda avanzada";
 		if( $page == "print" )
 			return GetTableCaption($table);
 		if( $page == "rprint" )
@@ -6716,19 +6715,19 @@ class RunnerPage
 		if( $page == "masterprint" )
 			return GetTableCaption($table)." [". RunnerPage::getKeysTitleTemplate( $table, $pSet ). "]";
 		if( $page == "login" )
-			return mlang_message("LOGIN");
+			return "Conectar";
 		if( $page == "register" )
-			return mlang_message("REGISTER");
+			return "Registrar";
 		if( $page == "register_success" )
-			return mlang_message("REG_SUCCESS");
+			return "Registro exitoso";
 		if( $page == "changepwd" )
-			return mlang_message("CHANGE_PASSWORD");
+			return "Cambiar contraseña";
 		if( $page == "changepwd_success" )
-			return mlang_message("CHANGE_PASSWORD");
+			return "Cambiar contraseña";
 		if( $page == "remind" )
-			return mlang_message("REMINDER");
+			return "Recordador de contraseña";
 		if( $page == "remind_success" )
-			return mlang_message("REMINDER");
+			return "Recordador de contraseña";
 		if( $page == "chart" )
 			return GetTableCaption($table);
 		if( $page == "report" )
@@ -6736,11 +6735,11 @@ class RunnerPage
 		if( $page == "dashboard" )
 			return GetTableCaption($table);
 		if( $page == "menu" )
-			return mlang_message("MENU");
+			return "Menú";
 		if( $page == "admin_rights_list" || $page == "admin_members_list" || $page == "admin_admembers_list" )
 			return GetTableCaption($table);
 		if( $page == PAGE_USERINFO )
-			return mlang_message("USERINFO");
+			return "Perfil del usuario";
 	}
 
 	/**
@@ -8497,10 +8496,10 @@ class RunnerPage
 
 	protected function recheckUserPermissions() {
 		if( Security::isGuest() || !isLogged() ) {
-			$this->setMessage( mlang_message("SESSION_EXPIRED1") .
+			$this->setMessage( "Su sesión ha expirado." .
 				"<a href='#' id='loginButtonContinue" . $this->id . "'>" .
-				mlang_message("SESSION_EXPIRED3") . "</a>" .
-				mlang_message("SESSION_EXPIRED4") );
+				"Login" . "</a>" .
+				"para guardar los datos." );
 		} else {
 			$this->setMessage( 'You have no permissions to complete this action.' );
 		}

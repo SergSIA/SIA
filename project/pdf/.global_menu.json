@@ -83,37 +83,11 @@ pdfDocument = {
 								
 			"%",
 			 
-								
-			"%",
-			 
 				],
 	
 		body: [
 				
 				[
-																{
-	cellId: 'c',
-	col:0,
-	row:0,
-		
-		
-	//	static colspan/rowspan
-		
-			
-	
-	
-			"text": [
-		
-				
-			{"text":"{$custom _H1_CLASS__QL_ALIGN_CENTER__BIENVENIDO_NBSP___H1__H1_CLASS__QL_ALIGN_CENTER__AL__H1__H1_CLASS__QL_ALIGN_CENTER___SISTEMA_DE_ASESORITA_EN_LINEA__H1_}","hidden":"{$item_hide_text}","isHtml":true},
-				
-		  ],
-  "border": [ false, false, false, false ],
-              "alignment": 'center',
-  },
-
-											],
-						[
 																{
 	cellId: 'c1',
 	col:0,
@@ -128,43 +102,10 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"","background":"#7B68EE","hidden":"{$item_hide_welcome_item}"},
+			{"text":"<h1 class=\"ql-align-center\">Bienvenido a SIA</h1><h2 class=\"ql-align-center\">Sistema Inteligente de Asesoria</h2>","hidden":"{$item_hide_text}","isHtml":true},
 				
 				
-			{"text":"","background":"#DC143C","hidden":"{$item_hide_welcome_item1}"},
-				
-				
-			{"text":"","background":"#DB7093","hidden":"{$item_hide_welcome_item2}"},
-				
-				
-			{"text":"","background":"#4682B4","hidden":"{$item_hide_welcome_item3}"},
-				
-				
-			{"text":"","background":"#D2691E","hidden":"{$item_hide_welcome_item4}"},
-				
-				
-			{"text":"","background":"#EDCA00","hidden":"{$item_hide_welcome_item5}"},
-				
-				
-			{"text":"","background":"#8FBC8B","hidden":"{$item_hide_welcome_item6}"},
-				
-				
-			{"text":"","background":"#D2691E","hidden":"{$item_hide_welcome_item7}"},
-				
-				
-			{"text":"","background":"#6DA5C8","hidden":"{$item_hide_welcome_item8}"},
-				
-				
-			{"text":"","background":"#4682B4","hidden":"{$item_hide_welcome_item9}"},
-				
-				
-			{"text":"","background":"#00C2C5","hidden":"{$item_hide_welcome_item10}"},
-				
-				
-			{"text":"","background":"#3CB371","hidden":"{$item_hide_welcome_item11}"},
-				
-				
-			{"text":"","background":"#D2691E","hidden":"{$item_hide_welcome_item14}"},
+			{"text":"","background":"#6B8E23","hidden":"{$item_hide_welcome_item}"},
 				
 		  ],
   "border": [ false, false, false, false ],

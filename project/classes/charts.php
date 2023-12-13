@@ -382,6 +382,8 @@ class Chart
 			return true;
 		if("public.consulting" == $this->chrt_array['tables'][0])
 			return true;
+		if("public.country" == $this->chrt_array['tables'][0])
+			return true;
 		if("public.customers" == $this->chrt_array['tables'][0])
 			return true;
 		if("public.document" == $this->chrt_array['tables'][0])
@@ -402,17 +404,21 @@ class Chart
 			return true;
 		if("public.user" == $this->chrt_array['tables'][0])
 			return true;
-		if("public.people" == $this->chrt_array['tables'][0])
-			return true;
 		if("public.consulting" == $this->chrt_array['tables'][0])
 			return true;
-		if("public.country" == $this->chrt_array['tables'][0])
+		if("public.consulting" == $this->chrt_array['tables'][0])
 			return true;
 		if("public.advisor" == $this->chrt_array['tables'][0])
 			return true;
-		if("public.consulting" == $this->chrt_array['tables'][0])
-			return true;
 		if("public.payment" == $this->chrt_array['tables'][0])
+			return true;
+		if("public.people" == $this->chrt_array['tables'][0])
+			return true;
+		if("public.advisor" == $this->chrt_array['tables'][0])
+			return true;
+		if("public.user" == $this->chrt_array['tables'][0])
+			return true;
+		if("public.customers" == $this->chrt_array['tables'][0])
 			return true;
 		return false;
 	}
@@ -503,12 +509,12 @@ class Chart
 			return "";
 
 		if( !$this->searchClauseObj )
-			return mlang_message("NO_DATA_YET");
+			return "Sin datos.";
 
 		if( $this->searchClauseObj->isSearchFunctionalityActivated() )
-			return mlang_message("NO_RECORDS");
+			return "No se hallaron registros";
 
-		return mlang_message("NO_DATA_YET");
+		return "Sin datos.";
 	}
 
 	/**

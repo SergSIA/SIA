@@ -364,6 +364,10 @@ class AuditTrailTable
 		{
 			return false;
 		}
+		if($table=="public.country")
+		{
+			return false;
+		}
 		if($table=="public.customers")
 		{
 			return false;
@@ -404,19 +408,7 @@ class AuditTrailTable
 		{
 			return false;
 		}
-		if($table=="public.people_user")
-		{
-			return false;
-		}
 		if($table=="public.consulting_my")
-		{
-			return false;
-		}
-		if($table=="public.country")
-		{
-			return false;
-		}
-		if($table=="public.advisor_user")
 		{
 			return false;
 		}
@@ -424,7 +416,27 @@ class AuditTrailTable
 		{
 			return false;
 		}
-		if($table=="public.payment_my")
+		if($table=="public.advisor_user")
+		{
+			return false;
+		}
+		if($table=="public.payment_advisor")
+		{
+			return false;
+		}
+		if($table=="public.people_user")
+		{
+			return false;
+		}
+		if($table=="public.advisor1")
+		{
+			return false;
+		}
+		if($table=="public.pay_deta")
+		{
+			return false;
+		}
+		if($table=="public.customers1")
 		{
 			return false;
 		}
@@ -744,6 +756,10 @@ class AuditTrailFile
 		{
 			return false;
 		}
+		if($table=="public.country")
+		{
+			return false;
+		}
 		if($table=="public.customers")
 		{
 			return false;
@@ -784,19 +800,7 @@ class AuditTrailFile
 		{
 			return false;
 		}
-		if($table=="public.people_user")
-		{
-			return false;
-		}
 		if($table=="public.consulting_my")
-		{
-			return false;
-		}
-		if($table=="public.country")
-		{
-			return false;
-		}
-		if($table=="public.advisor_user")
 		{
 			return false;
 		}
@@ -804,7 +808,27 @@ class AuditTrailFile
 		{
 			return false;
 		}
-		if($table=="public.payment_my")
+		if($table=="public.advisor_user")
+		{
+			return false;
+		}
+		if($table=="public.payment_advisor")
+		{
+			return false;
+		}
+		if($table=="public.people_user")
+		{
+			return false;
+		}
+		if($table=="public.advisor1")
+		{
+			return false;
+		}
+		if($table=="public.pay_deta")
+		{
+			return false;
+		}
+		if($table=="public.customers1")
 		{
 			return false;
 		}

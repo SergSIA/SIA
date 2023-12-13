@@ -168,7 +168,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{mlang_message PRINT_PAGES}","hidden":"{$item_hide_print_pages}","isHtml":true,"page_indicator":true},
+			{"text":"Página %current% / %total%","hidden":"{$item_hide_print_pages}","isHtml":true,"page_indicator":true},
 				
 		  ],
   "border": [ false, false, false, false ],
@@ -332,6 +332,11 @@ pdfDocument = {
 			 {BEGIN details_advisor}
 			{$displayDetailTable_advisor }
 		{END details_advisor},
+				
+				
+			 {BEGIN details_advisor_user}
+			{$displayDetailTable_advisor_user }
+		{END details_advisor_user},
 				
 		  ],
   "border": [ true, true, true, true ],

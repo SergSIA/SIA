@@ -109,7 +109,7 @@ class RemindPasswordPage extends RunnerPage
 		
 		if( !$this->checkCaptcha() )
 		{
-			$this->message = mlang_message("SEC_INVALID_CAPTCHA_CODE");
+			$this->message = "Codigo de seguridad no válido";
 			return false;
 		}
 						
@@ -129,7 +129,7 @@ class RemindPasswordPage extends RunnerPage
 		
 		if( !$tosearch || !$data )
 		{
-			$this->message = mlang_message("USER_NOREG1")." ".runner_htmlspecialchars($this->userEmail)." ".mlang_message("USER_NOREG2");
+			$this->message = "Usuario"." ".runner_htmlspecialchars($this->userEmail)." "."no registrado";
 			return false;
 		}
 		
@@ -140,22 +140,13 @@ class RemindPasswordPage extends RunnerPage
 			$token = generatePassword(20);
 			
 			$this->connection->exec("update ".$this->connection->addTableWrappers("public.user")." set "
-				.$this->connection->addFieldWrappers( "reset_token" )."=". $this->connection->prepareString( $token ).","
-				.$this->connection->addFieldWrappers( "updated" )."=". $this->connection->addDateQuotes( now() ).""
+				.$this->connection->addFieldWrappers( "" )."=". $this->connection->prepareString( $token ).","
+				.$this->connection->addFieldWrappers( "" )."=". $this->connection->addDateQuotes( now() ).""
 				." where ".$strSQLData["where"]);
 		} 
 		else
 		{
-				if( !$this->cipherer->isFieldEncrypted( $this->passwordFiled ) )
-			{
-				$password = generatePassword(10);
-				$dbPassword = $this->getPasswordHash( $password );
-				
-				$this->connection->exec("update ".$this->connection->addTableWrappers("public.user")
-					." set ".$this->connection->addFieldWrappers( $this->passwordFiled )."='".$dbPassword
-					."' where ".$strSQLData["where"]);
-			}
-	
+		
 		}
 		
 		$reminded = $this->sendRemindEmail( $username, $password, $email, $token, $dbPassword );
@@ -174,8 +165,7 @@ class RemindPasswordPage extends RunnerPage
 	 */
 	protected function remindMethod()
 	{
- //RPM_RESET
-		return RPM_RESET;
+		return RPM_SEND;
 	}
 	
 	/**
@@ -220,7 +210,7 @@ class RemindPasswordPage extends RunnerPage
 		{
 			$this->message = $sentMailResults["message"];
 			if( !$this->message )
-				$this->message = mlang_message("USER_NOREG1")." ".runner_htmlspecialchars($this->userEmail)." ".mlang_message("USER_NOREG2");
+				$this->message = "Usuario"." ".runner_htmlspecialchars($this->userEmail)." "."no registrado";
 		}
 	
 		return @$sentMailResults["mailed"];	

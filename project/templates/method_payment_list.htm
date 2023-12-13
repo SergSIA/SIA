@@ -44,7 +44,7 @@
 
 			<div class="clearfix " data-cellId="left_c0" data-pageid="{$pageid}" data-logo-cell data-itemid="expand_button" {$item_expand_button} data-topcell-item-type="expand_button" >
 				<span data-itemtype="expand_button" data-itemid="expand_button" {$item_expand_button} data-pageid="{$pageid}" data-small data-button-item>
-	<a type="button" title="{mlang_message EXPAND}" class="btn btn-link   
+	<a type="button" title="Expandir" class="btn btn-link   
 	" href="#" >
 					<span class="glyphicon glyphicon-triangle-right"></span>
 										</a>
@@ -67,7 +67,7 @@
 	<div class="panel-heading">
 		<div class="btn-group" id="addSearchFieldButton{$id}">
 			<button id="showHideControlChooseMenu{$id}" type="button" class="btn btn-default dropdown-toggle btn-sm )" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-			{mlang_message SEARCH_IN}			<span class="caret"></span>
+			Búsqueda			<span class="caret"></span>
 			</button>
 		</div>
 
@@ -77,12 +77,12 @@
 				<span class="glyphicon glyphicon glyphicon-option-vertical"></span>
 			</button>
 			<ul class="dropdown-menu dropdown-left">
-				<li id="showHideSearchType{$id}" {$showHideCtrlsOpt_attrs}><a>{mlang_message SEARCH_SHOW_OPTIONS_BUTTON}</a></li>
+				<li id="showHideSearchType{$id}" {$showHideCtrlsOpt_attrs}><a>Mostrar opciones</a></li>
 				<li role="separator" class="divider"></li>
-				<li class="srchCritTop" style="display: none;"><a><input type="radio" name="srchType{$id}" id="radioAll" {$all_checkbox}><label for="radioAll"><span class="glyphicon">&nbsp;</span>{mlang_message SEARCH_ALL_CONDITIONS}</label></a></li>
-				<li class="srchCritTop" style="display: none;"><a><input type="radio" name="srchType{$id}" id="radioAny" {$any_checkbox}><label for="radioAny"><span class="glyphicon">&nbsp;</span>{mlang_message SEARCH_ANY_CONDITIONS}</label></a></li>
+				<li class="srchCritTop" style="display: none;"><a><input type="radio" name="srchType{$id}" id="radioAll" {$all_checkbox}><label for="radioAll"><span class="glyphicon">&nbsp;</span>todas las condiciones</label></a></li>
+				<li class="srchCritTop" style="display: none;"><a><input type="radio" name="srchType{$id}" id="radioAny" {$any_checkbox}><label for="radioAny"><span class="glyphicon">&nbsp;</span>cualquier condición</label></a></li>
 				<li role="separator" class="divider"></li>
-				<li><a class="close-button"><span class="glyphicon glyphicon-remove">&nbsp;</span>{mlang_message HIDE}</a></li>
+				<li><a class="close-button"><span class="glyphicon glyphicon-remove">&nbsp;</span>esconder</a></li>
 			</ul>
 		</div>
 
@@ -131,9 +131,9 @@
 	</div>
 
 	<div class="panel-footer bottomSearchButt" {$bottomSearchButt_attrs}>
-		<button class="btn btn-primary btn-sm" id="searchButton{$id}" {$searchbutton_attrs}>{mlang_message SEARCH}</button>
+		<button class="btn btn-primary btn-sm" id="searchButton{$id}" {$searchbutton_attrs}>Buscar</button>
 
-				<button class="btn btn-default btn-sm" {$showAllCont_attrs} {$showallbutton_attrs}>{mlang_message SHOW_ALL}</button>
+				<button class="btn btn-default btn-sm" {$showAllCont_attrs} {$showallbutton_attrs}>Mostrar todo</button>
 	</div>
 </div>
 <!-- End Search panel content -->
@@ -150,7 +150,7 @@
 							 
 				<span class="navbar-form  navbar-header" data-cellId="supertop_c1" data-pageid="{$pageid}" data-itemid="expand_menu_button" {$item_expand_menu_button} data-topcell-item-type="expand_menu_button" >
 				<span data-itemtype="expand_menu_button" data-itemid="expand_menu_button" {$item_expand_menu_button} data-pageid="{$pageid}" data-small data-button-item>
-	<a type="button" title="{mlang_message COLLAPSE}" class="btn-link   
+	<a type="button" title="Encubrir" class="btn-link   
 	 glyphicon glyphicon-menu-hamburger" href="#" >		
 				
 								</a>
@@ -159,7 +159,7 @@
 		 
 				<span class="navbar-form  navbar-collapse" data-cellId="supertop_c1" data-pageid="{$pageid}" data-itemid="collapse_button" {$item_collapse_button} data-topcell-item-type="collapse_button" >
 				<span data-itemtype="collapse_button" data-itemid="collapse_button" {$item_collapse_button} data-pageid="{$pageid}" data-small data-button-item>
-	<a type="button" title="{mlang_message SHOW_MENU}" class="btn-link   
+	<a type="button" title="Muestrame el menu" class="btn-link   
 	 glyphicon glyphicon-triangle-left" href="#" >		
 				
 								</a>
@@ -194,7 +194,7 @@
 {END searchform_text}
 	<span class="input-group-btn">
 	{BEGIN searchform_showall}
-				<button class="btn btn-default" {$showAllCont_attrs} {$showallbutton_attrs} title="{mlang_message SHOW_ALL}">
+				<button class="btn btn-default" {$showAllCont_attrs} {$showallbutton_attrs} title="Mostrar todo">
 			<span class="glyphicon glyphicon-remove"></span>
 		</button>
 	{END searchform_showall}
@@ -221,7 +221,7 @@
 	<li data-itemtype="export_selected" data-itemid="export_selected" {$item_export_selected} data-pageid="{$pageid}" data-small >
 				<a  href="#" {$exportselectedlink_attrs} {$exportselectedlink_span}  title="" >
 				
-		{mlang_message EXPORT_SELECTED}		
+		Exportar seleccionados		
 		</a>
 	</li>
 {END exportselected_link}
@@ -229,21 +229,21 @@
 	<li data-itemtype="delete_selected" data-itemid="delete_selected" {$item_delete_selected} data-pageid="{$pageid}" data-small >
 				<a  href="#" {$deleteselectedlink_attrs} {$deleteselectedlink_span}  title="" >
 				
-		{mlang_message DELETE_SELECTED}		
+		Borrar articulos seleccionados		
 		</a>
 	</li>
 {END deleteselected_link}
 							<li role="separator" class="divider"></li>								<li data-itemtype="advsearch_link" data-itemid="advsearch_link" {$item_advsearch_link} data-pageid="{$pageid}" data-small >
 				<a   href="method_payment_search.php{$stateLink_full}" {$advsearchlink_attrs}  title="" >
 				
-		{mlang_message ADVANCED_SEARCH}		
+		Búsqueda avanzada		
 		</a>
 	</li>
 							{BEGIN searchPanelTopButtons}
 	<li data-itemtype="show_search_panel" data-itemid="show_search_panel" {$item_show_search_panel} data-pageid="{$pageid}" data-small >
 				<a  id="showOptPanel{$id}"  title="" >
 				
-		{mlang_message SHOW_SEARCH_PANEL}		
+		Mostrar panel de búsqueda		
 		</a>
 	</li>
 {END searchPanelTopButtons}
@@ -251,7 +251,7 @@
 	<li data-itemtype="hide_search_panel" data-itemid="hide_search_panel" {$item_hide_search_panel} data-pageid="{$pageid}" data-small >
 				<a  id="hideOptPanel{$id}"  title="" >
 				
-		{mlang_message HIDE_SEARCH_PANEL}		
+		Ocultar panel de búsqueda		
 		</a>
 	</li>
 {END searchPanelTopButtons}
@@ -259,7 +259,7 @@
 	<li data-itemtype="export" data-itemid="export" {$item_export} data-pageid="{$pageid}" data-small >
 				<a  href="#" {$exportlink_attrs}  title="" >
 				
-		{mlang_message EXPORT_RESULTS}		
+		Exportar resultados		
 		</a>
 	</li>
 {END export_link}
@@ -267,20 +267,10 @@
 	<li data-itemtype="import" data-itemid="import" {$item_import} data-pageid="{$pageid}" data-small >
 				<a  {$importlink_attrs} href="method_payment_import.php{$stateLink_full}"  title="" >
 				
-		{mlang_message IMPORT}		
+		Importar		
 		</a>
 	</li>
 {END import_link}
-							<li role="separator" class="divider"></li>								{BEGIN EnglishLANGLINK}
-	<li><a href="#" data-lang="English" class="rnr-langlink">
-		{BEGIN EnglishLANGLINK_ACTIVE}<span class="glyphicon glyphicon-ok">&nbsp;</span>{END EnglishLANGLINK_ACTIVE}
-		English</a></li>
-	{END EnglishLANGLINK}
-	{BEGIN SpanishLANGLINK}
-	<li><a href="#" data-lang="Spanish" class="rnr-langlink">
-		{BEGIN SpanishLANGLINK_ACTIVE}<span class="glyphicon glyphicon-ok">&nbsp;</span>{END SpanishLANGLINK_ACTIVE}
-		Español</a></li>
-	{END SpanishLANGLINK}
 					</ul>
 	</span>
 </span>
@@ -291,7 +281,7 @@
 <span data-itemtype="loginform_login" data-itemid="loginform_login" {$item_loginform_login} data-pageid="{$pageid}" data-small data-button-item>
 	<a type="button" title="" class="btn btn-primary   
 	" href="#" {$guestloginlink_attrs} >
-							{mlang_message LOGIN}			</a>
+							Conectar			</a>
 </span>
 {END guestloginbutton}
 			</span>
@@ -309,7 +299,7 @@
 	<li data-itemtype="userinfo_link" data-itemid="userinfo_link" {$item_userinfo_link} data-pageid="{$pageid}" data-small >
 				<a  href="userinfo.php"  title="" >
 				
-		{mlang_message USERINFO}		
+		Perfil del usuario		
 		</a>
 	</li>
 {END logoutbutton}
@@ -317,7 +307,7 @@
 	<li data-itemtype="logout_link" data-itemid="logout_link" {$item_logout_link} data-pageid="{$pageid}" data-small >
 				<a  href="#" {$logoutlink_attrs}  title="" >
 				
-		{mlang_message LOG_OUT}		
+		Desconectarse		
 		</a>
 	</li>
 {END logoutbutton}
@@ -325,7 +315,7 @@
 	<li data-itemtype="changepassword_link" data-itemid="changepassword_link" {$item_changepassword_link} data-pageid="{$pageid}" data-small >
 				<a  href="changepwd.php" {$changepwdlink_attrs} id="changePasswordButton{$id}"  title="" >
 				
-		{mlang_message CHANGE_PASSWORD}		
+		Cambiar contraseña		
 		</a>
 	</li>
 {END changepwd_link}
@@ -363,7 +353,7 @@
 <span data-itemtype="add" data-itemid="add" {$item_add} data-pageid="{$pageid}" data-small data-button-item>
 	<a type="button" title="" class="btn btn-primary   
 	" {$addlink_attrs} href="method_payment_add.php{$stateLink_full}" >
-							{mlang_message ADD_NEW}			</a>
+							Añadir nuevo			</a>
 </span>
 {END add_link}
 	 
@@ -371,7 +361,7 @@
 <span data-itemtype="delete" data-itemid="delete" {$item_delete} data-pageid="{$pageid}" data-small data-button-item>
 	<a type="button" title="" class="btn btn-default   
 	" {$deleteselectedlink_attrs} {$deleteselectedlink_span} disabled >
-							{mlang_message DELETE}			</a>
+							Borrar artículos seleccionados			</a>
 </span>
 {END deleteselected_link}
 			{END firstAboveGridCell}	
@@ -390,7 +380,7 @@
 </span>	 
 		{BEGIN print_friendly}
 <span id="printpanelblock{$id}"  data-pageid="{$pageid}" {$printpanel_hiddenattr} data-itemtype="print_panel" data-itemid="print_panel" {$item_print_panel} data-pageid="{$pageid}">
-	<button title="{mlang_message WR_PRINT_FRIENDLY}" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+	<button title="Página para imprimir" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
 					<span class="glyphicon glyphicon-print"></span>
 				<span class="caret"></span>
 	</button>
@@ -402,14 +392,14 @@
 									<div id="print_friendly_scope{$id}">
 	<div class="row">
 		<div class="col-md-4">
-			{mlang_message PPANEL_SCOPE}		</div>
+			Rango:		</div>
 
 			 
 		{BEGIN print_friendly_all}
 		<div class="col-md-8">
 			<label for="printAll{$id}">
 				<input type="radio" id="printAll{$id}" data-href="method_payment_print.php?all=1&amp;{$crosstable_attrs}" name="printScope" >
-									{mlang_message PPANEL_ALL_PAGES}							</label>
+									Imprimir todas las páginas							</label>
 		</div>
 		{END print_friendly_all}
 		</div>
@@ -418,7 +408,7 @@
 		<div class="col-md-8">
 			<label for="printPage{$id}">
 				<input name="printScope" id="printPage{$id}" type="radio" checked data-href="method_payment_print.php?{$crosstable_attrs}">
-				{mlang_message PPANEL_THIS_PAGE}			</label>
+				Imprimir esta página			</label>
 		</div>
 	</div>
 		
@@ -430,7 +420,7 @@
 		<div class="col-md-8">
 			<label style="color: gray;" for="printSelection{$id}">
 			<input name="printScope" disabled="disabled" id="printSelection{$id}" type="radio" >
-			{mlang_message PPANEL_SELECTED}			</label>
+			Imprimir la selección			</label>
 		</div>
 	</div>
 	</div>
@@ -445,22 +435,22 @@
 <div>
 	<label for="printDetailsToggler{$id}">
 		<input type="checkbox" id="printDetailsToggler{$id}">
-		{mlang_message PPANEL_DETAILS}	</label>
+		Detalles de impresión	</label>
 	<div  id="printdetailstables{$id}" style="display:none;">
 											{BEGIN print_details_payment}
 			<div>
 				<label for="printDetailspayment{$id}">
 					<input type="checkbox" value="payment" id="printDetailspayment{$id}" checked>
-					Pagos				</label>
+					Pago				</label>
 			</div>
 			{END print_details_payment}
-														{BEGIN print_details_payment_my}
+														{BEGIN print_details_payment_advisor}
 			<div>
-				<label for="printDetailspayment_my{$id}">
-					<input type="checkbox" value="payment_my" id="printDetailspayment_my{$id}" checked>
-					Payment My				</label>
+				<label for="printDetailspayment_advisor{$id}">
+					<input type="checkbox" value="payment_advisor" id="printDetailspayment_advisor{$id}" checked>
+					Pago				</label>
 			</div>
-			{END print_details_payment_my}
+			{END print_details_payment_advisor}
 						</div>
 </div>
 {END print_details}
@@ -473,7 +463,7 @@
 										">
 									<div>
 	<label for="printPerPage{$id}">
-					{mlang_message RECORDS_PP}							
+					Resultados por página							
 	</label>
 	<input type="number" id="printPerPage{$id}" value="{$print_recspp}" class="rnr-printrecspp">		
 </div>
@@ -487,7 +477,7 @@
 									<span data-itemtype="print_button" data-itemid="print_button" {$item_print_button} data-pageid="{$pageid}" data-small data-button-item>
 	<a type="button" title="" class="btn btn-primary   
 	" id="print_friendly_button{$id}" >
-							{mlang_message PPANEL_PRINT}			</a>
+							Imprimir			</a>
 </span>
 				 
 					</li>
@@ -674,8 +664,8 @@
 		{BEGIN edit_column}
 {BEGIN edit_link}
 <span data-itemtype="grid_edit" data-itemid="grid_edit" {$item_grid_edit} data-pageid="{$pageid}" data-record-id="{$recId}" data-small data-button-item>
-	<a type="button" title="{mlang_message EDIT}" class="btn-link   
-	 glyphicon glyphicon-pencil" href="method_payment_edit.php?{$editlink}" {$editlink_attrs} title="{mlang_message EDIT}" >		
+	<a type="button" title="Editar" class="btn-link   
+	 glyphicon glyphicon-pencil" href="method_payment_edit.php?{$editlink}" {$editlink_attrs} title="Editar" >		
 				
 								</a>
 </span>
@@ -685,8 +675,8 @@
 		{BEGIN view_column}
 {BEGIN view_link}
 <span data-itemtype="grid_view" data-itemid="grid_view" {$item_grid_view} data-pageid="{$pageid}" data-record-id="{$recId}" data-small data-button-item>
-	<a type="button" title="{mlang_message VIEW_RECORD}" class="btn-link   
-	 glyphicon glyphicon-search" href="method_payment_view.php?{$editlink}" {$viewlink_attrs} title="{mlang_message VIEW}" >		
+	<a type="button" title="Ver registro" class="btn-link   
+	 glyphicon glyphicon-search" href="method_payment_view.php?{$editlink}" {$viewlink_attrs} title="Ver" >		
 				
 								</a>
 </span>
@@ -740,7 +730,7 @@
 		data-itemtype="grid_alldetails_link" data-itemid="grid_alldetails_link" {$item_grid_alldetails_link} data-pageid="{$pageid}" data-record-id="{$recId}" 
 		{$dtables_link_attrs} 
 		class="{$dtables_link_class}" 
-		title="{mlang_message SHOW_DETAILS}"
+		title="Mostrar detalles"
 				
 	>
 					<span class="glyphicon glyphicon-th-list"></span>
@@ -768,20 +758,20 @@
 	 
 		
 		
-	{BEGIN payment_my_dtable_link}
+	{BEGIN payment_advisor_dtable_link}
 	<span data-itemtype="grid_details_link" data-itemid="grid_details_link1" {$item_grid_details_link1} data-pageid="{$pageid}" data-record-id="{$recId}">
-	<a  {$payment_my_link_attrs} data-short-details="payment_my"
-		class="{$payment_my_dlink_class}" 
-		title="{$caption public_payment_my }"			>
+	<a  {$payment_advisor_link_attrs} data-short-details="payment_advisor"
+		class="{$payment_advisor_dlink_class}" 
+		title="{$caption public_payment_advisor }"			>
 								
-									{BEGIN payment_my_childcount}
-				<span class="details-badge badge payment_my_badge" {$payment_my_childnumber_attr}>
-					{$payment_my_childnumber}				
+									{BEGIN payment_advisor_childcount}
+				<span class="details-badge badge payment_advisor_badge" {$payment_advisor_childnumber_attr}>
+					{$payment_advisor_childnumber}				
 				</span>
-				{END payment_my_childcount}
+				{END payment_advisor_childcount}
 						</a>
 	</span>
-	{END payment_my_dtable_link}
+	{END payment_advisor_dtable_link}
 
 
 	
@@ -853,11 +843,11 @@
 
 	 
 				<div data-itemtype="details_preview" data-itemid="details_preview" {$item_details_preview} data-pageid="{$pageid}" data-record-id="{$recId}" 
-	data-orders="payment,payment_my"
-			data-details-payment			data-details-payment_my	>
+	data-orders="payment,payment_advisor"
+			data-details-payment			data-details-payment_advisor	>
 		<span data-details-inside data-short-table="payment">
 			</span>
-		<span data-details-inside data-short-table="payment_my">
+		<span data-details-inside data-short-table="payment_advisor">
 			</span>
 		<div data-details-preview>
 	</div>

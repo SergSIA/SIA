@@ -19,21 +19,6 @@ $fieldToolTipsspecialty = array();
 $pageTitlesspecialty = array();
 $placeHoldersspecialty = array();
 
-if(mlang_getcurrentlang()=="English")
-{
-	$fieldLabelsspecialty["English"] = array();
-	$fieldToolTipsspecialty["English"] = array();
-	$placeHoldersspecialty["English"] = array();
-	$pageTitlesspecialty["English"] = array();
-	$fieldLabelsspecialty["English"]["id"] = "Id";
-	$fieldToolTipsspecialty["English"]["id"] = "";
-	$placeHoldersspecialty["English"]["id"] = "";
-	$fieldLabelsspecialty["English"]["description"] = "Description";
-	$fieldToolTipsspecialty["English"]["description"] = "";
-	$placeHoldersspecialty["English"]["description"] = "";
-	if (count($fieldToolTipsspecialty["English"]))
-		$tdataspecialty[".isUseToolTips"] = true;
-}
 if(mlang_getcurrentlang()=="Spanish")
 {
 	$fieldLabelsspecialty["Spanish"] = array();
@@ -145,7 +130,7 @@ $tdataspecialty[".rowHighlite"] = true;
 
 
 
-												
+									
 
 $tdataspecialty[".ajaxCodeSnippetAdded"] = false;
 
@@ -157,7 +142,7 @@ $tdataspecialty[".addPageEvents"] = false;
 $tdataspecialty[".isUseTimeForSearch"] = false;
 
 
-$tdataspecialty[".badgeColor"] = "6DA5C8";
+$tdataspecialty[".badgeColor"] = "E07878";
 
 
 $tdataspecialty[".allSearchFields"] = array();
@@ -556,6 +541,36 @@ $detailsTablesData["public.specialty"] = array();
 		$detailsParam["dType"]=PAGE_LIST;
 	$detailsParam["dShortTable"] = "advisor";
 	$detailsParam["dCaptionTable"] = GetTableCaption("public_advisor");
+	$detailsParam["masterKeys"] =array();
+	$detailsParam["detailKeys"] =array();
+
+
+		
+	$detailsTablesData["public.specialty"][$dIndex] = $detailsParam;
+
+	
+		$detailsTablesData["public.specialty"][$dIndex]["masterKeys"] = array();
+
+	$detailsTablesData["public.specialty"][$dIndex]["masterKeys"][]="id";
+
+				$detailsTablesData["public.specialty"][$dIndex]["detailKeys"] = array();
+
+	$detailsTablesData["public.specialty"][$dIndex]["detailKeys"][]="fk_id_specialty";
+//	public.advisor_user
+	
+	
+
+		$dIndex = 1;
+	$detailsParam = array();
+	$detailsParam["dDataSourceTable"]="public.advisor_user";
+		$detailsParam["dOriginalTable"] = "public.advisor";
+
+
+
+		
+		$detailsParam["dType"]=PAGE_LIST;
+	$detailsParam["dShortTable"] = "advisor_user";
+	$detailsParam["dCaptionTable"] = GetTableCaption("public_advisor_user");
 	$detailsParam["masterKeys"] =array();
 	$detailsParam["detailKeys"] =array();
 

@@ -154,7 +154,7 @@ class SearchPanel
 		$this->xt->assign("searchform_text", true);
 		$this->xt->assign("searchform_search", true);
 
-		$srchButtTitle = mlang_message("SEARCH"); 
+		$srchButtTitle = "Buscar"; 
 		$this->xt->assign('searchbutton_attrs', 'id="searchButtTop'.$this->id.'" title="'.$srchButtTitle.'"');
 		$this->xt->assign('clear_searchbutton_attrs', 'id="clearSearch'.$this->id.'"');
 		

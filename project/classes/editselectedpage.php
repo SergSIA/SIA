@@ -230,7 +230,7 @@ class EditSelectedPage extends EditPage
 		}
 		else
 		{
-			$label = str_replace( "%n%", $this->nSelected, mlang_message("UPDATE_N_RECORDS") );
+			$label = str_replace( "%n%", $this->nSelected, "Actualizar %n% registros" );
 			$this->xt->assign("update_selected", $label );
 		}		
 	}
@@ -741,11 +741,11 @@ class EditSelectedPage extends EditPage
 	 */
 	protected function setSuccessfulEditMessage()
 	{
-		$message = str_replace( array("%succeed%", "%total%"), array( "<strong>".$this->nUpdated."</strong>", "<strong>".$this->nSelected."</strong>" ), mlang_message("UPDATE_SELECTED_SUCCESS"));
+		$message = str_replace( array("%succeed%", "%total%"), array( "<strong>".$this->nUpdated."</strong>", "<strong>".$this->nSelected."</strong>" ), "%succeed% de %total% registros actualizados correctamente.");
 		$this->setMessage( $message );
 		
 		if( $this->nUpdated != $this->nSelected ) {
-			$message = str_replace( "%failed%", "<strong>".($this->nSelected - $this->nUpdated)."</strong>" , mlang_message("UPDATE_SELECTED_FAIL"));
+			$message = str_replace( "%failed%", "<strong>".($this->nSelected - $this->nUpdated)."</strong>" , "%failed% no fueron actualizados.");
 			$this->setMessage( $message );
 		}
 	}
@@ -869,7 +869,7 @@ class EditSelectedPage extends EditPage
 	 */
 	public function setDatabaseError( $message )
 	{
-		$this->messages[] = "<strong>&lt;&lt;&lt; ".mlang_message("RECORD_NOT_UPDATED")." &gt;&gt;&gt;</strong><br>".$message;
+		$this->messages[] = "<strong>&lt;&lt;&lt; "."El registro no ha sido editado"." &gt;&gt;&gt;</strong><br>".$message;
 		$this->messageType = MESSAGE_ERROR;
 	}	
 	

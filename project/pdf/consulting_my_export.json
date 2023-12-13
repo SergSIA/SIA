@@ -110,6 +110,9 @@ pdfDocument = {
 			{"text":{$fk_id_advisor_pdfvalue},"hidden":"{$item_hide_export_field1}"},
 				
 				
+			{"text":{$fk_id_customer_pdfvalue},"hidden":"{$item_hide_export_field2}"},
+				
+				
 			{"text":{$start_pdfvalue},"hidden":"{$item_hide_export_field3}"},
 				
 				
@@ -122,10 +125,10 @@ pdfDocument = {
 			{"text":{$access_pdfvalue},"hidden":"{$item_hide_export_field6}"},
 				
 				
-			{"text":{$start_h_pdfvalue},"hidden":"{$item_hide_export_field2}"},
+			{"text":{$start_h_pdfvalue},"hidden":"{$item_hide_export_field7}"},
 				
 				
-			{"text":{$end_h_pdfvalue},"hidden":"{$item_hide_export_field7}"},
+			{"text":{$end_h_pdfvalue},"hidden":"{$item_hide_export_field8}"},
 				
 		  ],
   "border": [ false, false, false, false ],

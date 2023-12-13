@@ -345,7 +345,7 @@ class LookupField extends EditControl
 				echo '<select id="'.$this->cfield.'" size="'.$this->lookupSize.'" '.$dataAttr.$selectClass.' name="'.$this->cfield.$this->postfix.'" '
 					.$this->multiple.' '.$this->inputStyle.'>';
 				if( !$this->multiselect )
-					echo '<option value="">'.mlang_message("PLEASE_SELECT").'</option>';
+					echo '<option value="">'."Por favor seleccione".'</option>';
 				else if($mode == MODE_SEARCH)
 					echo '<option value=""> </option>';
 
@@ -649,7 +649,7 @@ class LookupField extends EditControl
 
 					echo '<select size="'.$this->lookupSize.'" id="'.$this->cfield.'" name="'.$this->cfield.$this->postfix.'" class="'.$selectClass.'" '.$dataAttr.
 						$this->multiple.' '.$this->inputStyle.'>';
-					echo '<option value="">'.mlang_message("PLEASE_SELECT").'</option>';
+					echo '<option value="">'."Por favor seleccione".'</option>';
 					echo '</select>';
 					break;
 			}
@@ -683,7 +683,7 @@ class LookupField extends EditControl
 			echo '<select size="'.$this->lookupSize.'" id="'.$this->cfield.'" '
 				.$this->alt.' name="'.$this->cfield.$this->postfix.'"'.$dataAttr.' class="'.$selectClass.'" '.$this->multiple.' '.$this->inputStyle.'>';
 			if( !$this->multiselect )
-				echo '<option value="">'.mlang_message("PLEASE_SELECT").'</option>';
+				echo '<option value="">'."Por favor seleccione".'</option>';
 			else if($mode == MODE_SEARCH)
 				echo '<option value=""> </option>';
 		}
@@ -1338,11 +1338,11 @@ class LookupField extends EditControl
 		if( $this->LCType == LCT_LIST )
 		{
 			$visibility = $hiddenSelect ? ' style="visibility: hidden;"' : '';
-			$links[] = '<a href="#" id="'.$this->openlookup.'"'.$visibility.'>'.mlang_message("SELECT_LIST").'</a>';
+			$links[] = '<a href="#" id="'.$this->openlookup.'"'.$visibility.'>'."Seleccionar".'</a>';
 		}
 
 		if( $this->addNewItem )
-			$links[] = '<a href="#" id="addnew_'.$this->cfield.'">'.mlang_message("ADD_NEW").'</a>';
+			$links[] = '<a href="#" id="addnew_'.$this->cfield.'">'."Añadir nuevo".'</a>';
 
 		if( !count($links) )
 			return "";

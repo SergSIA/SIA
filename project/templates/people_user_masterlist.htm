@@ -13,7 +13,7 @@
 		<span data-itemtype="back_master" data-itemid="back_master" {$item_back_master} data-pageid="{$pageid}" data-small data-button-item>
 	<a type="button" title="" class="btn btn-link  btn-xs 
 	" {$backtomasterlink_attrs} >
-							{mlang_message BACK_TO_MASTER}			</a>
+							Regresar a la tabla principal			</a>
 </span>
 	 
 		<h3 class="panel-title" data-itemtype="masterlist_header" data-itemid="masterlist_header" {$item_masterlist_header} data-pageid="{$pageid}" >{$pagetitlelabel public_people_user masterlist}</h3>
@@ -37,7 +37,7 @@
 <span data-itemtype="inline_add" data-itemid="inline_add" {$item_inline_add} data-pageid="{$pageid}" data-small data-button-item>
 	<a type="button" title="" class="btn btn-primary   
 	" {$inlineaddlink_attrs} >
-							{mlang_message INLINE_ADD}			</a>
+							Añadir nuevo			</a>
 </span>
 {END inlineadd_link}
 			{END firstAboveGridCell}	
@@ -89,20 +89,20 @@
 	{$cell_grid_headcell_field}
 	{$recordattrs}
 	class="
-		 r-ori-vert				{$name_class}
+		 r-ori-vert				{$id_class}
 			"
 
-			data-field="name"
+			data-field="id"
 	
 	data-cellId="grid_headcell_field" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
-		{BEGIN name_fieldheadercolumn}
+		{BEGIN id_fieldheadercolumn}
  
-	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field5" {$item_simple_grid_field5} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="name" data-fieldname="name">
-	{$label public_people_user name }	</span>
-{END name_fieldheadercolumn}
+	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field6" {$item_simple_grid_field6} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="id" data-fieldname="id">
+	{$label public_people_user id }	</span>
+{END id_fieldheadercolumn}
 
 	
 	</th>
@@ -114,20 +114,20 @@
 	{$cell_grid_headcell_field1}
 	{$recordattrs}
 	class="
-		 r-ori-vert				{$last_name_class}
+		 r-ori-vert				{$name_class}
 			"
 
-			data-field="last_name"
+			data-field="name"
 	
 	data-cellId="grid_headcell_field1" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
-		{BEGIN last_name_fieldheadercolumn}
+		{BEGIN name_fieldheadercolumn}
  
-	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field6" {$item_simple_grid_field6} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="last_name" data-fieldname="last_name">
-	{$label public_people_user last_name }	</span>
-{END last_name_fieldheadercolumn}
+	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field7" {$item_simple_grid_field7} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="name" data-fieldname="name">
+	{$label public_people_user name }	</span>
+{END name_fieldheadercolumn}
 
 	
 	</th>
@@ -139,20 +139,20 @@
 	{$cell_grid_headcell_field2}
 	{$recordattrs}
 	class="
-		 r-ori-vert				{$birth_date_class}
+		 r-ori-vert				{$last_name_class}
 			"
 
-			data-field="birth_date"
+			data-field="last_name"
 	
 	data-cellId="grid_headcell_field2" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
-		{BEGIN birth_date_fieldheadercolumn}
+		{BEGIN last_name_fieldheadercolumn}
  
-	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field7" {$item_simple_grid_field7} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="birth_date" data-fieldname="birth_date">
-	{$label public_people_user birth_date }	</span>
-{END birth_date_fieldheadercolumn}
+	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field12" {$item_simple_grid_field12} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="last_name" data-fieldname="last_name">
+	{$label public_people_user last_name }	</span>
+{END last_name_fieldheadercolumn}
 
 	
 	</th>
@@ -164,20 +164,20 @@
 	{$cell_grid_headcell_field3}
 	{$recordattrs}
 	class="
-		 r-ori-vert				{$fk_type_doc_class}
+		 r-ori-vert				{$birth_date_class}
 			"
 
-			data-field="fk_type_doc"
+			data-field="birth_date"
 	
 	data-cellId="grid_headcell_field3" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
-		{BEGIN fk_type_doc_fieldheadercolumn}
+		{BEGIN birth_date_fieldheadercolumn}
  
-	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field12" {$item_simple_grid_field12} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="fk_type_doc" data-fieldname="fk_type_doc">
-	{$label public_people_user fk_type_doc }	</span>
-{END fk_type_doc_fieldheadercolumn}
+	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field13" {$item_simple_grid_field13} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="birth_date" data-fieldname="birth_date">
+	{$label public_people_user birth_date }	</span>
+{END birth_date_fieldheadercolumn}
 
 	
 	</th>
@@ -189,20 +189,20 @@
 	{$cell_grid_headcell_field4}
 	{$recordattrs}
 	class="
-		 r-ori-vert				{$document_class}
+		 r-ori-vert				{$fk_type_doc_class}
 			"
 
-			data-field="document"
+			data-field="fk_type_doc"
 	
 	data-cellId="grid_headcell_field4" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
-		{BEGIN document_fieldheadercolumn}
+		{BEGIN fk_type_doc_fieldheadercolumn}
  
-	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field13" {$item_simple_grid_field13} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="document" data-fieldname="document">
-	{$label public_people_user document }	</span>
-{END document_fieldheadercolumn}
+	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field14" {$item_simple_grid_field14} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="fk_type_doc" data-fieldname="fk_type_doc">
+	{$label public_people_user fk_type_doc }	</span>
+{END fk_type_doc_fieldheadercolumn}
 
 	
 	</th>
@@ -214,20 +214,20 @@
 	{$cell_grid_headcell_field5}
 	{$recordattrs}
 	class="
-		 r-ori-vert				{$telf_class}
+		 r-ori-vert				{$document_class}
 			"
 
-			data-field="telf"
+			data-field="document"
 	
 	data-cellId="grid_headcell_field5" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
-		{BEGIN telf_fieldheadercolumn}
+		{BEGIN document_fieldheadercolumn}
  
-	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field14" {$item_simple_grid_field14} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="telf" data-fieldname="telf">
-	{$label public_people_user telf }	</span>
-{END telf_fieldheadercolumn}
+	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field15" {$item_simple_grid_field15} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="document" data-fieldname="document">
+	{$label public_people_user document }	</span>
+{END document_fieldheadercolumn}
 
 	
 	</th>
@@ -239,20 +239,20 @@
 	{$cell_grid_headcell_field6}
 	{$recordattrs}
 	class="
-		 r-ori-vert				{$country_class}
+		 r-ori-vert				{$telf_class}
 			"
 
-			data-field="country"
+			data-field="telf"
 	
 	data-cellId="grid_headcell_field6" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
-		{BEGIN country_fieldheadercolumn}
+		{BEGIN telf_fieldheadercolumn}
  
-	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field15" {$item_simple_grid_field15} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="country" data-fieldname="country">
-	{$label public_people_user country }	</span>
-{END country_fieldheadercolumn}
+	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field16" {$item_simple_grid_field16} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="telf" data-fieldname="telf">
+	{$label public_people_user telf }	</span>
+{END telf_fieldheadercolumn}
 
 	
 	</th>
@@ -264,20 +264,20 @@
 	{$cell_grid_headcell_field7}
 	{$recordattrs}
 	class="
-		 r-ori-vert				{$created_by_class}
+		 r-ori-vert				{$country_class}
 			"
 
-			data-field="created_by"
+			data-field="country"
 	
 	data-cellId="grid_headcell_field7" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
-		{BEGIN created_by_fieldheadercolumn}
+		{BEGIN country_fieldheadercolumn}
  
-	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field16" {$item_simple_grid_field16} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="created_by" data-fieldname="created_by">
-	{$label public_people_user created_by }	</span>
-{END created_by_fieldheadercolumn}
+	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field17" {$item_simple_grid_field17} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="country" data-fieldname="country">
+	{$label public_people_user country }	</span>
+{END country_fieldheadercolumn}
 
 	
 	</th>
@@ -289,24 +289,49 @@
 	{$cell_grid_headcell_field8}
 	{$recordattrs}
 	class="
-		 r-ori-vert				{$updated_by_class}
+		 r-ori-vert				{$created_by_class}
 			"
 
-			data-field="updated_by"
+			data-field="created_by"
 	
 	data-cellId="grid_headcell_field8" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
+		{BEGIN created_by_fieldheadercolumn}
+ 
+	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field18" {$item_simple_grid_field18} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="created_by" data-fieldname="created_by">
+	{$label public_people_user created_by }	</span>
+{END created_by_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field8}
+				 
+					{BEGIN cellblock_grid_headcell_field9}
+	<th
+	
+	{$cell_grid_headcell_field9}
+	{$recordattrs}
+	class="
+		 r-ori-vert				{$updated_by_class}
+			"
+
+			data-field="updated_by"
+	
+	data-cellId="grid_headcell_field9" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
 		{BEGIN updated_by_fieldheadercolumn}
  
-	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field17" {$item_simple_grid_field17} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="updated_by" data-fieldname="updated_by">
+	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field19" {$item_simple_grid_field19} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="updated_by" data-fieldname="updated_by">
 	{$label public_people_user updated_by }	</span>
 {END updated_by_fieldheadercolumn}
 
 	
 	</th>
-	{END cellblock_grid_headcell_field8}
+	{END cellblock_grid_headcell_field9}
 							</tr>
 					 
 					 
@@ -339,8 +364,8 @@
 	 
 		{BEGIN inline_cancel}
 <span data-itemtype="grid_inline_cancel" data-itemid="grid_inline_cancel" {$item_grid_inline_cancel} data-pageid="{$pageid}" data-record-id="{$recId}" data-small data-button-item>
-	<a type="button" title="{mlang_message CANCEL}" class="btn-link   
-	 glyphicon glyphicon-remove" {$inlinerevertlink_attrs} title="{mlang_message CANCEL}" >		
+	<a type="button" title="Cancelar" class="btn-link   
+	 glyphicon glyphicon-remove" {$inlinerevertlink_attrs} title="Cancelar" >		
 				
 								</a>
 </span>
@@ -355,20 +380,20 @@
 	{$cell_grid_cell_field}
 	{$recordattrs}
 	class="
-		 r-ori-vert				{$name_class}
+		 r-ori-vert				{$id_class}
 			"
 
-			data-field="name"
+			data-field="id"
 	
 	data-cellId="grid_cell_field" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
-		{BEGIN name_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="simple_grid_field1" {$item_simple_grid_field1} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="name" data-fieldname="name" data-default-width >
-{$name_value}
+		{BEGIN id_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field" {$item_simple_grid_field} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="id" data-fieldname="id" data-default-width >
+{$id_value}
 </span>
-{END name_fieldcolumn}	
+{END id_fieldcolumn}	
 	</td>
 	{END cellblock_grid_cell_field}
 				 
@@ -378,20 +403,20 @@
 	{$cell_grid_cell_field1}
 	{$recordattrs}
 	class="
-		 r-ori-vert				{$last_name_class}
+		 r-ori-vert				{$name_class}
 			"
 
-			data-field="last_name"
+			data-field="name"
 	
 	data-cellId="grid_cell_field1" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
-		{BEGIN last_name_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="simple_grid_field2" {$item_simple_grid_field2} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="last_name" data-fieldname="last_name" data-default-width >
-{$last_name_value}
+		{BEGIN name_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field1" {$item_simple_grid_field1} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="name" data-fieldname="name" data-default-width >
+{$name_value}
 </span>
-{END last_name_fieldcolumn}	
+{END name_fieldcolumn}	
 	</td>
 	{END cellblock_grid_cell_field1}
 				 
@@ -401,20 +426,20 @@
 	{$cell_grid_cell_field2}
 	{$recordattrs}
 	class="
-		 r-ori-vert				{$birth_date_class}
+		 r-ori-vert				{$last_name_class}
 			"
 
-			data-field="birth_date"
+			data-field="last_name"
 	
 	data-cellId="grid_cell_field2" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
-		{BEGIN birth_date_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="simple_grid_field3" {$item_simple_grid_field3} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="birth_date" data-fieldname="birth_date" data-default-width >
-{$birth_date_value}
+		{BEGIN last_name_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field2" {$item_simple_grid_field2} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="last_name" data-fieldname="last_name" data-default-width >
+{$last_name_value}
 </span>
-{END birth_date_fieldcolumn}	
+{END last_name_fieldcolumn}	
 	</td>
 	{END cellblock_grid_cell_field2}
 				 
@@ -424,20 +449,20 @@
 	{$cell_grid_cell_field3}
 	{$recordattrs}
 	class="
-		 r-ori-vert				{$fk_type_doc_class}
+		 r-ori-vert				{$birth_date_class}
 			"
 
-			data-field="fk_type_doc"
+			data-field="birth_date"
 	
 	data-cellId="grid_cell_field3" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
-		{BEGIN fk_type_doc_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="simple_grid_field8" {$item_simple_grid_field8} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="fk_type_doc" data-fieldname="fk_type_doc" data-default-width >
-{$fk_type_doc_value}
+		{BEGIN birth_date_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field3" {$item_simple_grid_field3} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="birth_date" data-fieldname="birth_date" data-default-width >
+{$birth_date_value}
 </span>
-{END fk_type_doc_fieldcolumn}	
+{END birth_date_fieldcolumn}	
 	</td>
 	{END cellblock_grid_cell_field3}
 				 
@@ -447,20 +472,20 @@
 	{$cell_grid_cell_field4}
 	{$recordattrs}
 	class="
-		 r-ori-vert				{$document_class}
+		 r-ori-vert				{$fk_type_doc_class}
 			"
 
-			data-field="document"
+			data-field="fk_type_doc"
 	
 	data-cellId="grid_cell_field4" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
-		{BEGIN document_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="simple_grid_field9" {$item_simple_grid_field9} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="document" data-fieldname="document" data-default-width >
-{$document_value}
+		{BEGIN fk_type_doc_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field8" {$item_simple_grid_field8} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="fk_type_doc" data-fieldname="fk_type_doc" data-default-width >
+{$fk_type_doc_value}
 </span>
-{END document_fieldcolumn}	
+{END fk_type_doc_fieldcolumn}	
 	</td>
 	{END cellblock_grid_cell_field4}
 				 
@@ -470,20 +495,20 @@
 	{$cell_grid_cell_field5}
 	{$recordattrs}
 	class="
-		 r-ori-vert				{$telf_class}
+		 r-ori-vert				{$document_class}
 			"
 
-			data-field="telf"
+			data-field="document"
 	
 	data-cellId="grid_cell_field5" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
-		{BEGIN telf_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="simple_grid_field10" {$item_simple_grid_field10} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="telf" data-fieldname="telf" data-default-width >
-{$telf_value}
+		{BEGIN document_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field9" {$item_simple_grid_field9} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="document" data-fieldname="document" data-default-width >
+{$document_value}
 </span>
-{END telf_fieldcolumn}	
+{END document_fieldcolumn}	
 	</td>
 	{END cellblock_grid_cell_field5}
 				 
@@ -493,20 +518,20 @@
 	{$cell_grid_cell_field6}
 	{$recordattrs}
 	class="
-		 r-ori-vert				{$country_class}
+		 r-ori-vert				{$telf_class}
 			"
 
-			data-field="country"
+			data-field="telf"
 	
 	data-cellId="grid_cell_field6" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
-		{BEGIN country_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="simple_grid_field11" {$item_simple_grid_field11} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="country" data-fieldname="country" data-default-width >
-{$country_value}
+		{BEGIN telf_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field10" {$item_simple_grid_field10} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="telf" data-fieldname="telf" data-default-width >
+{$telf_value}
 </span>
-{END country_fieldcolumn}	
+{END telf_fieldcolumn}	
 	</td>
 	{END cellblock_grid_cell_field6}
 				 
@@ -516,20 +541,20 @@
 	{$cell_grid_cell_field7}
 	{$recordattrs}
 	class="
-		 r-ori-vert				{$created_by_class}
+		 r-ori-vert				{$country_class}
 			"
 
-			data-field="created_by"
+			data-field="country"
 	
 	data-cellId="grid_cell_field7" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
-		{BEGIN created_by_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="simple_grid_field" {$item_simple_grid_field} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="created_by" data-fieldname="created_by" data-default-width >
-{$created_by_value}
+		{BEGIN country_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field11" {$item_simple_grid_field11} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="country" data-fieldname="country" data-default-width >
+{$country_value}
 </span>
-{END created_by_fieldcolumn}	
+{END country_fieldcolumn}	
 	</td>
 	{END cellblock_grid_cell_field7}
 				 
@@ -539,22 +564,45 @@
 	{$cell_grid_cell_field8}
 	{$recordattrs}
 	class="
-		 r-ori-vert				{$updated_by_class}
+		 r-ori-vert				{$created_by_class}
 			"
 
-			data-field="updated_by"
+			data-field="created_by"
 	
 	data-cellId="grid_cell_field8" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
+		{BEGIN created_by_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field4" {$item_simple_grid_field4} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="created_by" data-fieldname="created_by" data-default-width >
+{$created_by_value}
+</span>
+{END created_by_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field8}
+				 
+					{BEGIN cellblock_grid_cell_field9}
+	<td
+	
+	{$cell_grid_cell_field9}
+	{$recordattrs}
+	class="
+		 r-ori-vert				{$updated_by_class}
+			"
+
+			data-field="updated_by"
+	
+	data-cellId="grid_cell_field9" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
 		{BEGIN updated_by_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="simple_grid_field4" {$item_simple_grid_field4} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="updated_by" data-fieldname="updated_by" data-default-width >
+<span data-itemtype="grid_field" data-itemid="simple_grid_field5" {$item_simple_grid_field5} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="updated_by" data-fieldname="updated_by" data-default-width >
 {$updated_by_value}
 </span>
 {END updated_by_fieldcolumn}	
 	</td>
-	{END cellblock_grid_cell_field8}
+	{END cellblock_grid_cell_field9}
 							</tr>
 					 
 					
@@ -730,6 +778,22 @@
 	
 	</td>
 	{END cellblock_grid_footcell_field8}
+				 
+					{BEGIN cellblock_grid_footcell_field9}
+	<td
+	
+	{$cell_grid_footcell_field9}
+	{$recordattrs}
+	class="
+		 r-ori-vert			"
+
+	
+	data-cellId="grid_footcell_field9" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="people_user_masterlist"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field9}
 							</tr>
 					
 					</tfoot>

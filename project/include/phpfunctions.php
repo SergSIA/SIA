@@ -920,6 +920,26 @@ function CustomExpression($value, $data, $field, $ptype, $table="")
 	global $strTableName;
 	if(!$table)
 		$table = $strTableName;
+				if($table=="public.pay_deta" && $field=="cuenta")
+	{
+		$value = 3778999001;;
+		return $value;
+	}
+				if($table=="public.pay_deta" && $field=="banco")
+	{
+		$value = 'BANCO CONTINENTAL';;
+		return $value;
+	}
+				if($table=="public.pay_deta" && $field=="cedula")
+	{
+		$value = 5317058;;
+		return $value;
+	}
+				if($table=="public.pay_deta" && $field=="titular")
+	{
+		$value = 'Sergio Candia';;
+		return $value;
+	}
 	return $value;
 }
 
@@ -955,6 +975,10 @@ function GetDefaultValue($field, $ptype, $table="")
 	global $strTableName;
 	if(!$table)
 		$table=$strTableName;
+				if($table=="public.advisor" && $field=="status")
+	{
+		return true;
+	}
 	return "";
 }
 

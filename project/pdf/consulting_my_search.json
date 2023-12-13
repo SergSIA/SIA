@@ -188,6 +188,9 @@ pdfDocument = {
 				
 			{"text":{$end_h_pdfvalue},"hidden":"{$item_hide_integrated_search_field8}"},
 				
+				
+			{"text":{$fk_id_people_pdfvalue},"hidden":"{$item_hide_integrated_search_field9}"},
+				
 		  ],
   "border": [ false, false, false, false ],
               "alignment": 'left',

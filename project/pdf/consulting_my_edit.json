@@ -156,19 +156,28 @@ pdfDocument = {
 			"stack": [
 		
 				
-			{"hidden":"{$item_hide_integrated_edit_field1}","stack":[{"text":"{$jslabel public_consulting_my fk_id_advisor }","bold":true},{"text":{$fk_id_advisor_pdfvalue}}],"margin":[0,0,0,15]},
+			{"hidden":"{$item_hide_integrated_edit_field}","stack":[{"text":"{$jslabel public_consulting_my fk_id_advisor }","bold":true},{"text":{$fk_id_advisor_pdfvalue}}],"margin":[0,0,0,15]},
 				
 				
-			{"hidden":"{$item_hide_integrated_edit_field3}","stack":[{"text":"{$jslabel public_consulting_my start }","bold":true},{"text":{$start_pdfvalue}}],"margin":[0,0,0,15]},
+			{"hidden":"{$item_hide_integrated_edit_field1}","stack":[{"text":"{$jslabel public_consulting_my fk_id_customer }","bold":true},{"text":{$fk_id_customer_pdfvalue}}],"margin":[0,0,0,15]},
 				
 				
-			{"hidden":"{$item_hide_integrated_edit_field}","stack":[{"text":"{$jslabel public_consulting_my start_h }","bold":true},{"text":{$start_h_pdfvalue}}],"margin":[0,0,0,15]},
+			{"hidden":"{$item_hide_integrated_edit_field2}","stack":[{"text":"{$jslabel public_consulting_my start }","bold":true},{"text":{$start_pdfvalue}}],"margin":[0,0,0,15]},
 				
 				
-			{"hidden":"{$item_hide_integrated_edit_field4}","stack":[{"text":"{$jslabel public_consulting_my end }","bold":true},{"text":{$end_pdfvalue}}],"margin":[0,0,0,15]},
+			{"hidden":"{$item_hide_integrated_edit_field3}","stack":[{"text":"{$jslabel public_consulting_my end }","bold":true},{"text":{$end_pdfvalue}}],"margin":[0,0,0,15]},
 				
 				
-			{"hidden":"{$item_hide_integrated_edit_field2}","stack":[{"text":"{$jslabel public_consulting_my end_h }","bold":true},{"text":{$end_h_pdfvalue}}],"margin":[0,0,0,15]},
+			{"hidden":"{$item_hide_integrated_edit_field4}","stack":[{"text":"{$jslabel public_consulting_my fk_id_status_consulting }","bold":true},{"text":{$fk_id_status_consulting_pdfvalue}}],"margin":[0,0,0,15]},
+				
+				
+			{"hidden":"{$item_hide_integrated_edit_field5}","stack":[{"text":"{$jslabel public_consulting_my access }","bold":true},{"text":{$access_pdfvalue}}],"margin":[0,0,0,15]},
+				
+				
+			{"hidden":"{$item_hide_integrated_edit_field6}","stack":[{"text":"{$jslabel public_consulting_my start_h }","bold":true},{"text":{$start_h_pdfvalue}}],"margin":[0,0,0,15]},
+				
+				
+			{"hidden":"{$item_hide_integrated_edit_field7}","stack":[{"text":"{$jslabel public_consulting_my end_h }","bold":true},{"text":{$end_h_pdfvalue}}],"margin":[0,0,0,15]},
 				
 		  ],
   "border": [ false, false, false, false ],

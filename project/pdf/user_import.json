@@ -116,6 +116,9 @@ pdfDocument = {
 			{"text":{$fk_id_rol_pdfvalue},"hidden":"{$item_hide_import_field3}"},
 				
 				
+			{"text":{$password_pdfvalue},"hidden":"{$item_hide_import_field4}"},
+				
+				
 			{"text":{$username_pdfvalue},"hidden":"{$item_hide_import_field5}"},
 				
 				
@@ -129,6 +132,9 @@ pdfDocument = {
 				
 				
 			{"text":{$fk_id_people_pdfvalue},"hidden":"{$item_hide_import_field9}"},
+				
+				
+			{"text":{$ext_security_id_pdfvalue},"hidden":"{$item_hide_import_field10}"},
 				
 		  ],
   "border": [ false, false, false, false ],

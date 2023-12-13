@@ -2,7 +2,7 @@
 			$optionsArray = array( 'pdf' => array( 'pdfView' => false ),
 'details' => array( 'public.payment' => array( 'displayPreview' => 2,
 'previewPageId' => '' ),
-'public.payment_my' => array( 'displayPreview' => 2,
+'public.payment_advisor' => array( 'displayPreview' => 2,
 'previewPageId' => '' ) ),
 'fields' => array( 'gridFields' => array( 'id',
 'description' ),

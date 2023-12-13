@@ -156,22 +156,22 @@ pdfDocument = {
 			"stack": [
 		
 				
-			{"hidden":"{$item_hide_integrated_edit_field1}","stack":[{"text":"{$jslabel public_customers fk_id_people }","bold":true},{"text":{$fk_id_people_pdfvalue}}],"margin":[0,0,0,15]},
+			{"hidden":"{$item_hide_integrated_edit_field}","stack":[{"text":"{$jslabel public_customers fk_id_people }","bold":true},{"text":{$fk_id_people_pdfvalue}}],"margin":[0,0,0,15]},
 				
 				
-			{"hidden":"{$item_hide_integrated_edit_field2}","stack":[{"text":"{$jslabel public_customers created_by }","bold":true},{"text":{$created_by_pdfvalue}}],"margin":[0,0,0,15]},
+			{"hidden":"{$item_hide_integrated_edit_field1}","stack":[{"text":"{$jslabel public_customers created_by }","bold":true},{"text":{$created_by_pdfvalue}}],"margin":[0,0,0,15]},
 				
 				
-			{"hidden":"{$item_hide_integrated_edit_field3}","stack":[{"text":"{$jslabel public_customers created_at }","bold":true},{"text":{$created_at_pdfvalue}}],"margin":[0,0,0,15]},
+			{"hidden":"{$item_hide_integrated_edit_field2}","stack":[{"text":"{$jslabel public_customers created_at }","bold":true},{"text":{$created_at_pdfvalue}}],"margin":[0,0,0,15]},
 				
 				
-			{"hidden":"{$item_hide_integrated_edit_field4}","stack":[{"text":"{$jslabel public_customers updated_by }","bold":true},{"text":{$updated_by_pdfvalue}}],"margin":[0,0,0,15]},
+			{"hidden":"{$item_hide_integrated_edit_field3}","stack":[{"text":"{$jslabel public_customers updated_by }","bold":true},{"text":{$updated_by_pdfvalue}}],"margin":[0,0,0,15]},
 				
 				
-			{"hidden":"{$item_hide_integrated_edit_field5}","stack":[{"text":"{$jslabel public_customers updated_at }","bold":true},{"text":{$updated_at_pdfvalue}}],"margin":[0,0,0,15]},
+			{"hidden":"{$item_hide_integrated_edit_field4}","stack":[{"text":"{$jslabel public_customers updated_at }","bold":true},{"text":{$updated_at_pdfvalue}}],"margin":[0,0,0,15]},
 				
 				
-			{"hidden":"{$item_hide_integrated_edit_field6}","stack":[{"text":"{$jslabel public_customers status }","bold":true},{"text":{$status_pdfvalue}}],"margin":[0,0,0,15]},
+			{"hidden":"{$item_hide_integrated_edit_field5}","stack":[{"text":"{$jslabel public_customers status }","bold":true},{"text":{$status_pdfvalue}}],"margin":[0,0,0,15]},
 				
 		  ],
   "border": [ false, false, false, false ],

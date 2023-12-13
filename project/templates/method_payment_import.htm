@@ -54,7 +54,7 @@
 					<div class="panel-body">
 													<!-- bsimportheader_text data-brick="importheader_text" data-pageid="{$pageid}" {$importheader_text_hiddenattr}-->
 	<div id="importheaderText{$id}" class="form-group">
-		{mlang_message IMPORT_DRAG_AND_DROP}	</div>
+		Arrastre un fichero separado por comas (.csv), Excel (.xlsx) o elija otra opción.	</div>
 
 	<!-- bsimportfields data-brick="importfields" data-pageid="{$pageid}" {$importfields_hiddenattr}-->
 	<div id="importFields{$id}" class="form-group">
@@ -62,7 +62,7 @@
 			<table class="fieldGrid">
 				<tr>
 					<td>
-						{mlang_message IMPORT_SELECT}					</td>
+						Seleccione el fichero con los datos.					</td>
 					<td>
 						<input type="File" id="importFile{$id}" name="importFile{$id}">
 					</td>
@@ -71,21 +71,21 @@
 		</div>
 
 		<div class="rnr-import-settings">
-			<button type="button" class="btn btn-default" id="uploadImportFile{$id}">{mlang_message IMPORT_BROWSEBUTTON}</button>
+			<button type="button" class="btn btn-default" id="uploadImportFile{$id}">Elegir...</button>
 		</div>
 
 		<div id="importDropzone{$id}" class="rnr-dragndrop-area" style="display: none;">
-			<div class="rnr-dragtext"> {mlang_message UPLOAD_DRAG} </div>
+			<div class="rnr-dragtext"> Arrastre aquí los ficheros </div>
 		</div>
 
 		<div class="rnr-import-settings">
-			<button type="button" class="btn btn-default" id="switchToTextInsertion{$id}">{mlang_message IMPORT_COPY_PASTE_TEXT}</button>
+			<button type="button" class="btn btn-default" id="switchToTextInsertion{$id}">Copiar y pegar texto</button>
 		</div>
 	</div>
 
 	<!-- bsimport_rawtext_control brickname_attr data-brick="import_rawtext_control" data-pageid="{$pageid}" {$import_rawtext_control_hiddenattr}-->
 	<div id="copyAndPasteText{$id}" class="form-group" style="display:none;">
-		<div>{mlang_message IMPORT_COPY_PASTE_DATA}</div>
+		<div>Copie y pegue su texto aquí:</div>
 		<textarea class="rnr-import-textarea" id="importText{$id}">
 		</textarea>
 	</div>
@@ -95,30 +95,30 @@
 		<div id="importSettings{$id}" class="rnr-import-settings form-group">
 			<div class="rnr-is-control checkbox">
 	    		<label>
-	    			<input class="rnr-checkbox" checked="checked" id="columnsInFirstLine{$id}" name="columnsInFirstLine" type="checkbox">{mlang_message IMPORT_COLUMN_HEADERS}	    		</label>
+	    			<input class="rnr-checkbox" checked="checked" id="columnsInFirstLine{$id}" name="columnsInFirstLine" type="checkbox">Cabaceras de columnas en la primera línea	    		</label>
 	  		</div>
 
 			<ul id="delimiterSettings{$id}" style="display:none;" class="rnr-is-control list-inline">
 				<li class="radio">
 					<label>
 						<input name="importDelimiter" class="importDelimiters" type="radio" value=",">
-						{mlang_message IMPORT_COMMA}					</label>
+						Coma					</label>
 				</li>
 				<li class="radio">
 					<label>
 						<input name="importDelimiter" class="importDelimiters" type="radio" value="&#9;">
-						{mlang_message IMPORT_TAB}					</label>
+						Tabulador					</label>
 				</li>
 				<li class="radio">
 					<label>
 						<input name="importDelimiter" class="importDelimiters" type="radio" value="other">
-						{mlang_message IMPORT_OTHER}					</label>
+						Otro					</label>
 					<input id="customDelimiter{$id}" value=";" type="text">
 				</li>
 			</ul>
 
 			<div id="dateFormatSettings{$id}" class="rnr-is-control" style="display:none;">
-				<label>{mlang_message IMPORT_DATA_FORMAT}</label>
+				<label>Formato de fecha:</label>
 				<input id="importDateFormat{$id}" type="text">
 			</div>
 		</div>
@@ -143,23 +143,23 @@
 	<div id="importButtons{$id}">
 		<div class="rnr-buttons-right">
 			<button type="button" class="btn btn-default" id="backToList{$id}">
-				{mlang_message BACK_TO_LIST}			</button>
+				Volver a la lista			</button>
 			<button type="button" class="btn btn-default" id="newImport{$id}" style="display: none;">
-				{mlang_message IMPORT_NEW}			</button>
+				Nueva importación			</button>
 		</div>
 		<div class="rnr-buttons-left">
 			<button type="button" class="btn btn-primary disabled" id="continueTextImport{$id}" style="display: none;">
-				{mlang_message CONTINUE}			</button>
+				Continuar			</button>
 			<button type="button" class="btn btn-primary" id="importButton{$id}" style="display: none;">
-				{mlang_message IMPORT_DATA}			</button>
+				Importar datos			</button>
 			<button type="button" class="btn btn-default" id="backTo{$id}" style="display: none;">
-				{mlang_message BACK}			</button>
+				Regresar			</button>
 			<button type="button" class="btn btn-default" id="saveReport{$id}" style="display: none;">
-				{mlang_message IMPORT_SAVE_REPORT}			</button>
+				Guardar informe			</button>
 			<button type="button" class="btn btn-default errorReportButtons{$id}" id="saveUnprocessedData{$id}" style="display: none;">
-				{mlang_message IMPORT_DOWNLOAD_UNPROCESSED_DATA}			</button>
+				Descargar datos no procesados			</button>
 			<button type="button" class="btn btn-default errorReportButtons{$id}" id="saveErrorReport{$id}" style="display: none;">
-				{mlang_message IMPORT_DOWNLOAD_ERROR_LOG}			</button>
+				Descargar log de errores			</button>
 		</div>
 	</div>
 											</div>

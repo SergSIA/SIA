@@ -137,7 +137,6 @@ function getFilenameFromURI( $uri )
 function getLangFileName($langName)
 {
 	$langArr = array();
-	$langArr["English"] = "English";
 	$langArr["Spanish"] = "Spanish";
 	return $langArr[$langName];
 }
@@ -201,6 +200,8 @@ function checkTableName($shortTName )
 		return true;
 	if ("consulting" == $shortTName )
 		return true;
+	if ("country" == $shortTName )
+		return true;
 	if ("customers" == $shortTName )
 		return true;
 	if ("document" == $shortTName )
@@ -221,17 +222,21 @@ function checkTableName($shortTName )
 		return true;
 	if ("user" == $shortTName )
 		return true;
-	if ("people_user" == $shortTName )
-		return true;
 	if ("consulting_my" == $shortTName )
 		return true;
-	if ("country" == $shortTName )
+	if ("consulting_my_advisor" == $shortTName )
 		return true;
-	if ("public_advisor_user" == $shortTName )
+	if ("advisor_user" == $shortTName )
 		return true;
-	if ("public_consulting_my_advisor" == $shortTName )
+	if ("payment_advisor" == $shortTName )
 		return true;
-	if ("payment_my" == $shortTName )
+	if ("people_user" == $shortTName )
+		return true;
+	if ("advisor1" == $shortTName )
+		return true;
+	if ("pay_deta" == $shortTName )
+		return true;
+	if ("customers1" == $shortTName )
 		return true;
 	return false;
 }
@@ -300,6 +305,15 @@ function GetTablesList($pdfMode = false)
 	}
 	if( $tableAvailable ) {
 		$arr[]="public.consulting";
+	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("public.country");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="public.country";
 	}
 	$tableAvailable = true;
 	if( $checkPermissions ) {
@@ -393,39 +407,12 @@ function GetTablesList($pdfMode = false)
 	}
 	$tableAvailable = true;
 	if( $checkPermissions ) {
-		$strPerm = GetUserPermissions("public.people_user");
-		$tableAvailable = ( strpos($strPerm, "P") !== false
-			|| $pdfMode && strpos($strPerm, "S") !== false );
-	}
-	if( $tableAvailable ) {
-		$arr[]="public.people_user";
-	}
-	$tableAvailable = true;
-	if( $checkPermissions ) {
 		$strPerm = GetUserPermissions("public.consulting_my");
 		$tableAvailable = ( strpos($strPerm, "P") !== false
 			|| $pdfMode && strpos($strPerm, "S") !== false );
 	}
 	if( $tableAvailable ) {
 		$arr[]="public.consulting_my";
-	}
-	$tableAvailable = true;
-	if( $checkPermissions ) {
-		$strPerm = GetUserPermissions("public.country");
-		$tableAvailable = ( strpos($strPerm, "P") !== false
-			|| $pdfMode && strpos($strPerm, "S") !== false );
-	}
-	if( $tableAvailable ) {
-		$arr[]="public.country";
-	}
-	$tableAvailable = true;
-	if( $checkPermissions ) {
-		$strPerm = GetUserPermissions("public.advisor_user");
-		$tableAvailable = ( strpos($strPerm, "P") !== false
-			|| $pdfMode && strpos($strPerm, "S") !== false );
-	}
-	if( $tableAvailable ) {
-		$arr[]="public.advisor_user";
 	}
 	$tableAvailable = true;
 	if( $checkPermissions ) {
@@ -438,12 +425,57 @@ function GetTablesList($pdfMode = false)
 	}
 	$tableAvailable = true;
 	if( $checkPermissions ) {
-		$strPerm = GetUserPermissions("public.payment_my");
+		$strPerm = GetUserPermissions("public.advisor_user");
 		$tableAvailable = ( strpos($strPerm, "P") !== false
 			|| $pdfMode && strpos($strPerm, "S") !== false );
 	}
 	if( $tableAvailable ) {
-		$arr[]="public.payment_my";
+		$arr[]="public.advisor_user";
+	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("public.payment_advisor");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="public.payment_advisor";
+	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("public.people_user");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="public.people_user";
+	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("public.advisor1");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="public.advisor1";
+	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("public.pay_deta");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="public.pay_deta";
+	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("public.customers1");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="public.customers1";
 	}
 	return $arr;
 }
@@ -456,6 +488,7 @@ function GetTablesListWithoutSecurity()
 	$arr = array();
 	$arr[]="public.advisor";
 	$arr[]="public.consulting";
+	$arr[]="public.country";
 	$arr[]="public.customers";
 	$arr[]="public.document";
 	$arr[]="public.method_payment";
@@ -466,12 +499,14 @@ function GetTablesListWithoutSecurity()
 	$arr[]="public.status_consulting";
 	$arr[]="public.status_payment";
 	$arr[]="public.user";
-	$arr[]="public.people_user";
 	$arr[]="public.consulting_my";
-	$arr[]="public.country";
-	$arr[]="public.advisor_user";
 	$arr[]="public.consulting_my_advisor";
-	$arr[]="public.payment_my";
+	$arr[]="public.advisor_user";
+	$arr[]="public.payment_advisor";
+	$arr[]="public.people_user";
+	$arr[]="public.advisor1";
+	$arr[]="public.pay_deta";
+	$arr[]="public.customers1";
 	return $arr;
 }
 
@@ -1094,219 +1129,219 @@ function GetUserPermissionsStatic( $table )
 	$extraPerm = "";
 	if( $table=="public.advisor" )
 	{
-		if( $sUserGroup=="1" )
+		if( $sUserGroup=="2" )
 		{
-						return "AEDSPI".$extraPerm;
+						return "".$extraPerm;
 		}
 		if( $sUserGroup=="3" )
 		{
 						return "".$extraPerm;
 		}
-		if( $sUserGroup=="2" )
+		if( $sUserGroup=="1" )
 		{
-						return "".$extraPerm;
+						return "AEDSPI".$extraPerm;
 		}
 //	default permissions
 		return "AEDSPI".$extraPerm;
 	}
 	if( $table=="public.consulting" )
 	{
-		if( $sUserGroup=="1" )
+		if( $sUserGroup=="2" )
 		{
-						return "AEDSPI".$extraPerm;
+						return "".$extraPerm;
 		}
 		if( $sUserGroup=="3" )
 		{
 						return "".$extraPerm;
 		}
+		if( $sUserGroup=="1" )
+		{
+						return "AEDSPI".$extraPerm;
+		}
+//	default permissions
+		return "AEDSPI".$extraPerm;
+	}
+	if( $table=="public.country" )
+	{
 		if( $sUserGroup=="2" )
 		{
 						return "".$extraPerm;
+		}
+		if( $sUserGroup=="3" )
+		{
+						return "".$extraPerm;
+		}
+		if( $sUserGroup=="1" )
+		{
+						return "AEDSPI".$extraPerm;
 		}
 //	default permissions
 		return "AEDSPI".$extraPerm;
 	}
 	if( $table=="public.customers" )
 	{
-		if( $sUserGroup=="1" )
+		if( $sUserGroup=="2" )
 		{
-						return "AEDSPI".$extraPerm;
+						return "".$extraPerm;
 		}
 		if( $sUserGroup=="3" )
 		{
 						return "".$extraPerm;
 		}
-		if( $sUserGroup=="2" )
+		if( $sUserGroup=="1" )
 		{
-						return "".$extraPerm;
+						return "AEDSPI".$extraPerm;
 		}
 //	default permissions
 		return "AEDSPI".$extraPerm;
 	}
 	if( $table=="public.document" )
 	{
-		if( $sUserGroup=="1" )
+		if( $sUserGroup=="2" )
 		{
-						return "AEDSPI".$extraPerm;
+						return "".$extraPerm;
 		}
 		if( $sUserGroup=="3" )
 		{
 						return "".$extraPerm;
 		}
-		if( $sUserGroup=="2" )
+		if( $sUserGroup=="1" )
 		{
-						return "".$extraPerm;
+						return "AEDSPI".$extraPerm;
 		}
 //	default permissions
 		return "AEDSPI".$extraPerm;
 	}
 	if( $table=="public.method_payment" )
 	{
-		if( $sUserGroup=="1" )
+		if( $sUserGroup=="2" )
 		{
-						return "AEDSPI".$extraPerm;
+						return "".$extraPerm;
 		}
 		if( $sUserGroup=="3" )
 		{
 						return "".$extraPerm;
 		}
-		if( $sUserGroup=="2" )
+		if( $sUserGroup=="1" )
 		{
-						return "".$extraPerm;
+						return "AEDSPI".$extraPerm;
 		}
 //	default permissions
 		return "AEDSPI".$extraPerm;
 	}
 	if( $table=="public.payment" )
 	{
-		if( $sUserGroup=="1" )
+		if( $sUserGroup=="2" )
 		{
-						return "AEDSPI".$extraPerm;
+						return "".$extraPerm;
 		}
 		if( $sUserGroup=="3" )
 		{
 						return "".$extraPerm;
 		}
-		if( $sUserGroup=="2" )
+		if( $sUserGroup=="1" )
 		{
-						return "".$extraPerm;
+						return "AEDSPI".$extraPerm;
 		}
 //	default permissions
 		return "AEDSPI".$extraPerm;
 	}
 	if( $table=="public.people" )
 	{
-		if( $sUserGroup=="1" )
+		if( $sUserGroup=="2" )
 		{
-						return "AEDSPI".$extraPerm;
+						return "".$extraPerm;
 		}
 		if( $sUserGroup=="3" )
 		{
 						return "".$extraPerm;
 		}
-		if( $sUserGroup=="2" )
+		if( $sUserGroup=="1" )
 		{
-						return "".$extraPerm;
+						return "AEDSPI".$extraPerm;
 		}
 //	default permissions
 		return "AEDSPI".$extraPerm;
 	}
 	if( $table=="public.role" )
 	{
-		if( $sUserGroup=="1" )
+		if( $sUserGroup=="2" )
 		{
-						return "AEDSPI".$extraPerm;
+						return "".$extraPerm;
 		}
 		if( $sUserGroup=="3" )
 		{
 						return "".$extraPerm;
 		}
-		if( $sUserGroup=="2" )
+		if( $sUserGroup=="1" )
 		{
-						return "".$extraPerm;
+						return "AEDSPI".$extraPerm;
 		}
 //	default permissions
 		return "AEDSPI".$extraPerm;
 	}
 	if( $table=="public.specialty" )
 	{
-		if( $sUserGroup=="1" )
+		if( $sUserGroup=="2" )
 		{
-						return "AEDSPI".$extraPerm;
+						return "".$extraPerm;
 		}
 		if( $sUserGroup=="3" )
 		{
 						return "".$extraPerm;
 		}
-		if( $sUserGroup=="2" )
+		if( $sUserGroup=="1" )
 		{
-						return "".$extraPerm;
+						return "AEDSPI".$extraPerm;
 		}
 //	default permissions
 		return "AEDSPI".$extraPerm;
 	}
 	if( $table=="public.status_consulting" )
 	{
-		if( $sUserGroup=="1" )
+		if( $sUserGroup=="2" )
 		{
-						return "AEDSPI".$extraPerm;
+						return "".$extraPerm;
 		}
 		if( $sUserGroup=="3" )
 		{
 						return "".$extraPerm;
 		}
-		if( $sUserGroup=="2" )
+		if( $sUserGroup=="1" )
 		{
-						return "".$extraPerm;
+						return "AEDSPI".$extraPerm;
 		}
 //	default permissions
 		return "AEDSPI".$extraPerm;
 	}
 	if( $table=="public.status_payment" )
 	{
-		if( $sUserGroup=="1" )
+		if( $sUserGroup=="2" )
 		{
-						return "AEDSPI".$extraPerm;
+						return "".$extraPerm;
 		}
 		if( $sUserGroup=="3" )
 		{
 						return "".$extraPerm;
 		}
-		if( $sUserGroup=="2" )
+		if( $sUserGroup=="1" )
 		{
-						return "".$extraPerm;
+						return "AEDSPI".$extraPerm;
 		}
 //	default permissions
 		return "AEDSPI".$extraPerm;
 	}
 	if( $table=="public.user" )
 	{
-		if( $sUserGroup=="1" )
+		if( $sUserGroup=="2" )
 		{
-						return "AEDSPI".$extraPerm;
+						return "".$extraPerm;
 		}
 		if( $sUserGroup=="3" )
 		{
 						return "".$extraPerm;
 		}
-		if( $sUserGroup=="2" )
-		{
-						return "".$extraPerm;
-		}
-//	default permissions
-		return "AEDSPI".$extraPerm;
-	}
-	if( $table=="public.people_user" )
-	{
 		if( $sUserGroup=="1" )
-		{
-						return "".$extraPerm;
-		}
-		if( $sUserGroup=="3" )
-		{
-						return "AESPI".$extraPerm;
-		}
-		if( $sUserGroup=="2" )
 		{
 						return "AEDSPI".$extraPerm;
 		}
@@ -1315,7 +1350,7 @@ function GetUserPermissionsStatic( $table )
 	}
 	if( $table=="public.consulting_my" )
 	{
-		if( $sUserGroup=="1" )
+		if( $sUserGroup=="2" )
 		{
 						return "".$extraPerm;
 		}
@@ -1323,41 +1358,7 @@ function GetUserPermissionsStatic( $table )
 		{
 						return "ASPI".$extraPerm;
 		}
-		if( $sUserGroup=="2" )
-		{
-						return "".$extraPerm;
-		}
-//	default permissions
-		return "AEDSPI".$extraPerm;
-	}
-	if( $table=="public.country" )
-	{
 		if( $sUserGroup=="1" )
-		{
-						return "AEDSPI".$extraPerm;
-		}
-		if( $sUserGroup=="3" )
-		{
-						return "".$extraPerm;
-		}
-		if( $sUserGroup=="2" )
-		{
-						return "".$extraPerm;
-		}
-//	default permissions
-		return "AEDSPI".$extraPerm;
-	}
-	if( $table=="public.advisor_user" )
-	{
-		if( $sUserGroup=="1" )
-		{
-						return "AEDSPI".$extraPerm;
-		}
-		if( $sUserGroup=="3" )
-		{
-						return "SPI".$extraPerm;
-		}
-		if( $sUserGroup=="2" )
 		{
 						return "".$extraPerm;
 		}
@@ -1366,37 +1367,122 @@ function GetUserPermissionsStatic( $table )
 	}
 	if( $table=="public.consulting_my_advisor" )
 	{
-		if( $sUserGroup=="1" )
+		if( $sUserGroup=="2" )
 		{
-						return "".$extraPerm;
+						return "ESP".$extraPerm;
 		}
 		if( $sUserGroup=="3" )
 		{
 						return "".$extraPerm;
 		}
-		if( $sUserGroup=="2" )
+		if( $sUserGroup=="1" )
 		{
-						return "ESPI".$extraPerm;
+						return "".$extraPerm;
 		}
 //	default permissions
 		return "AEDSPI".$extraPerm;
 	}
-	if( $table=="public.payment_my" )
+	if( $table=="public.advisor_user" )
 	{
+		if( $sUserGroup=="2" )
+		{
+						return "AESPI".$extraPerm;
+		}
+		if( $sUserGroup=="3" )
+		{
+						return "AEDSPI".$extraPerm;
+		}
 		if( $sUserGroup=="1" )
 		{
 						return "".$extraPerm;
+		}
+//	default permissions
+		return "AEDSPI".$extraPerm;
+	}
+	if( $table=="public.payment_advisor" )
+	{
+		if( $sUserGroup=="2" )
+		{
+						return "AESPI".$extraPerm;
 		}
 		if( $sUserGroup=="3" )
 		{
 						return "".$extraPerm;
 		}
-		if( $sUserGroup=="2" )
+		if( $sUserGroup=="1" )
 		{
-						return "AESPI".$extraPerm;
+						return "".$extraPerm;
 		}
 //	default permissions
 		return "AEDSPI".$extraPerm;
+	}
+	if( $table=="public.people_user" )
+	{
+		if( $sUserGroup=="2" )
+		{
+						return "AEPI".$extraPerm;
+		}
+		if( $sUserGroup=="3" )
+		{
+						return "AESPI".$extraPerm;
+		}
+		if( $sUserGroup=="1" )
+		{
+						return "".$extraPerm;
+		}
+//	default permissions
+		return "AEDSPI".$extraPerm;
+	}
+	if( $table=="public.advisor1" )
+	{
+		if( $sUserGroup=="2" )
+		{
+						return "".$extraPerm;
+		}
+		if( $sUserGroup=="3" )
+		{
+						return "SPI".$extraPerm;
+		}
+		if( $sUserGroup=="1" )
+		{
+						return "".$extraPerm;
+		}
+//	default permissions
+		return "AEDSPI".$extraPerm;
+	}
+	if( $table=="public.pay_deta" )
+	{
+		if( $sUserGroup=="2" )
+		{
+						return "AEDSPI".$extraPerm;
+		}
+		if( $sUserGroup=="3" )
+		{
+						return "AEDSPI".$extraPerm;
+		}
+		if( $sUserGroup=="1" )
+		{
+						return "AEDSPI".$extraPerm;
+		}
+//	default permissions
+		return "AEDSPI".$extraPerm;
+	}
+	if( $table=="public.customers1" )
+	{
+		if( $sUserGroup=="2" )
+		{
+						return "ADESPI".$extraPerm;
+		}
+		if( $sUserGroup=="3" )
+		{
+						return "ADESPI".$extraPerm;
+		}
+		if( $sUserGroup=="1" )
+		{
+						return "ADESPI".$extraPerm;
+		}
+//	default permissions
+		return "ADESPI".$extraPerm;
 	}
 	// grant nothing by default
 	return "";
@@ -1530,7 +1616,7 @@ function DoLogin($callAfterLoginEvent = false, $userID = "Guest", $userName = ""
 	global $globalEvents;
 
 	if($userID == "Guest" && $userName == "")
-		$userName = mlang_message("AA_GROUP_GUEST");
+		$userName = "Invitado";
 
 	if( !GetGlobalData("bTwoFactorAuth", false) || inRestApi() || $userID == "Guest" )
 	{
@@ -2327,7 +2413,6 @@ function SetLangVars($xt, $prefix, $pageName = "", $extraparams = "")
 
 	$xt->assign($currentLang . "LANGLINK_ACTIVE", true);
 
-	$xt->assign("EnglishLANGLINK", "English" != $currentLang);
 	$xt->assign("SpanishLANGLINK", "Spanish" != $currentLang);
 
 	if( isEnableSection508() )
@@ -2486,18 +2571,18 @@ function mlang_getlanglist()
 function getMountNames()
 {
 	$mounts = array();
-		$mounts[1] = mlang_message("MONTH_JAN");
-	$mounts[2] = mlang_message("MONTH_FEB");
-	$mounts[3] = mlang_message("MONTH_MAR");
-	$mounts[4] = mlang_message("MONTH_APR");
-	$mounts[5] = mlang_message("MONTH_MAY");
-	$mounts[6] = mlang_message("MONTH_JUN");
-	$mounts[7] = mlang_message("MONTH_JUL");
-	$mounts[8] = mlang_message("MONTH_AUG");
-	$mounts[9] = mlang_message("MONTH_SEP");
-	$mounts[10] = mlang_message("MONTH_OCT");
-	$mounts[11] = mlang_message("MONTH_NOV");
-	$mounts[12] = mlang_message("MONTH_DEC");
+		$mounts[1] = "Enero";
+	$mounts[2] = "Febrero";
+	$mounts[3] = "Marzo";
+	$mounts[4] = "Abril";
+	$mounts[5] = "Mayo";
+	$mounts[6] = "Junio";
+	$mounts[7] = "Julio";
+	$mounts[8] = "Agosto";
+	$mounts[9] = "Septiembre";
+	$mounts[10] = "Octubre";
+	$mounts[11] = "Noviembre";
+	$mounts[12] = "Diciembre";
 
 	return $mounts;
 }
@@ -3606,7 +3691,6 @@ function getDefaultLanguage()
 	if( strlen(@$_SESSION["language"]) == 0 && $_SERVER['HTTP_ACCEPT_LANGUAGE'] )
 	{
 		$arrWizardLang = array();
-		$arrWizardLang[] = "English";
 		$arrWizardLang[] = "Spanish";
 		$arrLang = array();
 		$arrLang["af"] = "Afrikaans";
@@ -3975,8 +4059,8 @@ function verifyRecaptchaResponse( $response ) {
 	$verifyUrl = "https://www.google.com/recaptcha/api/siteverify?";
 
 	$errors = array();
-	$errors["missing-input-response"] = mlang_message("SEC_INVALID_CAPTCHA_CODE");
-	$errors["invalid-input-response"] = mlang_message("SEC_INVALID_CAPTCHA_CODE");
+	$errors["missing-input-response"] = "Codigo de seguridad no válido";
+	$errors["invalid-input-response"] = "Codigo de seguridad no válido";
 	$errors["missing-input-secret"] = "The secret parameter is missing";
 	$errors["invalid-input-secret"] = "The secret parameter is invalid or malformed";
 	$errors["bad-request"] = "The request is invalid or malformed";

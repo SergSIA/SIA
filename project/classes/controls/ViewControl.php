@@ -171,7 +171,7 @@ class ViewControl
 
 		if(IsBinaryType($this->fieldType))
 		{
-			$value = mlang_message("LONG_BINARY");
+			$value = "código binario demasiado grande – no puede ser desplegado";
 			$this->searchHighlight = false;
 		}
 
@@ -182,9 +182,9 @@ class ViewControl
 		if($this->editFormat == EDIT_FORMAT_CHECKBOX && $this->viewFormat == FORMAT_NONE)
 		{
 			if($value && $value!=0)
-				$value = mlang_message("YES");
+				$value = "Sí";
 			else
-				$value = mlang_message("NO");
+				$value = "No";
 
 			$this->searchHighlight = false;
 		}
@@ -318,7 +318,7 @@ class ViewControl
 		$dataField = 'data-fieldlabel="'.runner_htmlspecialchars( $label ).'"';
 
 		return $truncatedValue.' <a href="javascript:void(0);" data-gridlink data-query="'.GetTableLink('fulltext', '', implode('&',$params)).'" '.$dataField.'>'
-			.mlang_message("MORE").'&nbsp;...</a>';
+			."Más".'&nbsp;...</a>';
 	}
 
 	/**

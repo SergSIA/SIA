@@ -19,42 +19,6 @@ $fieldToolTipsadvisor = array();
 $pageTitlesadvisor = array();
 $placeHoldersadvisor = array();
 
-if(mlang_getcurrentlang()=="English")
-{
-	$fieldLabelsadvisor["English"] = array();
-	$fieldToolTipsadvisor["English"] = array();
-	$placeHoldersadvisor["English"] = array();
-	$pageTitlesadvisor["English"] = array();
-	$fieldLabelsadvisor["English"]["id"] = "Id";
-	$fieldToolTipsadvisor["English"]["id"] = "";
-	$placeHoldersadvisor["English"]["id"] = "";
-	$fieldLabelsadvisor["English"]["fk_id_people"] = "People";
-	$fieldToolTipsadvisor["English"]["fk_id_people"] = "";
-	$placeHoldersadvisor["English"]["fk_id_people"] = "";
-	$fieldLabelsadvisor["English"]["fk_id_specialty"] = "Specialty";
-	$fieldToolTipsadvisor["English"]["fk_id_specialty"] = "";
-	$placeHoldersadvisor["English"]["fk_id_specialty"] = "";
-	$fieldLabelsadvisor["English"]["created_by"] = "Created By";
-	$fieldToolTipsadvisor["English"]["created_by"] = "";
-	$placeHoldersadvisor["English"]["created_by"] = "";
-	$fieldLabelsadvisor["English"]["created_at"] = "Created At";
-	$fieldToolTipsadvisor["English"]["created_at"] = "";
-	$placeHoldersadvisor["English"]["created_at"] = "";
-	$fieldLabelsadvisor["English"]["updated_by"] = "Updated By";
-	$fieldToolTipsadvisor["English"]["updated_by"] = "";
-	$placeHoldersadvisor["English"]["updated_by"] = "";
-	$fieldLabelsadvisor["English"]["updated_at"] = "Updated At";
-	$fieldToolTipsadvisor["English"]["updated_at"] = "";
-	$placeHoldersadvisor["English"]["updated_at"] = "";
-	$fieldLabelsadvisor["English"]["status"] = "Status";
-	$fieldToolTipsadvisor["English"]["status"] = "";
-	$placeHoldersadvisor["English"]["status"] = "";
-	$fieldLabelsadvisor["English"]["commission"] = "% Commission";
-	$fieldToolTipsadvisor["English"]["commission"] = "";
-	$placeHoldersadvisor["English"]["commission"] = "";
-	if (count($fieldToolTipsadvisor["English"]))
-		$tdataadvisor[".isUseToolTips"] = true;
-}
 if(mlang_getcurrentlang()=="Spanish")
 {
 	$fieldLabelsadvisor["Spanish"] = array();
@@ -70,22 +34,22 @@ if(mlang_getcurrentlang()=="Spanish")
 	$fieldLabelsadvisor["Spanish"]["fk_id_specialty"] = "Especialidad";
 	$fieldToolTipsadvisor["Spanish"]["fk_id_specialty"] = "";
 	$placeHoldersadvisor["Spanish"]["fk_id_specialty"] = "";
-	$fieldLabelsadvisor["Spanish"]["created_by"] = "Creado Por";
+	$fieldLabelsadvisor["Spanish"]["created_by"] = "Creado por";
 	$fieldToolTipsadvisor["Spanish"]["created_by"] = "";
 	$placeHoldersadvisor["Spanish"]["created_by"] = "";
-	$fieldLabelsadvisor["Spanish"]["created_at"] = "Credo El";
+	$fieldLabelsadvisor["Spanish"]["created_at"] = "Creado el";
 	$fieldToolTipsadvisor["Spanish"]["created_at"] = "";
 	$placeHoldersadvisor["Spanish"]["created_at"] = "";
-	$fieldLabelsadvisor["Spanish"]["updated_by"] = "Actualizado Por";
+	$fieldLabelsadvisor["Spanish"]["updated_by"] = "Actualizado por";
 	$fieldToolTipsadvisor["Spanish"]["updated_by"] = "";
 	$placeHoldersadvisor["Spanish"]["updated_by"] = "";
-	$fieldLabelsadvisor["Spanish"]["updated_at"] = "Actualizado El";
+	$fieldLabelsadvisor["Spanish"]["updated_at"] = "Actualizado el";
 	$fieldToolTipsadvisor["Spanish"]["updated_at"] = "";
 	$placeHoldersadvisor["Spanish"]["updated_at"] = "";
 	$fieldLabelsadvisor["Spanish"]["status"] = "Estado";
 	$fieldToolTipsadvisor["Spanish"]["status"] = "";
 	$placeHoldersadvisor["Spanish"]["status"] = "";
-	$fieldLabelsadvisor["Spanish"]["commission"] = "% Comision";
+	$fieldLabelsadvisor["Spanish"]["commission"] = "Comision %";
 	$fieldToolTipsadvisor["Spanish"]["commission"] = "";
 	$placeHoldersadvisor["Spanish"]["commission"] = "";
 	if (count($fieldToolTipsadvisor["Spanish"]))
@@ -187,7 +151,7 @@ $tdataadvisor[".rowHighlite"] = true;
 
 
 
-																																																
+																																				
 
 $tdataadvisor[".ajaxCodeSnippetAdded"] = false;
 
@@ -199,7 +163,7 @@ $tdataadvisor[".addPageEvents"] = false;
 $tdataadvisor[".isUseTimeForSearch"] = false;
 
 
-$tdataadvisor[".badgeColor"] = "7B68EE";
+$tdataadvisor[".badgeColor"] = "00C2C5";
 
 
 $tdataadvisor[".allSearchFields"] = array();
@@ -515,7 +479,7 @@ $tdataadvisor[".hideMobileList"] = array();
 	
 		
 	$edata["LinkField"] = "id";
-	$edata["LinkFieldType"] = 20;
+	$edata["LinkFieldType"] = 3;
 	$edata["DisplayField"] = "name";
 
 	
@@ -976,8 +940,7 @@ $tdataadvisor[".hideMobileList"] = array();
 
 
 
-		$edata["IsRequired"] = true;
-
+	
 	
 	
 	
@@ -1001,8 +964,7 @@ $tdataadvisor[".hideMobileList"] = array();
 	$edata["validateAs"] = array();
 	$edata["validateAs"]["basicValidate"] = array();
 	$edata["validateAs"]["customMessages"] = array();
-						$edata["validateAs"]["basicValidate"][] = "IsRequired";
-		
+	
 	
 	//	End validation
 
@@ -1256,8 +1218,7 @@ $tdataadvisor[".hideMobileList"] = array();
 
 
 
-		$edata["IsRequired"] = true;
-
+	
 	
 	
 	
@@ -1281,8 +1242,7 @@ $tdataadvisor[".hideMobileList"] = array();
 	$edata["validateAs"] = array();
 	$edata["validateAs"]["basicValidate"] = array();
 	$edata["validateAs"]["customMessages"] = array();
-						$edata["validateAs"]["basicValidate"][] = "IsRequired";
-		
+	
 	
 	//	End validation
 
@@ -1660,36 +1620,6 @@ $detailsTablesData["public.advisor"] = array();
 		$detailsParam["dType"]=PAGE_LIST;
 	$detailsParam["dShortTable"] = "consulting_my";
 	$detailsParam["dCaptionTable"] = GetTableCaption("public_consulting_my");
-	$detailsParam["masterKeys"] =array();
-	$detailsParam["detailKeys"] =array();
-
-
-		
-	$detailsTablesData["public.advisor"][$dIndex] = $detailsParam;
-
-	
-		$detailsTablesData["public.advisor"][$dIndex]["masterKeys"] = array();
-
-	$detailsTablesData["public.advisor"][$dIndex]["masterKeys"][]="id";
-
-				$detailsTablesData["public.advisor"][$dIndex]["detailKeys"] = array();
-
-	$detailsTablesData["public.advisor"][$dIndex]["detailKeys"][]="fk_id_advisor";
-//	public.consulting_my_advisor
-	
-	
-
-		$dIndex = 2;
-	$detailsParam = array();
-	$detailsParam["dDataSourceTable"]="public.consulting_my_advisor";
-		$detailsParam["dOriginalTable"] = "public.consulting";
-
-
-
-		
-		$detailsParam["dType"]=PAGE_LIST;
-	$detailsParam["dShortTable"] = "public_consulting_my_advisor";
-	$detailsParam["dCaptionTable"] = GetTableCaption("public_consulting_my_advisor");
 	$detailsParam["masterKeys"] =array();
 	$detailsParam["detailKeys"] =array();
 

@@ -1,8 +1,6 @@
 <?php
 
 $langfile="";
-if(mlang_getcurrentlang() == "English")
-	$langfile="English.php";
 if(mlang_getcurrentlang() == "Spanish")
 	$langfile="Spanish.php";
 

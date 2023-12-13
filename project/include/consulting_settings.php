@@ -19,42 +19,6 @@ $fieldToolTipsconsulting = array();
 $pageTitlesconsulting = array();
 $placeHoldersconsulting = array();
 
-if(mlang_getcurrentlang()=="English")
-{
-	$fieldLabelsconsulting["English"] = array();
-	$fieldToolTipsconsulting["English"] = array();
-	$placeHoldersconsulting["English"] = array();
-	$pageTitlesconsulting["English"] = array();
-	$fieldLabelsconsulting["English"]["id"] = "Id";
-	$fieldToolTipsconsulting["English"]["id"] = "";
-	$placeHoldersconsulting["English"]["id"] = "";
-	$fieldLabelsconsulting["English"]["fk_id_advisor"] = "Advisor";
-	$fieldToolTipsconsulting["English"]["fk_id_advisor"] = "";
-	$placeHoldersconsulting["English"]["fk_id_advisor"] = "";
-	$fieldLabelsconsulting["English"]["fk_id_customer"] = "Customer";
-	$fieldToolTipsconsulting["English"]["fk_id_customer"] = "";
-	$placeHoldersconsulting["English"]["fk_id_customer"] = "";
-	$fieldLabelsconsulting["English"]["start"] = "Start";
-	$fieldToolTipsconsulting["English"]["start"] = "";
-	$placeHoldersconsulting["English"]["start"] = "";
-	$fieldLabelsconsulting["English"]["end"] = "End";
-	$fieldToolTipsconsulting["English"]["end"] = "";
-	$placeHoldersconsulting["English"]["end"] = "";
-	$fieldLabelsconsulting["English"]["fk_id_status_consulting"] = "Status Consulting";
-	$fieldToolTipsconsulting["English"]["fk_id_status_consulting"] = "";
-	$placeHoldersconsulting["English"]["fk_id_status_consulting"] = "";
-	$fieldLabelsconsulting["English"]["access"] = "Access";
-	$fieldToolTipsconsulting["English"]["access"] = "";
-	$placeHoldersconsulting["English"]["access"] = "";
-	$fieldLabelsconsulting["English"]["start_h"] = "Time";
-	$fieldToolTipsconsulting["English"]["start_h"] = "";
-	$placeHoldersconsulting["English"]["start_h"] = "";
-	$fieldLabelsconsulting["English"]["end_h"] = "Time";
-	$fieldToolTipsconsulting["English"]["end_h"] = "";
-	$placeHoldersconsulting["English"]["end_h"] = "";
-	if (count($fieldToolTipsconsulting["English"]))
-		$tdataconsulting[".isUseToolTips"] = true;
-}
 if(mlang_getcurrentlang()=="Spanish")
 {
 	$fieldLabelsconsulting["Spanish"] = array();
@@ -70,16 +34,16 @@ if(mlang_getcurrentlang()=="Spanish")
 	$fieldLabelsconsulting["Spanish"]["fk_id_customer"] = "Cliente";
 	$fieldToolTipsconsulting["Spanish"]["fk_id_customer"] = "";
 	$placeHoldersconsulting["Spanish"]["fk_id_customer"] = "";
-	$fieldLabelsconsulting["Spanish"]["start"] = "Inicio";
+	$fieldLabelsconsulting["Spanish"]["start"] = "Inicia";
 	$fieldToolTipsconsulting["Spanish"]["start"] = "";
 	$placeHoldersconsulting["Spanish"]["start"] = "";
-	$fieldLabelsconsulting["Spanish"]["end"] = "Fin";
+	$fieldLabelsconsulting["Spanish"]["end"] = "Termina";
 	$fieldToolTipsconsulting["Spanish"]["end"] = "";
 	$placeHoldersconsulting["Spanish"]["end"] = "";
-	$fieldLabelsconsulting["Spanish"]["fk_id_status_consulting"] = "Estado Asesoria";
+	$fieldLabelsconsulting["Spanish"]["fk_id_status_consulting"] = "Estado";
 	$fieldToolTipsconsulting["Spanish"]["fk_id_status_consulting"] = "";
 	$placeHoldersconsulting["Spanish"]["fk_id_status_consulting"] = "";
-	$fieldLabelsconsulting["Spanish"]["access"] = "Acceso ";
+	$fieldLabelsconsulting["Spanish"]["access"] = "Acceso";
 	$fieldToolTipsconsulting["Spanish"]["access"] = "";
 	$placeHoldersconsulting["Spanish"]["access"] = "";
 	$fieldLabelsconsulting["Spanish"]["start_h"] = "Hora";
@@ -187,7 +151,7 @@ $tdataconsulting[".rowHighlite"] = true;
 
 
 
-																																																
+																																													
 
 $tdataconsulting[".ajaxCodeSnippetAdded"] = false;
 
@@ -199,7 +163,7 @@ $tdataconsulting[".addPageEvents"] = false;
 $tdataconsulting[".isUseTimeForSearch"] = false;
 
 
-$tdataconsulting[".badgeColor"] = "DC143C";
+$tdataconsulting[".badgeColor"] = "778899";
 
 
 $tdataconsulting[".allSearchFields"] = array();
@@ -506,7 +470,7 @@ $tdataconsulting[".hideMobileList"] = array();
 
 // Begin Lookup settings
 				$edata["LookupType"] = 2;
-	$edata["LookupTable"] = "public.advisor";
+	$edata["LookupTable"] = "public.advisor1";
 			$edata["autoCompleteFieldsOnEdit"] = 0;
 	$edata["autoCompleteFields"] = array();
 		$edata["LCType"] = 0;
@@ -514,12 +478,13 @@ $tdataconsulting[".hideMobileList"] = array();
 	
 		
 	$edata["LinkField"] = "id";
-	$edata["LinkFieldType"] = 20;
-	$edata["DisplayField"] = "id";
+	$edata["LinkFieldType"] = 3;
+	$edata["DisplayField"] = "name|| '  ' || last_name";
 
 	
 
-	
+		$edata["CustomDisplay"] = "true";
+
 	$edata["LookupOrderBy"] = "";
 
 	
@@ -576,7 +541,7 @@ $tdataconsulting[".hideMobileList"] = array();
 
 
 // the field's search options settings
-		$fdata["defaultSearchOption"] = "Contains";
+		$fdata["defaultSearchOption"] = "Equals";
 
 			// the default search options list
 				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
@@ -671,7 +636,7 @@ $tdataconsulting[".hideMobileList"] = array();
 
 // Begin Lookup settings
 				$edata["LookupType"] = 2;
-	$edata["LookupTable"] = "public.customers";
+	$edata["LookupTable"] = "public.customers1";
 			$edata["autoCompleteFieldsOnEdit"] = 0;
 	$edata["autoCompleteFields"] = array();
 		$edata["LCType"] = 0;
@@ -679,12 +644,13 @@ $tdataconsulting[".hideMobileList"] = array();
 	
 		
 	$edata["LinkField"] = "id";
-	$edata["LinkFieldType"] = 20;
-	$edata["DisplayField"] = "id";
+	$edata["LinkFieldType"] = 3;
+	$edata["DisplayField"] = "name || ' ' || last_name";
 
 	
 
-	
+		$edata["CustomDisplay"] = "true";
+
 	$edata["LookupOrderBy"] = "";
 
 	
@@ -741,7 +707,7 @@ $tdataconsulting[".hideMobileList"] = array();
 
 
 // the field's search options settings
-		$fdata["defaultSearchOption"] = "Contains";
+		$fdata["defaultSearchOption"] = "Equals";
 
 			// the default search options list
 				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
@@ -1242,17 +1208,13 @@ $tdataconsulting[".hideMobileList"] = array();
 //  Begin View Formats
 	$fdata["ViewFormats"] = array();
 
-	$vdata = array("ViewFormat" => "Hyperlink");
+	$vdata = array("ViewFormat" => "");
 
 	
 	
 	
 	
-				$vdata["hlType"] = 0;
-	$vdata["hlLinkWordNameType"] = "Text";
-	$vdata["hlLinkWordText"] = "Link";
-	$vdata["hlTitleField"] = "";
-
+	
 	
 	
 	
@@ -1261,7 +1223,8 @@ $tdataconsulting[".hideMobileList"] = array();
 	
 		
 	
-	
+		$vdata["NeedEncode"] = true;
+
 	
 		$vdata["truncateText"] = true;
 	$vdata["NumberOfChars"] = 80;
@@ -1694,21 +1657,21 @@ $detailsTablesData["public.consulting"] = array();
 				$detailsTablesData["public.consulting"][$dIndex]["detailKeys"] = array();
 
 	$detailsTablesData["public.consulting"][$dIndex]["detailKeys"][]="fk_id_consulting";
-//	public.payment_my
+//	public.payment_advisor
 	
 	
 
 		$dIndex = 1;
 	$detailsParam = array();
-	$detailsParam["dDataSourceTable"]="public.payment_my";
+	$detailsParam["dDataSourceTable"]="public.payment_advisor";
 		$detailsParam["dOriginalTable"] = "public.payment";
 
 
 
 		
 		$detailsParam["dType"]=PAGE_LIST;
-	$detailsParam["dShortTable"] = "payment_my";
-	$detailsParam["dCaptionTable"] = GetTableCaption("public_payment_my");
+	$detailsParam["dShortTable"] = "payment_advisor";
+	$detailsParam["dCaptionTable"] = GetTableCaption("public_payment_advisor");
 	$detailsParam["masterKeys"] =array();
 	$detailsParam["detailKeys"] =array();
 
@@ -1783,6 +1746,24 @@ $masterTablesData["public.consulting"] = array();
 	$masterTablesData["public.consulting"][2]["masterKeys"][]="id";
 				$masterTablesData["public.consulting"][2]["detailKeys"] = array();
 	$masterTablesData["public.consulting"][2]["detailKeys"][]="fk_id_status_consulting";
+		
+	//endif
+	
+	//if !@t.bReportCrossTab
+			$strOriginalDetailsTable="public.advisor";
+	$masterParams = array();
+	$masterParams["mDataSourceTable"]="public.advisor_user";
+	$masterParams["mOriginalTable"]= $strOriginalDetailsTable;
+	$masterParams["mShortTable"]= "advisor_user";
+	$masterParams["masterKeys"]= array();
+	$masterParams["detailKeys"]= array();
+
+	$masterParams["type"] = PAGE_LIST;
+					$masterTablesData["public.consulting"][3] = $masterParams;
+				$masterTablesData["public.consulting"][3]["masterKeys"] = array();
+	$masterTablesData["public.consulting"][3]["masterKeys"][]="id";
+				$masterTablesData["public.consulting"][3]["detailKeys"] = array();
+	$masterTablesData["public.consulting"][3]["detailKeys"][]="fk_id_advisor";
 		
 	//endif
 // -----------------end  prepare master-details data arrays ------------------------------//

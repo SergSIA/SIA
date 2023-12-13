@@ -12,17 +12,13 @@
 	function __construct()
 	{
 	// fill list of events
-		$this->events["BeforeQueryList"]=true;
-
-		$this->events["BeforeProcessRowList"]=true;
-
-		$this->events["BeforeShowList"]=true;
+		$this->events["ProcessValuesAdd"]=true;
 
 		$this->events["BeforeAdd"]=true;
 
-		$this->events["BeforeProcessList"]=true;
+		$this->events["BeforeQueryList"]=true;
 
-		$this->events["AfterAdd"]=true;
+		$this->events["BeforeShowList"]=true;
 
 
 	}
@@ -51,193 +47,46 @@
 		
 		
 		
-				// List page: Before SQL query
-function BeforeQueryList(&$strSQL, &$strWhereClause, &$strOrderBy, $pageObject)
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+				// Process record values
+function ProcessValuesAdd(&$values, $pageObject)
 {
 
-		$id = $_SESSION["UserData"]["fk_id_people"]>0?$_SESSION["UserData"]["fk_id_people"]:0;
-$strWhereClause = whereAdd($strWhereClause, "id=$id");
+		$data = array();
+$data["fk_id_people"] =$_SESSION["UserData"]["fk_id_people"] ;
+DB::Update("user", $data, "id=".$_SESSION["UserData"]["id"] );
 
+$rs_c = DB::Query("select max(p.id)+1 as max_id_c  from public.customers p ");
+$data_c=$rs_c->fetchAssoc();	
+
+$data = array();
+$data["id"] = $data_c["max_id_c"]>0?$data_c["max_id_c"]:1;
+$data["fk_id_people"] = $_SESSION["UserData"]["fk_id_people"];
+$data["created_by"] = $_SESSION["UserData"]["id"];
+$data["created_at"] = date('Y-m-d h:m:s');;
+$data["updated_by"] = $_SESSION["UserData"]["id"];
+$data["updated_at"] = date('Y-m-d h:m:s');
+DB::Insert("public.customers", $data );
 
 // Place event code here.
 // Use "Add Action" button to add code snippets.
 ;		
-} // function BeforeQueryList
+} // function ProcessValuesAdd
 
 		
 		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-				// List page: Before record processed
-function BeforeProcessRowList(&$data, $pageObject)
-{
-
-		
-
-
-// Place event code here.
-// Use "Add Action" button to add code snippets.
-
-return true;
-;		
-} // function BeforeProcessRowList
-
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-				// Before display
-function BeforeShowList(&$xt, &$templatefile, $pageObject)
-{
-
-		if($_SESSION["UserData"]["fk_id_people"]>0){
-	
-}
-else{
-	header("Location: people_user_add.php");
-	exit();
-}
-
-// Place event code here.
-// Use "Add Action" button to add code snippets.
-;		
-} // function BeforeShowList
-
 		
 		
 		
@@ -351,17 +200,40 @@ return true;
 		
 		
 
-				// List page: Before process
-function BeforeProcessList($pageObject)
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+				// List page: Before SQL query
+function BeforeQueryList(&$strSQL, &$strWhereClause, &$strOrderBy, $pageObject)
 {
 
-		
+		$id = $_SESSION["UserData"]["fk_id_people"]>0?$_SESSION["UserData"]["fk_id_people"]:0;
+$strWhereClause = whereAdd($strWhereClause, "id=$id");
 
 
 // Place event code here.
 // Use "Add Action" button to add code snippets.
 ;		
-} // function BeforeProcessList
+} // function BeforeQueryList
 
 		
 		
@@ -404,28 +276,6 @@ function BeforeProcessList($pageObject)
 		
 		
 		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
 
 		
 		
@@ -442,53 +292,45 @@ function BeforeProcessList($pageObject)
 		
 		
 		
-				// After record added
-function AfterAdd(&$values, &$keys, $inline, $pageObject)
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+				// Before display
+function BeforeShowList(&$xt, &$templatefile, $pageObject)
 {
 
-		$data = array();
-$data["fk_id_people"] =$_SESSION["UserData"]["fk_id_people"] ;
-DB::Update("user", $data, "id=".$_SESSION["UserData"]["id"] );
-
-$rs_c = DB::Query("select max(p.id)+1 as max_id_c  from public.customers p ");
-$data_c=$rs_c->fetchAssoc();	
-
-$data = array();
-$data["id"] = $data_c["max_id_c"]>0?$data_c["max_id_c"]:1;
-$data["fk_id_people"] = $_SESSION["UserData"]["fk_id_people"];
-$data["created_by"] = $_SESSION["UserData"]["id"];
-$data["created_at"] = date('Y-m-d h:m:s');;
-$data["updated_by"] = $_SESSION["UserData"]["id"];
-$data["updated_at"] = date('Y-m-d h:m:s');
-DB::Insert("public.customers", $data );
+		if($_SESSION["UserData"]["fk_id_people"]>0){
+	
+}
+else{
+	header("Location: people_user_add.php");
+	exit();
+}
 
 // Place event code here.
 // Use "Add Action" button to add code snippets.
 ;		
-} // function AfterAdd
+} // function BeforeShowList
 
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
 		
 		
 		

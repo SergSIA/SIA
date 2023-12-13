@@ -234,7 +234,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{mlang_message DISPLAYING}","hidden":"{$item_hide_details_found}","isHtml":true,"page_indicator":true},
+			{"text":"Mostrando %first% - %last% de %total%","hidden":"{$item_hide_details_found}","isHtml":true,"page_indicator":true},
 				
 				
 			{"text":"","hidden":"{$item_hide_page_size}"},
@@ -740,10 +740,19 @@ pdfDocument = {
 			{"text":"","hidden":"{$item_hide_grid_details_link}"},
 				
 				
+			{"text":"","hidden":"{$item_hide_grid_details_link1}"},
+				
+				
 			{"text":"","hidden":"{$item_hide_grid_details_link2}"},
 				
 				
-			{"text":"","hidden":"{$item_hide_grid_details_link1}"},
+			{"text":"","hidden":"{$item_hide_grid_details_link3}"},
+				
+				
+			{"text":"","hidden":"{$item_hide_grid_details_link4}"},
+				
+				
+			{"text":"","hidden":"{$item_hide_grid_details_link5}"},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -1093,14 +1102,29 @@ pdfDocument = {
 		{END details_advisor},
 				
 				
+			 {BEGIN details_customers}
+			{$displayDetailTable_customers }
+		{END details_customers},
+				
+				
 			 {BEGIN details_user}
 			{$displayDetailTable_user }
 		{END details_user},
 				
 				
-			 {BEGIN details_customers}
-			{$displayDetailTable_customers }
-		{END details_customers},
+			 {BEGIN details_people_user}
+			{$displayDetailTable_people_user }
+		{END details_people_user},
+				
+				
+			 {BEGIN details_advisor_user}
+			{$displayDetailTable_advisor_user }
+		{END details_advisor_user},
+				
+				
+			 {BEGIN details_pay_deta}
+			{$displayDetailTable_pay_deta }
+		{END details_pay_deta},
 				
 		  ],
   "border": [ true, true, true, true ],

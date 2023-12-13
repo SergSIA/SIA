@@ -225,7 +225,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{mlang_message DISPLAYING}","hidden":"{$item_hide_details_found}","isHtml":true,"page_indicator":true},
+			{"text":"Mostrando %first% - %last% de %total%","hidden":"{$item_hide_details_found}","isHtml":true,"page_indicator":true},
 				
 				
 			{"text":"","hidden":"{$item_hide_page_size}"},
@@ -653,6 +653,9 @@ pdfDocument = {
 			{"text":"","hidden":"{$item_hide_grid_details_link}"},
 				
 				
+			{"text":"","hidden":"{$item_hide_grid_details_link1}"},
+				
+				
 			{"text":"","hidden":"{$item_hide_grid_details_link2}"},
 				
 		  ],
@@ -925,9 +928,14 @@ pdfDocument = {
 		{END details_consulting},
 				
 				
-			 {BEGIN details_undefined}
-			{$displayDetailTable_undefined }
-		{END details_undefined},
+			 {BEGIN details_consulting_my}
+			{$displayDetailTable_consulting_my }
+		{END details_consulting_my},
+				
+				
+			 {BEGIN details_consulting_my_advisor}
+			{$displayDetailTable_consulting_my_advisor }
+		{END details_consulting_my_advisor},
 				
 		  ],
   "border": [ true, true, true, true ],

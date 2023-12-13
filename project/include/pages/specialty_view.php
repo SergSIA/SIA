@@ -1,6 +1,8 @@
 <?php
 			$optionsArray = array( 'pdf' => array( 'pdfView' => false ),
 'details' => array( 'public.advisor' => array( 'displayPreview' => 2,
+'previewPageId' => '' ),
+'public.advisor_user' => array( 'displayPreview' => 2,
 'previewPageId' => '' ) ),
 'fields' => array( 'gridFields' => array( 'id',
 'description' ),

@@ -30,14 +30,14 @@ require_once(getabspath("classes/cipherer.php"));
 
 include_once(getabspath("include/advisor_events.php"));
 $tableEvents["public.advisor"] = new eventclass_advisor;
-include_once(getabspath("include/people_user_events.php"));
-$tableEvents["public.people_user"] = new eventclass_people_user;
 include_once(getabspath("include/consulting_my_events.php"));
 $tableEvents["public.consulting_my"] = new eventclass_consulting_my;
-include_once(getabspath("include/public_advisor_user_events.php"));
-$tableEvents["public.advisor_user"] = new eventclass_public_advisor_user;
-include_once(getabspath("include/public_consulting_my_advisor_events.php"));
-$tableEvents["public.consulting_my_advisor"] = new eventclass_public_consulting_my_advisor;
+include_once(getabspath("include/consulting_my_advisor_events.php"));
+$tableEvents["public.consulting_my_advisor"] = new eventclass_consulting_my_advisor;
+include_once(getabspath("include/people_user_events.php"));
+$tableEvents["public.people_user"] = new eventclass_people_user;
+include_once(getabspath("include/advisor1_events.php"));
+$tableEvents["public.advisor1"] = new eventclass_advisor1;
 
 $xt = new Xtempl();
 

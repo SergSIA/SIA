@@ -44,7 +44,7 @@
 
 			<div class="clearfix " data-cellId="left_c0" data-pageid="{$pageid}" data-logo-cell data-itemid="expand_button" {$item_expand_button} data-topcell-item-type="expand_button" >
 				<span data-itemtype="expand_button" data-itemid="expand_button" {$item_expand_button} data-pageid="{$pageid}" data-small data-button-item>
-	<a type="button" title="{mlang_message EXPAND}" class="btn btn-link   
+	<a type="button" title="Expandir" class="btn btn-link   
 	" href="#" >
 					<span class="glyphicon glyphicon-triangle-right"></span>
 										</a>
@@ -67,7 +67,7 @@
 	<div class="panel-heading">
 		<div class="btn-group" id="addSearchFieldButton{$id}">
 			<button id="showHideControlChooseMenu{$id}" type="button" class="btn btn-default dropdown-toggle btn-sm )" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-			{mlang_message SEARCH_IN}			<span class="caret"></span>
+			Búsqueda			<span class="caret"></span>
 			</button>
 		</div>
 
@@ -77,12 +77,12 @@
 				<span class="glyphicon glyphicon glyphicon-option-vertical"></span>
 			</button>
 			<ul class="dropdown-menu dropdown-left">
-				<li id="showHideSearchType{$id}" {$showHideCtrlsOpt_attrs}><a>{mlang_message SEARCH_SHOW_OPTIONS_BUTTON}</a></li>
+				<li id="showHideSearchType{$id}" {$showHideCtrlsOpt_attrs}><a>Mostrar opciones</a></li>
 				<li role="separator" class="divider"></li>
-				<li class="srchCritTop" style="display: none;"><a><input type="radio" name="srchType{$id}" id="radioAll" {$all_checkbox}><label for="radioAll"><span class="glyphicon">&nbsp;</span>{mlang_message SEARCH_ALL_CONDITIONS}</label></a></li>
-				<li class="srchCritTop" style="display: none;"><a><input type="radio" name="srchType{$id}" id="radioAny" {$any_checkbox}><label for="radioAny"><span class="glyphicon">&nbsp;</span>{mlang_message SEARCH_ANY_CONDITIONS}</label></a></li>
+				<li class="srchCritTop" style="display: none;"><a><input type="radio" name="srchType{$id}" id="radioAll" {$all_checkbox}><label for="radioAll"><span class="glyphicon">&nbsp;</span>todas las condiciones</label></a></li>
+				<li class="srchCritTop" style="display: none;"><a><input type="radio" name="srchType{$id}" id="radioAny" {$any_checkbox}><label for="radioAny"><span class="glyphicon">&nbsp;</span>cualquier condición</label></a></li>
 				<li role="separator" class="divider"></li>
-				<li><a class="close-button"><span class="glyphicon glyphicon-remove">&nbsp;</span>{mlang_message HIDE}</a></li>
+				<li><a class="close-button"><span class="glyphicon glyphicon-remove">&nbsp;</span>esconder</a></li>
 			</ul>
 		</div>
 
@@ -113,19 +113,6 @@
 								<span class="rnr-searchcontrol">{$searchcontrol1_access}</span>
 						</div>
 		{END searchCtrlBlock_access}
-																{BEGIN searchCtrlBlock_end_h}
-
-
-		<div class="form-group srchPanelRow {$filterRow_class_end_h}" {$filterRow_attrs_end_h}>
-			<label>{$label public_consulting_my end_h }</label>
-
-							{$delCtrlButt}
-			
-								<span class="rnr-searchtype">{$searchtype_end_h}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol_end_h}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol1_end_h}</span>
-						</div>
-		{END searchCtrlBlock_end_h}
 																{BEGIN searchCtrlBlock_start_h}
 
 
@@ -178,6 +165,19 @@
 								<span class="rnr-searchcontrol">{$searchcontrol1_fk_id_status_consulting}</span>
 						</div>
 		{END searchCtrlBlock_fk_id_status_consulting}
+																{BEGIN searchCtrlBlock_fk_id_customer}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_fk_id_customer}" {$filterRow_attrs_fk_id_customer}>
+			<label>{$label public_consulting_my fk_id_customer }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_fk_id_customer}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_fk_id_customer}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_fk_id_customer}</span>
+						</div>
+		{END searchCtrlBlock_fk_id_customer}
 																{BEGIN searchCtrlBlock_fk_id_advisor}
 
 
@@ -191,6 +191,19 @@
 								<span class="rnr-searchcontrol">{$searchcontrol1_fk_id_advisor}</span>
 						</div>
 		{END searchCtrlBlock_fk_id_advisor}
+																{BEGIN searchCtrlBlock_end_h}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_end_h}" {$filterRow_attrs_end_h}>
+			<label>{$label public_consulting_my end_h }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_end_h}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_end_h}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_end_h}</span>
+						</div>
+		{END searchCtrlBlock_end_h}
 																{BEGIN searchCtrlBlock_end}
 
 
@@ -209,9 +222,9 @@
 	</div>
 
 	<div class="panel-footer bottomSearchButt" {$bottomSearchButt_attrs}>
-		<button class="btn btn-primary btn-sm" id="searchButton{$id}" {$searchbutton_attrs}>{mlang_message SEARCH}</button>
+		<button class="btn btn-primary btn-sm" id="searchButton{$id}" {$searchbutton_attrs}>Buscar</button>
 
-				<button class="btn btn-default btn-sm" {$showAllCont_attrs} {$showallbutton_attrs}>{mlang_message SHOW_ALL}</button>
+				<button class="btn btn-default btn-sm" {$showAllCont_attrs} {$showallbutton_attrs}>Mostrar todo</button>
 	</div>
 </div>
 <!-- End Search panel content -->
@@ -228,7 +241,7 @@
 							 
 				<span class="navbar-form  navbar-header" data-cellId="supertop_c1" data-pageid="{$pageid}" data-itemid="expand_menu_button" {$item_expand_menu_button} data-topcell-item-type="expand_menu_button" >
 				<span data-itemtype="expand_menu_button" data-itemid="expand_menu_button" {$item_expand_menu_button} data-pageid="{$pageid}" data-small data-button-item>
-	<a type="button" title="{mlang_message COLLAPSE}" class="btn-link   
+	<a type="button" title="Encubrir" class="btn-link   
 	 glyphicon glyphicon-menu-hamburger" href="#" >		
 				
 								</a>
@@ -237,7 +250,7 @@
 		 
 				<span class="navbar-form  navbar-collapse" data-cellId="supertop_c1" data-pageid="{$pageid}" data-itemid="collapse_button" {$item_collapse_button} data-topcell-item-type="collapse_button" >
 				<span data-itemtype="collapse_button" data-itemid="collapse_button" {$item_collapse_button} data-pageid="{$pageid}" data-small data-button-item>
-	<a type="button" title="{mlang_message SHOW_MENU}" class="btn-link   
+	<a type="button" title="Muestrame el menu" class="btn-link   
 	 glyphicon glyphicon-triangle-left" href="#" >		
 				
 								</a>
@@ -272,7 +285,7 @@
 {END searchform_text}
 	<span class="input-group-btn">
 	{BEGIN searchform_showall}
-				<button class="btn btn-default" {$showAllCont_attrs} {$showallbutton_attrs} title="{mlang_message SHOW_ALL}">
+				<button class="btn btn-default" {$showAllCont_attrs} {$showallbutton_attrs} title="Mostrar todo">
 			<span class="glyphicon glyphicon-remove"></span>
 		</button>
 	{END searchform_showall}
@@ -299,7 +312,7 @@
 	<li data-itemtype="export_selected" data-itemid="export_selected" {$item_export_selected} data-pageid="{$pageid}" data-small >
 				<a  href="#" {$exportselectedlink_attrs} {$exportselectedlink_span}  title="" >
 				
-		{mlang_message EXPORT_SELECTED}		
+		Exportar seleccionados		
 		</a>
 	</li>
 {END exportselected_link}
@@ -307,21 +320,21 @@
 	<li data-itemtype="delete_selected" data-itemid="delete_selected" {$item_delete_selected} data-pageid="{$pageid}" data-small >
 				<a  href="#" {$deleteselectedlink_attrs} {$deleteselectedlink_span}  title="" >
 				
-		{mlang_message DELETE_SELECTED}		
+		Borrar articulos seleccionados		
 		</a>
 	</li>
 {END deleteselected_link}
 							<li role="separator" class="divider"></li>								<li data-itemtype="advsearch_link" data-itemid="advsearch_link" {$item_advsearch_link} data-pageid="{$pageid}" data-small >
 				<a   href="consulting_my_search.php{$stateLink_full}" {$advsearchlink_attrs}  title="" >
 				
-		{mlang_message ADVANCED_SEARCH}		
+		Búsqueda avanzada		
 		</a>
 	</li>
 							{BEGIN searchPanelTopButtons}
 	<li data-itemtype="show_search_panel" data-itemid="show_search_panel" {$item_show_search_panel} data-pageid="{$pageid}" data-small >
 				<a  id="showOptPanel{$id}"  title="" >
 				
-		{mlang_message SHOW_SEARCH_PANEL}		
+		Mostrar panel de búsqueda		
 		</a>
 	</li>
 {END searchPanelTopButtons}
@@ -329,7 +342,7 @@
 	<li data-itemtype="hide_search_panel" data-itemid="hide_search_panel" {$item_hide_search_panel} data-pageid="{$pageid}" data-small >
 				<a  id="hideOptPanel{$id}"  title="" >
 				
-		{mlang_message HIDE_SEARCH_PANEL}		
+		Ocultar panel de búsqueda		
 		</a>
 	</li>
 {END searchPanelTopButtons}
@@ -337,7 +350,7 @@
 	<li data-itemtype="export" data-itemid="export" {$item_export} data-pageid="{$pageid}" data-small >
 				<a  href="#" {$exportlink_attrs}  title="" >
 				
-		{mlang_message EXPORT_RESULTS}		
+		Exportar resultados		
 		</a>
 	</li>
 {END export_link}
@@ -345,20 +358,10 @@
 	<li data-itemtype="import" data-itemid="import" {$item_import} data-pageid="{$pageid}" data-small >
 				<a  {$importlink_attrs} href="consulting_my_import.php{$stateLink_full}"  title="" >
 				
-		{mlang_message IMPORT}		
+		Importar		
 		</a>
 	</li>
 {END import_link}
-							<li role="separator" class="divider"></li>								{BEGIN EnglishLANGLINK}
-	<li><a href="#" data-lang="English" class="rnr-langlink">
-		{BEGIN EnglishLANGLINK_ACTIVE}<span class="glyphicon glyphicon-ok">&nbsp;</span>{END EnglishLANGLINK_ACTIVE}
-		English</a></li>
-	{END EnglishLANGLINK}
-	{BEGIN SpanishLANGLINK}
-	<li><a href="#" data-lang="Spanish" class="rnr-langlink">
-		{BEGIN SpanishLANGLINK_ACTIVE}<span class="glyphicon glyphicon-ok">&nbsp;</span>{END SpanishLANGLINK_ACTIVE}
-		Español</a></li>
-	{END SpanishLANGLINK}
 					</ul>
 	</span>
 </span>
@@ -369,7 +372,7 @@
 <span data-itemtype="loginform_login" data-itemid="loginform_login" {$item_loginform_login} data-pageid="{$pageid}" data-small data-button-item>
 	<a type="button" title="" class="btn btn-primary   
 	" href="#" {$guestloginlink_attrs} >
-							{mlang_message LOGIN}			</a>
+							Conectar			</a>
 </span>
 {END guestloginbutton}
 			</span>
@@ -387,7 +390,7 @@
 	<li data-itemtype="userinfo_link" data-itemid="userinfo_link" {$item_userinfo_link} data-pageid="{$pageid}" data-small >
 				<a  href="userinfo.php"  title="" >
 				
-		{mlang_message USERINFO}		
+		Perfil del usuario		
 		</a>
 	</li>
 {END logoutbutton}
@@ -395,7 +398,7 @@
 	<li data-itemtype="logout_link" data-itemid="logout_link" {$item_logout_link} data-pageid="{$pageid}" data-small >
 				<a  href="#" {$logoutlink_attrs}  title="" >
 				
-		{mlang_message LOG_OUT}		
+		Desconectarse		
 		</a>
 	</li>
 {END logoutbutton}
@@ -403,7 +406,7 @@
 	<li data-itemtype="changepassword_link" data-itemid="changepassword_link" {$item_changepassword_link} data-pageid="{$pageid}" data-small >
 				<a  href="changepwd.php" {$changepwdlink_attrs} id="changePasswordButton{$id}"  title="" >
 				
-		{mlang_message CHANGE_PASSWORD}		
+		Cambiar contraseña		
 		</a>
 	</li>
 {END changepwd_link}
@@ -455,7 +458,7 @@
 <span data-itemtype="add" data-itemid="add" {$item_add} data-pageid="{$pageid}" data-small data-button-item>
 	<a type="button" title="" class="btn btn-primary   
 	" {$addlink_attrs} href="consulting_my_add.php{$stateLink_full}" >
-							{$custom ADD_NEW}			</a>
+							Solicitar Asesoria			</a>
 </span>
 {END add_link}
 	 
@@ -463,7 +466,7 @@
 <span data-itemtype="inline_add" data-itemid="inline_add" {$item_inline_add} data-pageid="{$pageid}" data-small data-button-item>
 	<a type="button" title="" class="btn btn-primary   
 	" {$inlineaddlink_attrs} >
-							{mlang_message INLINE_ADD}			</a>
+							Añadir nuevo			</a>
 </span>
 {END inlineadd_link}
 	 
@@ -471,7 +474,7 @@
 <span data-itemtype="delete" data-itemid="delete" {$item_delete} data-pageid="{$pageid}" data-small data-button-item>
 	<a type="button" title="" class="btn btn-default   
 	" {$deleteselectedlink_attrs} {$deleteselectedlink_span} disabled >
-							{mlang_message DELETE}			</a>
+							Borrar artículos seleccionados			</a>
 </span>
 {END deleteselected_link}
 			{END firstAboveGridCell}	
@@ -490,7 +493,7 @@
 </span>	 
 		{BEGIN print_friendly}
 <span id="printpanelblock{$id}"  data-pageid="{$pageid}" {$printpanel_hiddenattr} data-itemtype="print_panel" data-itemid="print_panel" {$item_print_panel} data-pageid="{$pageid}">
-	<button title="{mlang_message WR_PRINT_FRIENDLY}" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+	<button title="Página para imprimir" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
 					<span class="glyphicon glyphicon-print"></span>
 				<span class="caret"></span>
 	</button>
@@ -502,14 +505,14 @@
 									<div id="print_friendly_scope{$id}">
 	<div class="row">
 		<div class="col-md-4">
-			{mlang_message PPANEL_SCOPE}		</div>
+			Rango:		</div>
 
 			 
 		{BEGIN print_friendly_all}
 		<div class="col-md-8">
 			<label for="printAll{$id}">
 				<input type="radio" id="printAll{$id}" data-href="consulting_my_print.php?all=1&amp;{$crosstable_attrs}" name="printScope" >
-									{mlang_message PPANEL_ALL_PAGES}							</label>
+									Imprimir todas las páginas							</label>
 		</div>
 		{END print_friendly_all}
 		</div>
@@ -518,7 +521,7 @@
 		<div class="col-md-8">
 			<label for="printPage{$id}">
 				<input name="printScope" id="printPage{$id}" type="radio" checked data-href="consulting_my_print.php?{$crosstable_attrs}">
-				{mlang_message PPANEL_THIS_PAGE}			</label>
+				Imprimir esta página			</label>
 		</div>
 	</div>
 		
@@ -530,7 +533,7 @@
 		<div class="col-md-8">
 			<label style="color: gray;" for="printSelection{$id}">
 			<input name="printScope" disabled="disabled" id="printSelection{$id}" type="radio" >
-			{mlang_message PPANEL_SELECTED}			</label>
+			Imprimir la selección			</label>
 		</div>
 	</div>
 	</div>
@@ -545,13 +548,13 @@
 <div>
 	<label for="printDetailsToggler{$id}">
 		<input type="checkbox" id="printDetailsToggler{$id}">
-		{mlang_message PPANEL_DETAILS}	</label>
+		Detalles de impresión	</label>
 	<div  id="printdetailstables{$id}" style="display:none;">
 											{BEGIN print_details_payment}
 			<div>
 				<label for="printDetailspayment{$id}">
 					<input type="checkbox" value="payment" id="printDetailspayment{$id}" checked>
-					Pagos				</label>
+					Pago				</label>
 			</div>
 			{END print_details_payment}
 						</div>
@@ -566,7 +569,7 @@
 										">
 									<div>
 	<label for="printPerPage{$id}">
-					{mlang_message RECORDS_PP}							
+					Resultados por página							
 	</label>
 	<input type="number" id="printPerPage{$id}" value="{$print_recspp}" class="rnr-printrecspp">		
 </div>
@@ -580,7 +583,7 @@
 									<span data-itemtype="print_button" data-itemid="print_button" {$item_print_button} data-pageid="{$pageid}" data-small data-button-item>
 	<a type="button" title="" class="btn btn-primary   
 	" id="print_friendly_button{$id}" >
-							{mlang_message PPANEL_PRINT}			</a>
+							Imprimir			</a>
 </span>
 				 
 					</li>
@@ -588,21 +591,6 @@
 </span>
 {END print_friendly}
 		</div>					</div>
-	 
-		<div class="row">
-			 
-				<div 
-	data-cellId="above-grid_c3" data-pageid="{$pageid}"	{$cell_above-grid_c3}
-	class=" r-ori-vert			col-md-6
-	
-">
-			</div>			 
-				<div 
-	data-cellId="above-grid_c4" data-pageid="{$pageid}"	{$cell_above-grid_c4}
-	class="r-align-right r-ori-vert			col-md-6
-	
-">
-			</div>					</div>
 	</div>		
 {END above-grid_block}
 						</div>
@@ -623,7 +611,10 @@
 			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="fk_id_advisor"]:before {
 		content: "{$label public_consulting_my fk_id_advisor}";
 	}
-				[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="start"]:before {
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="fk_id_customer"]:before {
+		content: "{$label public_consulting_my fk_id_customer}";
+	}
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="start"]:before {
 		content: "{$label public_consulting_my start}";
 	}
 			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="end"]:before {
@@ -641,7 +632,7 @@
 			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="end_h"]:before {
 		content: "{$label public_consulting_my end_h}";
 	}
-	}
+		}
 </style>
 <table data-location="grid" id="form_grid_{$pageid}" data-makeup="leftbar" {$form_grid} data-pageid="{$pageid}" class=" table {$grid_classes} r-horizontal-grid  r-flexgrid rnr-b-grid rnr-gridtable" 
 	cellpadding="0" 
@@ -657,6 +648,46 @@
 								r-gridrow
 							">
 				 
+					{BEGIN cellblock_grid_headcell_icons}
+	<th
+	
+	{$cell_grid_headcell_icons}
+	{$recordattrs}
+	class="
+		 r-ori-vert			"
+
+	
+	data-cellId="grid_headcell_icons" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="consulting_my_list"		data-control-cell
+	
+	>
+
+	
+	</th>
+	{END cellblock_grid_headcell_icons}
+				 
+					{BEGIN cellblock_grid_headcell_checkbox}
+	<th
+	
+	{$cell_grid_headcell_checkbox}
+	{$recordattrs}
+	class="
+		 r-ori-vert			"
+
+	
+	data-cellId="grid_headcell_checkbox" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="consulting_my_list"	
+		data-checkbox-cell
+	>
+
+	 
+		{BEGIN checkbox_column}
+<span data-itemtype="grid_checkbox_head" data-itemid="grid_checkbox_head" {$item_grid_checkbox_head} data-pageid="{$pageid}" data-record-id="{$recId}" >
+	<input type="checkbox" {$checkboxheader_attrs}>
+</span>
+{END checkbox_column}
+	
+	</th>
+	{END cellblock_grid_headcell_checkbox}
+				 
 					{BEGIN cellblock_grid_headcell_details}
 	<th
 	
@@ -666,8 +697,7 @@
 		 r-ori-vert			"
 
 	
-	data-cellId="grid_headcell_details" data-pageid="{$pageid}" data-record-id="{$recId}"		data-control-cell
-	
+	data-cellId="grid_headcell_details" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	
@@ -691,7 +721,7 @@
 	 
 		{BEGIN id_fieldheadercolumn}
 	{BEGIN id_fieldheader}
-	<SPAN {$id_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field8" {$item_simple_grid_field8} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="id" data-fieldname="id">
+	<SPAN {$id_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field9" {$item_simple_grid_field9} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="id" data-fieldname="id">
 	{$label public_consulting_my id }	{$arrow_icon_id}
 	</SPAN>
 	{END id_fieldheader}
@@ -718,7 +748,7 @@
 	 
 		{BEGIN fk_id_advisor_fieldheadercolumn}
 	{BEGIN fk_id_advisor_fieldheader}
-	<SPAN {$fk_id_advisor_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field9" {$item_simple_grid_field9} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="fk_id_advisor" data-fieldname="fk_id_advisor">
+	<SPAN {$fk_id_advisor_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field10" {$item_simple_grid_field10} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="fk_id_advisor" data-fieldname="fk_id_advisor">
 	{$label public_consulting_my fk_id_advisor }	{$arrow_icon_fk_id_advisor}
 	</SPAN>
 	{END fk_id_advisor_fieldheader}
@@ -734,22 +764,22 @@
 	{$cell_grid_headcell_field2}
 	{$recordattrs}
 	class="
-		 r-ori-vert				{$start_class}
+		 r-ori-vert				{$fk_id_customer_class}
 			"
 
-			data-field="start"
+			data-field="fk_id_customer"
 	
 	data-cellId="grid_headcell_field2" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
-		{BEGIN start_fieldheadercolumn}
-	{BEGIN start_fieldheader}
-	<SPAN {$start_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field10" {$item_simple_grid_field10} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="start" data-fieldname="start">
-	{$label public_consulting_my start }	{$arrow_icon_start}
+		{BEGIN fk_id_customer_fieldheadercolumn}
+	{BEGIN fk_id_customer_fieldheader}
+	<SPAN {$fk_id_customer_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field11" {$item_simple_grid_field11} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="fk_id_customer" data-fieldname="fk_id_customer">
+	{$label public_consulting_my fk_id_customer }	{$arrow_icon_fk_id_customer}
 	</SPAN>
-	{END start_fieldheader}
-{END start_fieldheadercolumn}
+	{END fk_id_customer_fieldheader}
+{END fk_id_customer_fieldheadercolumn}
 
 	
 	</th>
@@ -761,22 +791,22 @@
 	{$cell_grid_headcell_field3}
 	{$recordattrs}
 	class="
-		 r-ori-vert				{$start_h_class}
+		 r-ori-vert				{$start_class}
 			"
 
-			data-field="start_h"
+			data-field="start"
 	
 	data-cellId="grid_headcell_field3" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
-		{BEGIN start_h_fieldheadercolumn}
-	{BEGIN start_h_fieldheader}
-	<SPAN {$start_h_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field11" {$item_simple_grid_field11} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="start_h" data-fieldname="start_h">
-	{$label public_consulting_my start_h }	{$arrow_icon_start_h}
+		{BEGIN start_fieldheadercolumn}
+	{BEGIN start_fieldheader}
+	<SPAN {$start_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field12" {$item_simple_grid_field12} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="start" data-fieldname="start">
+	{$label public_consulting_my start }	{$arrow_icon_start}
 	</SPAN>
-	{END start_h_fieldheader}
-{END start_h_fieldheadercolumn}
+	{END start_fieldheader}
+{END start_fieldheadercolumn}
 
 	
 	</th>
@@ -799,7 +829,7 @@
 	 
 		{BEGIN end_fieldheadercolumn}
 	{BEGIN end_fieldheader}
-	<SPAN {$end_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field12" {$item_simple_grid_field12} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="end" data-fieldname="end">
+	<SPAN {$end_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field13" {$item_simple_grid_field13} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="end" data-fieldname="end">
 	{$label public_consulting_my end }	{$arrow_icon_end}
 	</SPAN>
 	{END end_fieldheader}
@@ -815,39 +845,12 @@
 	{$cell_grid_headcell_field5}
 	{$recordattrs}
 	class="
-		 r-ori-vert				{$end_h_class}
-			"
-
-			data-field="end_h"
-	
-	data-cellId="grid_headcell_field5" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN end_h_fieldheadercolumn}
-	{BEGIN end_h_fieldheader}
-	<SPAN {$end_h_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field13" {$item_simple_grid_field13} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="end_h" data-fieldname="end_h">
-	{$label public_consulting_my end_h }	{$arrow_icon_end_h}
-	</SPAN>
-	{END end_h_fieldheader}
-{END end_h_fieldheadercolumn}
-
-	
-	</th>
-	{END cellblock_grid_headcell_field5}
-				 
-					{BEGIN cellblock_grid_headcell_field6}
-	<th
-	
-	{$cell_grid_headcell_field6}
-	{$recordattrs}
-	class="
 		 r-ori-vert				{$fk_id_status_consulting_class}
 			"
 
 			data-field="fk_id_status_consulting"
 	
-	data-cellId="grid_headcell_field6" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_headcell_field5" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
@@ -861,12 +864,12 @@
 
 	
 	</th>
-	{END cellblock_grid_headcell_field6}
+	{END cellblock_grid_headcell_field5}
 				 
-					{BEGIN cellblock_grid_headcell_field7}
+					{BEGIN cellblock_grid_headcell_field6}
 	<th
 	
-	{$cell_grid_headcell_field7}
+	{$cell_grid_headcell_field6}
 	{$recordattrs}
 	class="
 		 r-ori-vert				{$access_class}
@@ -874,7 +877,7 @@
 
 			data-field="access"
 	
-	data-cellId="grid_headcell_field7" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_headcell_field6" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
@@ -888,23 +891,61 @@
 
 	
 	</th>
-	{END cellblock_grid_headcell_field7}
+	{END cellblock_grid_headcell_field6}
 				 
-					{BEGIN cellblock_grid_cell_field8}
+					{BEGIN cellblock_grid_headcell_field7}
 	<th
 	
-	{$cell_grid_cell_field8}
+	{$cell_grid_headcell_field7}
 	{$recordattrs}
 	class="
-		 r-ori-vert			"
+		 r-ori-vert				{$start_h_class}
+			"
 
+			data-field="start_h"
 	
-	data-cellId="grid_cell_field8" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_headcell_field7" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
+
+	 
+		{BEGIN start_h_fieldheadercolumn}
+	{BEGIN start_h_fieldheader}
+	<SPAN {$start_h_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field16" {$item_simple_grid_field16} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="start_h" data-fieldname="start_h">
+	{$label public_consulting_my start_h }	{$arrow_icon_start_h}
+	</SPAN>
+	{END start_h_fieldheader}
+{END start_h_fieldheadercolumn}
 
 	
 	</th>
-	{END cellblock_grid_cell_field8}
+	{END cellblock_grid_headcell_field7}
+				 
+					{BEGIN cellblock_grid_headcell_field8}
+	<th
+	
+	{$cell_grid_headcell_field8}
+	{$recordattrs}
+	class="
+		 r-ori-vert				{$end_h_class}
+			"
+
+			data-field="end_h"
+	
+	data-cellId="grid_headcell_field8" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN end_h_fieldheadercolumn}
+	{BEGIN end_h_fieldheader}
+	<SPAN {$end_h_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field17" {$item_simple_grid_field17} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="end_h" data-fieldname="end_h">
+	{$label public_consulting_my end_h }	{$arrow_icon_end_h}
+	</SPAN>
+	{END end_h_fieldheader}
+{END end_h_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field8}
 							</tr>
 					 
 					 
@@ -922,8 +963,7 @@
 								r-gridrow
 							">
 				 
-					{BEGIN cellblock_grid_cell_icons}
-	<td
+						<td
 	
 	{$cell_grid_cell_icons}
 	{$recordattrs}
@@ -931,16 +971,15 @@
 					"
 
 	
-	data-cellId="grid_cell_icons" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="consulting_my_list"		data-control-cell
-	
+	data-cellId="grid_cell_icons" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="consulting_my_list"	
 	>
 
 	 
 		{BEGIN edit_column}
 {BEGIN edit_link}
 <span data-itemtype="grid_edit" data-itemid="grid_edit" {$item_grid_edit} data-pageid="{$pageid}" data-record-id="{$recId}" data-small data-button-item>
-	<a type="button" title="{mlang_message EDIT}" class="btn-link   
-	 glyphicon glyphicon-pencil" href="consulting_my_edit.php?{$editlink}" {$editlink_attrs} title="{mlang_message EDIT}" >		
+	<a type="button" title="Editar" class="btn-link   
+	 glyphicon glyphicon-pencil" href="consulting_my_edit.php?{$editlink}" {$editlink_attrs} title="Editar" >		
 				
 								</a>
 </span>
@@ -949,8 +988,8 @@
 	 
 		{BEGIN inline_cancel}
 <span data-itemtype="grid_inline_cancel" data-itemid="grid_inline_cancel" {$item_grid_inline_cancel} data-pageid="{$pageid}" data-record-id="{$recId}" data-small data-button-item>
-	<a type="button" title="{mlang_message CANCEL}" class="btn-link   
-	 glyphicon glyphicon-remove" {$inlinerevertlink_attrs} title="{mlang_message CANCEL}" >		
+	<a type="button" title="Cancelar" class="btn-link   
+	 glyphicon glyphicon-remove" {$inlinerevertlink_attrs} title="Cancelar" >		
 				
 								</a>
 </span>
@@ -959,16 +998,80 @@
 		{BEGIN view_column}
 {BEGIN view_link}
 <span data-itemtype="grid_view" data-itemid="grid_view" {$item_grid_view} data-pageid="{$pageid}" data-record-id="{$recId}" data-small data-button-item>
-	<a type="button" title="{mlang_message VIEW_RECORD}" class="btn-link   
-	 glyphicon glyphicon-search" href="consulting_my_view.php?{$editlink}" {$viewlink_attrs} title="{mlang_message VIEW}" >		
+	<a type="button" title="Ver registro" class="btn-link   
+	 glyphicon glyphicon-search" href="consulting_my_view.php?{$editlink}" {$viewlink_attrs} title="Ver" >		
 				
 								</a>
 </span>
 {END view_link}
 {END view_column}
+	 
+		<span data-itemtype="custom_button" data-itemid="custom_button" {$item_custom_button} data-pageid="{$pageid}" data-page="consulting_my_list" data-record-id="{$recId}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-default   
+	" id="rechazar" href="javascript:void(0)" typeid="ib" >
+							Cancelar			</a>
+</span>
 	
 	</td>
-	{END cellblock_grid_cell_icons}
+					 
+					{BEGIN cellblock_grid_cell_checkbox}
+	<td
+	
+	{$cell_grid_cell_checkbox}
+	{$recordattrs}
+	class="
+		 r-ori-vert			"
+
+	
+	data-cellId="grid_cell_checkbox" data-pageid="{$pageid}" data-record-id="{$recId}"	
+		data-checkbox-cell
+	>
+
+	 
+		{BEGIN checkbox_column}
+<span data-itemtype="grid_checkbox" data-itemid="grid_checkbox" {$item_grid_checkbox} data-pageid="{$pageid}" data-record-id="{$recId}" >
+	<input type="checkbox" {$checkbox_attrs}
+		>
+</span>	
+{END checkbox_column}
+	
+	</td>
+	{END cellblock_grid_cell_checkbox}
+				 
+					{BEGIN cellblock_grid_cell_details}
+	<td
+	
+	{$cell_grid_cell_details}
+	{$recordattrs}
+	class="
+					"
+
+	
+	data-cellId="grid_cell_details" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="consulting_my_list"	
+	>
+
+	 
+			 
+		
+	{BEGIN dtables_link}
+				<span data-itemtype="grid_details_link" data-itemid="grid_details_link" {$item_grid_details_link} data-pageid="{$pageid}" data-record-id="{$recId}">
+		<a 
+			{$payment_link_attrs} 
+			class="{$dtables_link_class} details-badge badge payment_badge" 
+			title="Mostrar detalles"
+						
+		>
+							<span class="glyphicon glyphicon-th-list"></span>
+									<span class="{$payment_cntspan_class}" {$payment_childnumber_attr}>
+				{$payment_childnumber}				
+			</span>
+		</a>
+		</span>
+	{END dtables_link}
+
+	
+	</td>
+	{END cellblock_grid_cell_details}
 				 
 					{BEGIN cellblock_grid_cell_field}
 	<td
@@ -1022,20 +1125,20 @@
 	{$cell_grid_cell_field2}
 	{$recordattrs}
 	class="
-		 r-ori-vert				{$start_class}
+		 r-ori-vert				{$fk_id_customer_class}
 			"
 
-			data-field="start"
+			data-field="fk_id_customer"
 	
 	data-cellId="grid_cell_field2" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
-		{BEGIN start_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="simple_grid_field3" {$item_simple_grid_field3} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="start" data-fieldname="start" data-default-width >
-{$start_value}
+		{BEGIN fk_id_customer_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field2" {$item_simple_grid_field2} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="fk_id_customer" data-fieldname="fk_id_customer" data-default-width >
+{$fk_id_customer_value}
 </span>
-{END start_fieldcolumn}	
+{END fk_id_customer_fieldcolumn}	
 	</td>
 	{END cellblock_grid_cell_field2}
 				 
@@ -1045,20 +1148,20 @@
 	{$cell_grid_cell_field3}
 	{$recordattrs}
 	class="
-		 r-ori-vert				{$start_h_class}
+		 r-ori-vert				{$start_class}
 			"
 
-			data-field="start_h"
+			data-field="start"
 	
 	data-cellId="grid_cell_field3" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
-		{BEGIN start_h_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="simple_grid_field2" {$item_simple_grid_field2} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="start_h" data-fieldname="start_h" data-default-width >
-{$start_h_value}
+		{BEGIN start_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field3" {$item_simple_grid_field3} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="start" data-fieldname="start" data-default-width >
+{$start_value}
 </span>
-{END start_h_fieldcolumn}	
+{END start_fieldcolumn}	
 	</td>
 	{END cellblock_grid_cell_field3}
 				 
@@ -1091,35 +1194,12 @@
 	{$cell_grid_cell_field5}
 	{$recordattrs}
 	class="
-		 r-ori-vert				{$end_h_class}
-			"
-
-			data-field="end_h"
-	
-	data-cellId="grid_cell_field5" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN end_h_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="simple_grid_field7" {$item_simple_grid_field7} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="end_h" data-fieldname="end_h" data-default-width >
-{$end_h_value}
-</span>
-{END end_h_fieldcolumn}	
-	</td>
-	{END cellblock_grid_cell_field5}
-				 
-					{BEGIN cellblock_grid_cell_field6}
-	<td
-	
-	{$cell_grid_cell_field6}
-	{$recordattrs}
-	class="
 		 r-ori-vert				{$fk_id_status_consulting_class}
 			"
 
 			data-field="fk_id_status_consulting"
 	
-	data-cellId="grid_cell_field6" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_cell_field5" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
@@ -1129,12 +1209,12 @@
 </span>
 {END fk_id_status_consulting_fieldcolumn}	
 	</td>
-	{END cellblock_grid_cell_field6}
+	{END cellblock_grid_cell_field5}
 				 
-					{BEGIN cellblock_grid_cell_field7}
+					{BEGIN cellblock_grid_cell_field6}
 	<td
 	
-	{$cell_grid_cell_field7}
+	{$cell_grid_cell_field6}
 	{$recordattrs}
 	class="
 		 r-ori-vert				{$access_class}
@@ -1142,7 +1222,7 @@
 
 			data-field="access"
 	
-	data-cellId="grid_cell_field7" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_cell_field6" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
@@ -1152,28 +1232,54 @@
 </span>
 {END access_fieldcolumn}	
 	</td>
-	{END cellblock_grid_cell_field7}
+	{END cellblock_grid_cell_field6}
 				 
-						<td
+					{BEGIN cellblock_grid_cell_field7}
+	<td
 	
-	{$cell_grid_cell_field9}
+	{$cell_grid_cell_field7}
 	{$recordattrs}
 	class="
-		 r-ori-vert			"
+		 r-ori-vert				{$start_h_class}
+			"
 
+			data-field="start_h"
 	
-	data-cellId="grid_cell_field9" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_cell_field7" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
-		<span data-itemtype="custom_button" data-itemid="custom_button" {$item_custom_button} data-pageid="{$pageid}" data-page="consulting_my_list" data-record-id="{$recId}" data-small data-button-item>
-	<a type="button" title="" class="btn btn-default   
-	" id="cancelarCliente" href="javascript:void(0)" typeid="ib" >
-							Cancelar			</a>
+		{BEGIN start_h_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field7" {$item_simple_grid_field7} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="start_h" data-fieldname="start_h" data-default-width >
+{$start_h_value}
 </span>
-	
+{END start_h_fieldcolumn}	
 	</td>
-								</tr>
+	{END cellblock_grid_cell_field7}
+				 
+					{BEGIN cellblock_grid_cell_field8}
+	<td
+	
+	{$cell_grid_cell_field8}
+	{$recordattrs}
+	class="
+		 r-ori-vert				{$end_h_class}
+			"
+
+			data-field="end_h"
+	
+	data-cellId="grid_cell_field8" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN end_h_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field8" {$item_simple_grid_field8} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="end_h" data-fieldname="end_h" data-default-width >
+{$end_h_value}
+</span>
+{END end_h_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field8}
+							</tr>
 					 
 						<tr {$rowattrs} {$row_grid_2} class="{$rowclass} 
 								
@@ -1203,22 +1309,6 @@
 	
 	</td>
 	{END cellblock_grid_cell_dpreview}
-				 
-					{BEGIN cellblock_grid_cell_field10}
-	<td
-	
-	{$cell_grid_cell_field10}
-	{$recordattrs}
-	class="
-		 r-ori-vert			"
-
-	
-	data-cellId="grid_cell_field10" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	
-	</td>
-	{END cellblock_grid_cell_field10}
 							</tr>
 					 
 					
@@ -1412,21 +1502,21 @@
 	</td>
 	{END cellblock_grid_footcell_field7}
 				 
-					{BEGIN cellblock_grid_cell_field11}
+					{BEGIN cellblock_grid_footcell_field8}
 	<td
 	
-	{$cell_grid_cell_field11}
+	{$cell_grid_footcell_field8}
 	{$recordattrs}
 	class="
 		 r-ori-vert			"
 
 	
-	data-cellId="grid_cell_field11" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="consulting_my_list"	
+	data-cellId="grid_footcell_field8" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="consulting_my_list"	
 	>
 
 	
 	</td>
-	{END cellblock_grid_cell_field11}
+	{END cellblock_grid_footcell_field8}
 							</tr>
 					
 					</tfoot>

@@ -159,7 +159,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{mlang_message DISPLAYING}","hidden":"{$item_hide_details_found}","isHtml":true,"page_indicator":true},
+			{"text":"Mostrando %first% - %last% de %total%","hidden":"{$item_hide_details_found}","isHtml":true,"page_indicator":true},
 				
 				
 			{"text":"","hidden":"{$item_hide_page_size}"},
@@ -401,6 +401,9 @@ pdfDocument = {
 				
 			{"text":"","hidden":"{$item_hide_grid_details_link}"},
 				
+				
+			{"text":"","hidden":"{$item_hide_grid_details_link1}"},
+				
 		  ],
   "border": [ true, true, true, true ],
               "alignment": 'left',
@@ -487,6 +490,11 @@ pdfDocument = {
 			 {BEGIN details_advisor}
 			{$displayDetailTable_advisor }
 		{END details_advisor},
+				
+				
+			 {BEGIN details_advisor_user}
+			{$displayDetailTable_advisor_user }
+		{END details_advisor_user},
 				
 		  ],
   "border": [ true, true, true, true ],

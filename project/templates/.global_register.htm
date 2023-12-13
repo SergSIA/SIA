@@ -138,6 +138,27 @@
 
 
 {END email_fieldblock}
+											
+{BEGIN password_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_password}  r-vertical-field" 
+	data-signal-error-for="password{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field1" {$item_integrated_edit_field1} data-pageid="{$pageid}" data-field="password" data-fieldname="password" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_password}">
+		{BEGIN password_label}{$label public_user password }{END password_label}
+	</label>
+	<div class="r-edit-field">
+		{$password_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="password">
+		<div class="text-muted" >
+		{$tooltip public_user password }		</div>
+	</div>
+</div>
+
+
+{END password_fieldblock}
 	
 								</td>
 			{END cellblock_grid_c3}
@@ -161,13 +182,13 @@
 		<span data-itemtype="register_save" data-itemid="register_save" {$item_register_save} data-pageid="{$pageid}" data-small data-button-item>
 	<a type="button" title="" class="btn btn-primary   
 	" {$submit_attrs} >
-							{mlang_message REGISTER}			</a>
+							Registrar			</a>
 </span>
 	 
 		<span data-itemtype="back_to_login" data-itemid="back_to_login" {$item_back_to_login} data-pageid="{$pageid}" data-small data-button-item>
 	<a type="button" title="" class="btn btn-link   
 	" href="login.php" {$backlink_attrs} >
-							{mlang_message BACK_TO_LOGIN}			</a>
+							Regresar a la página de conexión			</a>
 </span>
 	</div>			 
 				<div 
@@ -178,7 +199,7 @@
 		<span data-itemtype="register_reset" data-itemid="register_reset" {$item_register_reset} data-pageid="{$pageid}" data-small data-button-item>
 	<a type="button" title="" class="btn btn-default   
 	" {$resetbutton_attrs} >
-							{mlang_message RESET}			</a>
+							Reiniciar			</a>
 </span>
 	</div>					</div>
 	</div>		

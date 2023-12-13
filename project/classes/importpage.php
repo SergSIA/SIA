@@ -156,7 +156,7 @@ class ImportPage extends RunnerPage
 		if( $returnJSON != false )
 			echo $returnJSON;
 		else
-			echo mlang_message("IMPORT_FILE_PARSING_FAILED");
+			echo "El fichero que quiere importar no puede ser analizado";
 		
 		exit();	
 	}
@@ -966,17 +966,17 @@ class ImportPage extends RunnerPage
 		}
 		else
 		{
-			$reportText .= mlang_message("IMPORT_INTO")." ".$this->strOriginalTableName.$lineBreak.
+			$reportText .= "Importar en"." ".$this->strOriginalTableName.$lineBreak.
 				str_format_datetime( db2time( now() ) ) .$lineBreak.$lineBreak;
 		}
 		
-		$reportText .= mysprintf(mlang_message("IMPORT_RECORD_PROCESSED_SUCCESSFULLY"), array($boldBegin.$importedReords.$boldEnd, $boldBegin.$totalRecords.$boldEnd)) 
+		$reportText .= mysprintf("%s registros de %s procesados correctamente.", array($boldBegin.$importedReords.$boldEnd, $boldBegin.$totalRecords.$boldEnd)) 
 			. $lineBreak
-			. mysprintf(mlang_message("IMPORT_RECORDS_ADDED"), array($boldBegin.$addedRecords.$boldEnd)) .$lineBreak
-			. mysprintf(mlang_message("IMPORT_RECORDS_UPDATED"), array($boldBegin.$updatedRecords.$boldEnd)) .$lineBreak;
+			. mysprintf("%s registros añadidos.", array($boldBegin.$addedRecords.$boldEnd)) .$lineBreak
+			. mysprintf("%s registros actualizados.", array($boldBegin.$updatedRecords.$boldEnd)) .$lineBreak;
 			
 		if( $notImportedRecords )
-			$reportText.= mysprintf(mlang_message("IMPORT_RECORDS_PROC_WITH_ERRORS"), array($boldBegin.$notImportedRecords.$boldEnd));
+			$reportText.= mysprintf("%s registros procesados con errores", array($boldBegin.$notImportedRecords.$boldEnd));
 		
 		if( $notImportedRecords && count($errorMessages) )
 		{

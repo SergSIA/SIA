@@ -263,7 +263,7 @@ class AddPage extends RunnerPage
 		{
 			$returnJSON = array();
 			$returnJSON['success'] = false;
-			$returnJSON['message'] = mlang_message("INLINE_ERROR");
+			$returnJSON['message'] = "Se ha producido un error";
 			$returnJSON['fatalError'] = true;
 			echo printJSON($returnJSON);
 			exit();
@@ -697,9 +697,9 @@ class AddPage extends RunnerPage
 			return;
 
 		if( $this->mode == ADD_INLINE )
-			$infoMessage = "".mlang_message("RECORD_ADDED")."";
+			$infoMessage = ""."El registro fue añadido"."";
 		else
-			$infoMessage = "<strong><<< ".mlang_message("RECORD_ADDED")." >>></strong>";
+			$infoMessage = "<strong><<< "."El registro fue añadido"." >>></strong>";
 
 		if( $this->mode != ADD_SIMPLE && $this->mode != ADD_MASTER || !$this->keys )
 		{
@@ -726,10 +726,10 @@ class AddPage extends RunnerPage
 			$infoMessage.= "<br>";
 
 			if( $this->editAvailable() )
-				$infoMessage.= "&nbsp;<a href='".GetTableLink( $this->pSet->getShortTableName(), "edit", $keylink )."'>".mlang_message("EDIT")."</a>&nbsp;";
+				$infoMessage.= "&nbsp;<a href='".GetTableLink( $this->pSet->getShortTableName(), "edit", $keylink )."'>"."Editar"."</a>&nbsp;";
 
 			if( $this->viewAvailable() )
-				$infoMessage.= "&nbsp;<a href='".GetTableLink( $this->pSet->getShortTableName(), "view", $keylink )."'>".mlang_message("VIEW")."</a>&nbsp;";
+				$infoMessage.= "&nbsp;<a href='".GetTableLink( $this->pSet->getShortTableName(), "view", $keylink )."'>"."Ver"."</a>&nbsp;";
 		}
 
 		$this->setMessage( $infoMessage );
@@ -1729,11 +1729,11 @@ class AddPage extends RunnerPage
 	{
 		if( $this->mode != ADD_INLINE )
 		{
-			$this->message = "<strong>&lt;&lt;&lt; ".mlang_message("RECORD_NOT_ADDED")."</strong> &gt;&gt;&gt;<br><br>".$message;
+			$this->message = "<strong>&lt;&lt;&lt; "."El registro no ha sido añadido"."</strong> &gt;&gt;&gt;<br><br>".$message;
 		}
 		else
 		{
-			$this->message = mlang_message("RECORD_NOT_ADDED").". ".$message;
+			$this->message = "El registro no ha sido añadido".". ".$message;
 		}
 
 		$this->messageType = MESSAGE_ERROR;

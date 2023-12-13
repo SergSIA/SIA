@@ -44,7 +44,7 @@
 
 			<div class="clearfix " data-cellId="left_c0" data-pageid="{$pageid}" data-logo-cell data-itemid="expand_button" {$item_expand_button} data-topcell-item-type="expand_button" >
 				<span data-itemtype="expand_button" data-itemid="expand_button" {$item_expand_button} data-pageid="{$pageid}" data-small data-button-item>
-	<a type="button" title="{mlang_message EXPAND}" class="btn btn-link   
+	<a type="button" title="Expandir" class="btn btn-link   
 	" href="#" >
 					<span class="glyphicon glyphicon-triangle-right"></span>
 										</a>
@@ -67,7 +67,7 @@
 	<div class="panel-heading">
 		<div class="btn-group" id="addSearchFieldButton{$id}">
 			<button id="showHideControlChooseMenu{$id}" type="button" class="btn btn-default dropdown-toggle btn-sm )" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-			{mlang_message SEARCH_IN}			<span class="caret"></span>
+			Búsqueda			<span class="caret"></span>
 			</button>
 		</div>
 
@@ -77,12 +77,12 @@
 				<span class="glyphicon glyphicon glyphicon-option-vertical"></span>
 			</button>
 			<ul class="dropdown-menu dropdown-left">
-				<li id="showHideSearchType{$id}" {$showHideCtrlsOpt_attrs}><a>{mlang_message SEARCH_SHOW_OPTIONS_BUTTON}</a></li>
+				<li id="showHideSearchType{$id}" {$showHideCtrlsOpt_attrs}><a>Mostrar opciones</a></li>
 				<li role="separator" class="divider"></li>
-				<li class="srchCritTop" style="display: none;"><a><input type="radio" name="srchType{$id}" id="radioAll" {$all_checkbox}><label for="radioAll"><span class="glyphicon">&nbsp;</span>{mlang_message SEARCH_ALL_CONDITIONS}</label></a></li>
-				<li class="srchCritTop" style="display: none;"><a><input type="radio" name="srchType{$id}" id="radioAny" {$any_checkbox}><label for="radioAny"><span class="glyphicon">&nbsp;</span>{mlang_message SEARCH_ANY_CONDITIONS}</label></a></li>
+				<li class="srchCritTop" style="display: none;"><a><input type="radio" name="srchType{$id}" id="radioAll" {$all_checkbox}><label for="radioAll"><span class="glyphicon">&nbsp;</span>todas las condiciones</label></a></li>
+				<li class="srchCritTop" style="display: none;"><a><input type="radio" name="srchType{$id}" id="radioAny" {$any_checkbox}><label for="radioAny"><span class="glyphicon">&nbsp;</span>cualquier condición</label></a></li>
 				<li role="separator" class="divider"></li>
-				<li><a class="close-button"><span class="glyphicon glyphicon-remove">&nbsp;</span>{mlang_message HIDE}</a></li>
+				<li><a class="close-button"><span class="glyphicon glyphicon-remove">&nbsp;</span>esconder</a></li>
 			</ul>
 		</div>
 
@@ -152,6 +152,19 @@
 								<span class="rnr-searchcontrol">{$searchcontrol1_reset_token}</span>
 						</div>
 		{END searchCtrlBlock_reset_token}
+																{BEGIN searchCtrlBlock_password}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_password}" {$filterRow_attrs_password}>
+			<label>{$label public_user password }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_password}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_password}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_password}</span>
+						</div>
+		{END searchCtrlBlock_password}
 																{BEGIN searchCtrlBlock_id}
 
 
@@ -191,6 +204,19 @@
 								<span class="rnr-searchcontrol">{$searchcontrol1_fk_id_people}</span>
 						</div>
 		{END searchCtrlBlock_fk_id_people}
+																{BEGIN searchCtrlBlock_ext_security_id}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_ext_security_id}" {$filterRow_attrs_ext_security_id}>
+			<label>{$label public_user ext_security_id }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_ext_security_id}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_ext_security_id}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_ext_security_id}</span>
+						</div>
+		{END searchCtrlBlock_ext_security_id}
 																{BEGIN searchCtrlBlock_email}
 
 
@@ -222,9 +248,9 @@
 	</div>
 
 	<div class="panel-footer bottomSearchButt" {$bottomSearchButt_attrs}>
-		<button class="btn btn-primary btn-sm" id="searchButton{$id}" {$searchbutton_attrs}>{mlang_message SEARCH}</button>
+		<button class="btn btn-primary btn-sm" id="searchButton{$id}" {$searchbutton_attrs}>Buscar</button>
 
-				<button class="btn btn-default btn-sm" {$showAllCont_attrs} {$showallbutton_attrs}>{mlang_message SHOW_ALL}</button>
+				<button class="btn btn-default btn-sm" {$showAllCont_attrs} {$showallbutton_attrs}>Mostrar todo</button>
 	</div>
 </div>
 <!-- End Search panel content -->
@@ -241,7 +267,7 @@
 							 
 				<span class="navbar-form  navbar-header" data-cellId="supertop_c1" data-pageid="{$pageid}" data-itemid="expand_menu_button" {$item_expand_menu_button} data-topcell-item-type="expand_menu_button" >
 				<span data-itemtype="expand_menu_button" data-itemid="expand_menu_button" {$item_expand_menu_button} data-pageid="{$pageid}" data-small data-button-item>
-	<a type="button" title="{mlang_message COLLAPSE}" class="btn-link   
+	<a type="button" title="Encubrir" class="btn-link   
 	 glyphicon glyphicon-menu-hamburger" href="#" >		
 				
 								</a>
@@ -250,7 +276,7 @@
 		 
 				<span class="navbar-form  navbar-collapse" data-cellId="supertop_c1" data-pageid="{$pageid}" data-itemid="collapse_button" {$item_collapse_button} data-topcell-item-type="collapse_button" >
 				<span data-itemtype="collapse_button" data-itemid="collapse_button" {$item_collapse_button} data-pageid="{$pageid}" data-small data-button-item>
-	<a type="button" title="{mlang_message SHOW_MENU}" class="btn-link   
+	<a type="button" title="Muestrame el menu" class="btn-link   
 	 glyphicon glyphicon-triangle-left" href="#" >		
 				
 								</a>
@@ -285,7 +311,7 @@
 {END searchform_text}
 	<span class="input-group-btn">
 	{BEGIN searchform_showall}
-				<button class="btn btn-default" {$showAllCont_attrs} {$showallbutton_attrs} title="{mlang_message SHOW_ALL}">
+				<button class="btn btn-default" {$showAllCont_attrs} {$showallbutton_attrs} title="Mostrar todo">
 			<span class="glyphicon glyphicon-remove"></span>
 		</button>
 	{END searchform_showall}
@@ -312,7 +338,7 @@
 	<li data-itemtype="export_selected" data-itemid="export_selected" {$item_export_selected} data-pageid="{$pageid}" data-small >
 				<a  href="#" {$exportselectedlink_attrs} {$exportselectedlink_span}  title="" >
 				
-		{mlang_message EXPORT_SELECTED}		
+		Exportar seleccionados		
 		</a>
 	</li>
 {END exportselected_link}
@@ -320,21 +346,21 @@
 	<li data-itemtype="delete_selected" data-itemid="delete_selected" {$item_delete_selected} data-pageid="{$pageid}" data-small >
 				<a  href="#" {$deleteselectedlink_attrs} {$deleteselectedlink_span}  title="" >
 				
-		{mlang_message DELETE_SELECTED}		
+		Borrar articulos seleccionados		
 		</a>
 	</li>
 {END deleteselected_link}
 							<li role="separator" class="divider"></li>								<li data-itemtype="advsearch_link" data-itemid="advsearch_link" {$item_advsearch_link} data-pageid="{$pageid}" data-small >
 				<a   href="user_search.php{$stateLink_full}" {$advsearchlink_attrs}  title="" >
 				
-		{mlang_message ADVANCED_SEARCH}		
+		Búsqueda avanzada		
 		</a>
 	</li>
 							{BEGIN searchPanelTopButtons}
 	<li data-itemtype="show_search_panel" data-itemid="show_search_panel" {$item_show_search_panel} data-pageid="{$pageid}" data-small >
 				<a  id="showOptPanel{$id}"  title="" >
 				
-		{mlang_message SHOW_SEARCH_PANEL}		
+		Mostrar panel de búsqueda		
 		</a>
 	</li>
 {END searchPanelTopButtons}
@@ -342,7 +368,7 @@
 	<li data-itemtype="hide_search_panel" data-itemid="hide_search_panel" {$item_hide_search_panel} data-pageid="{$pageid}" data-small >
 				<a  id="hideOptPanel{$id}"  title="" >
 				
-		{mlang_message HIDE_SEARCH_PANEL}		
+		Ocultar panel de búsqueda		
 		</a>
 	</li>
 {END searchPanelTopButtons}
@@ -350,7 +376,7 @@
 	<li data-itemtype="export" data-itemid="export" {$item_export} data-pageid="{$pageid}" data-small >
 				<a  href="#" {$exportlink_attrs}  title="" >
 				
-		{mlang_message EXPORT_RESULTS}		
+		Exportar resultados		
 		</a>
 	</li>
 {END export_link}
@@ -358,20 +384,10 @@
 	<li data-itemtype="import" data-itemid="import" {$item_import} data-pageid="{$pageid}" data-small >
 				<a  {$importlink_attrs} href="user_import.php{$stateLink_full}"  title="" >
 				
-		{mlang_message IMPORT}		
+		Importar		
 		</a>
 	</li>
 {END import_link}
-							<li role="separator" class="divider"></li>								{BEGIN EnglishLANGLINK}
-	<li><a href="#" data-lang="English" class="rnr-langlink">
-		{BEGIN EnglishLANGLINK_ACTIVE}<span class="glyphicon glyphicon-ok">&nbsp;</span>{END EnglishLANGLINK_ACTIVE}
-		English</a></li>
-	{END EnglishLANGLINK}
-	{BEGIN SpanishLANGLINK}
-	<li><a href="#" data-lang="Spanish" class="rnr-langlink">
-		{BEGIN SpanishLANGLINK_ACTIVE}<span class="glyphicon glyphicon-ok">&nbsp;</span>{END SpanishLANGLINK_ACTIVE}
-		Español</a></li>
-	{END SpanishLANGLINK}
 					</ul>
 	</span>
 </span>
@@ -382,7 +398,7 @@
 <span data-itemtype="loginform_login" data-itemid="loginform_login" {$item_loginform_login} data-pageid="{$pageid}" data-small data-button-item>
 	<a type="button" title="" class="btn btn-primary   
 	" href="#" {$guestloginlink_attrs} >
-							{mlang_message LOGIN}			</a>
+							Conectar			</a>
 </span>
 {END guestloginbutton}
 			</span>
@@ -400,7 +416,7 @@
 	<li data-itemtype="userinfo_link" data-itemid="userinfo_link" {$item_userinfo_link} data-pageid="{$pageid}" data-small >
 				<a  href="userinfo.php"  title="" >
 				
-		{mlang_message USERINFO}		
+		Perfil del usuario		
 		</a>
 	</li>
 {END logoutbutton}
@@ -408,7 +424,7 @@
 	<li data-itemtype="logout_link" data-itemid="logout_link" {$item_logout_link} data-pageid="{$pageid}" data-small >
 				<a  href="#" {$logoutlink_attrs}  title="" >
 				
-		{mlang_message LOG_OUT}		
+		Desconectarse		
 		</a>
 	</li>
 {END logoutbutton}
@@ -416,7 +432,7 @@
 	<li data-itemtype="changepassword_link" data-itemid="changepassword_link" {$item_changepassword_link} data-pageid="{$pageid}" data-small >
 				<a  href="changepwd.php" {$changepwdlink_attrs} id="changePasswordButton{$id}"  title="" >
 				
-		{mlang_message CHANGE_PASSWORD}		
+		Cambiar contraseña		
 		</a>
 	</li>
 {END changepwd_link}
@@ -468,7 +484,7 @@
 <span data-itemtype="add" data-itemid="add" {$item_add} data-pageid="{$pageid}" data-small data-button-item>
 	<a type="button" title="" class="btn btn-primary   
 	" {$addlink_attrs} href="user_add.php{$stateLink_full}" >
-							{mlang_message ADD_NEW}			</a>
+							Añadir nuevo			</a>
 </span>
 {END add_link}
 	 
@@ -476,7 +492,7 @@
 <span data-itemtype="inline_add" data-itemid="inline_add" {$item_inline_add} data-pageid="{$pageid}" data-small data-button-item>
 	<a type="button" title="" class="btn btn-primary   
 	" {$inlineaddlink_attrs} >
-							{mlang_message INLINE_ADD}			</a>
+							Añadir nuevo			</a>
 </span>
 {END inlineadd_link}
 	 
@@ -484,7 +500,7 @@
 <span data-itemtype="delete" data-itemid="delete" {$item_delete} data-pageid="{$pageid}" data-small data-button-item>
 	<a type="button" title="" class="btn btn-default   
 	" {$deleteselectedlink_attrs} {$deleteselectedlink_span} disabled >
-							{mlang_message DELETE}			</a>
+							Borrar artículos seleccionados			</a>
 </span>
 {END deleteselected_link}
 			{END firstAboveGridCell}	
@@ -503,7 +519,7 @@
 </span>	 
 		{BEGIN print_friendly}
 <span id="printpanelblock{$id}"  data-pageid="{$pageid}" {$printpanel_hiddenattr} data-itemtype="print_panel" data-itemid="print_panel" {$item_print_panel} data-pageid="{$pageid}">
-	<button title="{mlang_message WR_PRINT_FRIENDLY}" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+	<button title="Página para imprimir" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
 					<span class="glyphicon glyphicon-print"></span>
 				<span class="caret"></span>
 	</button>
@@ -515,14 +531,14 @@
 									<div id="print_friendly_scope{$id}">
 	<div class="row">
 		<div class="col-md-4">
-			{mlang_message PPANEL_SCOPE}		</div>
+			Rango:		</div>
 
 			 
 		{BEGIN print_friendly_all}
 		<div class="col-md-8">
 			<label for="printAll{$id}">
 				<input type="radio" id="printAll{$id}" data-href="user_print.php?all=1&amp;{$crosstable_attrs}" name="printScope" >
-									{mlang_message PPANEL_ALL_PAGES}							</label>
+									Imprimir todas las páginas							</label>
 		</div>
 		{END print_friendly_all}
 		</div>
@@ -531,7 +547,7 @@
 		<div class="col-md-8">
 			<label for="printPage{$id}">
 				<input name="printScope" id="printPage{$id}" type="radio" checked data-href="user_print.php?{$crosstable_attrs}">
-				{mlang_message PPANEL_THIS_PAGE}			</label>
+				Imprimir esta página			</label>
 		</div>
 	</div>
 		
@@ -543,7 +559,7 @@
 		<div class="col-md-8">
 			<label style="color: gray;" for="printSelection{$id}">
 			<input name="printScope" disabled="disabled" id="printSelection{$id}" type="radio" >
-			{mlang_message PPANEL_SELECTED}			</label>
+			Imprimir la selección			</label>
 		</div>
 	</div>
 	</div>
@@ -556,7 +572,7 @@
 										">
 									<div>
 	<label for="printPerPage{$id}">
-					{mlang_message RECORDS_PP}							
+					Resultados por página							
 	</label>
 	<input type="number" id="printPerPage{$id}" value="{$print_recspp}" class="rnr-printrecspp">		
 </div>
@@ -570,7 +586,7 @@
 									<span data-itemtype="print_button" data-itemid="print_button" {$item_print_button} data-pageid="{$pageid}" data-small data-button-item>
 	<a type="button" title="" class="btn btn-primary   
 	" id="print_friendly_button{$id}" >
-							{mlang_message PPANEL_PRINT}			</a>
+							Imprimir			</a>
 </span>
 				 
 					</li>
@@ -604,6 +620,9 @@
 			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="fk_id_rol"]:before {
 		content: "{$label public_user fk_id_rol}";
 	}
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="password"]:before {
+		content: "{$label public_user password}";
+	}
 			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="username"]:before {
 		content: "{$label public_user username}";
 	}
@@ -619,7 +638,13 @@
 			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="fk_id_people"]:before {
 		content: "{$label public_user fk_id_people}";
 	}
-		}
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="userpic"]:before {
+		content: "{$label public_user userpic}";
+	}
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="ext_security_id"]:before {
+		content: "{$label public_user ext_security_id}";
+	}
+	}
 </style>
 <table data-location="grid" id="form_grid_{$pageid}" data-makeup="leftbar" {$form_grid} data-pageid="{$pageid}" class=" table {$grid_classes} r-horizontal-grid  r-flexgrid rnr-b-grid rnr-gridtable" 
 	cellpadding="0" 
@@ -692,7 +717,7 @@
 	 
 		{BEGIN id_fieldheadercolumn}
 	{BEGIN id_fieldheader}
-	<SPAN {$id_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field4" {$item_simple_grid_field4} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="id" data-fieldname="id">
+	<SPAN {$id_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field12" {$item_simple_grid_field12} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="id" data-fieldname="id">
 	{$label public_user id }	{$arrow_icon_id}
 	</SPAN>
 	{END id_fieldheader}
@@ -719,7 +744,7 @@
 	 
 		{BEGIN active_fieldheadercolumn}
 	{BEGIN active_fieldheader}
-	<SPAN {$active_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field10" {$item_simple_grid_field10} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="active" data-fieldname="active">
+	<SPAN {$active_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field13" {$item_simple_grid_field13} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="active" data-fieldname="active">
 	{$label public_user active }	{$arrow_icon_active}
 	</SPAN>
 	{END active_fieldheader}
@@ -746,7 +771,7 @@
 	 
 		{BEGIN email_fieldheadercolumn}
 	{BEGIN email_fieldheader}
-	<SPAN {$email_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field11" {$item_simple_grid_field11} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="email" data-fieldname="email">
+	<SPAN {$email_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field14" {$item_simple_grid_field14} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="email" data-fieldname="email">
 	{$label public_user email }	{$arrow_icon_email}
 	</SPAN>
 	{END email_fieldheader}
@@ -773,7 +798,7 @@
 	 
 		{BEGIN fk_id_rol_fieldheadercolumn}
 	{BEGIN fk_id_rol_fieldheader}
-	<SPAN {$fk_id_rol_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field12" {$item_simple_grid_field12} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="fk_id_rol" data-fieldname="fk_id_rol">
+	<SPAN {$fk_id_rol_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field15" {$item_simple_grid_field15} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="fk_id_rol" data-fieldname="fk_id_rol">
 	{$label public_user fk_id_rol }	{$arrow_icon_fk_id_rol}
 	</SPAN>
 	{END fk_id_rol_fieldheader}
@@ -789,22 +814,22 @@
 	{$cell_grid_headcell_field4}
 	{$recordattrs}
 	class="
-		 r-ori-vert				{$username_class}
+		 r-ori-vert				{$password_class}
 			"
 
-			data-field="username"
+			data-field="password"
 	
 	data-cellId="grid_headcell_field4" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
-		{BEGIN username_fieldheadercolumn}
-	{BEGIN username_fieldheader}
-	<SPAN {$username_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field13" {$item_simple_grid_field13} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="username" data-fieldname="username">
-	{$label public_user username }	{$arrow_icon_username}
+		{BEGIN password_fieldheadercolumn}
+	{BEGIN password_fieldheader}
+	<SPAN {$password_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field16" {$item_simple_grid_field16} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="password" data-fieldname="password">
+	{$label public_user password }	{$arrow_icon_password}
 	</SPAN>
-	{END username_fieldheader}
-{END username_fieldheadercolumn}
+	{END password_fieldheader}
+{END password_fieldheadercolumn}
 
 	
 	</th>
@@ -816,22 +841,22 @@
 	{$cell_grid_headcell_field5}
 	{$recordattrs}
 	class="
-		 r-ori-vert				{$reset_token_class}
+		 r-ori-vert				{$username_class}
 			"
 
-			data-field="reset_token"
+			data-field="username"
 	
 	data-cellId="grid_headcell_field5" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
-		{BEGIN reset_token_fieldheadercolumn}
-	{BEGIN reset_token_fieldheader}
-	<SPAN {$reset_token_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field14" {$item_simple_grid_field14} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="reset_token" data-fieldname="reset_token">
-	{$label public_user reset_token }	{$arrow_icon_reset_token}
+		{BEGIN username_fieldheadercolumn}
+	{BEGIN username_fieldheader}
+	<SPAN {$username_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field17" {$item_simple_grid_field17} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="username" data-fieldname="username">
+	{$label public_user username }	{$arrow_icon_username}
 	</SPAN>
-	{END reset_token_fieldheader}
-{END reset_token_fieldheadercolumn}
+	{END username_fieldheader}
+{END username_fieldheadercolumn}
 
 	
 	</th>
@@ -843,22 +868,22 @@
 	{$cell_grid_headcell_field6}
 	{$recordattrs}
 	class="
-		 r-ori-vert				{$created_class}
+		 r-ori-vert				{$reset_token_class}
 			"
 
-			data-field="created"
+			data-field="reset_token"
 	
 	data-cellId="grid_headcell_field6" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
-		{BEGIN created_fieldheadercolumn}
-	{BEGIN created_fieldheader}
-	<SPAN {$created_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field15" {$item_simple_grid_field15} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="created" data-fieldname="created">
-	{$label public_user created }	{$arrow_icon_created}
+		{BEGIN reset_token_fieldheadercolumn}
+	{BEGIN reset_token_fieldheader}
+	<SPAN {$reset_token_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field18" {$item_simple_grid_field18} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="reset_token" data-fieldname="reset_token">
+	{$label public_user reset_token }	{$arrow_icon_reset_token}
 	</SPAN>
-	{END created_fieldheader}
-{END created_fieldheadercolumn}
+	{END reset_token_fieldheader}
+{END reset_token_fieldheadercolumn}
 
 	
 	</th>
@@ -870,22 +895,22 @@
 	{$cell_grid_headcell_field7}
 	{$recordattrs}
 	class="
-		 r-ori-vert				{$updated_class}
+		 r-ori-vert				{$created_class}
 			"
 
-			data-field="updated"
+			data-field="created"
 	
 	data-cellId="grid_headcell_field7" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
-		{BEGIN updated_fieldheadercolumn}
-	{BEGIN updated_fieldheader}
-	<SPAN {$updated_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field16" {$item_simple_grid_field16} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="updated" data-fieldname="updated">
-	{$label public_user updated }	{$arrow_icon_updated}
+		{BEGIN created_fieldheadercolumn}
+	{BEGIN created_fieldheader}
+	<SPAN {$created_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field19" {$item_simple_grid_field19} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="created" data-fieldname="created">
+	{$label public_user created }	{$arrow_icon_created}
 	</SPAN>
-	{END updated_fieldheader}
-{END updated_fieldheadercolumn}
+	{END created_fieldheader}
+{END created_fieldheadercolumn}
 
 	
 	</th>
@@ -897,18 +922,45 @@
 	{$cell_grid_headcell_field8}
 	{$recordattrs}
 	class="
-		 r-ori-vert				{$fk_id_people_class}
+		 r-ori-vert				{$updated_class}
 			"
 
-			data-field="fk_id_people"
+			data-field="updated"
 	
 	data-cellId="grid_headcell_field8" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
+		{BEGIN updated_fieldheadercolumn}
+	{BEGIN updated_fieldheader}
+	<SPAN {$updated_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field20" {$item_simple_grid_field20} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="updated" data-fieldname="updated">
+	{$label public_user updated }	{$arrow_icon_updated}
+	</SPAN>
+	{END updated_fieldheader}
+{END updated_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field8}
+				 
+					{BEGIN cellblock_grid_headcell_field9}
+	<th
+	
+	{$cell_grid_headcell_field9}
+	{$recordattrs}
+	class="
+		 r-ori-vert				{$fk_id_people_class}
+			"
+
+			data-field="fk_id_people"
+	
+	data-cellId="grid_headcell_field9" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
 		{BEGIN fk_id_people_fieldheadercolumn}
 	{BEGIN fk_id_people_fieldheader}
-	<SPAN {$fk_id_people_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field17" {$item_simple_grid_field17} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="fk_id_people" data-fieldname="fk_id_people">
+	<SPAN {$fk_id_people_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field21" {$item_simple_grid_field21} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="fk_id_people" data-fieldname="fk_id_people">
 	{$label public_user fk_id_people }	{$arrow_icon_fk_id_people}
 	</SPAN>
 	{END fk_id_people_fieldheader}
@@ -916,7 +968,59 @@
 
 	
 	</th>
-	{END cellblock_grid_headcell_field8}
+	{END cellblock_grid_headcell_field9}
+				 
+					{BEGIN cellblock_grid_headcell_field10}
+	<th
+	
+	{$cell_grid_headcell_field10}
+	{$recordattrs}
+	class="
+		 r-ori-vert				{$userpic_class}
+			"
+
+			data-field="userpic"
+	
+	data-cellId="grid_headcell_field10" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN userpic_fieldheadercolumn}
+ 
+	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field22" {$item_simple_grid_field22} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="userpic" data-fieldname="userpic">
+	{$label public_user userpic }	</span>
+{END userpic_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field10}
+				 
+					{BEGIN cellblock_grid_headcell_field11}
+	<th
+	
+	{$cell_grid_headcell_field11}
+	{$recordattrs}
+	class="
+		 r-ori-vert				{$ext_security_id_class}
+			"
+
+			data-field="ext_security_id"
+	
+	data-cellId="grid_headcell_field11" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN ext_security_id_fieldheadercolumn}
+	{BEGIN ext_security_id_fieldheader}
+	<SPAN {$ext_security_id_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field23" {$item_simple_grid_field23} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="ext_security_id" data-fieldname="ext_security_id">
+	{$label public_user ext_security_id }	{$arrow_icon_ext_security_id}
+	</SPAN>
+	{END ext_security_id_fieldheader}
+{END ext_security_id_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field11}
 							</tr>
 					 
 					 
@@ -950,8 +1054,8 @@
 		{BEGIN edit_column}
 {BEGIN edit_link}
 <span data-itemtype="grid_edit" data-itemid="grid_edit" {$item_grid_edit} data-pageid="{$pageid}" data-record-id="{$recId}" data-small data-button-item>
-	<a type="button" title="{mlang_message EDIT}" class="btn-link   
-	 glyphicon glyphicon-pencil" href="user_edit.php?{$editlink}" {$editlink_attrs} title="{mlang_message EDIT}" >		
+	<a type="button" title="Editar" class="btn-link   
+	 glyphicon glyphicon-pencil" href="user_edit.php?{$editlink}" {$editlink_attrs} title="Editar" >		
 				
 								</a>
 </span>
@@ -960,8 +1064,8 @@
 	 
 		{BEGIN inline_cancel}
 <span data-itemtype="grid_inline_cancel" data-itemid="grid_inline_cancel" {$item_grid_inline_cancel} data-pageid="{$pageid}" data-record-id="{$recId}" data-small data-button-item>
-	<a type="button" title="{mlang_message CANCEL}" class="btn-link   
-	 glyphicon glyphicon-remove" {$inlinerevertlink_attrs} title="{mlang_message CANCEL}" >		
+	<a type="button" title="Cancelar" class="btn-link   
+	 glyphicon glyphicon-remove" {$inlinerevertlink_attrs} title="Cancelar" >		
 				
 								</a>
 </span>
@@ -970,8 +1074,8 @@
 		{BEGIN view_column}
 {BEGIN view_link}
 <span data-itemtype="grid_view" data-itemid="grid_view" {$item_grid_view} data-pageid="{$pageid}" data-record-id="{$recId}" data-small data-button-item>
-	<a type="button" title="{mlang_message VIEW_RECORD}" class="btn-link   
-	 glyphicon glyphicon-search" href="user_view.php?{$editlink}" {$viewlink_attrs} title="{mlang_message VIEW}" >		
+	<a type="button" title="Ver registro" class="btn-link   
+	 glyphicon glyphicon-search" href="user_view.php?{$editlink}" {$viewlink_attrs} title="Ver" >		
 				
 								</a>
 </span>
@@ -1104,20 +1208,20 @@
 	{$cell_grid_cell_field4}
 	{$recordattrs}
 	class="
-		 r-ori-vert				{$username_class}
+		 r-ori-vert				{$password_class}
 			"
 
-			data-field="username"
+			data-field="password"
 	
 	data-cellId="grid_cell_field4" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
-		{BEGIN username_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="simple_grid_field5" {$item_simple_grid_field5} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="username" data-fieldname="username" data-default-width >
-{$username_value}
+		{BEGIN password_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field4" {$item_simple_grid_field4} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="password" data-fieldname="password" data-default-width >
+{$password_value}
 </span>
-{END username_fieldcolumn}	
+{END password_fieldcolumn}	
 	</td>
 	{END cellblock_grid_cell_field4}
 				 
@@ -1127,20 +1231,20 @@
 	{$cell_grid_cell_field5}
 	{$recordattrs}
 	class="
-		 r-ori-vert				{$reset_token_class}
+		 r-ori-vert				{$username_class}
 			"
 
-			data-field="reset_token"
+			data-field="username"
 	
 	data-cellId="grid_cell_field5" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
-		{BEGIN reset_token_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="simple_grid_field6" {$item_simple_grid_field6} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="reset_token" data-fieldname="reset_token" data-default-width >
-{$reset_token_value}
+		{BEGIN username_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field5" {$item_simple_grid_field5} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="username" data-fieldname="username" data-default-width >
+{$username_value}
 </span>
-{END reset_token_fieldcolumn}	
+{END username_fieldcolumn}	
 	</td>
 	{END cellblock_grid_cell_field5}
 				 
@@ -1150,20 +1254,20 @@
 	{$cell_grid_cell_field6}
 	{$recordattrs}
 	class="
-		 r-ori-vert				{$created_class}
+		 r-ori-vert				{$reset_token_class}
 			"
 
-			data-field="created"
+			data-field="reset_token"
 	
 	data-cellId="grid_cell_field6" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
-		{BEGIN created_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="simple_grid_field7" {$item_simple_grid_field7} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="created" data-fieldname="created" data-default-width >
-{$created_value}
+		{BEGIN reset_token_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field6" {$item_simple_grid_field6} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="reset_token" data-fieldname="reset_token" data-default-width >
+{$reset_token_value}
 </span>
-{END created_fieldcolumn}	
+{END reset_token_fieldcolumn}	
 	</td>
 	{END cellblock_grid_cell_field6}
 				 
@@ -1173,20 +1277,20 @@
 	{$cell_grid_cell_field7}
 	{$recordattrs}
 	class="
-		 r-ori-vert				{$updated_class}
+		 r-ori-vert				{$created_class}
 			"
 
-			data-field="updated"
+			data-field="created"
 	
 	data-cellId="grid_cell_field7" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
-		{BEGIN updated_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="simple_grid_field8" {$item_simple_grid_field8} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="updated" data-fieldname="updated" data-default-width >
-{$updated_value}
+		{BEGIN created_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field7" {$item_simple_grid_field7} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="created" data-fieldname="created" data-default-width >
+{$created_value}
 </span>
-{END updated_fieldcolumn}	
+{END created_fieldcolumn}	
 	</td>
 	{END cellblock_grid_cell_field7}
 				 
@@ -1196,12 +1300,35 @@
 	{$cell_grid_cell_field8}
 	{$recordattrs}
 	class="
+		 r-ori-vert				{$updated_class}
+			"
+
+			data-field="updated"
+	
+	data-cellId="grid_cell_field8" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN updated_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field8" {$item_simple_grid_field8} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="updated" data-fieldname="updated" data-default-width >
+{$updated_value}
+</span>
+{END updated_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field8}
+				 
+					{BEGIN cellblock_grid_cell_field9}
+	<td
+	
+	{$cell_grid_cell_field9}
+	{$recordattrs}
+	class="
 		 r-ori-vert				{$fk_id_people_class}
 			"
 
 			data-field="fk_id_people"
 	
-	data-cellId="grid_cell_field8" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_cell_field9" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
@@ -1211,7 +1338,53 @@
 </span>
 {END fk_id_people_fieldcolumn}	
 	</td>
-	{END cellblock_grid_cell_field8}
+	{END cellblock_grid_cell_field9}
+				 
+					{BEGIN cellblock_grid_cell_field10}
+	<td
+	
+	{$cell_grid_cell_field10}
+	{$recordattrs}
+	class="
+		 r-ori-vert				{$userpic_class}
+			"
+
+			data-field="userpic"
+	
+	data-cellId="grid_cell_field10" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN userpic_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field10" {$item_simple_grid_field10} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="userpic" data-fieldname="userpic" data-default-width >
+{$userpic_value}
+</span>
+{END userpic_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field10}
+				 
+					{BEGIN cellblock_grid_cell_field11}
+	<td
+	
+	{$cell_grid_cell_field11}
+	{$recordattrs}
+	class="
+		 r-ori-vert				{$ext_security_id_class}
+			"
+
+			data-field="ext_security_id"
+	
+	data-cellId="grid_cell_field11" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN ext_security_id_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field11" {$item_simple_grid_field11} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="ext_security_id" data-fieldname="ext_security_id" data-default-width >
+{$ext_security_id_value}
+</span>
+{END ext_security_id_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field11}
 							</tr>
 					 
 					
@@ -1403,6 +1576,54 @@
 	
 	</td>
 	{END cellblock_grid_footcell_field8}
+				 
+					{BEGIN cellblock_grid_footcell_field9}
+	<td
+	
+	{$cell_grid_footcell_field9}
+	{$recordattrs}
+	class="
+		 r-ori-vert			"
+
+	
+	data-cellId="grid_footcell_field9" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="user_list"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field9}
+				 
+					{BEGIN cellblock_grid_footcell_field10}
+	<td
+	
+	{$cell_grid_footcell_field10}
+	{$recordattrs}
+	class="
+		 r-ori-vert			"
+
+	
+	data-cellId="grid_footcell_field10" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="user_list"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field10}
+				 
+					{BEGIN cellblock_grid_footcell_field11}
+	<td
+	
+	{$cell_grid_footcell_field11}
+	{$recordattrs}
+	class="
+		 r-ori-vert			"
+
+	
+	data-cellId="grid_footcell_field11" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="user_list"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field11}
 							</tr>
 					
 					</tfoot>

@@ -48,60 +48,7 @@ include(getabspath('classes/pdlayout.php'));
 
 //	custom labels
 $custom_labels = array();
-$custom_labels["English"] = array();
-	$custom_labels["English"]['ADVISOR'] = "Advisor";
-		$custom_labels["English"]['CONSULTING'] = "Consulting";
-		$custom_labels["English"]['CUSTOMERS'] = "Customer";
-		$custom_labels["English"]['DOCUMENT'] = "Document";
-		$custom_labels["English"]['METHOD_PAYMENT'] = "Method Payment";
-		$custom_labels["English"]['PAYMENT'] = "Payment";
-		$custom_labels["English"]['PEOPLE'] = "People";
-		$custom_labels["English"]['SPECIALTY'] = "Specialty";
-		$custom_labels["English"]['STATUS_CONSULTING'] = "Status Consulting";
-		$custom_labels["English"]['STATUS_CONSULTING1'] = "Status Consulting";
-		$custom_labels["English"]['STATUS_PAYMENT'] = "Status Payment";
-		$custom_labels["English"]['USER'] = "User";
-		$custom_labels["English"]['CLIENTES'] = "Custmer";
-		$custom_labels["English"]['ADD_NEW'] = "Generate Consultig";
-		$custom_labels["English"]['COUNTRY'] = "Country";
-		$custom_labels["English"]['NEW_SECTION'] = "Advisor";
-		$custom_labels["English"]['NEW_SECTION1'] = "Date Consulting";
-		$custom_labels["English"]['CANCELAR'] = "cancell";
-		$custom_labels["English"]['PARAMETROS'] = "Parameters";
-		$custom_labels["English"]['_H1_CLASS__QL_ALIGN_CENTER__BIENVENIDO_NBSP___H1__H1_CLASS__QL_ALIGN_CENTER__AL__H1__H1_CLASS__QL_ALIGN_CENTER___SISTEMA_DE_ASESORITA_EN_LINEA__H1_'] = "<h1 class=\"ql-align-center\">Welcome</h1><h1 class=\"ql-align-center\">System Consulting Online</h1><p><br></p>";
-		$custom_labels["English"]['CONSULTINGS'] = "Consultings";
-		$custom_labels["English"]['START'] = "Finish";
-		$custom_labels["English"]['LINK'] = "Link";
-		$custom_labels["English"]['PAYMENT_MY'] = "Payment My";
-		$custom_labels["English"]['NO_ES_UN_ENLACE'] = "Not link";
-		$custom_labels["English"]['LABEL'] = "Exits";
-	$custom_labels["Spanish"] = array();
-		$custom_labels["Spanish"]['ADVISOR'] = "Asesor";
-		$custom_labels["Spanish"]['CONSULTING'] = "Asesorias";
-		$custom_labels["Spanish"]['CUSTOMERS'] = "Cliente";
-		$custom_labels["Spanish"]['DOCUMENT'] = "Documento";
-		$custom_labels["Spanish"]['METHOD_PAYMENT'] = "Metodo Pago";
-		$custom_labels["Spanish"]['PAYMENT'] = "Pagos";
-		$custom_labels["Spanish"]['PEOPLE'] = "Personas";
-		$custom_labels["Spanish"]['SPECIALTY'] = "Especialidad";
-		$custom_labels["Spanish"]['STATUS_CONSULTING'] = "Estado Asesoria";
-		$custom_labels["Spanish"]['STATUS_CONSULTING1'] = "Estado Asesoria";
-		$custom_labels["Spanish"]['STATUS_PAYMENT'] = "Estado Pago";
-		$custom_labels["Spanish"]['USER'] = "Usuario";
-		$custom_labels["Spanish"]['CLIENTES'] = "Clientes";
-		$custom_labels["Spanish"]['ADD_NEW'] = "Nueva Asesoria";
-		$custom_labels["Spanish"]['COUNTRY'] = "Pais";
-		$custom_labels["Spanish"]['NEW_SECTION'] = "Asesor";
-		$custom_labels["Spanish"]['NEW_SECTION1'] = "Fecha Consultoria";
-		$custom_labels["Spanish"]['CANCELAR'] = "Cancelar";
-		$custom_labels["Spanish"]['PARAMETROS'] = "Parametros";
-		$custom_labels["Spanish"]['_H1_CLASS__QL_ALIGN_CENTER__BIENVENIDO_NBSP___H1__H1_CLASS__QL_ALIGN_CENTER__AL__H1__H1_CLASS__QL_ALIGN_CENTER___SISTEMA_DE_ASESORITA_EN_LINEA__H1_'] = "<h1 class=\"ql-align-center\">Bienvenido&nbsp;</h1><h1 class=\"ql-align-center\">al</h1><h1 class=\"ql-align-center\">Sistema de Asesoria en Linea</h1>";
-		$custom_labels["Spanish"]['CONSULTINGS'] = "Gestionar Asesorias";
-		$custom_labels["Spanish"]['START'] = "Finalizar";
-		$custom_labels["Spanish"]['LINK'] = "Acceso";
-		$custom_labels["Spanish"]['PAYMENT_MY'] = "Mis Pagos";
-		$custom_labels["Spanish"]['NO_ES_UN_ENLACE'] = "No es un enlace";
-		$custom_labels["Spanish"]['LABEL'] = "Ya Existe";
+$custom_labels["Spanish"] = array();
 
 define('GLOBAL_PAGES_SHORT', ".global");
 define('GLOBAL_PAGES', "<global>");
@@ -599,8 +546,6 @@ $globalSettings["bTwoFactorAuth"] = false;
  */
 $globalSettings["keepLoggedIn"] = true;
 
-$globalSettings["bEncryptPasswords"] = true;
-$globalSettings["nEncryptPasswordMethod"] = "0";
 
 
 
@@ -608,14 +553,15 @@ $globalSettings["nEncryptPasswordMethod"] = "0";
 //mail settings
 $globalSettings["useBuiltInMailer"] = false;
 
-$globalSettings["useCustomSMTPSettings"] = false;
+$globalSettings["useCustomSMTPSettings"] = true;
 
-$globalSettings["strSMTPUser"] = "";
-$globalSettings["strSMTPServer"] = "localhost";
-$globalSettings["strSMTPPort"] = "25";
-$globalSettings["strSMTPPassword"] = "";
-$globalSettings["strFromEmail"] = "";
+$globalSettings["strSMTPUser"] = "oermgblaapkl";
+$globalSettings["strSMTPServer"] = "smtp1.s.ipzmarketing.com";
+$globalSettings["strSMTPPort"] = "587";
+$globalSettings["strSMTPPassword"] = "tI3foAGMqNbu";
+$globalSettings["strFromEmail"] = "no-reply@colpybox.com";
 
+$globalSettings["SMTPSecure"] = "tls";
 //
 
 
@@ -631,8 +577,7 @@ $globalSettings["LandingURL"] = "";
 $globalSettings["LandingPageId"] = "";
 
 $globalSettings["ProjectLogo"] = array();
-$globalSettings["ProjectLogo"]["English"] = "Consulting";
-$globalSettings["ProjectLogo"]["Spanish"] = "Asesoria";
+$globalSettings["ProjectLogo"]["Spanish"] = "SIA";
 
 $globalSettings["CookieBanner"] = array();
 
@@ -651,6 +596,11 @@ $globalSettings["SpUserIdField"] = "ext_security_id";
 
 	
 	
+//password global settings for register page
+$globalSettings["pwdStrong"] = true;
+$globalSettings["pwdLen"] = 8;
+$globalSettings["pwdUnique"] = 4;
+$globalSettings["pwdDigits"] = 2;
 
 
 /**
@@ -723,7 +673,7 @@ $globalSettings["usersTableInProject"] = true;
 $globalSettings["usersDatasourceTable"] = "public.user";
 
 
-$globalSettings["jwtSecret"] = "GxUOKOV3LZ0jlZGxGAkd";
+$globalSettings["jwtSecret"] = "X1UjytqIH6HRVNoruBDx";
 
 if( $cDisplayNameField == '' )
 	$cDisplayNameField = $cUserNameField;
@@ -746,9 +696,9 @@ $suggestAllContent = true;
 $strLastSQL = "";
 $showCustomMarkerOnPrint = false;
 
-$projectBuildKey = "302_1698676535";
+$projectBuildKey = "163_1702425440";
 $wizardBuildKey = "37251";
-$projectBuildNumber = "302";
+$projectBuildNumber = "163";
 
 $mlang_messages = array();
 $mlang_charsets = array();
@@ -769,46 +719,29 @@ $menuTreelikeFlags["secondary"] = 1;
 
 // table captions
 $tableCaptions = array();
-$tableCaptions["English"] = array();
-$tableCaptions["English"][""] = "";
-$tableCaptions["English"]["public_advisor"] = "Advisor";
-$tableCaptions["English"]["public_consulting"] = "Consulting";
-$tableCaptions["English"]["public_customers"] = "Customers";
-$tableCaptions["English"]["public_document"] = "Document";
-$tableCaptions["English"]["public_method_payment"] = "Method Payment";
-$tableCaptions["English"]["public_payment"] = "Payment";
-$tableCaptions["English"]["public_people"] = "People";
-$tableCaptions["English"]["public_role"] = "Role";
-$tableCaptions["English"]["public_specialty"] = "Specialty";
-$tableCaptions["English"]["public_status_consulting"] = "Status Consulting";
-$tableCaptions["English"]["public_status_payment"] = "Status Payment";
-$tableCaptions["English"]["public_user"] = "User";
-$tableCaptions["English"]["public_people_user"] = "My Data";
-$tableCaptions["English"]["public_consulting_my"] = "My Consulting";
-$tableCaptions["English"]["public_country"] = "Country";
-$tableCaptions["English"]["public_advisor_user"] = "Advisor";
-$tableCaptions["English"]["public_consulting_my_advisor"] = "Consulting My Advisor";
-$tableCaptions["English"]["public_payment_my"] = "Payment My";
 $tableCaptions["Spanish"] = array();
 $tableCaptions["Spanish"][""] = "";
 $tableCaptions["Spanish"]["public_advisor"] = "Asesor";
-$tableCaptions["Spanish"]["public_consulting"] = "Asesoria";
-$tableCaptions["Spanish"]["public_customers"] = "Customers";
+$tableCaptions["Spanish"]["public_consulting"] = "Asesorias";
+$tableCaptions["Spanish"]["public_country"] = "Pais";
+$tableCaptions["Spanish"]["public_customers"] = "Clientes";
 $tableCaptions["Spanish"]["public_document"] = "Documento";
 $tableCaptions["Spanish"]["public_method_payment"] = "Metodo Pago";
-$tableCaptions["Spanish"]["public_payment"] = "Pagos";
+$tableCaptions["Spanish"]["public_payment"] = "Pago";
 $tableCaptions["Spanish"]["public_people"] = "Personas";
 $tableCaptions["Spanish"]["public_role"] = "Rol";
 $tableCaptions["Spanish"]["public_specialty"] = "Especialidad";
 $tableCaptions["Spanish"]["public_status_consulting"] = "Estado Asesoria";
 $tableCaptions["Spanish"]["public_status_payment"] = "Estado Pago";
 $tableCaptions["Spanish"]["public_user"] = "Usuario";
-$tableCaptions["Spanish"]["public_people_user"] = "Mis datos";
-$tableCaptions["Spanish"]["public_consulting_my"] = "Mis Asesorias";
-$tableCaptions["Spanish"]["public_country"] = "Pais";
-$tableCaptions["Spanish"]["public_advisor_user"] = "Asesores";
-$tableCaptions["Spanish"]["public_consulting_my_advisor"] = "Consulting My Advisor";
-$tableCaptions["Spanish"]["public_payment_my"] = "Payment My";
+$tableCaptions["Spanish"]["public_consulting_my"] = "Asesoria";
+$tableCaptions["Spanish"]["public_consulting_my_advisor"] = "Asesoria";
+$tableCaptions["Spanish"]["public_advisor_user"] = "Advisor User";
+$tableCaptions["Spanish"]["public_payment_advisor"] = "Pago";
+$tableCaptions["Spanish"]["public_people_user"] = "People User";
+$tableCaptions["Spanish"]["public_advisor1"] = "Asesores";
+$tableCaptions["Spanish"]["public_pay_deta"] = "Pay Deta";
+$tableCaptions["Spanish"]["public_customers1"] = "Customers1";
 
 
 $globalEvents = new class_GlobalEvents;
@@ -880,9 +813,6 @@ $mediaType = $mediaType ? $mediaType : 0;
 
 
 $page_titles[GLOBAL_PAGES_SHORT] = array();
-if(mlang_getcurrentlang()=="English")
-{
-}
 if(mlang_getcurrentlang()=="Spanish")
 {
 }
@@ -926,7 +856,7 @@ $isUseRTECK = false;
 
 $isUseRTEInnova = false;
 
-$caseInsensitiveUsername = 0;
+$caseInsensitiveUsername = 1;
 
 
 $menuNodesIndex=0;

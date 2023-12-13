@@ -6,8 +6,9 @@ Te has registrado como usuario en %url%
 Id: %id_value%
 Email: %email_value%
 Rol: %fk_id_rol_value%
-Usuario: %username_value%
-Fecha Alta: %created_value%
-Fecha Actualizacion: %updated_value%
-Fk Id Persona: %fk_id_people_value%
+Username: %username_value%
+Created: %created_value%
+Updated: %updated_value%
+Persona: %fk_id_people_value%
 Userpic: %userpic_value%
+Ext Security Id: %ext_security_id_value%

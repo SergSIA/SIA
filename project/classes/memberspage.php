@@ -250,12 +250,12 @@ class MembersPage extends ListPage_Simple
 		global $cman;
 		$grConnection = $cman->getForUserGroups();			
 		
-		$this->groups[] = array(-1, "<".mlang_message("AA_GROUP_ADMIN").">");
+		$this->groups[] = array(-1, "<"."Administrador".">");
 		$this->groupFullChecked[] = true;
 		
 		$sql = "select ". $grConnection->addFieldWrappers( "" ) .", "
 			. $grConnection->addFieldWrappers( "" )
-			." from ". $grConnection->addTableWrappers( "uggroups" ) 
+			." from ". $grConnection->addTableWrappers( "" ) 
 			." order by ". $grConnection->addFieldWrappers( "" );
 		
 		$qResult = $grConnection->query( $sql );
